@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2023.11.22.11:59:02"
+ outputDirectory="/nfs/site/disks/rae_work_ernestoh/ProyectilesQuartus/shdes_Arrow/axe5_eagle_top_23_4_new/ip/gts_reset_seq/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex 5"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="A5ED065BB32AE4SR0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="4"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_BOARD"
+     type="String"
+     defaultValue="default"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="rsif" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port
+       name="o_src_rs_grant"
+       direction="output"
+       role="src_rs_grant"
+       width="1" />
+   <port
+       name="i_src_rs_priority"
+       direction="input"
+       role="src_rs_priority"
+       width="1" />
+   <port name="i_src_rs_req" direction="input" role="src_rs_req" width="1" />
+  </interface>
+  <interface name="o_pma_cu_clk" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="o_pma_cu_clk" direction="output" role="clk" width="1" />
+  </interface>
+ </perimeter>
+ <entity kind="gts_reset_seq" version="1.0" name="gts_reset_seq">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="A5ED065BB32AE4SR0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex 5" />
+  <parameter name="AUTO_BOARD" value="default" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="4" />
+  <generatedFiles>
+   <file
+       path="/nfs/site/disks/rae_work_ernestoh/ProyectilesQuartus/shdes_Arrow/axe5_eagle_top_23_4_new/ip/gts_reset_seq/synth/gts_reset_seq.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/nfs/site/disks/rae_work_ernestoh/ProyectilesQuartus/shdes_Arrow/axe5_eagle_top_23_4_new/ip/gts_reset_seq/synth/gts_reset_seq.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/nfs/site/disks/rae_work_ernestoh/ProyectilesQuartus/shdes_Arrow/axe5_eagle_top_23_4_new/ip/gts_reset_seq.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/77/linux64/ip/altera/alt_xcvr/intel_monolithic/reset_control/intel_srcss_gts/tcl/intel_srcss_gts_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="gts_reset_seq">"Generating: gts_reset_seq"</message>
+   <message level="Info" culprit="gts_reset_seq">"Generating: gts_reset_seq_intel_srcss_gts_200_wnl7lpy"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="intel_srcss_gts"
+   version="2.0.0"
+   name="gts_reset_seq_intel_srcss_gts_200_wnl7lpy">
+  <parameter name="NUM_BANKS_SHORELINE" value="1" />
+  <parameter name="SRC_RS_DISABLE" value="false" />
+  <parameter name="NUM_LANES_SHORELINE" value="1" />
+  <generatedFiles>
+   <file
+       path="/nfs/site/disks/rae_work_ernestoh/ProyectilesQuartus/shdes_Arrow/axe5_eagle_top_23_4_new/ip/gts_reset_seq/intel_srcss_gts_200/synth/gts_reset_seq_intel_srcss_gts_200_wnl7lpy.sv"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/rae_work_ernestoh/ProyectilesQuartus/shdes_Arrow/axe5_eagle_top_23_4_new/ip/gts_reset_seq/intel_srcss_gts_200/synth/gts_reset_seq_intel_srcss_gts_200_wnl7lpy.sdc"
+       attributes="NO_SDC_PROMOTION" />
+   <file
+       path="/nfs/site/disks/rae_work_ernestoh/ProyectilesQuartus/shdes_Arrow/axe5_eagle_top_23_4_new/ip/gts_reset_seq/intel_srcss_gts_200/synth/intel_srcss_gts.sv"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/rae_work_ernestoh/ProyectilesQuartus/shdes_Arrow/axe5_eagle_top_23_4_new/ip/gts_reset_seq/intel_srcss_gts_200/synth/intel_ss_synchronizers.sv"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/rae_work_ernestoh/ProyectilesQuartus/shdes_Arrow/axe5_eagle_top_23_4_new/ip/gts_reset_seq/intel_srcss_gts_200/synth/sopc_synchronizer.v"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/nfs/site/disks/rae_work_ernestoh/ProyectilesQuartus/shdes_Arrow/axe5_eagle_top_23_4_new/ip/gts_reset_seq/intel_srcss_gts_200/synth/gts_reset_seq_intel_srcss_gts_200_wnl7lpy.sv"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/rae_work_ernestoh/ProyectilesQuartus/shdes_Arrow/axe5_eagle_top_23_4_new/ip/gts_reset_seq/intel_srcss_gts_200/synth/gts_reset_seq_intel_srcss_gts_200_wnl7lpy.sdc"
+       attributes="NO_SDC_PROMOTION" />
+   <file
+       path="/nfs/site/disks/rae_work_ernestoh/ProyectilesQuartus/shdes_Arrow/axe5_eagle_top_23_4_new/ip/gts_reset_seq/intel_srcss_gts_200/synth/intel_srcss_gts.sv"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/rae_work_ernestoh/ProyectilesQuartus/shdes_Arrow/axe5_eagle_top_23_4_new/ip/gts_reset_seq/intel_srcss_gts_200/synth/intel_ss_synchronizers.sv"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/rae_work_ernestoh/ProyectilesQuartus/shdes_Arrow/axe5_eagle_top_23_4_new/ip/gts_reset_seq/intel_srcss_gts_200/synth/sopc_synchronizer.v"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/nfs/site/disks/swbld_releases_6/acds/23.4/77/linux64/ip/altera/alt_xcvr/intel_monolithic/reset_control/intel_srcss_gts/tcl/intel_srcss_gts_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="gts_reset_seq" as="intel_srcss_gts_0" />
+  <messages>
+   <message level="Info" culprit="gts_reset_seq">"Generating: gts_reset_seq_intel_srcss_gts_200_wnl7lpy"</message>
+  </messages>
+ </entity>
+</deploy>
