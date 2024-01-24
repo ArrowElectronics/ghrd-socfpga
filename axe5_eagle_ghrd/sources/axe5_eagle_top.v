@@ -343,7 +343,7 @@ module axe5_eagle_top (
 
 	// Instantiate HPS system from Plaform Designer
     ghrd_hps_system hps_system (
-        //.sys_clk_clk              (HPS_OSC_CLK_25MHz),
+        .sys_clk_clk              (REFCLK_3B0_p),
 		  //.osc_clock_bridge_out_clk (osc_clock_bridge_out),
       `ifdef wHDMI
         .hdmi_pll_refclk_clk      (REFCLK_3B0_p),
@@ -368,7 +368,7 @@ module axe5_eagle_top (
       `ifdef wFAB_PB
         .pb_export                (FPGA_PB),
       `endif
-        .sys_reset_reset          (HPS_COLD_RST),
+//        .sys_reset_reset          (HPS_COLD_RST),
       `ifdef wRGB_LED0
         .rgb_led0_export          (rgb_led0),
       `endif

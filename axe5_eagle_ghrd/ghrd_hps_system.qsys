@@ -104,6 +104,14 @@ https://fpgasoftware.intel.com/eula.-->
          type = "int";
       }
    }
+   element iopll_0
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
    element onchip_M20Kx64.axi_s1
    {
       datum baseAddress
@@ -150,14 +158,6 @@ https://fpgasoftware.intel.com/eula.-->
       {
          value = "";
          type = "String";
-      }
-   }
-   element reset_in
-   {
-      datum _sortIndex
-      {
-         value = "1";
-         type = "int";
       }
    }
    element video_sys_0
@@ -254,24 +254,6 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:displayName>systemInfos</ipxact:displayName>
           <ipxact:value>&lt;systemInfosDefinition&gt;
     &lt;connPtSystemInfos&gt;
-        &lt;entry&gt;
-            &lt;key&gt;hdmi_pll_refclk&lt;/key&gt;
-            &lt;value&gt;
-                &lt;connectionPointName&gt;hdmi_pll_refclk&lt;/connectionPointName&gt;
-                &lt;suppliedSystemInfos&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                    &lt;/entry&gt;
-                &lt;/suppliedSystemInfos&gt;
-                &lt;consumedSystemInfos/&gt;
-            &lt;/value&gt;
-        &lt;/entry&gt;
         &lt;entry&gt;
             &lt;key&gt;i2c1_scl_oe&lt;/key&gt;
             &lt;value&gt;
@@ -481,7 +463,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;name&gt;hps2fpga_awaddr&lt;/name&gt;
                         &lt;role&gt;awaddr&lt;/role&gt;
                         &lt;direction&gt;Output&lt;/direction&gt;
-                        &lt;width&gt;32&lt;/width&gt;
+                        &lt;width&gt;30&lt;/width&gt;
                         &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                         &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                         &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -652,7 +634,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;name&gt;hps2fpga_araddr&lt;/name&gt;
                         &lt;role&gt;araddr&lt;/role&gt;
                         &lt;direction&gt;Output&lt;/direction&gt;
-                        &lt;width&gt;32&lt;/width&gt;
+                        &lt;width&gt;30&lt;/width&gt;
                         &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                         &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                         &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -3359,7 +3341,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;name&gt;f2sdram_araddr&lt;/name&gt;
                         &lt;role&gt;araddr&lt;/role&gt;
                         &lt;direction&gt;Input&lt;/direction&gt;
-                        &lt;width&gt;32&lt;/width&gt;
+                        &lt;width&gt;30&lt;/width&gt;
                         &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                         &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                         &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -3458,7 +3440,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;name&gt;f2sdram_awaddr&lt;/name&gt;
                         &lt;role&gt;awaddr&lt;/role&gt;
                         &lt;direction&gt;Input&lt;/direction&gt;
-                        &lt;width&gt;32&lt;/width&gt;
+                        &lt;width&gt;30&lt;/width&gt;
                         &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                         &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                         &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -4707,11 +4689,11 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;suppliedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;ADDRESS_MAP&lt;/key&gt;
-                            &lt;value&gt;&amp;lt;address-map&amp;gt;&amp;lt;slave name='f2sdram' start='0x0' end='0x100000000' datawidth='64' /&amp;gt;&amp;lt;/address-map&amp;gt;&lt;/value&gt;
+                            &lt;value&gt;&amp;lt;address-map&amp;gt;&amp;lt;slave name='f2sdram' start='0x0' end='0x40000000' datawidth='64' /&amp;gt;&amp;lt;/address-map&amp;gt;&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;ADDRESS_WIDTH&lt;/key&gt;
-                            &lt;value&gt;32&lt;/value&gt;
+                            &lt;value&gt;30&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;MAX_SLAVE_DATA_WIDTH&lt;/key&gt;
@@ -4909,7 +4891,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;name&gt;hps2fpga_awaddr&lt;/name&gt;
                     &lt;role&gt;awaddr&lt;/role&gt;
                     &lt;direction&gt;Output&lt;/direction&gt;
-                    &lt;width&gt;32&lt;/width&gt;
+                    &lt;width&gt;30&lt;/width&gt;
                     &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                     &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                     &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -5080,7 +5062,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;name&gt;hps2fpga_araddr&lt;/name&gt;
                     &lt;role&gt;araddr&lt;/role&gt;
                     &lt;direction&gt;Output&lt;/direction&gt;
-                    &lt;width&gt;32&lt;/width&gt;
+                    &lt;width&gt;30&lt;/width&gt;
                     &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                     &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                     &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -7787,7 +7769,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;name&gt;f2sdram_araddr&lt;/name&gt;
                     &lt;role&gt;araddr&lt;/role&gt;
                     &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;32&lt;/width&gt;
+                    &lt;width&gt;30&lt;/width&gt;
                     &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                     &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                     &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -7886,7 +7868,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;name&gt;f2sdram_awaddr&lt;/name&gt;
                     &lt;role&gt;awaddr&lt;/role&gt;
                     &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;32&lt;/width&gt;
+                    &lt;width&gt;30&lt;/width&gt;
                     &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                     &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                     &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -14220,6 +14202,599 @@ https://fpgasoftware.intel.com/eula.-->
       <altera:module altera:enabled="true" altera:auto_export="false">
         <altera:entity_info>
           <ipxact:vendor>Altera Corporation</ipxact:vendor>
+          <ipxact:library>iopll_0</ipxact:library>
+          <ipxact:name>altera_generic_component</ipxact:name>
+          <ipxact:version>1.0</ipxact:version>
+        </altera:entity_info>
+        <altera:altera_module_parameters>
+          <ipxact:parameters>
+            <ipxact:parameter parameterId="componentDefinition" type="string">
+              <ipxact:name>componentDefinition</ipxact:name>
+              <ipxact:displayName>Component definition</ipxact:displayName>
+              <ipxact:value>&lt;componentDefinition&gt;
+    &lt;boundary&gt;
+        &lt;interfaces&gt;
+            &lt;interface&gt;
+                &lt;name&gt;refclk&lt;/name&gt;
+                &lt;type&gt;clock&lt;/type&gt;
+                &lt;isStart&gt;false&lt;/isStart&gt;
+                &lt;ports&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;refclk&lt;/name&gt;
+                        &lt;role&gt;clk&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                &lt;/ports&gt;
+                &lt;assignments&gt;
+                    &lt;assignmentValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;ui.blockdiagram.direction&lt;/key&gt;
+                            &lt;value&gt;input&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/assignmentValueMap&gt;
+                &lt;/assignments&gt;
+                &lt;parameters&gt;
+                    &lt;parameterValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;clockRate&lt;/key&gt;
+                            &lt;value&gt;25000000&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;externallyDriven&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;ptfSchematicName&lt;/key&gt;
+                        &lt;/entry&gt;
+                    &lt;/parameterValueMap&gt;
+                &lt;/parameters&gt;
+            &lt;/interface&gt;
+            &lt;interface&gt;
+                &lt;name&gt;locked&lt;/name&gt;
+                &lt;type&gt;conduit&lt;/type&gt;
+                &lt;isStart&gt;false&lt;/isStart&gt;
+                &lt;ports&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;locked&lt;/name&gt;
+                        &lt;role&gt;export&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                &lt;/ports&gt;
+                &lt;assignments&gt;
+                    &lt;assignmentValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;ui.blockdiagram.direction&lt;/key&gt;
+                            &lt;value&gt;output&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/assignmentValueMap&gt;
+                &lt;/assignments&gt;
+                &lt;parameters&gt;
+                    &lt;parameterValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedClock&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedReset&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;prSafe&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/parameterValueMap&gt;
+                &lt;/parameters&gt;
+            &lt;/interface&gt;
+            &lt;interface&gt;
+                &lt;name&gt;reset&lt;/name&gt;
+                &lt;type&gt;reset&lt;/type&gt;
+                &lt;isStart&gt;false&lt;/isStart&gt;
+                &lt;ports&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;rst&lt;/name&gt;
+                        &lt;role&gt;reset&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                &lt;/ports&gt;
+                &lt;assignments&gt;
+                    &lt;assignmentValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;ui.blockdiagram.direction&lt;/key&gt;
+                            &lt;value&gt;input&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/assignmentValueMap&gt;
+                &lt;/assignments&gt;
+                &lt;parameters&gt;
+                    &lt;parameterValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedClock&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;synchronousEdges&lt;/key&gt;
+                            &lt;value&gt;NONE&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/parameterValueMap&gt;
+                &lt;/parameters&gt;
+            &lt;/interface&gt;
+            &lt;interface&gt;
+                &lt;name&gt;outclk0&lt;/name&gt;
+                &lt;type&gt;clock&lt;/type&gt;
+                &lt;isStart&gt;true&lt;/isStart&gt;
+                &lt;ports&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;outclk_0&lt;/name&gt;
+                        &lt;role&gt;clk&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                &lt;/ports&gt;
+                &lt;assignments&gt;
+                    &lt;assignmentValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;ui.blockdiagram.direction&lt;/key&gt;
+                            &lt;value&gt;output&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/assignmentValueMap&gt;
+                &lt;/assignments&gt;
+                &lt;parameters&gt;
+                    &lt;parameterValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedDirectClock&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;clockRate&lt;/key&gt;
+                            &lt;value&gt;100000000&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;clockRateKnown&lt;/key&gt;
+                            &lt;value&gt;true&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;externallyDriven&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;ptfSchematicName&lt;/key&gt;
+                        &lt;/entry&gt;
+                    &lt;/parameterValueMap&gt;
+                &lt;/parameters&gt;
+            &lt;/interface&gt;
+            &lt;interface&gt;
+                &lt;name&gt;outclk1&lt;/name&gt;
+                &lt;type&gt;clock&lt;/type&gt;
+                &lt;isStart&gt;true&lt;/isStart&gt;
+                &lt;ports&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;outclk_1&lt;/name&gt;
+                        &lt;role&gt;clk&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                &lt;/ports&gt;
+                &lt;assignments&gt;
+                    &lt;assignmentValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;ui.blockdiagram.direction&lt;/key&gt;
+                            &lt;value&gt;output&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/assignmentValueMap&gt;
+                &lt;/assignments&gt;
+                &lt;parameters&gt;
+                    &lt;parameterValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedDirectClock&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;clockRate&lt;/key&gt;
+                            &lt;value&gt;150000000&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;clockRateKnown&lt;/key&gt;
+                            &lt;value&gt;true&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;externallyDriven&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;ptfSchematicName&lt;/key&gt;
+                        &lt;/entry&gt;
+                    &lt;/parameterValueMap&gt;
+                &lt;/parameters&gt;
+            &lt;/interface&gt;
+        &lt;/interfaces&gt;
+    &lt;/boundary&gt;
+    &lt;originalModuleInfo&gt;
+        &lt;className&gt;altera_iopll&lt;/className&gt;
+        &lt;version&gt;19.3.1&lt;/version&gt;
+        &lt;displayName&gt;IOPLL Intel FPGA IP&lt;/displayName&gt;
+    &lt;/originalModuleInfo&gt;
+    &lt;systemInfoParameterDescriptors&gt;
+        &lt;descriptors&gt;
+            &lt;descriptor&gt;
+                &lt;parameterDefaultValue&gt;&lt;/parameterDefaultValue&gt;
+                &lt;parameterName&gt;system_info_device_component&lt;/parameterName&gt;
+                &lt;parameterType&gt;java.lang.String&lt;/parameterType&gt;
+                &lt;systemInfotype&gt;DEVICE&lt;/systemInfotype&gt;
+            &lt;/descriptor&gt;
+            &lt;descriptor&gt;
+                &lt;parameterDefaultValue&gt;&lt;/parameterDefaultValue&gt;
+                &lt;parameterName&gt;system_info_device_family&lt;/parameterName&gt;
+                &lt;parameterType&gt;java.lang.String&lt;/parameterType&gt;
+                &lt;systemInfotype&gt;DEVICE_FAMILY&lt;/systemInfotype&gt;
+            &lt;/descriptor&gt;
+            &lt;descriptor&gt;
+                &lt;parameterDefaultValue&gt;&lt;/parameterDefaultValue&gt;
+                &lt;parameterName&gt;system_info_device_speed_grade&lt;/parameterName&gt;
+                &lt;parameterType&gt;java.lang.String&lt;/parameterType&gt;
+                &lt;systemInfotype&gt;DEVICE_SPEEDGRADE&lt;/systemInfotype&gt;
+            &lt;/descriptor&gt;
+            &lt;descriptor&gt;
+                &lt;parameterDefaultValue&gt;&lt;/parameterDefaultValue&gt;
+                &lt;parameterName&gt;system_part_trait_iobank_rev&lt;/parameterName&gt;
+                &lt;parameterType&gt;java.lang.String&lt;/parameterType&gt;
+                &lt;systemInfoArgs&gt;DEVICE_IOBANK_REVISION&lt;/systemInfoArgs&gt;
+                &lt;systemInfotype&gt;PART_TRAIT&lt;/systemInfotype&gt;
+            &lt;/descriptor&gt;
+            &lt;descriptor&gt;
+                &lt;parameterDefaultValue&gt;&lt;/parameterDefaultValue&gt;
+                &lt;parameterName&gt;system_part_trait_speed_grade&lt;/parameterName&gt;
+                &lt;parameterType&gt;java.lang.String&lt;/parameterType&gt;
+                &lt;systemInfoArgs&gt;DEVICE_SPEEDGRADE&lt;/systemInfoArgs&gt;
+                &lt;systemInfotype&gt;PART_TRAIT&lt;/systemInfotype&gt;
+            &lt;/descriptor&gt;
+        &lt;/descriptors&gt;
+    &lt;/systemInfoParameterDescriptors&gt;
+    &lt;systemInfos&gt;
+        &lt;connPtSystemInfos&gt;
+            &lt;entry&gt;
+                &lt;key&gt;outclk0&lt;/key&gt;
+                &lt;value&gt;
+                    &lt;connectionPointName&gt;outclk0&lt;/connectionPointName&gt;
+                    &lt;suppliedSystemInfos&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;CLOCK_RATE&lt;/key&gt;
+                            &lt;value&gt;100000000&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/suppliedSystemInfos&gt;
+                    &lt;consumedSystemInfos/&gt;
+                &lt;/value&gt;
+            &lt;/entry&gt;
+            &lt;entry&gt;
+                &lt;key&gt;outclk1&lt;/key&gt;
+                &lt;value&gt;
+                    &lt;connectionPointName&gt;outclk1&lt;/connectionPointName&gt;
+                    &lt;suppliedSystemInfos&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;CLOCK_RATE&lt;/key&gt;
+                            &lt;value&gt;150000000&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/suppliedSystemInfos&gt;
+                    &lt;consumedSystemInfos/&gt;
+                &lt;/value&gt;
+            &lt;/entry&gt;
+        &lt;/connPtSystemInfos&gt;
+    &lt;/systemInfos&gt;
+&lt;/componentDefinition&gt;</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="defaultBoundary" type="string">
+              <ipxact:name>defaultBoundary</ipxact:name>
+              <ipxact:displayName>Default boundary</ipxact:displayName>
+              <ipxact:value>&lt;boundaryDefinition&gt;
+    &lt;interfaces&gt;
+        &lt;interface&gt;
+            &lt;name&gt;refclk&lt;/name&gt;
+            &lt;type&gt;clock&lt;/type&gt;
+            &lt;isStart&gt;false&lt;/isStart&gt;
+            &lt;ports&gt;
+                &lt;port&gt;
+                    &lt;name&gt;refclk&lt;/name&gt;
+                    &lt;role&gt;clk&lt;/role&gt;
+                    &lt;direction&gt;Input&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+            &lt;/ports&gt;
+            &lt;assignments&gt;
+                &lt;assignmentValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;ui.blockdiagram.direction&lt;/key&gt;
+                        &lt;value&gt;input&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/assignmentValueMap&gt;
+            &lt;/assignments&gt;
+            &lt;parameters&gt;
+                &lt;parameterValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;clockRate&lt;/key&gt;
+                        &lt;value&gt;25000000&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;externallyDriven&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;ptfSchematicName&lt;/key&gt;
+                    &lt;/entry&gt;
+                &lt;/parameterValueMap&gt;
+            &lt;/parameters&gt;
+        &lt;/interface&gt;
+        &lt;interface&gt;
+            &lt;name&gt;locked&lt;/name&gt;
+            &lt;type&gt;conduit&lt;/type&gt;
+            &lt;isStart&gt;false&lt;/isStart&gt;
+            &lt;ports&gt;
+                &lt;port&gt;
+                    &lt;name&gt;locked&lt;/name&gt;
+                    &lt;role&gt;export&lt;/role&gt;
+                    &lt;direction&gt;Output&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+            &lt;/ports&gt;
+            &lt;assignments&gt;
+                &lt;assignmentValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;ui.blockdiagram.direction&lt;/key&gt;
+                        &lt;value&gt;output&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/assignmentValueMap&gt;
+            &lt;/assignments&gt;
+            &lt;parameters&gt;
+                &lt;parameterValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedClock&lt;/key&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedReset&lt;/key&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;prSafe&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/parameterValueMap&gt;
+            &lt;/parameters&gt;
+        &lt;/interface&gt;
+        &lt;interface&gt;
+            &lt;name&gt;reset&lt;/name&gt;
+            &lt;type&gt;reset&lt;/type&gt;
+            &lt;isStart&gt;false&lt;/isStart&gt;
+            &lt;ports&gt;
+                &lt;port&gt;
+                    &lt;name&gt;rst&lt;/name&gt;
+                    &lt;role&gt;reset&lt;/role&gt;
+                    &lt;direction&gt;Input&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+            &lt;/ports&gt;
+            &lt;assignments&gt;
+                &lt;assignmentValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;ui.blockdiagram.direction&lt;/key&gt;
+                        &lt;value&gt;input&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/assignmentValueMap&gt;
+            &lt;/assignments&gt;
+            &lt;parameters&gt;
+                &lt;parameterValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedClock&lt;/key&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;synchronousEdges&lt;/key&gt;
+                        &lt;value&gt;NONE&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/parameterValueMap&gt;
+            &lt;/parameters&gt;
+        &lt;/interface&gt;
+        &lt;interface&gt;
+            &lt;name&gt;outclk0&lt;/name&gt;
+            &lt;type&gt;clock&lt;/type&gt;
+            &lt;isStart&gt;true&lt;/isStart&gt;
+            &lt;ports&gt;
+                &lt;port&gt;
+                    &lt;name&gt;outclk_0&lt;/name&gt;
+                    &lt;role&gt;clk&lt;/role&gt;
+                    &lt;direction&gt;Output&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+            &lt;/ports&gt;
+            &lt;assignments&gt;
+                &lt;assignmentValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;ui.blockdiagram.direction&lt;/key&gt;
+                        &lt;value&gt;output&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/assignmentValueMap&gt;
+            &lt;/assignments&gt;
+            &lt;parameters&gt;
+                &lt;parameterValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedDirectClock&lt;/key&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;clockRate&lt;/key&gt;
+                        &lt;value&gt;100000000&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;clockRateKnown&lt;/key&gt;
+                        &lt;value&gt;true&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;externallyDriven&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;ptfSchematicName&lt;/key&gt;
+                    &lt;/entry&gt;
+                &lt;/parameterValueMap&gt;
+            &lt;/parameters&gt;
+        &lt;/interface&gt;
+        &lt;interface&gt;
+            &lt;name&gt;outclk1&lt;/name&gt;
+            &lt;type&gt;clock&lt;/type&gt;
+            &lt;isStart&gt;true&lt;/isStart&gt;
+            &lt;ports&gt;
+                &lt;port&gt;
+                    &lt;name&gt;outclk_1&lt;/name&gt;
+                    &lt;role&gt;clk&lt;/role&gt;
+                    &lt;direction&gt;Output&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+            &lt;/ports&gt;
+            &lt;assignments&gt;
+                &lt;assignmentValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;ui.blockdiagram.direction&lt;/key&gt;
+                        &lt;value&gt;output&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/assignmentValueMap&gt;
+            &lt;/assignments&gt;
+            &lt;parameters&gt;
+                &lt;parameterValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedDirectClock&lt;/key&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;clockRate&lt;/key&gt;
+                        &lt;value&gt;150000000&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;clockRateKnown&lt;/key&gt;
+                        &lt;value&gt;true&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;externallyDriven&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;ptfSchematicName&lt;/key&gt;
+                    &lt;/entry&gt;
+                &lt;/parameterValueMap&gt;
+            &lt;/parameters&gt;
+        &lt;/interface&gt;
+    &lt;/interfaces&gt;
+&lt;/boundaryDefinition&gt;</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="generationInfoDefinition" type="string">
+              <ipxact:name>generationInfoDefinition</ipxact:name>
+              <ipxact:displayName>Generation Behavior</ipxact:displayName>
+              <ipxact:value>&lt;generationInfoDefinition&gt;
+    &lt;hdlLibraryName&gt;ghrd_hps_system_iopll_0&lt;/hdlLibraryName&gt;
+    &lt;fileSets&gt;
+        &lt;fileSet&gt;
+            &lt;fileSetName&gt;ghrd_hps_system_iopll_0&lt;/fileSetName&gt;
+            &lt;fileSetFixedName&gt;ghrd_hps_system_iopll_0&lt;/fileSetFixedName&gt;
+            &lt;fileSetKind&gt;QUARTUS_SYNTH&lt;/fileSetKind&gt;
+            &lt;fileSetFiles/&gt;
+        &lt;/fileSet&gt;
+        &lt;fileSet&gt;
+            &lt;fileSetName&gt;ghrd_hps_system_iopll_0&lt;/fileSetName&gt;
+            &lt;fileSetFixedName&gt;ghrd_hps_system_iopll_0&lt;/fileSetFixedName&gt;
+            &lt;fileSetKind&gt;SIM_VERILOG&lt;/fileSetKind&gt;
+            &lt;fileSetFiles/&gt;
+        &lt;/fileSet&gt;
+        &lt;fileSet&gt;
+            &lt;fileSetName&gt;ghrd_hps_system_iopll_0&lt;/fileSetName&gt;
+            &lt;fileSetFixedName&gt;ghrd_hps_system_iopll_0&lt;/fileSetFixedName&gt;
+            &lt;fileSetKind&gt;SIM_VHDL&lt;/fileSetKind&gt;
+            &lt;fileSetFiles/&gt;
+        &lt;/fileSet&gt;
+        &lt;fileSet&gt;
+            &lt;fileSetName&gt;ghrd_hps_system_iopll_0&lt;/fileSetName&gt;
+            &lt;fileSetFixedName&gt;ghrd_hps_system_iopll_0&lt;/fileSetFixedName&gt;
+            &lt;fileSetKind&gt;CDC&lt;/fileSetKind&gt;
+            &lt;fileSetFiles/&gt;
+        &lt;/fileSet&gt;
+        &lt;fileSet&gt;
+            &lt;fileSetName&gt;ghrd_hps_system_iopll_0&lt;/fileSetName&gt;
+            &lt;fileSetFixedName&gt;ghrd_hps_system_iopll_0&lt;/fileSetFixedName&gt;
+            &lt;fileSetKind&gt;CDC_VHDL&lt;/fileSetKind&gt;
+            &lt;fileSetFiles/&gt;
+        &lt;/fileSet&gt;
+    &lt;/fileSets&gt;
+&lt;/generationInfoDefinition&gt;</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="hdlParameters" type="string">
+              <ipxact:name>hdlParameters</ipxact:name>
+              <ipxact:displayName>HDL Parameters</ipxact:displayName>
+              <ipxact:value>&lt;hdlParameterDescriptorDefinitionList/&gt;</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="hlsFile" type="string">
+              <ipxact:name>hlsFile</ipxact:name>
+              <ipxact:displayName>HLS file</ipxact:displayName>
+              <ipxact:value></ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="liveModuleName" type="string">
+              <ipxact:name>liveModuleName</ipxact:name>
+              <ipxact:displayName>Live Module Name</ipxact:displayName>
+              <ipxact:value>iopll_0</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="logicalView" type="string">
+              <ipxact:name>logicalView</ipxact:name>
+              <ipxact:displayName>Logical view</ipxact:displayName>
+              <ipxact:value>ip/ghrd_hps_system/ghrd_hps_system_iopll_0.ip</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="moduleAssignmentDefinition" type="string">
+              <ipxact:name>moduleAssignmentDefinition</ipxact:name>
+              <ipxact:displayName>Module Assignments</ipxact:displayName>
+              <ipxact:value>&lt;assignmentDefinition&gt;
+    &lt;assignmentValueMap&gt;
+        &lt;entry&gt;
+            &lt;key&gt;embeddedsw.dts.compatible&lt;/key&gt;
+            &lt;value&gt;altr,pll&lt;/value&gt;
+        &lt;/entry&gt;
+        &lt;entry&gt;
+            &lt;key&gt;embeddedsw.dts.group&lt;/key&gt;
+            &lt;value&gt;clock&lt;/value&gt;
+        &lt;/entry&gt;
+        &lt;entry&gt;
+            &lt;key&gt;embeddedsw.dts.vendor&lt;/key&gt;
+            &lt;value&gt;altr&lt;/value&gt;
+        &lt;/entry&gt;
+    &lt;/assignmentValueMap&gt;
+&lt;/assignmentDefinition&gt;</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
+              <ipxact:name>svInterfaceDefinition</ipxact:name>
+              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:value></ipxact:value>
+            </ipxact:parameter>
+          </ipxact:parameters>
+        </altera:altera_module_parameters>
+      </altera:module>
+      <altera:module altera:enabled="true" altera:auto_export="false">
+        <altera:entity_info>
+          <ipxact:vendor>Altera Corporation</ipxact:vendor>
           <ipxact:library>onchip_sram</ipxact:library>
           <ipxact:name>altera_generic_component</ipxact:name>
           <ipxact:version>1.0</ipxact:version>
@@ -16196,15 +16771,15 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;consumedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;2&lt;/value&gt;
+                            &lt;value&gt;19&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                            &lt;value&gt;-1&lt;/value&gt;
+                            &lt;value&gt;100000000&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;2&lt;/value&gt;
+                            &lt;value&gt;19&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/consumedSystemInfos&gt;
                 &lt;/value&gt;
@@ -16294,348 +16869,6 @@ https://fpgasoftware.intel.com/eula.-->
               <ipxact:name>logicalView</ipxact:name>
               <ipxact:displayName>Logical view</ipxact:displayName>
               <ipxact:value>peripheral_sys.qsys</ipxact:value>
-            </ipxact:parameter>
-            <ipxact:parameter parameterId="moduleAssignmentDefinition" type="string">
-              <ipxact:name>moduleAssignmentDefinition</ipxact:name>
-              <ipxact:displayName>Module Assignments</ipxact:displayName>
-              <ipxact:value>&lt;assignmentDefinition&gt;
-    &lt;assignmentValueMap/&gt;
-&lt;/assignmentDefinition&gt;</ipxact:value>
-            </ipxact:parameter>
-            <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
-              <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
-              <ipxact:value></ipxact:value>
-            </ipxact:parameter>
-          </ipxact:parameters>
-        </altera:altera_module_parameters>
-      </altera:module>
-      <altera:module altera:enabled="true" altera:auto_export="false">
-        <altera:entity_info>
-          <ipxact:vendor>Altera Corporation</ipxact:vendor>
-          <ipxact:library>reset_in</ipxact:library>
-          <ipxact:name>altera_generic_component</ipxact:name>
-          <ipxact:version>1.0</ipxact:version>
-        </altera:entity_info>
-        <altera:altera_module_parameters>
-          <ipxact:parameters>
-            <ipxact:parameter parameterId="componentDefinition" type="string">
-              <ipxact:name>componentDefinition</ipxact:name>
-              <ipxact:displayName>Component definition</ipxact:displayName>
-              <ipxact:value>&lt;componentDefinition&gt;
-    &lt;boundary&gt;
-        &lt;interfaces&gt;
-            &lt;interface&gt;
-                &lt;name&gt;clk&lt;/name&gt;
-                &lt;type&gt;clock&lt;/type&gt;
-                &lt;isStart&gt;false&lt;/isStart&gt;
-                &lt;ports&gt;
-                    &lt;port&gt;
-                        &lt;name&gt;clk&lt;/name&gt;
-                        &lt;role&gt;clk&lt;/role&gt;
-                        &lt;direction&gt;Input&lt;/direction&gt;
-                        &lt;width&gt;1&lt;/width&gt;
-                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                    &lt;/port&gt;
-                &lt;/ports&gt;
-                &lt;assignments&gt;
-                    &lt;assignmentValueMap/&gt;
-                &lt;/assignments&gt;
-                &lt;parameters&gt;
-                    &lt;parameterValueMap&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;clockRate&lt;/key&gt;
-                            &lt;value&gt;0&lt;/value&gt;
-                        &lt;/entry&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;externallyDriven&lt;/key&gt;
-                            &lt;value&gt;false&lt;/value&gt;
-                        &lt;/entry&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;ptfSchematicName&lt;/key&gt;
-                        &lt;/entry&gt;
-                    &lt;/parameterValueMap&gt;
-                &lt;/parameters&gt;
-            &lt;/interface&gt;
-            &lt;interface&gt;
-                &lt;name&gt;in_reset&lt;/name&gt;
-                &lt;type&gt;reset&lt;/type&gt;
-                &lt;isStart&gt;false&lt;/isStart&gt;
-                &lt;ports&gt;
-                    &lt;port&gt;
-                        &lt;name&gt;in_reset&lt;/name&gt;
-                        &lt;role&gt;reset&lt;/role&gt;
-                        &lt;direction&gt;Input&lt;/direction&gt;
-                        &lt;width&gt;1&lt;/width&gt;
-                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                    &lt;/port&gt;
-                &lt;/ports&gt;
-                &lt;assignments&gt;
-                    &lt;assignmentValueMap/&gt;
-                &lt;/assignments&gt;
-                &lt;parameters&gt;
-                    &lt;parameterValueMap&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;associatedClock&lt;/key&gt;
-                            &lt;value&gt;clk&lt;/value&gt;
-                        &lt;/entry&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;synchronousEdges&lt;/key&gt;
-                            &lt;value&gt;DEASSERT&lt;/value&gt;
-                        &lt;/entry&gt;
-                    &lt;/parameterValueMap&gt;
-                &lt;/parameters&gt;
-            &lt;/interface&gt;
-            &lt;interface&gt;
-                &lt;name&gt;out_reset&lt;/name&gt;
-                &lt;type&gt;reset&lt;/type&gt;
-                &lt;isStart&gt;true&lt;/isStart&gt;
-                &lt;ports&gt;
-                    &lt;port&gt;
-                        &lt;name&gt;out_reset&lt;/name&gt;
-                        &lt;role&gt;reset&lt;/role&gt;
-                        &lt;direction&gt;Output&lt;/direction&gt;
-                        &lt;width&gt;1&lt;/width&gt;
-                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                    &lt;/port&gt;
-                &lt;/ports&gt;
-                &lt;assignments&gt;
-                    &lt;assignmentValueMap/&gt;
-                &lt;/assignments&gt;
-                &lt;parameters&gt;
-                    &lt;parameterValueMap&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;associatedClock&lt;/key&gt;
-                            &lt;value&gt;clk&lt;/value&gt;
-                        &lt;/entry&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;associatedDirectReset&lt;/key&gt;
-                            &lt;value&gt;in_reset&lt;/value&gt;
-                        &lt;/entry&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;associatedResetSinks&lt;/key&gt;
-                            &lt;value&gt;in_reset&lt;/value&gt;
-                        &lt;/entry&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;synchronousEdges&lt;/key&gt;
-                            &lt;value&gt;DEASSERT&lt;/value&gt;
-                        &lt;/entry&gt;
-                    &lt;/parameterValueMap&gt;
-                &lt;/parameters&gt;
-            &lt;/interface&gt;
-        &lt;/interfaces&gt;
-    &lt;/boundary&gt;
-    &lt;originalModuleInfo&gt;
-        &lt;className&gt;altera_reset_bridge&lt;/className&gt;
-        &lt;version&gt;19.2.0&lt;/version&gt;
-        &lt;displayName&gt;Reset Bridge Intel FPGA IP&lt;/displayName&gt;
-    &lt;/originalModuleInfo&gt;
-    &lt;systemInfoParameterDescriptors&gt;
-        &lt;descriptors&gt;
-            &lt;descriptor&gt;
-                &lt;parameterDefaultValue&gt;-1&lt;/parameterDefaultValue&gt;
-                &lt;parameterName&gt;AUTO_CLK_CLOCK_RATE&lt;/parameterName&gt;
-                &lt;parameterType&gt;java.lang.Long&lt;/parameterType&gt;
-                &lt;systemInfoArgs&gt;clk&lt;/systemInfoArgs&gt;
-                &lt;systemInfotype&gt;CLOCK_RATE&lt;/systemInfotype&gt;
-            &lt;/descriptor&gt;
-        &lt;/descriptors&gt;
-    &lt;/systemInfoParameterDescriptors&gt;
-    &lt;systemInfos&gt;
-        &lt;connPtSystemInfos&gt;
-            &lt;entry&gt;
-                &lt;key&gt;clk&lt;/key&gt;
-                &lt;value&gt;
-                    &lt;connectionPointName&gt;clk&lt;/connectionPointName&gt;
-                    &lt;suppliedSystemInfos/&gt;
-                    &lt;consumedSystemInfos&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                            &lt;value&gt;-1&lt;/value&gt;
-                        &lt;/entry&gt;
-                    &lt;/consumedSystemInfos&gt;
-                &lt;/value&gt;
-            &lt;/entry&gt;
-        &lt;/connPtSystemInfos&gt;
-    &lt;/systemInfos&gt;
-&lt;/componentDefinition&gt;</ipxact:value>
-            </ipxact:parameter>
-            <ipxact:parameter parameterId="defaultBoundary" type="string">
-              <ipxact:name>defaultBoundary</ipxact:name>
-              <ipxact:displayName>Default boundary</ipxact:displayName>
-              <ipxact:value>&lt;boundaryDefinition&gt;
-    &lt;interfaces&gt;
-        &lt;interface&gt;
-            &lt;name&gt;clk&lt;/name&gt;
-            &lt;type&gt;clock&lt;/type&gt;
-            &lt;isStart&gt;false&lt;/isStart&gt;
-            &lt;ports&gt;
-                &lt;port&gt;
-                    &lt;name&gt;clk&lt;/name&gt;
-                    &lt;role&gt;clk&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-            &lt;/ports&gt;
-            &lt;assignments&gt;
-                &lt;assignmentValueMap/&gt;
-            &lt;/assignments&gt;
-            &lt;parameters&gt;
-                &lt;parameterValueMap&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;clockRate&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;externallyDriven&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;ptfSchematicName&lt;/key&gt;
-                    &lt;/entry&gt;
-                &lt;/parameterValueMap&gt;
-            &lt;/parameters&gt;
-        &lt;/interface&gt;
-        &lt;interface&gt;
-            &lt;name&gt;in_reset&lt;/name&gt;
-            &lt;type&gt;reset&lt;/type&gt;
-            &lt;isStart&gt;false&lt;/isStart&gt;
-            &lt;ports&gt;
-                &lt;port&gt;
-                    &lt;name&gt;in_reset&lt;/name&gt;
-                    &lt;role&gt;reset&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-            &lt;/ports&gt;
-            &lt;assignments&gt;
-                &lt;assignmentValueMap/&gt;
-            &lt;/assignments&gt;
-            &lt;parameters&gt;
-                &lt;parameterValueMap&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedClock&lt;/key&gt;
-                        &lt;value&gt;clk&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;synchronousEdges&lt;/key&gt;
-                        &lt;value&gt;DEASSERT&lt;/value&gt;
-                    &lt;/entry&gt;
-                &lt;/parameterValueMap&gt;
-            &lt;/parameters&gt;
-        &lt;/interface&gt;
-        &lt;interface&gt;
-            &lt;name&gt;out_reset&lt;/name&gt;
-            &lt;type&gt;reset&lt;/type&gt;
-            &lt;isStart&gt;true&lt;/isStart&gt;
-            &lt;ports&gt;
-                &lt;port&gt;
-                    &lt;name&gt;out_reset&lt;/name&gt;
-                    &lt;role&gt;reset&lt;/role&gt;
-                    &lt;direction&gt;Output&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-            &lt;/ports&gt;
-            &lt;assignments&gt;
-                &lt;assignmentValueMap/&gt;
-            &lt;/assignments&gt;
-            &lt;parameters&gt;
-                &lt;parameterValueMap&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedClock&lt;/key&gt;
-                        &lt;value&gt;clk&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedDirectReset&lt;/key&gt;
-                        &lt;value&gt;in_reset&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedResetSinks&lt;/key&gt;
-                        &lt;value&gt;in_reset&lt;/value&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;synchronousEdges&lt;/key&gt;
-                        &lt;value&gt;DEASSERT&lt;/value&gt;
-                    &lt;/entry&gt;
-                &lt;/parameterValueMap&gt;
-            &lt;/parameters&gt;
-        &lt;/interface&gt;
-    &lt;/interfaces&gt;
-&lt;/boundaryDefinition&gt;</ipxact:value>
-            </ipxact:parameter>
-            <ipxact:parameter parameterId="generationInfoDefinition" type="string">
-              <ipxact:name>generationInfoDefinition</ipxact:name>
-              <ipxact:displayName>Generation Behavior</ipxact:displayName>
-              <ipxact:value>&lt;generationInfoDefinition&gt;
-    &lt;hdlLibraryName&gt;ghrd_hps_system_reset_in&lt;/hdlLibraryName&gt;
-    &lt;fileSets&gt;
-        &lt;fileSet&gt;
-            &lt;fileSetName&gt;ghrd_hps_system_reset_in&lt;/fileSetName&gt;
-            &lt;fileSetFixedName&gt;ghrd_hps_system_reset_in&lt;/fileSetFixedName&gt;
-            &lt;fileSetKind&gt;QUARTUS_SYNTH&lt;/fileSetKind&gt;
-            &lt;fileSetFiles/&gt;
-        &lt;/fileSet&gt;
-        &lt;fileSet&gt;
-            &lt;fileSetName&gt;ghrd_hps_system_reset_in&lt;/fileSetName&gt;
-            &lt;fileSetFixedName&gt;ghrd_hps_system_reset_in&lt;/fileSetFixedName&gt;
-            &lt;fileSetKind&gt;SIM_VERILOG&lt;/fileSetKind&gt;
-            &lt;fileSetFiles/&gt;
-        &lt;/fileSet&gt;
-        &lt;fileSet&gt;
-            &lt;fileSetName&gt;ghrd_hps_system_reset_in&lt;/fileSetName&gt;
-            &lt;fileSetFixedName&gt;ghrd_hps_system_reset_in&lt;/fileSetFixedName&gt;
-            &lt;fileSetKind&gt;SIM_VHDL&lt;/fileSetKind&gt;
-            &lt;fileSetFiles/&gt;
-        &lt;/fileSet&gt;
-        &lt;fileSet&gt;
-            &lt;fileSetName&gt;ghrd_hps_system_reset_in&lt;/fileSetName&gt;
-            &lt;fileSetFixedName&gt;ghrd_hps_system_reset_in&lt;/fileSetFixedName&gt;
-            &lt;fileSetKind&gt;CDC&lt;/fileSetKind&gt;
-            &lt;fileSetFiles/&gt;
-        &lt;/fileSet&gt;
-        &lt;fileSet&gt;
-            &lt;fileSetName&gt;ghrd_hps_system_reset_in&lt;/fileSetName&gt;
-            &lt;fileSetFixedName&gt;ghrd_hps_system_reset_in&lt;/fileSetFixedName&gt;
-            &lt;fileSetKind&gt;CDC_VHDL&lt;/fileSetKind&gt;
-            &lt;fileSetFiles/&gt;
-        &lt;/fileSet&gt;
-    &lt;/fileSets&gt;
-&lt;/generationInfoDefinition&gt;</ipxact:value>
-            </ipxact:parameter>
-            <ipxact:parameter parameterId="hdlParameters" type="string">
-              <ipxact:name>hdlParameters</ipxact:name>
-              <ipxact:displayName>HDL Parameters</ipxact:displayName>
-              <ipxact:value>&lt;hdlParameterDescriptorDefinitionList/&gt;</ipxact:value>
-            </ipxact:parameter>
-            <ipxact:parameter parameterId="hlsFile" type="string">
-              <ipxact:name>hlsFile</ipxact:name>
-              <ipxact:displayName>HLS file</ipxact:displayName>
-              <ipxact:value></ipxact:value>
-            </ipxact:parameter>
-            <ipxact:parameter parameterId="liveModuleName" type="string">
-              <ipxact:name>liveModuleName</ipxact:name>
-              <ipxact:displayName>Live Module Name</ipxact:displayName>
-              <ipxact:value></ipxact:value>
-            </ipxact:parameter>
-            <ipxact:parameter parameterId="logicalView" type="string">
-              <ipxact:name>logicalView</ipxact:name>
-              <ipxact:displayName>Logical view</ipxact:displayName>
-              <ipxact:value>ip/ghrd_hps_system/ghrd_hps_system_reset_in.ip</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="moduleAssignmentDefinition" type="string">
               <ipxact:name>moduleAssignmentDefinition</ipxact:name>
@@ -16806,6 +17039,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;parameterValueMap&gt;
                         &lt;entry&gt;
                             &lt;key&gt;associatedClock&lt;/key&gt;
+                            &lt;value&gt;hdmi_clock&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;associatedReset&lt;/key&gt;
@@ -16818,12 +17052,12 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;/parameters&gt;
             &lt;/interface&gt;
             &lt;interface&gt;
-                &lt;name&gt;clk&lt;/name&gt;
+                &lt;name&gt;hdmi_clock&lt;/name&gt;
                 &lt;type&gt;clock&lt;/type&gt;
                 &lt;isStart&gt;false&lt;/isStart&gt;
                 &lt;ports&gt;
                     &lt;port&gt;
-                        &lt;name&gt;clk_clk&lt;/name&gt;
+                        &lt;name&gt;hdmi_clock_clk&lt;/name&gt;
                         &lt;role&gt;clk&lt;/role&gt;
                         &lt;direction&gt;Input&lt;/direction&gt;
                         &lt;width&gt;1&lt;/width&gt;
@@ -16877,7 +17111,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;associatedClock&lt;/key&gt;
-                            &lt;value&gt;clk&lt;/value&gt;
+                            &lt;value&gt;sys_clock&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;associatedReset&lt;/key&gt;
@@ -17234,7 +17468,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;parameterValueMap&gt;
                         &lt;entry&gt;
                             &lt;key&gt;associatedClock&lt;/key&gt;
-                            &lt;value&gt;clk&lt;/value&gt;
+                            &lt;value&gt;sys_clock&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;associatedReset&lt;/key&gt;
@@ -17295,45 +17529,6 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;entry&gt;
                             &lt;key&gt;issuesFIXEDBursts&lt;/key&gt;
                             &lt;value&gt;true&lt;/value&gt;
-                        &lt;/entry&gt;
-                    &lt;/parameterValueMap&gt;
-                &lt;/parameters&gt;
-            &lt;/interface&gt;
-            &lt;interface&gt;
-                &lt;name&gt;hdmi_pll_refclk&lt;/name&gt;
-                &lt;type&gt;clock&lt;/type&gt;
-                &lt;isStart&gt;false&lt;/isStart&gt;
-                &lt;ports&gt;
-                    &lt;port&gt;
-                        &lt;name&gt;hdmi_pll_refclk_clk&lt;/name&gt;
-                        &lt;role&gt;clk&lt;/role&gt;
-                        &lt;direction&gt;Input&lt;/direction&gt;
-                        &lt;width&gt;1&lt;/width&gt;
-                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                    &lt;/port&gt;
-                &lt;/ports&gt;
-                &lt;assignments&gt;
-                    &lt;assignmentValueMap&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;ui.blockdiagram.direction&lt;/key&gt;
-                            &lt;value&gt;input&lt;/value&gt;
-                        &lt;/entry&gt;
-                    &lt;/assignmentValueMap&gt;
-                &lt;/assignments&gt;
-                &lt;parameters&gt;
-                    &lt;parameterValueMap&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;clockRate&lt;/key&gt;
-                            &lt;value&gt;25000000&lt;/value&gt;
-                        &lt;/entry&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;externallyDriven&lt;/key&gt;
-                            &lt;value&gt;false&lt;/value&gt;
-                        &lt;/entry&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;ptfSchematicName&lt;/key&gt;
                         &lt;/entry&gt;
                     &lt;/parameterValueMap&gt;
                 &lt;/parameters&gt;
@@ -17478,7 +17673,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;associatedClock&lt;/key&gt;
-                            &lt;value&gt;clk&lt;/value&gt;
+                            &lt;value&gt;sys_clock&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;associatedReset&lt;/key&gt;
@@ -17679,11 +17874,45 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;parameterValueMap&gt;
                         &lt;entry&gt;
                             &lt;key&gt;associatedClock&lt;/key&gt;
-                            &lt;value&gt;clk&lt;/value&gt;
+                            &lt;value&gt;sys_clock&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;synchronousEdges&lt;/key&gt;
                             &lt;value&gt;DEASSERT&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/parameterValueMap&gt;
+                &lt;/parameters&gt;
+            &lt;/interface&gt;
+            &lt;interface&gt;
+                &lt;name&gt;sys_clock&lt;/name&gt;
+                &lt;type&gt;clock&lt;/type&gt;
+                &lt;isStart&gt;false&lt;/isStart&gt;
+                &lt;ports&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;sys_clock_clk&lt;/name&gt;
+                        &lt;role&gt;clk&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                &lt;/ports&gt;
+                &lt;assignments&gt;
+                    &lt;assignmentValueMap/&gt;
+                &lt;/assignments&gt;
+                &lt;parameters&gt;
+                    &lt;parameterValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;clockRate&lt;/key&gt;
+                            &lt;value&gt;0&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;externallyDriven&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;ptfSchematicName&lt;/key&gt;
                         &lt;/entry&gt;
                     &lt;/parameterValueMap&gt;
                 &lt;/parameters&gt;
@@ -17701,27 +17930,6 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;parameterName&gt;AUTO_BOARD&lt;/parameterName&gt;
                 &lt;parameterType&gt;java.lang.String&lt;/parameterType&gt;
                 &lt;systemInfotype&gt;BOARD&lt;/systemInfotype&gt;
-            &lt;/descriptor&gt;
-            &lt;descriptor&gt;
-                &lt;parameterDefaultValue&gt;-1&lt;/parameterDefaultValue&gt;
-                &lt;parameterName&gt;AUTO_CLK_CLOCK_DOMAIN&lt;/parameterName&gt;
-                &lt;parameterType&gt;java.lang.Integer&lt;/parameterType&gt;
-                &lt;systemInfoArgs&gt;clk&lt;/systemInfoArgs&gt;
-                &lt;systemInfotype&gt;CLOCK_DOMAIN&lt;/systemInfotype&gt;
-            &lt;/descriptor&gt;
-            &lt;descriptor&gt;
-                &lt;parameterDefaultValue&gt;-1&lt;/parameterDefaultValue&gt;
-                &lt;parameterName&gt;AUTO_CLK_CLOCK_RATE&lt;/parameterName&gt;
-                &lt;parameterType&gt;java.lang.Long&lt;/parameterType&gt;
-                &lt;systemInfoArgs&gt;clk&lt;/systemInfoArgs&gt;
-                &lt;systemInfotype&gt;CLOCK_RATE&lt;/systemInfotype&gt;
-            &lt;/descriptor&gt;
-            &lt;descriptor&gt;
-                &lt;parameterDefaultValue&gt;-1&lt;/parameterDefaultValue&gt;
-                &lt;parameterName&gt;AUTO_CLK_RESET_DOMAIN&lt;/parameterName&gt;
-                &lt;parameterType&gt;java.lang.Integer&lt;/parameterType&gt;
-                &lt;systemInfoArgs&gt;clk&lt;/systemInfoArgs&gt;
-                &lt;systemInfotype&gt;RESET_DOMAIN&lt;/systemInfotype&gt;
             &lt;/descriptor&gt;
             &lt;descriptor&gt;
                 &lt;parameterDefaultValue&gt;A5ED065BB32AE4SR0&lt;/parameterDefaultValue&gt;
@@ -17748,6 +17956,27 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;systemInfotype&gt;GENERATION_ID&lt;/systemInfotype&gt;
             &lt;/descriptor&gt;
             &lt;descriptor&gt;
+                &lt;parameterDefaultValue&gt;-1&lt;/parameterDefaultValue&gt;
+                &lt;parameterName&gt;AUTO_HDMI_CLOCK_CLOCK_DOMAIN&lt;/parameterName&gt;
+                &lt;parameterType&gt;java.lang.Integer&lt;/parameterType&gt;
+                &lt;systemInfoArgs&gt;hdmi_clock&lt;/systemInfoArgs&gt;
+                &lt;systemInfotype&gt;CLOCK_DOMAIN&lt;/systemInfotype&gt;
+            &lt;/descriptor&gt;
+            &lt;descriptor&gt;
+                &lt;parameterDefaultValue&gt;-1&lt;/parameterDefaultValue&gt;
+                &lt;parameterName&gt;AUTO_HDMI_CLOCK_CLOCK_RATE&lt;/parameterName&gt;
+                &lt;parameterType&gt;java.lang.Long&lt;/parameterType&gt;
+                &lt;systemInfoArgs&gt;hdmi_clock&lt;/systemInfoArgs&gt;
+                &lt;systemInfotype&gt;CLOCK_RATE&lt;/systemInfotype&gt;
+            &lt;/descriptor&gt;
+            &lt;descriptor&gt;
+                &lt;parameterDefaultValue&gt;-1&lt;/parameterDefaultValue&gt;
+                &lt;parameterName&gt;AUTO_HDMI_CLOCK_RESET_DOMAIN&lt;/parameterName&gt;
+                &lt;parameterType&gt;java.lang.Integer&lt;/parameterType&gt;
+                &lt;systemInfoArgs&gt;hdmi_clock&lt;/systemInfoArgs&gt;
+                &lt;systemInfotype&gt;RESET_DOMAIN&lt;/systemInfotype&gt;
+            &lt;/descriptor&gt;
+            &lt;descriptor&gt;
                 &lt;parameterName&gt;AUTO_HDMI_DMAC_MASTER_ADDRESS_MAP&lt;/parameterName&gt;
                 &lt;parameterType&gt;com.altera.entityinterfaces.moduleext.AddressMap&lt;/parameterType&gt;
                 &lt;systemInfoArgs&gt;hdmi_dmac_master&lt;/systemInfoArgs&gt;
@@ -17761,23 +17990,23 @@ https://fpgasoftware.intel.com/eula.-->
             &lt;/descriptor&gt;
             &lt;descriptor&gt;
                 &lt;parameterDefaultValue&gt;-1&lt;/parameterDefaultValue&gt;
-                &lt;parameterName&gt;AUTO_HDMI_PLL_REFCLK_CLOCK_DOMAIN&lt;/parameterName&gt;
+                &lt;parameterName&gt;AUTO_SYS_CLOCK_CLOCK_DOMAIN&lt;/parameterName&gt;
                 &lt;parameterType&gt;java.lang.Integer&lt;/parameterType&gt;
-                &lt;systemInfoArgs&gt;hdmi_pll_refclk&lt;/systemInfoArgs&gt;
+                &lt;systemInfoArgs&gt;sys_clock&lt;/systemInfoArgs&gt;
                 &lt;systemInfotype&gt;CLOCK_DOMAIN&lt;/systemInfotype&gt;
             &lt;/descriptor&gt;
             &lt;descriptor&gt;
                 &lt;parameterDefaultValue&gt;-1&lt;/parameterDefaultValue&gt;
-                &lt;parameterName&gt;AUTO_HDMI_PLL_REFCLK_CLOCK_RATE&lt;/parameterName&gt;
+                &lt;parameterName&gt;AUTO_SYS_CLOCK_CLOCK_RATE&lt;/parameterName&gt;
                 &lt;parameterType&gt;java.lang.Long&lt;/parameterType&gt;
-                &lt;systemInfoArgs&gt;hdmi_pll_refclk&lt;/systemInfoArgs&gt;
+                &lt;systemInfoArgs&gt;sys_clock&lt;/systemInfoArgs&gt;
                 &lt;systemInfotype&gt;CLOCK_RATE&lt;/systemInfotype&gt;
             &lt;/descriptor&gt;
             &lt;descriptor&gt;
                 &lt;parameterDefaultValue&gt;-1&lt;/parameterDefaultValue&gt;
-                &lt;parameterName&gt;AUTO_HDMI_PLL_REFCLK_RESET_DOMAIN&lt;/parameterName&gt;
+                &lt;parameterName&gt;AUTO_SYS_CLOCK_RESET_DOMAIN&lt;/parameterName&gt;
                 &lt;parameterType&gt;java.lang.Integer&lt;/parameterType&gt;
-                &lt;systemInfoArgs&gt;hdmi_pll_refclk&lt;/systemInfoArgs&gt;
+                &lt;systemInfoArgs&gt;sys_clock&lt;/systemInfoArgs&gt;
                 &lt;systemInfotype&gt;RESET_DOMAIN&lt;/systemInfotype&gt;
             &lt;/descriptor&gt;
             &lt;descriptor&gt;
@@ -17791,22 +18020,22 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;systemInfos&gt;
         &lt;connPtSystemInfos&gt;
             &lt;entry&gt;
-                &lt;key&gt;clk&lt;/key&gt;
+                &lt;key&gt;hdmi_clock&lt;/key&gt;
                 &lt;value&gt;
-                    &lt;connectionPointName&gt;clk&lt;/connectionPointName&gt;
+                    &lt;connectionPointName&gt;hdmi_clock&lt;/connectionPointName&gt;
                     &lt;suppliedSystemInfos/&gt;
                     &lt;consumedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;2&lt;/value&gt;
+                            &lt;value&gt;20&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                            &lt;value&gt;-1&lt;/value&gt;
+                            &lt;value&gt;150000000&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;2&lt;/value&gt;
+                            &lt;value&gt;20&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/consumedSystemInfos&gt;
                 &lt;/value&gt;
@@ -17819,32 +18048,11 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;consumedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;ADDRESS_MAP&lt;/key&gt;
-                            &lt;value&gt;&amp;lt;address-map&amp;gt;&amp;lt;slave name='agilex_5_soc.f2sdram' start='0x0' end='0x100000000' datawidth='64' /&amp;gt;&amp;lt;/address-map&amp;gt;&lt;/value&gt;
+                            &lt;value&gt;&amp;lt;address-map&amp;gt;&amp;lt;slave name='agilex_5_soc.f2sdram' start='0x0' end='0x40000000' datawidth='64' /&amp;gt;&amp;lt;/address-map&amp;gt;&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;ADDRESS_WIDTH&lt;/key&gt;
-                            &lt;value&gt;32&lt;/value&gt;
-                        &lt;/entry&gt;
-                    &lt;/consumedSystemInfos&gt;
-                &lt;/value&gt;
-            &lt;/entry&gt;
-            &lt;entry&gt;
-                &lt;key&gt;hdmi_pll_refclk&lt;/key&gt;
-                &lt;value&gt;
-                    &lt;connectionPointName&gt;hdmi_pll_refclk&lt;/connectionPointName&gt;
-                    &lt;suppliedSystemInfos/&gt;
-                    &lt;consumedSystemInfos&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;-1&lt;/value&gt;
-                        &lt;/entry&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                            &lt;value&gt;-1&lt;/value&gt;
-                        &lt;/entry&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;-1&lt;/value&gt;
+                            &lt;value&gt;30&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/consumedSystemInfos&gt;
                 &lt;/value&gt;
@@ -17865,6 +18073,27 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                     &lt;/suppliedSystemInfos&gt;
                     &lt;consumedSystemInfos/&gt;
+                &lt;/value&gt;
+            &lt;/entry&gt;
+            &lt;entry&gt;
+                &lt;key&gt;sys_clock&lt;/key&gt;
+                &lt;value&gt;
+                    &lt;connectionPointName&gt;sys_clock&lt;/connectionPointName&gt;
+                    &lt;suppliedSystemInfos/&gt;
+                    &lt;consumedSystemInfos&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
+                            &lt;value&gt;19&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;CLOCK_RATE&lt;/key&gt;
+                            &lt;value&gt;100000000&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
+                            &lt;value&gt;19&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/consumedSystemInfos&gt;
                 &lt;/value&gt;
             &lt;/entry&gt;
         &lt;/connPtSystemInfos&gt;
@@ -17994,48 +18223,6 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="avalon" altera:version="23.4" altera:start="agilex_5_soc.hps2fpga" altera:end="peripheral_sys_0.mm_peripheral_bridge_s0">
-        <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x01000000"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="domainAlias" altera:parameter_value=""></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.burstAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.clockCrossingAdapter" altera:parameter_value="HANDSHAKE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.enableAllPipelines" altera:parameter_value="FALSE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.enableEccProtection" altera:parameter_value="FALSE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.enableInstrumentation" altera:parameter_value="FALSE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.enableOutOfOrderSupport" altera:parameter_value="FALSE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.insertDefaultSlave" altera:parameter_value="FALSE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectResetSource" altera:parameter_value="DEFAULT"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectType" altera:parameter_value="STANDARD"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.maxAdditionalLatency" altera:parameter_value="1"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.optimizeRdFifoSize" altera:parameter_value="FALSE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.piplineType" altera:parameter_value="PIPELINE_STAGE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.responseFifoType" altera:parameter_value="REGISTER_BASED"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
-      </altera:connection>
-      <altera:connection altera:kind="avalon" altera:version="23.4" altera:start="agilex_5_soc.hps2fpga" altera:end="video_sys_0.mm_video_bridge_s0">
-        <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x10000000"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="domainAlias" altera:parameter_value=""></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.burstAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.clockCrossingAdapter" altera:parameter_value="HANDSHAKE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.enableAllPipelines" altera:parameter_value="FALSE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.enableEccProtection" altera:parameter_value="FALSE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.enableInstrumentation" altera:parameter_value="FALSE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.enableOutOfOrderSupport" altera:parameter_value="FALSE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.insertDefaultSlave" altera:parameter_value="FALSE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectResetSource" altera:parameter_value="DEFAULT"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectType" altera:parameter_value="STANDARD"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.maxAdditionalLatency" altera:parameter_value="1"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.optimizeRdFifoSize" altera:parameter_value="FALSE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.piplineType" altera:parameter_value="PIPELINE_STAGE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.responseFifoType" altera:parameter_value="REGISTER_BASED"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
-      </altera:connection>
       <altera:connection altera:kind="avalon" altera:version="23.4" altera:start="agilex_5_soc.io96b0_ch0_axi" altera:end="emif_bank3a_hps.s0_axi4">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0000"></altera:connection_parameter>
@@ -18060,6 +18247,27 @@ https://fpgasoftware.intel.com/eula.-->
       <altera:connection altera:kind="avalon" altera:version="23.4" altera:start="agilex_5_soc.io96b0_csr_axi" altera:end="emif_bank3a_hps.s0_axil">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0000"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="domainAlias" altera:parameter_value=""></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.burstAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.clockCrossingAdapter" altera:parameter_value="HANDSHAKE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.enableAllPipelines" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.enableEccProtection" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.enableInstrumentation" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.enableOutOfOrderSupport" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.insertDefaultSlave" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectResetSource" altera:parameter_value="DEFAULT"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectType" altera:parameter_value="STANDARD"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.maxAdditionalLatency" altera:parameter_value="1"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.optimizeRdFifoSize" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.piplineType" altera:parameter_value="PIPELINE_STAGE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.responseFifoType" altera:parameter_value="REGISTER_BASED"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
+      </altera:connection>
+      <altera:connection altera:kind="avalon" altera:version="23.4" altera:start="agilex_5_soc.lwhps2fpga" altera:end="peripheral_sys_0.mm_peripheral_bridge_s0">
+        <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x01000000"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="domainAlias" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.burstAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
@@ -18162,25 +18370,46 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
+      <altera:connection altera:kind="avalon" altera:version="23.4" altera:start="fpga_only_master.master" altera:end="video_sys_0.mm_video_bridge_s0">
+        <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x10000000"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="domainAlias" altera:parameter_value=""></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.burstAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.clockCrossingAdapter" altera:parameter_value="HANDSHAKE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.enableAllPipelines" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.enableEccProtection" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.enableInstrumentation" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.enableOutOfOrderSupport" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.insertDefaultSlave" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectResetSource" altera:parameter_value="DEFAULT"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectType" altera:parameter_value="STANDARD"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.maxAdditionalLatency" altera:parameter_value="1"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.optimizeRdFifoSize" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.piplineType" altera:parameter_value="PIPELINE_STAGE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.responseFifoType" altera:parameter_value="REGISTER_BASED"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
+      </altera:connection>
       <altera:connection altera:kind="clock" altera:version="23.4" altera:start="agilex_5_soc.h2f_user0_clk" altera:end="agilex_5_soc.emac_ptp_clk"></altera:connection>
       <altera:connection altera:kind="clock" altera:version="23.4" altera:start="agilex_5_soc.h2f_user0_clk" altera:end="agilex_5_soc.emac_timestamp_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="agilex_5_soc.h2f_user1_clk" altera:end="reset_in.clk"></altera:connection>
       <altera:connection altera:kind="clock" altera:version="23.4" altera:start="agilex_5_soc.h2f_user1_clk" altera:end="bank3a_emif_master.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="agilex_5_soc.h2f_user1_clk" altera:end="fpga_only_master.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="agilex_5_soc.h2f_user1_clk" altera:end="f2sdram_only_master.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="agilex_5_soc.h2f_user1_clk" altera:end="peripheral_sys_0.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="agilex_5_soc.h2f_user1_clk" altera:end="video_sys_0.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="agilex_5_soc.h2f_user1_clk" altera:end="onchip_sram.clk1"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="agilex_5_soc.h2f_user1_clk" altera:end="agilex_5_soc.f2sdram_axi_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="agilex_5_soc.h2f_user1_clk" altera:end="agilex_5_soc.hps2fpga_axi_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="agilex_5_soc.h2f_user1_clk" altera:end="agilex_5_soc.lwhps2fpga_axi_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="iopll_0.outclk0" altera:end="fpga_only_master.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="iopll_0.outclk0" altera:end="f2sdram_only_master.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="iopll_0.outclk0" altera:end="peripheral_sys_0.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="iopll_0.outclk0" altera:end="onchip_sram.clk1"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="iopll_0.outclk0" altera:end="agilex_5_soc.f2sdram_axi_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="iopll_0.outclk0" altera:end="agilex_5_soc.hps2fpga_axi_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="iopll_0.outclk0" altera:end="agilex_5_soc.lwhps2fpga_axi_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="iopll_0.outclk0" altera:end="video_sys_0.sys_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="23.4" altera:start="iopll_0.outclk1" altera:end="video_sys_0.hdmi_clock"></altera:connection>
       <altera:connection altera:kind="clock" altera:version="23.4" altera:start="emif_bank3a_hps.s0_axil_clk" altera:end="agilex_5_soc.io96b0_csr_axi_clk"></altera:connection>
       <altera:connection altera:kind="clock" altera:version="23.4" altera:start="emif_bank3a_hps.usr_clk_0" altera:end="agilex_5_soc.io96b0_ch0_axi_clk"></altera:connection>
       <altera:connection altera:kind="interrupt" altera:version="23.4" altera:start="agilex_5_soc.fpga2hps_interrupt" altera:end="peripheral_sys_0.dipsw_irq">
         <altera:connection_parameter altera:parameter_name="irqNumber" altera:parameter_value="1"></altera:connection_parameter>
       </altera:connection>
       <altera:connection altera:kind="interrupt" altera:version="23.4" altera:start="agilex_5_soc.fpga2hps_interrupt" altera:end="video_sys_0.hdmi_dmac">
-        <altera:connection_parameter altera:parameter_name="irqNumber" altera:parameter_value="0"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="irqNumber" altera:parameter_value="4"></altera:connection_parameter>
       </altera:connection>
       <altera:connection altera:kind="interrupt" altera:version="23.4" altera:start="agilex_5_soc.fpga2hps_interrupt" altera:end="peripheral_sys_0.jtag_uart_irq">
         <altera:connection_parameter altera:parameter_name="irqNumber" altera:parameter_value="2"></altera:connection_parameter>
@@ -18190,13 +18419,13 @@ https://fpgasoftware.intel.com/eula.-->
       </altera:connection>
       <altera:connection altera:kind="reset" altera:version="23.4" altera:start="intel_user_rst_clkgate_0.ninit_done" altera:end="fpga_only_master.clk_reset"></altera:connection>
       <altera:connection altera:kind="reset" altera:version="23.4" altera:start="intel_user_rst_clkgate_0.ninit_done" altera:end="f2sdram_only_master.clk_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="intel_user_rst_clkgate_0.ninit_done" altera:end="agilex_5_soc.f2sdram_axi_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="intel_user_rst_clkgate_0.ninit_done" altera:end="agilex_5_soc.hps2fpga_axi_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="intel_user_rst_clkgate_0.ninit_done" altera:end="agilex_5_soc.lwhps2fpga_axi_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="intel_user_rst_clkgate_0.ninit_done" altera:end="iopll_0.reset"></altera:connection>
       <altera:connection altera:kind="reset" altera:version="23.4" altera:start="intel_user_rst_clkgate_0.ninit_done" altera:end="peripheral_sys_0.reset"></altera:connection>
       <altera:connection altera:kind="reset" altera:version="23.4" altera:start="intel_user_rst_clkgate_0.ninit_done" altera:end="video_sys_0.reset"></altera:connection>
       <altera:connection altera:kind="reset" altera:version="23.4" altera:start="intel_user_rst_clkgate_0.ninit_done" altera:end="onchip_sram.reset1"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="reset_in.out_reset" altera:end="bank3a_emif_master.clk_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="reset_in.out_reset" altera:end="agilex_5_soc.f2sdram_axi_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="reset_in.out_reset" altera:end="agilex_5_soc.hps2fpga_axi_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="reset_in.out_reset" altera:end="agilex_5_soc.lwhps2fpga_axi_reset"></altera:connection>
       <altera:connection altera:kind="reset" altera:version="23.4" altera:start="emif_bank3a_hps.s0_axil_rst_n" altera:end="agilex_5_soc.io96b0_csr_axi_rst"></altera:connection>
       <altera:connection altera:kind="reset" altera:version="23.4" altera:start="emif_bank3a_hps.usr_rst_n_0" altera:end="agilex_5_soc.io96b0_ch0_axi_rst"></altera:connection>
     </altera:connections>
@@ -18215,7 +18444,6 @@ https://fpgasoftware.intel.com/eula.-->
       <altera:interface_mapping altera:name="emif_bank3a_hps_emif_oct_0" altera:internal="emif_bank3a_hps.emif_oct_0" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="emif_bank3a_hps_emif_ref_clk_0" altera:internal="emif_bank3a_hps.emif_ref_clk_0" altera:type="clock" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="hdmi" altera:internal="video_sys_0.hdmi" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
-      <altera:interface_mapping altera:name="hdmi_pll_refclk" altera:internal="video_sys_0.hdmi_pll_refclk" altera:type="clock" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="hps_io" altera:internal="agilex_5_soc.hps_io" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="i2c1" altera:internal="agilex_5_soc.I2C1" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="i2c1_scl_i" altera:internal="agilex_5_soc.I2C1_scl_i" altera:type="clock" altera:dir="end"></altera:interface_mapping>
@@ -18227,7 +18455,7 @@ https://fpgasoftware.intel.com/eula.-->
       <altera:interface_mapping altera:name="rgb_led3" altera:internal="peripheral_sys_0.rgb_led3" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="spim0" altera:internal="agilex_5_soc.spim0" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="spim0_sclk_out" altera:internal="agilex_5_soc.spim0_sclk_out" altera:type="clock" altera:dir="start"></altera:interface_mapping>
-      <altera:interface_mapping altera:name="sys_reset" altera:internal="reset_in.in_reset" altera:type="reset" altera:dir="end"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="sys_clk" altera:internal="iopll_0.refclk" altera:type="clock" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="usb31_io" altera:internal="agilex_5_soc.usb31_io" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="usb31_phy_pma_cpu_clk" altera:internal="agilex_5_soc.usb31_phy_pma_cpu_clk" altera:type="clock" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="usb31_phy_reconfig_clk" altera:internal="agilex_5_soc.usb31_phy_reconfig_clk" altera:type="clock" altera:dir="end"></altera:interface_mapping>
@@ -18253,14 +18481,6 @@ https://fpgasoftware.intel.com/eula.-->
             <ipxact:busType vendor="intel" library="intel" name="axi4" version="23.4"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
-            <ipxact:name>peripheral_sys_0.mm_peripheral_bridge_s0</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="23.4"></ipxact:busType>
-          </ipxact:busInterface>
-          <ipxact:busInterface>
-            <ipxact:name>video_sys_0.mm_video_bridge_s0</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="23.4"></ipxact:busType>
-          </ipxact:busInterface>
-          <ipxact:busInterface>
             <ipxact:name>agilex_5_soc.hps2fpga</ipxact:name>
             <ipxact:busType vendor="intel" library="intel" name="axi4" version="23.4"></ipxact:busType>
             <ipxact:master>
@@ -18268,6 +18488,10 @@ https://fpgasoftware.intel.com/eula.-->
                 <ipxact:baseAddress>0x0000_0000</ipxact:baseAddress>
               </ipxact:addressSpaceRef>
             </ipxact:master>
+          </ipxact:busInterface>
+          <ipxact:busInterface>
+            <ipxact:name>peripheral_sys_0.mm_peripheral_bridge_s0</ipxact:name>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="23.4"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>video_sys_0.mm_video_bridge_s0</ipxact:name>
@@ -18278,7 +18502,7 @@ https://fpgasoftware.intel.com/eula.-->
             <ipxact:busType vendor="intel" library="intel" name="axi4" version="23.4"></ipxact:busType>
             <ipxact:master>
               <ipxact:addressSpaceRef addressSpaceRef="agilex_5_soc.lwhps2fpga">
-                <ipxact:baseAddress>0x1000_0000</ipxact:baseAddress>
+                <ipxact:baseAddress>0x0100_0000</ipxact:baseAddress>
               </ipxact:addressSpaceRef>
             </ipxact:master>
           </ipxact:busInterface>
@@ -18330,6 +18554,10 @@ https://fpgasoftware.intel.com/eula.-->
             <ipxact:busType vendor="intel" library="intel" name="avalon" version="23.4"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
+            <ipxact:name>video_sys_0.mm_video_bridge_s0</ipxact:name>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="23.4"></ipxact:busType>
+          </ipxact:busInterface>
+          <ipxact:busInterface>
             <ipxact:name>fpga_only_master.master</ipxact:name>
             <ipxact:busType vendor="intel" library="intel" name="avalon" version="23.4"></ipxact:busType>
             <ipxact:master>
@@ -18361,21 +18589,16 @@ https://fpgasoftware.intel.com/eula.-->
                 <ipxact:addressOffset>0x0000_0000</ipxact:addressOffset>
                 <ipxact:range>0x0000_8000</ipxact:range>
               </ipxact:segment>
-              <ipxact:segment>
-                <ipxact:name>peripheral_sys_0.mm_peripheral_bridge_s0</ipxact:name>
-                <ipxact:addressOffset>0x0100_0000</ipxact:addressOffset>
-                <ipxact:range>0x0100_0000</ipxact:range>
-              </ipxact:segment>
-              <ipxact:segment>
-                <ipxact:name>video_sys_0.mm_video_bridge_s0</ipxact:name>
-                <ipxact:addressOffset>0x1000_0000</ipxact:addressOffset>
-                <ipxact:range>0x0100_0000</ipxact:range>
-              </ipxact:segment>
             </ipxact:segments>
           </ipxact:addressSpace>
           <ipxact:addressSpace>
             <ipxact:name>agilex_5_soc.lwhps2fpga</ipxact:name>
             <ipxact:segments>
+              <ipxact:segment>
+                <ipxact:name>peripheral_sys_0.mm_peripheral_bridge_s0</ipxact:name>
+                <ipxact:addressOffset>0x0100_0000</ipxact:addressOffset>
+                <ipxact:range>0x0100_0000</ipxact:range>
+              </ipxact:segment>
               <ipxact:segment>
                 <ipxact:name>video_sys_0.mm_video_bridge_s0</ipxact:name>
                 <ipxact:addressOffset>0x1000_0000</ipxact:addressOffset>
@@ -18409,7 +18632,7 @@ https://fpgasoftware.intel.com/eula.-->
               <ipxact:segment>
                 <ipxact:name>agilex_5_soc.f2sdram</ipxact:name>
                 <ipxact:addressOffset>0x0000_0000</ipxact:addressOffset>
-                <ipxact:range>0x1_0000_0000</ipxact:range>
+                <ipxact:range>0x4000_0000</ipxact:range>
               </ipxact:segment>
             </ipxact:segments>
           </ipxact:addressSpace>
@@ -18426,6 +18649,11 @@ https://fpgasoftware.intel.com/eula.-->
                 <ipxact:addressOffset>0x0100_0000</ipxact:addressOffset>
                 <ipxact:range>0x0100_0000</ipxact:range>
               </ipxact:segment>
+              <ipxact:segment>
+                <ipxact:name>video_sys_0.mm_video_bridge_s0</ipxact:name>
+                <ipxact:addressOffset>0x1000_0000</ipxact:addressOffset>
+                <ipxact:range>0x0100_0000</ipxact:range>
+              </ipxact:segment>
             </ipxact:segments>
           </ipxact:addressSpace>
           <ipxact:addressSpace>
@@ -18434,7 +18662,7 @@ https://fpgasoftware.intel.com/eula.-->
               <ipxact:segment>
                 <ipxact:name>agilex_5_soc.f2sdram</ipxact:name>
                 <ipxact:addressOffset>0x0000_0000</ipxact:addressOffset>
-                <ipxact:range>0x1_0000_0000</ipxact:range>
+                <ipxact:range>0x4000_0000</ipxact:range>
               </ipxact:segment>
             </ipxact:segments>
           </ipxact:addressSpace>

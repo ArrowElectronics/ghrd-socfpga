@@ -4482,7 +4482,7 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:vectors>
             <ipxact:vector>
               <ipxact:left>0</ipxact:left>
-              <ipxact:right>31</ipxact:right>
+              <ipxact:right>29</ipxact:right>
             </ipxact:vector>
           </ipxact:vectors>
           <ipxact:wireTypeDefs>
@@ -4784,7 +4784,7 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:vectors>
             <ipxact:vector>
               <ipxact:left>0</ipxact:left>
-              <ipxact:right>31</ipxact:right>
+              <ipxact:right>29</ipxact:right>
             </ipxact:vector>
           </ipxact:vectors>
           <ipxact:wireTypeDefs>
@@ -7090,7 +7090,7 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:vectors>
             <ipxact:vector>
               <ipxact:left>0</ipxact:left>
-              <ipxact:right>31</ipxact:right>
+              <ipxact:right>29</ipxact:right>
             </ipxact:vector>
           </ipxact:vectors>
           <ipxact:wireTypeDefs>
@@ -7273,7 +7273,7 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:vectors>
             <ipxact:vector>
               <ipxact:left>0</ipxact:left>
-              <ipxact:right>31</ipxact:right>
+              <ipxact:right>29</ipxact:right>
             </ipxact:vector>
           </ipxact:vectors>
           <ipxact:wireTypeDefs>
@@ -8985,7 +8985,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="H2F_Address_Width" type="int">
           <ipxact:name>H2F_Address_Width</ipxact:name>
           <ipxact:displayName>Interface Address Width</ipxact:displayName>
-          <ipxact:value>32</ipxact:value>
+          <ipxact:value>30</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="LWH2F_Width" type="int">
           <ipxact:name>LWH2F_Width</ipxact:name>
@@ -10405,7 +10405,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="f2sdram_address_width" type="int">
           <ipxact:name>f2sdram_address_width</ipxact:name>
           <ipxact:displayName>Interface Address Width</ipxact:displayName>
-          <ipxact:value>32</ipxact:value>
+          <ipxact:value>30</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="f2s_mode" type="string">
           <ipxact:name>f2s_mode</ipxact:name>
@@ -10629,7 +10629,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;name&gt;hps2fpga_awaddr&lt;/name&gt;
                     &lt;role&gt;awaddr&lt;/role&gt;
                     &lt;direction&gt;Output&lt;/direction&gt;
-                    &lt;width&gt;32&lt;/width&gt;
+                    &lt;width&gt;30&lt;/width&gt;
                     &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                     &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                     &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -10800,7 +10800,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;name&gt;hps2fpga_araddr&lt;/name&gt;
                     &lt;role&gt;araddr&lt;/role&gt;
                     &lt;direction&gt;Output&lt;/direction&gt;
-                    &lt;width&gt;32&lt;/width&gt;
+                    &lt;width&gt;30&lt;/width&gt;
                     &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                     &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                     &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -13507,7 +13507,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;name&gt;f2sdram_araddr&lt;/name&gt;
                     &lt;role&gt;araddr&lt;/role&gt;
                     &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;32&lt;/width&gt;
+                    &lt;width&gt;30&lt;/width&gt;
                     &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                     &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                     &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -13606,7 +13606,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;name&gt;f2sdram_awaddr&lt;/name&gt;
                     &lt;role&gt;awaddr&lt;/role&gt;
                     &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;32&lt;/width&gt;
+                    &lt;width&gt;30&lt;/width&gt;
                     &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                     &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                     &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -14827,11 +14827,11 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;consumedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;ADDRESS_MAP&lt;/key&gt;
-                        &lt;value&gt;&amp;lt;address-map&amp;gt;&amp;lt;slave name='f2sdram' start='0x0' end='0x100000000' datawidth='64' /&amp;gt;&amp;lt;/address-map&amp;gt;&lt;/value&gt;
+                        &lt;value&gt;&amp;lt;address-map&amp;gt;&amp;lt;slave name='f2sdram' start='0x0' end='0x40000000' datawidth='64' /&amp;gt;&amp;lt;/address-map&amp;gt;&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;ADDRESS_WIDTH&lt;/key&gt;
-                        &lt;value&gt;32&lt;/value&gt;
+                        &lt;value&gt;30&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;MAX_SLAVE_DATA_WIDTH&lt;/key&gt;
