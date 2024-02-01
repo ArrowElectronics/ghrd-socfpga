@@ -61,6 +61,51 @@ https://fpgasoftware.intel.com/eula.-->
       </ipxact:parameters>
     </ipxact:busInterface>
     <ipxact:busInterface>
+      <ipxact:name>hps_gp</ipxact:name>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="23.4"></ipxact:busType>
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="23.4"></ipxact:abstractionRef>
+          <ipxact:portMaps>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>gp_in</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>hps_gp_gp_in</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>gp_out</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>hps_gp_gp_out</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:slave></ipxact:slave>
+      <ipxact:parameters>
+        <ipxact:parameter parameterId="associatedClock" type="string">
+          <ipxact:name>associatedClock</ipxact:name>
+          <ipxact:displayName>associatedClock</ipxact:displayName>
+          <ipxact:value></ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="associatedReset" type="string">
+          <ipxact:name>associatedReset</ipxact:name>
+          <ipxact:displayName>associatedReset</ipxact:displayName>
+          <ipxact:value></ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="prSafe" type="bit">
+          <ipxact:name>prSafe</ipxact:name>
+          <ipxact:displayName>Partial Reconfiguration Safe</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+      </ipxact:parameters>
+    </ipxact:busInterface>
+    <ipxact:busInterface>
       <ipxact:name>hps2fpga_axi_clock</ipxact:name>
       <ipxact:busType vendor="intel" library="intel" name="clock" version="23.4"></ipxact:busType>
       <ipxact:abstractionTypes>
@@ -1703,51 +1748,6 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:name>ptfSchematicName</ipxact:name>
           <ipxact:displayName>PTF schematic name</ipxact:displayName>
           <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-      </ipxact:parameters>
-    </ipxact:busInterface>
-    <ipxact:busInterface>
-      <ipxact:name>h2f_warm_reset_handshake</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="conduit" version="23.4"></ipxact:busType>
-      <ipxact:abstractionTypes>
-        <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="23.4"></ipxact:abstractionRef>
-          <ipxact:portMaps>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>reset_req</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>h2f_warm_reset_handshake_reset_req</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>reset_ack</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>h2f_warm_reset_handshake_reset_ack</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-          </ipxact:portMaps>
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-      <ipxact:slave></ipxact:slave>
-      <ipxact:parameters>
-        <ipxact:parameter parameterId="associatedClock" type="string">
-          <ipxact:name>associatedClock</ipxact:name>
-          <ipxact:displayName>associatedClock</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="associatedReset" type="string">
-          <ipxact:name>associatedReset</ipxact:name>
-          <ipxact:displayName>associatedReset</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="prSafe" type="bit">
-          <ipxact:name>prSafe</ipxact:name>
-          <ipxact:displayName>Partial Reconfiguration Safe</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
         </ipxact:parameter>
       </ipxact:parameters>
     </ipxact:busInterface>
@@ -4432,6 +4432,42 @@ https://fpgasoftware.intel.com/eula.-->
         </ipxact:wire>
       </ipxact:port>
       <ipxact:port>
+        <ipxact:name>hps_gp_gp_in</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>0</ipxact:left>
+              <ipxact:right>31</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>hps_gp_gp_out</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>0</ipxact:left>
+              <ipxact:right>31</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
         <ipxact:name>hps2fpga_axi_clock_clk</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
@@ -6118,32 +6154,6 @@ https://fpgasoftware.intel.com/eula.-->
         </ipxact:wire>
       </ipxact:port>
       <ipxact:port>
-        <ipxact:name>h2f_warm_reset_handshake_reset_req</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>h2f_warm_reset_handshake_reset_ack</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
         <ipxact:name>h2f_cold_reset_reset_n</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
@@ -7090,7 +7100,7 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:vectors>
             <ipxact:vector>
               <ipxact:left>0</ipxact:left>
-              <ipxact:right>29</ipxact:right>
+              <ipxact:right>31</ipxact:right>
             </ipxact:vector>
           </ipxact:vectors>
           <ipxact:wireTypeDefs>
@@ -7273,7 +7283,7 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:vectors>
             <ipxact:vector>
               <ipxact:left>0</ipxact:left>
-              <ipxact:right>29</ipxact:right>
+              <ipxact:right>31</ipxact:right>
             </ipxact:vector>
           </ipxact:vectors>
           <ipxact:wireTypeDefs>
@@ -8800,7 +8810,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="GP_Enable" type="bit">
           <ipxact:name>GP_Enable</ipxact:name>
           <ipxact:displayName>Enable GP signals</ipxact:displayName>
-          <ipxact:value>false</ipxact:value>
+          <ipxact:value>true</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="Debug_APB_Enable" type="bit">
           <ipxact:name>Debug_APB_Enable</ipxact:name>
@@ -9385,7 +9395,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="Rst_hps_warm_en" type="bit">
           <ipxact:name>Rst_hps_warm_en</ipxact:name>
           <ipxact:displayName>Enable HPS Warm Reset</ipxact:displayName>
-          <ipxact:value>true</ipxact:value>
+          <ipxact:value>false</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="Rst_h2f_cold_en" type="bit">
           <ipxact:name>Rst_h2f_cold_en</ipxact:name>
@@ -10405,7 +10415,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="f2sdram_address_width" type="int">
           <ipxact:name>f2sdram_address_width</ipxact:name>
           <ipxact:displayName>Interface Address Width</ipxact:displayName>
-          <ipxact:value>30</ipxact:value>
+          <ipxact:value>32</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="f2s_mode" type="string">
           <ipxact:name>f2s_mode</ipxact:name>
@@ -10543,6 +10553,48 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;entry&gt;
                         &lt;key&gt;synchronousEdges&lt;/key&gt;
                         &lt;value&gt;NONE&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/parameterValueMap&gt;
+            &lt;/parameters&gt;
+        &lt;/interface&gt;
+        &lt;interface&gt;
+            &lt;name&gt;hps_gp&lt;/name&gt;
+            &lt;type&gt;conduit&lt;/type&gt;
+            &lt;isStart&gt;false&lt;/isStart&gt;
+            &lt;ports&gt;
+                &lt;port&gt;
+                    &lt;name&gt;hps_gp_gp_in&lt;/name&gt;
+                    &lt;role&gt;gp_in&lt;/role&gt;
+                    &lt;direction&gt;Input&lt;/direction&gt;
+                    &lt;width&gt;32&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+                &lt;port&gt;
+                    &lt;name&gt;hps_gp_gp_out&lt;/name&gt;
+                    &lt;role&gt;gp_out&lt;/role&gt;
+                    &lt;direction&gt;Output&lt;/direction&gt;
+                    &lt;width&gt;32&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+            &lt;/ports&gt;
+            &lt;assignments&gt;
+                &lt;assignmentValueMap/&gt;
+            &lt;/assignments&gt;
+            &lt;parameters&gt;
+                &lt;parameterValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedClock&lt;/key&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedReset&lt;/key&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;prSafe&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/parameterValueMap&gt;
             &lt;/parameters&gt;
@@ -12183,48 +12235,6 @@ https://fpgasoftware.intel.com/eula.-->
             &lt;/parameters&gt;
         &lt;/interface&gt;
         &lt;interface&gt;
-            &lt;name&gt;h2f_warm_reset_handshake&lt;/name&gt;
-            &lt;type&gt;conduit&lt;/type&gt;
-            &lt;isStart&gt;false&lt;/isStart&gt;
-            &lt;ports&gt;
-                &lt;port&gt;
-                    &lt;name&gt;h2f_warm_reset_handshake_reset_req&lt;/name&gt;
-                    &lt;role&gt;reset_req&lt;/role&gt;
-                    &lt;direction&gt;Output&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-                &lt;port&gt;
-                    &lt;name&gt;h2f_warm_reset_handshake_reset_ack&lt;/name&gt;
-                    &lt;role&gt;reset_ack&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-            &lt;/ports&gt;
-            &lt;assignments&gt;
-                &lt;assignmentValueMap/&gt;
-            &lt;/assignments&gt;
-            &lt;parameters&gt;
-                &lt;parameterValueMap&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedClock&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedReset&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;prSafe&lt;/key&gt;
-                        &lt;value&gt;false&lt;/value&gt;
-                    &lt;/entry&gt;
-                &lt;/parameterValueMap&gt;
-            &lt;/parameters&gt;
-        &lt;/interface&gt;
-        &lt;interface&gt;
             &lt;name&gt;h2f_cold_reset&lt;/name&gt;
             &lt;type&gt;reset&lt;/type&gt;
             &lt;isStart&gt;true&lt;/isStart&gt;
@@ -13507,7 +13517,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;name&gt;f2sdram_araddr&lt;/name&gt;
                     &lt;role&gt;araddr&lt;/role&gt;
                     &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;30&lt;/width&gt;
+                    &lt;width&gt;32&lt;/width&gt;
                     &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                     &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                     &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -13606,7 +13616,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;name&gt;f2sdram_awaddr&lt;/name&gt;
                     &lt;role&gt;awaddr&lt;/role&gt;
                     &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;30&lt;/width&gt;
+                    &lt;width&gt;32&lt;/width&gt;
                     &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                     &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                     &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -14827,11 +14837,11 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;consumedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;ADDRESS_MAP&lt;/key&gt;
-                        &lt;value&gt;&amp;lt;address-map&amp;gt;&amp;lt;slave name='f2sdram' start='0x0' end='0x40000000' datawidth='64' /&amp;gt;&amp;lt;/address-map&amp;gt;&lt;/value&gt;
+                        &lt;value&gt;&amp;lt;address-map&amp;gt;&amp;lt;slave name='f2sdram' start='0x0' end='0x100000000' datawidth='64' /&amp;gt;&amp;lt;/address-map&amp;gt;&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;ADDRESS_WIDTH&lt;/key&gt;
-                        &lt;value&gt;30&lt;/value&gt;
+                        &lt;value&gt;32&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;MAX_SLAVE_DATA_WIDTH&lt;/key&gt;
@@ -15039,10 +15049,7 @@ https://fpgasoftware.intel.com/eula.-->
       <altera:interface_mapping altera:name="h2f_user1_clk" altera:internal="intel_agilex_5_soc_0.h2f_user1_clk" altera:type="clock" altera:dir="start">
         <altera:port_mapping altera:name="h2f_user1_clk_clk" altera:internal="h2f_user1_clk_clk"></altera:port_mapping>
       </altera:interface_mapping>
-      <altera:interface_mapping altera:name="h2f_warm_reset_handshake" altera:internal="intel_agilex_5_soc_0.h2f_warm_reset_handshake" altera:type="conduit" altera:dir="end">
-        <altera:port_mapping altera:name="h2f_warm_reset_handshake_reset_ack" altera:internal="h2f_warm_reset_handshake_reset_ack"></altera:port_mapping>
-        <altera:port_mapping altera:name="h2f_warm_reset_handshake_reset_req" altera:internal="h2f_warm_reset_handshake_reset_req"></altera:port_mapping>
-      </altera:interface_mapping>
+      <altera:interface_mapping altera:name="h2f_warm_reset_handshake" altera:internal="intel_agilex_5_soc_0.h2f_warm_reset_handshake"></altera:interface_mapping>
       <altera:interface_mapping altera:name="hps2fpga" altera:internal="intel_agilex_5_soc_0.hps2fpga" altera:type="axi4" altera:dir="start">
         <altera:port_mapping altera:name="hps2fpga_araddr" altera:internal="hps2fpga_araddr"></altera:port_mapping>
         <altera:port_mapping altera:name="hps2fpga_arburst" altera:internal="hps2fpga_arburst"></altera:port_mapping>
@@ -15085,6 +15092,10 @@ https://fpgasoftware.intel.com/eula.-->
       </altera:interface_mapping>
       <altera:interface_mapping altera:name="hps2fpga_axi_reset" altera:internal="intel_agilex_5_soc_0.hps2fpga_axi_reset" altera:type="reset" altera:dir="end">
         <altera:port_mapping altera:name="hps2fpga_axi_reset_reset_n" altera:internal="hps2fpga_axi_reset_reset_n"></altera:port_mapping>
+      </altera:interface_mapping>
+      <altera:interface_mapping altera:name="hps_gp" altera:internal="intel_agilex_5_soc_0.hps_gp" altera:type="conduit" altera:dir="end">
+        <altera:port_mapping altera:name="hps_gp_gp_in" altera:internal="hps_gp_gp_in"></altera:port_mapping>
+        <altera:port_mapping altera:name="hps_gp_gp_out" altera:internal="hps_gp_gp_out"></altera:port_mapping>
       </altera:interface_mapping>
       <altera:interface_mapping altera:name="hps_io" altera:internal="intel_agilex_5_soc_0.hps_io" altera:type="conduit" altera:dir="end">
         <altera:port_mapping altera:name="hps_io_emac2_rx_clk" altera:internal="hps_io_emac2_rx_clk"></altera:port_mapping>
