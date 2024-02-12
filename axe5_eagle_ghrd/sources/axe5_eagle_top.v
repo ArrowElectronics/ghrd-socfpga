@@ -18,10 +18,10 @@
 `define wRGB_LED3
 `define wFAB_PB
 `define wFAB_DIPSW
-//`define wFAB_I2C1
+`define wFAB_I2C1
 `define wFAB_QSPI
 `define wADDA
-//`define wHDMI
+`define wHDMI
 //`define wLPDDR4B
 `define wLPDDR4A //EMIF HPS
 //`define wFMC
@@ -346,7 +346,6 @@ module axe5_eagle_top (
         .sys_clk_clk              (REFCLK_3B0_p),
 		  //.osc_clock_bridge_out_clk (osc_clock_bridge_out),
       `ifdef wHDMI
-        .hdmi_pll_refclk_clk      (REFCLK_3B0_p),
         .hdmi_h_clk               (HDMI_CLK),
         .hdmi_h16_hsync           (),
         .hdmi_h16_vsync           (),
