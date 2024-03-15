@@ -1,3 +1,8 @@
+// 
+// SPDX-FileCopyrightText: Copyright (C) 2024 Arrow Electronics, Inc. 
+// SPDX-License-Identifier: MIT-0 
+//
+
 `timescale 1ns/10ps
 
 `define wHPS_UART0
