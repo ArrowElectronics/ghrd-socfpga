@@ -19117,7 +19117,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;consumedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;21&lt;/value&gt;
+                            &lt;value&gt;20&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
@@ -19125,7 +19125,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;21&lt;/value&gt;
+                            &lt;value&gt;20&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/consumedSystemInfos&gt;
                 &lt;/value&gt;
@@ -20604,7 +20604,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;consumedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;21&lt;/value&gt;
+                            &lt;value&gt;20&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
@@ -20612,7 +20612,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;21&lt;/value&gt;
+                            &lt;value&gt;20&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/consumedSystemInfos&gt;
                 &lt;/value&gt;
@@ -20660,7 +20660,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;consumedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;20&lt;/value&gt;
+                            &lt;value&gt;19&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
@@ -20668,7 +20668,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;20&lt;/value&gt;
+                            &lt;value&gt;19&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/consumedSystemInfos&gt;
                 &lt;/value&gt;
@@ -20995,14 +20995,6 @@ https://fpgasoftware.intel.com/eula.-->
       <altera:connection altera:kind="interrupt" altera:version="23.4" altera:start="agilex_5_soc.fpga2hps_interrupt" altera:end="peripheral_sys_0.pb_irq">
         <altera:connection_parameter altera:parameter_name="irqNumber" altera:parameter_value="3"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="agilex_5_soc.h2f_reset" altera:end="fpga_only_master.clk_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="agilex_5_soc.h2f_reset" altera:end="f2sdram_only_master.clk_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="agilex_5_soc.h2f_reset" altera:end="agilex_5_soc.f2sdram_axi_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="agilex_5_soc.h2f_reset" altera:end="agilex_5_soc.hps2fpga_axi_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="agilex_5_soc.h2f_reset" altera:end="agilex_5_soc.lwhps2fpga_axi_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="agilex_5_soc.h2f_reset" altera:end="peripheral_sys_0.reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="agilex_5_soc.h2f_reset" altera:end="video_sys_0.reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="23.4" altera:start="agilex_5_soc.h2f_reset" altera:end="onchip_sram.reset1"></altera:connection>
       <altera:connection altera:kind="reset" altera:version="23.4" altera:start="intel_user_rst_clkgate_0.ninit_done" altera:end="fpga_only_master.clk_reset"></altera:connection>
       <altera:connection altera:kind="reset" altera:version="23.4" altera:start="intel_user_rst_clkgate_0.ninit_done" altera:end="f2sdram_only_master.clk_reset"></altera:connection>
       <altera:connection altera:kind="reset" altera:version="23.4" altera:start="intel_user_rst_clkgate_0.ninit_done" altera:end="agilex_5_soc.f2sdram_axi_reset"></altera:connection>
