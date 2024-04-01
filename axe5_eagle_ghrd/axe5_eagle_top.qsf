@@ -62,68 +62,70 @@ set_location_assignment PIN_CH132 -to LED3G
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED3G -entity axe5_eagle_top
 set_location_assignment PIN_CG135 -to LED3B
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED3B -entity axe5_eagle_top
-set_location_assignment PIN_BH19 -to HDMI_SPDIF
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_SPDIF -entity axe5_eagle_top
-set_location_assignment PIN_BE25 -to HDMI_VS
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_VS -entity axe5_eagle_top
-set_location_assignment PIN_BF32 -to HDMI_HS
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_HS -entity axe5_eagle_top
-set_location_assignment PIN_BK31 -to HDMI_CLK
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CLK -entity axe5_eagle_top
-set_location_assignment PIN_BF36 -to HDMI_DE
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_DE -entity axe5_eagle_top
-set_location_assignment PIN_BF16 -to HDMI_INT
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_INT -entity axe5_eagle_top
-set_location_assignment PIN_BF29 -to CT_HPD
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to CT_HPD -entity axe5_eagle_top
-set_location_assignment PIN_BU28 -to HDMI_D[0]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[0] -entity axe5_eagle_top
-set_location_assignment PIN_BP31 -to HDMI_D[1]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[1] -entity axe5_eagle_top
-set_location_assignment PIN_BR28 -to HDMI_D[2]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[2] -entity axe5_eagle_top
-set_location_assignment PIN_BR31 -to HDMI_D[3]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[3] -entity axe5_eagle_top
-set_location_assignment PIN_BU31 -to HDMI_D[4]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[4] -entity axe5_eagle_top
-set_location_assignment PIN_BM28 -to HDMI_D[5]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[5] -entity axe5_eagle_top
-set_location_assignment PIN_BW28 -to HDMI_D[6]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[6] -entity axe5_eagle_top
-set_location_assignment PIN_BM31 -to HDMI_D[7]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[7] -entity axe5_eagle_top
-set_location_assignment PIN_BP22 -to HDMI_D[8]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[8] -entity axe5_eagle_top
-set_location_assignment PIN_BK28 -to HDMI_D[9]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[9] -entity axe5_eagle_top
-set_location_assignment PIN_BR22 -to HDMI_D[10]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[10] -entity axe5_eagle_top
-set_location_assignment PIN_CH12 -to HDMI_D[11]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[11] -entity axe5_eagle_top
-set_location_assignment PIN_BU22 -to HDMI_D[12]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[12] -entity axe5_eagle_top
-set_location_assignment PIN_BW19 -to HDMI_D[13]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[13] -entity axe5_eagle_top
-set_location_assignment PIN_BH28 -to HDMI_D[14]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[14] -entity axe5_eagle_top
-set_location_assignment PIN_BM22 -to HDMI_D[15]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[15] -entity axe5_eagle_top
-set_location_assignment PIN_CF12 -to HDMI_D[16]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[16] -entity axe5_eagle_top
-set_location_assignment PIN_BK19 -to HDMI_D[17]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[17] -entity axe5_eagle_top
-set_location_assignment PIN_CF9 -to HDMI_D[18]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[18] -entity axe5_eagle_top
-set_location_assignment PIN_BF21 -to HDMI_D[19]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[19] -entity axe5_eagle_top
-set_location_assignment PIN_BE21 -to HDMI_D[20]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[20] -entity axe5_eagle_top
-set_location_assignment PIN_BE43 -to HDMI_D[21]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[21] -entity axe5_eagle_top
-set_location_assignment PIN_BF40 -to HDMI_D[22]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[22] -entity axe5_eagle_top
-set_location_assignment PIN_BE29 -to HDMI_D[23]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[23] -entity axe5_eagle_top
+set_location_assignment PIN_CF9 -to HDMI_SPDIF
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_SPDIF
+set_location_assignment PIN_BH19 -to HDMI_VS
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_VS
+set_location_assignment PIN_CF12 -to HDMI_HS
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_HS
+set_location_assignment PIN_BK31  -to HDMI_CLK
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CLK
+set_location_assignment PIN_BK19 -to HDMI_DE
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_DE
+set_location_assignment PIN_BF16  -to HDMI_INT
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_INT
+set_location_assignment PIN_BW19 -to HDMI_CT_HPD
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CT_HPD -entity axe5_eagle_top
+set_location_assignment PIN_BF25 -to HDMI_CEC_CLK
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CEC_CLK -entity axe5_eagle_top
+set_location_assignment PIN_BF32 -to HDMI_D[0]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[0]
+set_location_assignment PIN_CH12 -to HDMI_D[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[1]
+set_location_assignment PIN_BM22 -to HDMI_D[2]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[2]
+set_location_assignment PIN_BF21 -to HDMI_D[3]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[3]
+set_location_assignment PIN_BE21 -to HDMI_D[4]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[4]
+set_location_assignment PIN_BP22 -to HDMI_D[5]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[5]
+set_location_assignment PIN_BR22 -to HDMI_D[6]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[6]
+set_location_assignment PIN_BE25 -to HDMI_D[7]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[7]
+set_location_assignment PIN_BU22 -to HDMI_D[8]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[8]
+set_location_assignment PIN_BW28 -to HDMI_D[9]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[9]
+set_location_assignment PIN_BU28 -to HDMI_D[10]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[10]
+set_location_assignment PIN_BM31 -to HDMI_D[11]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[11]
+set_location_assignment PIN_BR28 -to HDMI_D[12]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[12]
+set_location_assignment PIN_BM28 -to HDMI_D[13]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[13]
+set_location_assignment PIN_BK28 -to HDMI_D[14]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[14]
+set_location_assignment PIN_BH28 -to HDMI_D[15]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[15]
+set_location_assignment PIN_BF36 -to HDMI_D[16]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[16]
+set_location_assignment PIN_BE43 -to HDMI_D[17]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[17]
+set_location_assignment PIN_BU31 -to HDMI_D[18]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[18]
+set_location_assignment PIN_BP31 -to HDMI_D[19]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[19]
+set_location_assignment PIN_BR31 -to HDMI_D[20]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[20]
+set_location_assignment PIN_BF29 -to HDMI_D[21]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[21]
+set_location_assignment PIN_BF40  -to HDMI_D[22]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[22]
+set_location_assignment PIN_BE29  -to HDMI_D[23]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[23]
 set_location_assignment PIN_R134 -to HPS_LED0
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_LED0 -entity axe5_eagle_top
 set_location_assignment PIN_AG115 -to HPS_LED1
@@ -370,46 +372,38 @@ set_global_assignment -name HPS_DAP_NO_CERTIFICATE on
 set_location_assignment PIN_BU118 -to USB_HUB_RST -comment IO_BANK_5A
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to USB_HUB_RST
 set_global_assignment -name VERILOG_FILE ../sources/axe5_eagle_top.v
+set_global_assignment -name TCL_SCRIPT_FILE sources/agx5e065_pin_assignment.tcl
+set_global_assignment -name SDC_FILE axe5_eagle_top.sdc
 set_global_assignment -name QIP_FILE ip/gts_reset_seq/gts_reset_seq.qip
 set_global_assignment -name QIP_FILE ip/gmii2rgmii_pll/gmii2rgmii_pll.qip
-set_global_assignment -name QSYS_FILE video_sys.qsys
+set_global_assignment -name QSYS_FILE ghrd_system.qsys
+set_global_assignment -name QSYS_FILE hps_system.qsys
 set_global_assignment -name QSYS_FILE peripheral_sys.qsys
-set_global_assignment -name QSYS_FILE ghrd_hps_system.qsys
+set_global_assignment -name QSYS_FILE video_sys.qsys
 set_global_assignment -name IP_FILE ip/gmii2rgmii/gmii2rgmii.ip
-set_global_assignment -name IP_FILE ip/ghrd_hps_system/ghrd_hps_system_master_1.ip
-set_global_assignment -name IP_FILE ip/ghrd_hps_system/ghrd_hps_system_intel_agilex_5_soc_0.ip
-set_global_assignment -name IP_FILE ip/ghrd_hps_system/ghrd_hps_system_intel_onchip_memory_0.ip
-set_global_assignment -name IP_FILE ip/ghrd_hps_system/ghrd_hps_system_master_2.ip
-set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_pio_1.ip
-set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_pio_0.ip
+set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_clock_in.ip
+set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_reset_in.ip
+set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_mm_bridge_0.ip
 set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_sysid_qsys_0.ip
 set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_jtag_uart_0.ip
-set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_pio_5.ip
-set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_pio_4.ip
-set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_pio_3.ip
-set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_clock_in.ip
+set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_pio_0.ip
+set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_pio_1.ip
 set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_pio_2.ip
-set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_mm_bridge_0.ip
-set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_reset_in.ip
+set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_pio_3.ip
+set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_pio_4.ip
+set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_pio_5.ip
+set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_pio_6.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_clock_in.ip
+set_global_assignment -name IP_FILE ip/video_sys/video_sys_reset_in.ip
+set_global_assignment -name IP_FILE ip/video_sys/video_sys_iopll_0.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_mm_bridge_1.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_axi_dmac_0.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_axi_hdmi_tx_0.ip
-set_global_assignment -name IP_FILE ip/video_sys/video_sys_reset_in.ip
-set_global_assignment -name TCL_SCRIPT_FILE sources/agx5e065_pin_assignment.tcl
-set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_pio_6.ip
-set_global_assignment -name IP_FILE ip/ghrd_hps_system/ghrd_hps_system_emif_hps_ph2_0.ip
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
-set_global_assignment -name SIGNALTAP_FILE stp1.stp
-set_global_assignment -name IP_FILE ip/ghrd_hps_system/ghrd_hps_system_intel_user_rst_clkgate_0.ip
 set_global_assignment -name USE_INIT_DONE SDM_IO0
 set_global_assignment -name USE_HPS_COLD_RESET SDM_IO10
 set_global_assignment -name BOARD default
-set_global_assignment -name IP_FILE ip/ghrd_hps_system/ghrd_hps_system_iopll_0.ip
-set_global_assignment -name IP_FILE ip/video_sys/video_sys_clock_bridge_0.ip
-set_global_assignment -name IP_FILE ip/ghrd_hps_system/ghrd_hps_system_s10_configuration_clock_0.ip
-set_global_assignment -name IP_FILE ip/ghrd_hps_system/ghrd_hps_system_f2sdram_adapter_64_0.ip
 
 set_location_assignment PIN_F4 -to MUX_I2C_SDA
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to MUX_I2C_SDA -entity axe5_eagle_top
@@ -417,3 +411,19 @@ set_location_assignment PIN_D4 -to MUX_I2C_SCL
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to MUX_I2C_SCL -entity axe5_eagle_top
 set_location_assignment PIN_K4 -to MUX_I2C_INT
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to MUX_I2C_INT -entity axe5_eagle_top
+set_global_assignment -name IP_FILE ip/hps_signal_buffer/hps_signal_buffer.ip
+set_instance_assignment -name PARTITION_COLOUR 4291867135 -to axe5_eagle_top -entity axe5_eagle_top
+set_instance_assignment -name PARTITION_COLOUR 4289714943 -to auto_fab_0 -entity axe5_eagle_top
+set_global_assignment -name IP_FILE ip/hps_system/hps_system_reset_in.ip
+set_global_assignment -name IP_FILE ip/hps_system/hps_system_intel_agilex_5_soc_0.ip
+set_global_assignment -name IP_FILE ip/hps_system/hps_system_emif_hps_ph2_0.ip
+set_global_assignment -name IP_FILE ip/hps_system/hps_system_f2sdram_adapter_64_0.ip
+set_global_assignment -name IP_FILE ip/hps_system/hps_system_clock_bridge_0.ip
+set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_clock_in.ip
+set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_s10_configuration_clock_0.ip
+set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_intel_user_rst_clkgate_0.ip
+set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_master_0.ip
+set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_master_1.ip
+set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_iopll_0.ip
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
+set_global_assignment -name IP_FILE ip/hps_system/hps_system_master_0.ip

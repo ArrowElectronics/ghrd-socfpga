@@ -14,7 +14,7 @@ refer to the applicable agreement for further details, at
 https://fpgasoftware.intel.com/eula.-->
 <ipxact:component xmlns:altera="http://www.altera.com/XMLSchema/IPXact2014/extensions" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
   <ipxact:vendor>RSF</ipxact:vendor>
-  <ipxact:library>ghrd_hps_system_f2sdram_adapter_64_0</ipxact:library>
+  <ipxact:library>hps_system_f2sdram_adapter_64_0</ipxact:library>
   <ipxact:name>f2sdram_adapter_64_0</ipxact:name>
   <ipxact:version>1.0</ipxact:version>
   <ipxact:busInterfaces>
@@ -2488,7 +2488,7 @@ https://fpgasoftware.intel.com/eula.-->
   <ipxact:vendorExtensions>
     <altera:entity_info>
       <ipxact:vendor>RSF</ipxact:vendor>
-      <ipxact:library>ghrd_hps_system_f2sdram_adapter_64_0</ipxact:library>
+      <ipxact:library>hps_system_f2sdram_adapter_64_0</ipxact:library>
       <ipxact:name>f2sdram_adapter_64</ipxact:name>
       <ipxact:version>1.0</ipxact:version>
     </altera:entity_info>

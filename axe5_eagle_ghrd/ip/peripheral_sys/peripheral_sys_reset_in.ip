@@ -20,10 +20,10 @@ https://fpgasoftware.intel.com/eula.-->
   <ipxact:busInterfaces>
     <ipxact:busInterface>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="clock" version="23.2"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="clock" version="23.4"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="23.2"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="23.4"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -57,10 +57,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>in_reset</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="reset" version="23.2"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="reset" version="23.4"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="23.2"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="23.4"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -89,10 +89,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>out_reset</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="reset" version="23.2"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="reset" version="23.4"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="23.2"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="23.4"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -206,7 +206,7 @@ https://fpgasoftware.intel.com/eula.-->
         </ipxact:parameter>
         <ipxact:parameter parameterId="SYNCHRONOUS_EDGES" type="string">
           <ipxact:name>SYNCHRONOUS_EDGES</ipxact:name>
-          <ipxact:displayName>Synchronous edges</ipxact:displayName>
+          <ipxact:displayName>Input Synchronous edges</ipxact:displayName>
           <ipxact:value>deassert</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="NUM_RESET_OUTPUTS" type="int">
@@ -227,7 +227,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="AUTO_CLK_CLOCK_RATE" type="longint">
           <ipxact:name>AUTO_CLK_CLOCK_RATE</ipxact:name>
           <ipxact:displayName>Auto CLOCK_RATE</ipxact:displayName>
-          <ipxact:value>50000000</ipxact:value>
+          <ipxact:value>250000000</ipxact:value>
         </ipxact:parameter>
       </ipxact:parameters>
     </altera:altera_module_parameters>
@@ -406,7 +406,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                        &lt;value&gt;50000000&lt;/value&gt;
+                        &lt;value&gt;250000000&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;
@@ -414,6 +414,11 @@ https://fpgasoftware.intel.com/eula.-->
         &lt;/entry&gt;
     &lt;/connPtSystemInfos&gt;
 &lt;/systemInfosDefinition&gt;</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="dflBitArray" type="string">
+          <ipxact:name>dflBitArray</ipxact:name>
+          <ipxact:displayName>dflBitArray</ipxact:displayName>
+          <ipxact:value></ipxact:value>
         </ipxact:parameter>
       </ipxact:parameters>
     </altera:altera_system_parameters>

@@ -2143,12 +2143,12 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="CLK_DOMAIN_REQ" type="int">
           <ipxact:name>CLK_DOMAIN_REQ</ipxact:name>
           <ipxact:displayName>CLK_DOMAIN_REQ</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
+          <ipxact:value>4</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="CLK_DOMAIN_SRC_AXI" type="int">
           <ipxact:name>CLK_DOMAIN_SRC_AXI</ipxact:name>
           <ipxact:displayName>CLK_DOMAIN_SRC_AXI</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
+          <ipxact:value>4</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="CLK_DOMAIN_SRC_SAXI" type="int">
           <ipxact:name>CLK_DOMAIN_SRC_SAXI</ipxact:name>
@@ -2168,7 +2168,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="CLK_DOMAIN_DEST_SAXI" type="int">
           <ipxact:name>CLK_DOMAIN_DEST_SAXI</ipxact:name>
           <ipxact:displayName>CLK_DOMAIN_DEST_SAXI</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
+          <ipxact:value>4</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="CLK_DOMAIN_DEST_FIFO" type="int">
           <ipxact:name>CLK_DOMAIN_DEST_FIFO</ipxact:name>
@@ -3280,7 +3280,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
+                        &lt;value&gt;4&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;
@@ -3293,7 +3293,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
+                        &lt;value&gt;4&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;
@@ -3306,7 +3306,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;1&lt;/value&gt;
+                        &lt;value&gt;4&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;

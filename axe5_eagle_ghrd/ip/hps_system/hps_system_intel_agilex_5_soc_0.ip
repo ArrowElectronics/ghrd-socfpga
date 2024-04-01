@@ -14,7 +14,7 @@ refer to the applicable agreement for further details, at
 https://fpgasoftware.intel.com/eula.-->
 <ipxact:component xmlns:altera="http://www.altera.com/XMLSchema/IPXact2014/extensions" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
   <ipxact:vendor>Intel Corporation</ipxact:vendor>
-  <ipxact:library>ghrd_hps_system_intel_agilex_5_soc_0</ipxact:library>
+  <ipxact:library>hps_system_intel_agilex_5_soc_0</ipxact:library>
   <ipxact:name>intel_agilex_5_soc_0</ipxact:name>
   <ipxact:version>2.0.0</ipxact:version>
   <ipxact:busInterfaces>
@@ -8796,7 +8796,7 @@ https://fpgasoftware.intel.com/eula.-->
   <ipxact:vendorExtensions>
     <altera:entity_info>
       <ipxact:vendor>Intel Corporation</ipxact:vendor>
-      <ipxact:library>ghrd_hps_system_intel_agilex_5_soc_0</ipxact:library>
+      <ipxact:library>hps_system_intel_agilex_5_soc_0</ipxact:library>
       <ipxact:name>intel_agilex_5_soc</ipxact:name>
       <ipxact:version>2.0.0</ipxact:version>
     </altera:entity_info>
@@ -10501,11 +10501,6 @@ https://fpgasoftware.intel.com/eula.-->
    }
    element intel_agilex_5_soc_0
    {
-      datum _sortIndex
-      {
-         value = "0";
-         type = "int";
-      }
    }
 }
 </ipxact:value>
@@ -14817,6 +14812,19 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:value>&lt;systemInfosDefinition&gt;
     &lt;connPtSystemInfos&gt;
         &lt;entry&gt;
+            &lt;key&gt;I2C0_scl_oe&lt;/key&gt;
+            &lt;value&gt;
+                &lt;connectionPointName&gt;I2C0_scl_oe&lt;/connectionPointName&gt;
+                &lt;suppliedSystemInfos/&gt;
+                &lt;consumedSystemInfos&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;CLOCK_RATE&lt;/key&gt;
+                        &lt;value&gt;0&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/consumedSystemInfos&gt;
+            &lt;/value&gt;
+        &lt;/entry&gt;
+        &lt;entry&gt;
             &lt;key&gt;I2C1_scl_oe&lt;/key&gt;
             &lt;value&gt;
                 &lt;connectionPointName&gt;I2C1_scl_oe&lt;/connectionPointName&gt;
@@ -14921,6 +14929,9 @@ https://fpgasoftware.intel.com/eula.-->
       </ipxact:parameters>
     </altera:altera_system_parameters>
     <altera:altera_interface_boundary>
+      <altera:interface_mapping altera:name="I2C0" altera:internal="intel_agilex_5_soc_0.I2C0"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="I2C0_scl_i" altera:internal="intel_agilex_5_soc_0.I2C0_scl_i"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="I2C0_scl_oe" altera:internal="intel_agilex_5_soc_0.I2C0_scl_oe"></altera:interface_mapping>
       <altera:interface_mapping altera:name="I2C1" altera:internal="intel_agilex_5_soc_0.I2C1" altera:type="conduit" altera:dir="end">
         <altera:port_mapping altera:name="I2C1_sda_i" altera:internal="I2C1_sda_i"></altera:port_mapping>
         <altera:port_mapping altera:name="I2C1_sda_oe" altera:internal="I2C1_sda_oe"></altera:port_mapping>
@@ -14931,10 +14942,6 @@ https://fpgasoftware.intel.com/eula.-->
       <altera:interface_mapping altera:name="I2C1_scl_oe" altera:internal="intel_agilex_5_soc_0.I2C1_scl_oe" altera:type="clock" altera:dir="start">
         <altera:port_mapping altera:name="I2C1_scl_oe_clk" altera:internal="I2C1_scl_oe_clk"></altera:port_mapping>
       </altera:interface_mapping>
-      <altera:interface_mapping altera:name="cs_debug_apb" altera:internal="intel_agilex_5_soc_0.cs_debug_apb"></altera:interface_mapping>
-      <altera:interface_mapping altera:name="cs_debug_apb_clock" altera:internal="intel_agilex_5_soc_0.cs_debug_apb_clock"></altera:interface_mapping>
-      <altera:interface_mapping altera:name="cs_debug_apb_reset" altera:internal="intel_agilex_5_soc_0.cs_debug_apb_reset"></altera:interface_mapping>
-      <altera:interface_mapping altera:name="cs_debug_apb_sideband" altera:internal="intel_agilex_5_soc_0.cs_debug_apb_sideband"></altera:interface_mapping>
       <altera:interface_mapping altera:name="emac0" altera:internal="intel_agilex_5_soc_0.emac0" altera:type="conduit" altera:dir="end">
         <altera:port_mapping altera:name="emac0_mac_col" altera:internal="emac0_mac_col"></altera:port_mapping>
         <altera:port_mapping altera:name="emac0_mac_crs" altera:internal="emac0_mac_crs"></altera:port_mapping>
@@ -14960,6 +14967,7 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:port_mapping altera:name="emac0_mdio_mac_mdo" altera:internal="emac0_mdio_mac_mdo"></altera:port_mapping>
         <altera:port_mapping altera:name="emac0_mdio_mac_mdoe" altera:internal="emac0_mdio_mac_mdoe"></altera:port_mapping>
       </altera:interface_mapping>
+      <altera:interface_mapping altera:name="emac1_app_rst" altera:internal="intel_agilex_5_soc_0.emac1_app_rst"></altera:interface_mapping>
       <altera:interface_mapping altera:name="emac2_app_rst" altera:internal="intel_agilex_5_soc_0.emac2_app_rst" altera:type="reset" altera:dir="start">
         <altera:port_mapping altera:name="emac2_app_rst_reset_n" altera:internal="emac2_app_rst_reset_n"></altera:port_mapping>
       </altera:interface_mapping>
@@ -14972,12 +14980,6 @@ https://fpgasoftware.intel.com/eula.-->
       <altera:interface_mapping altera:name="emac_timestamp_data" altera:internal="intel_agilex_5_soc_0.emac_timestamp_data" altera:type="conduit" altera:dir="end">
         <altera:port_mapping altera:name="emac_timestamp_data_data_in" altera:internal="emac_timestamp_data_data_in"></altera:port_mapping>
       </altera:interface_mapping>
-      <altera:interface_mapping altera:name="emif0_ch0_axi" altera:internal="intel_agilex_5_soc_0.emif0_ch0_axi"></altera:interface_mapping>
-      <altera:interface_mapping altera:name="emif0_ch0_axi_clk" altera:internal="intel_agilex_5_soc_0.emif0_ch0_axi_clk"></altera:interface_mapping>
-      <altera:interface_mapping altera:name="emif0_ch0_axi_rst" altera:internal="intel_agilex_5_soc_0.emif0_ch0_axi_rst"></altera:interface_mapping>
-      <altera:interface_mapping altera:name="emif0_csr_axi" altera:internal="intel_agilex_5_soc_0.emif0_csr_axi"></altera:interface_mapping>
-      <altera:interface_mapping altera:name="emif0_csr_axi_clk" altera:internal="intel_agilex_5_soc_0.emif0_csr_axi_clk"></altera:interface_mapping>
-      <altera:interface_mapping altera:name="emif0_csr_axi_rst" altera:internal="intel_agilex_5_soc_0.emif0_csr_axi_rst"></altera:interface_mapping>
       <altera:interface_mapping altera:name="f2sdram" altera:internal="intel_agilex_5_soc_0.f2sdram" altera:type="axi4" altera:dir="end">
         <altera:port_mapping altera:name="f2sdram_araddr" altera:internal="f2sdram_araddr"></altera:port_mapping>
         <altera:port_mapping altera:name="f2sdram_arburst" altera:internal="f2sdram_arburst"></altera:port_mapping>
@@ -15030,16 +15032,12 @@ https://fpgasoftware.intel.com/eula.-->
       <altera:interface_mapping altera:name="f2sdram_axi_reset" altera:internal="intel_agilex_5_soc_0.f2sdram_axi_reset" altera:type="reset" altera:dir="end">
         <altera:port_mapping altera:name="f2sdram_axi_reset_reset_n" altera:internal="f2sdram_axi_reset_reset_n"></altera:port_mapping>
       </altera:interface_mapping>
-      <altera:interface_mapping altera:name="fpga2hps" altera:internal="intel_agilex_5_soc_0.fpga2hps"></altera:interface_mapping>
-      <altera:interface_mapping altera:name="fpga2hps_clock" altera:internal="intel_agilex_5_soc_0.fpga2hps_clock"></altera:interface_mapping>
       <altera:interface_mapping altera:name="fpga2hps_interrupt" altera:internal="intel_agilex_5_soc_0.fpga2hps_interrupt" altera:type="interrupt" altera:dir="start">
         <altera:port_mapping altera:name="fpga2hps_interrupt_irq" altera:internal="fpga2hps_interrupt_irq"></altera:port_mapping>
       </altera:interface_mapping>
-      <altera:interface_mapping altera:name="fpga2hps_reset" altera:internal="intel_agilex_5_soc_0.fpga2hps_reset"></altera:interface_mapping>
       <altera:interface_mapping altera:name="h2f_cold_reset" altera:internal="intel_agilex_5_soc_0.h2f_cold_reset" altera:type="reset" altera:dir="start">
         <altera:port_mapping altera:name="h2f_cold_reset_reset_n" altera:internal="h2f_cold_reset_reset_n"></altera:port_mapping>
       </altera:interface_mapping>
-      <altera:interface_mapping altera:name="h2f_mpu_events" altera:internal="intel_agilex_5_soc_0.h2f_mpu_events"></altera:interface_mapping>
       <altera:interface_mapping altera:name="h2f_reset" altera:internal="intel_agilex_5_soc_0.h2f_reset" altera:type="reset" altera:dir="start">
         <altera:port_mapping altera:name="h2f_reset_reset_n" altera:internal="h2f_reset_reset_n"></altera:port_mapping>
       </altera:interface_mapping>
@@ -15049,7 +15047,6 @@ https://fpgasoftware.intel.com/eula.-->
       <altera:interface_mapping altera:name="h2f_user1_clk" altera:internal="intel_agilex_5_soc_0.h2f_user1_clk" altera:type="clock" altera:dir="start">
         <altera:port_mapping altera:name="h2f_user1_clk_clk" altera:internal="h2f_user1_clk_clk"></altera:port_mapping>
       </altera:interface_mapping>
-      <altera:interface_mapping altera:name="h2f_warm_reset_handshake" altera:internal="intel_agilex_5_soc_0.h2f_warm_reset_handshake"></altera:interface_mapping>
       <altera:interface_mapping altera:name="hps2fpga" altera:internal="intel_agilex_5_soc_0.hps2fpga" altera:type="axi4" altera:dir="start">
         <altera:port_mapping altera:name="hps2fpga_araddr" altera:internal="hps2fpga_araddr"></altera:port_mapping>
         <altera:port_mapping altera:name="hps2fpga_arburst" altera:internal="hps2fpga_arburst"></altera:port_mapping>

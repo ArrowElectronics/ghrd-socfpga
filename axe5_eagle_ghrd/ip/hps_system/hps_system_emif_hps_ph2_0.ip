@@ -14,7 +14,7 @@ refer to the applicable agreement for further details, at
 https://fpgasoftware.intel.com/eula.-->
 <ipxact:component xmlns:altera="http://www.altera.com/XMLSchema/IPXact2014/extensions" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
   <ipxact:vendor>Intel Corporation</ipxact:vendor>
-  <ipxact:library>ghrd_hps_system_emif_hps_ph2_0</ipxact:library>
+  <ipxact:library>hps_system_emif_hps_ph2_0</ipxact:library>
   <ipxact:name>emif_hps_ph2_0</ipxact:name>
   <ipxact:version>6.0.0</ipxact:version>
   <ipxact:busInterfaces>
@@ -1147,7 +1147,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:fileSetRef>
           <ipxact:localName>QUARTUS_SYNTH</ipxact:localName>
         </ipxact:fileSetRef>
-        <ipxact:parameters></ipxact:parameters>
       </ipxact:componentInstantiation>
     </ipxact:instantiations>
     <ipxact:ports>
@@ -1155,7 +1154,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>noc_aclk_0</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1240,7 +1238,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_axi4_arlock</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1289,7 +1286,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_axi4_arvalid</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1410,7 +1406,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_axi4_awlock</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1459,7 +1454,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_axi4_awvalid</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1508,7 +1502,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_axi4_bready</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1521,7 +1514,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_axi4_rready</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1570,7 +1562,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_axi4_wlast</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1583,7 +1574,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_axi4_wvalid</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1632,7 +1622,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_axi4_arready</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1645,7 +1634,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_axi4_awready</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1694,7 +1682,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_axi4_bvalid</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1743,7 +1730,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_axi4_rlast</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1774,7 +1760,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_axi4_rvalid</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1787,7 +1772,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_axi4_wready</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1800,7 +1784,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>emif_mem_0_mem_ck_t</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1813,7 +1796,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>emif_mem_0_mem_ck_c</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1826,7 +1808,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>emif_mem_0_mem_cke</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1839,7 +1820,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>emif_mem_0_mem_reset_n</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1852,7 +1832,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>emif_mem_0_mem_cs</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1955,7 +1934,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>emif_oct_0_oct_rzqin</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1968,7 +1946,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_noc_axi4lite_clk</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -1981,7 +1958,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_noc_axi4lite_rst_n</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2012,7 +1988,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_noc_axi4lite_awvalid</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2025,7 +2000,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_noc_axi4lite_awready</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2074,7 +2048,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_noc_axi4lite_wvalid</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2087,7 +2060,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_noc_axi4lite_wready</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2118,7 +2090,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_noc_axi4lite_bvalid</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2131,7 +2102,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_noc_axi4lite_bready</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2162,7 +2132,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_noc_axi4lite_arvalid</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2175,7 +2144,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_noc_axi4lite_arready</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2224,7 +2192,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_noc_axi4lite_rvalid</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2237,7 +2204,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>s0_noc_axi4lite_rready</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2286,7 +2252,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>out_reset_0_n</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2299,7 +2264,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>emif_ref_clk_0_clk</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -2313,7 +2277,7 @@ https://fpgasoftware.intel.com/eula.-->
   <ipxact:vendorExtensions>
     <altera:entity_info>
       <ipxact:vendor>Intel Corporation</ipxact:vendor>
-      <ipxact:library>ghrd_hps_system_emif_hps_ph2_0</ipxact:library>
+      <ipxact:library>hps_system_emif_hps_ph2_0</ipxact:library>
       <ipxact:name>emif_hps_ph2</ipxact:name>
       <ipxact:version>6.0.0</ipxact:version>
     </altera:entity_info>
@@ -3088,17 +3052,6 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:displayName>bonusData</ipxact:displayName>
           <ipxact:value>bonusData 
 {
-   element $system
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Agilex 5";
-         type = "String";
-      }
-   }
-   element emif_hps_ph2_0
-   {
-   }
 }
 </ipxact:value>
         </ipxact:parameter>

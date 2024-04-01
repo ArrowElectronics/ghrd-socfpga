@@ -1329,7 +1329,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="OUT_CLK_POLARITY" type="int">
           <ipxact:name>OUT_CLK_POLARITY</ipxact:name>
           <ipxact:displayName>HDMI CLOCK POLARITY</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
+          <ipxact:value>1</ipxact:value>
         </ipxact:parameter>
       </ipxact:parameters>
     </altera:altera_module_parameters>

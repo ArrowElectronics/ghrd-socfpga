@@ -14,8 +14,8 @@ refer to the applicable agreement for further details, at
 https://fpgasoftware.intel.com/eula.-->
 <ipxact:component xmlns:altera="http://www.altera.com/XMLSchema/IPXact2014/extensions" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
   <ipxact:vendor>Intel Corporation</ipxact:vendor>
-  <ipxact:library>ghrd_hps_system_master_2</ipxact:library>
-  <ipxact:name>master_2</ipxact:name>
+  <ipxact:library>hps_system_master_0</ipxact:library>
+  <ipxact:name>master_0</ipxact:name>
   <ipxact:version>19.1</ipxact:version>
   <ipxact:busInterfaces>
     <ipxact:busInterface>
@@ -415,7 +415,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:fileSetRef>
           <ipxact:localName>QUARTUS_SYNTH</ipxact:localName>
         </ipxact:fileSetRef>
-        <ipxact:parameters></ipxact:parameters>
       </ipxact:componentInstantiation>
     </ipxact:instantiations>
     <ipxact:ports>
@@ -423,7 +422,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>clk_clk</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -436,7 +434,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>clk_reset_reset</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -449,7 +446,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>master_reset_reset</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -498,7 +494,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>master_read</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -511,7 +506,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>master_write</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -542,7 +536,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>master_waitrequest</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -555,7 +548,6 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:name>master_readdatavalid</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
           <ipxact:wireTypeDefs>
             <ipxact:wireTypeDef>
               <ipxact:typeName>STD_LOGIC</ipxact:typeName>
@@ -587,7 +579,7 @@ https://fpgasoftware.intel.com/eula.-->
   <ipxact:vendorExtensions>
     <altera:entity_info>
       <ipxact:vendor>Intel Corporation</ipxact:vendor>
-      <ipxact:library>ghrd_hps_system_master_2</ipxact:library>
+      <ipxact:library>hps_system_master_0</ipxact:library>
       <ipxact:name>altera_jtag_avalon_master</ipxact:name>
       <ipxact:version>19.1</ipxact:version>
     </altera:entity_info>
@@ -680,22 +672,6 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:displayName>bonusData</ipxact:displayName>
           <ipxact:value>bonusData 
 {
-   element $system
-   {
-      datum _originalDeviceFamily
-      {
-         value = "Agilex 5";
-         type = "String";
-      }
-   }
-   element master_2
-   {
-      datum _sortIndex
-      {
-         value = "0";
-         type = "int";
-      }
-   }
 }
 </ipxact:value>
         </ipxact:parameter>
@@ -1066,13 +1042,13 @@ https://fpgasoftware.intel.com/eula.-->
       </ipxact:parameters>
     </altera:altera_system_parameters>
     <altera:altera_interface_boundary>
-      <altera:interface_mapping altera:name="clk" altera:internal="master_2.clk" altera:type="clock" altera:dir="end">
+      <altera:interface_mapping altera:name="clk" altera:internal="master_0.clk" altera:type="clock" altera:dir="end">
         <altera:port_mapping altera:name="clk_clk" altera:internal="clk_clk"></altera:port_mapping>
       </altera:interface_mapping>
-      <altera:interface_mapping altera:name="clk_reset" altera:internal="master_2.clk_reset" altera:type="reset" altera:dir="end">
+      <altera:interface_mapping altera:name="clk_reset" altera:internal="master_0.clk_reset" altera:type="reset" altera:dir="end">
         <altera:port_mapping altera:name="clk_reset_reset" altera:internal="clk_reset_reset"></altera:port_mapping>
       </altera:interface_mapping>
-      <altera:interface_mapping altera:name="master" altera:internal="master_2.master" altera:type="avalon" altera:dir="start">
+      <altera:interface_mapping altera:name="master" altera:internal="master_0.master" altera:type="avalon" altera:dir="start">
         <altera:port_mapping altera:name="master_address" altera:internal="master_address"></altera:port_mapping>
         <altera:port_mapping altera:name="master_byteenable" altera:internal="master_byteenable"></altera:port_mapping>
         <altera:port_mapping altera:name="master_read" altera:internal="master_read"></altera:port_mapping>
@@ -1082,7 +1058,7 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:port_mapping altera:name="master_write" altera:internal="master_write"></altera:port_mapping>
         <altera:port_mapping altera:name="master_writedata" altera:internal="master_writedata"></altera:port_mapping>
       </altera:interface_mapping>
-      <altera:interface_mapping altera:name="master_reset" altera:internal="master_2.master_reset" altera:type="reset" altera:dir="start">
+      <altera:interface_mapping altera:name="master_reset" altera:internal="master_0.master_reset" altera:type="reset" altera:dir="start">
         <altera:port_mapping altera:name="master_reset_reset" altera:internal="master_reset_reset"></altera:port_mapping>
       </altera:interface_mapping>
     </altera:altera_interface_boundary>
