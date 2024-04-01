@@ -398,7 +398,7 @@ set_global_assignment -name IP_FILE ip/video_sys/video_sys_iopll_0.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_mm_bridge_1.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_axi_dmac_0.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_axi_hdmi_tx_0.ip
-set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name ENABLE_SIGNALTAP OFF
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
 set_global_assignment -name USE_INIT_DONE SDM_IO0
 set_global_assignment -name USE_HPS_COLD_RESET SDM_IO10
@@ -423,4 +423,4 @@ set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_s10_configuration
 set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_intel_user_rst_clkgate_0.ip
 set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_master_1.ip
 set_global_assignment -name SIGNALTAP_FILE stp1.stp
-set_global_assignment -name IP_FILE ip/hps_system/hps_system_master_0.ip
+set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_master_0.ip
