@@ -374,7 +374,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to USB_HUB_RST
 set_global_assignment -name VERILOG_FILE ../sources/axe5_eagle_top.v
 set_global_assignment -name TCL_SCRIPT_FILE sources/agx5e065_pin_assignment.tcl
 set_global_assignment -name SDC_FILE axe5_eagle_top.sdc
-set_global_assignment -name QIP_FILE ip/gts_reset_seq/gts_reset_seq.qip
 set_global_assignment -name IP_FILE ip/gts_reset_seq/gts_reset_seq.ip
 set_global_assignment -name QIP_FILE ip/gmii2rgmii_pll/gmii2rgmii_pll.qip
 set_global_assignment -name QSYS_FILE ghrd_system.qsys
@@ -422,7 +421,6 @@ set_global_assignment -name IP_FILE ip/hps_system/hps_system_clock_bridge_0.ip
 set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_clock_in.ip
 set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_s10_configuration_clock_0.ip
 set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_intel_user_rst_clkgate_0.ip
-set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_master_0.ip
 set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_master_1.ip
 set_global_assignment -name SIGNALTAP_FILE stp1.stp
 set_global_assignment -name IP_FILE ip/hps_system/hps_system_master_0.ip
