@@ -134,6 +134,7 @@ module axi_hdmi_tx_core #(
   reg             hdmi_data_sel_2d = 'd0;
   reg     [47:0]  hdmi_data_2d = 'd0;
   reg     [23:0]  hdmi_tpm_data = 'd0;
+  reg	  [11:0]  tpm_count = 'd0;
   reg             hdmi_hsync = 'd0;
   reg             hdmi_vsync = 'd0;
   reg             hdmi_hsync_data_e = 'd0;
@@ -373,7 +374,14 @@ module axi_hdmi_tx_core #(
     if ((hdmi_rst == 1'b1) || (hdmi_fs_ret == 1'b1)) begin
       hdmi_tpm_data <= 'd0;
     end else if (hdmi_de_2d == 1'b1) begin
-      hdmi_tpm_data <= hdmi_tpm_data + 1'b1;
+//      hdmi_tpm_data <= hdmi_tpm_data + 1'b1;   [SK] 378-383 added for debug
+	if (hdmi_hs_count <= 1'h280) begin
+	 hdmi_tpm_data <= 1'hff0000;
+	end else if ((hdmi_hs_count >= 1'h280) && (hdmi_hs_count < 1'h500)) begin
+	 hdmi_tpm_data <= 1'h00ff00;
+	end else if ((hdmi_hs_count >= 1'h500) && (hdmi_hs_count < 1'h780)) begin
+	 hdmi_tpm_data <= 1'h0000ff;
+	end	 	
     end
     hdmi_tpm_oos <= hdmi_tpm_mismatch_s;
   end

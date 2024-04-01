@@ -155,6 +155,11 @@ module axi_hdmi_tx #(
   wire            vdma_ovf_s;
   wire            vdma_unf_s;
   wire            vdma_tpm_oos_s;
+  
+  wire            hdmi_16_hsync_int;
+  wire            hdmi_16_vsync_int;
+  wire            hdmi_16_data_e_in;
+  wire    [15:0]  hdmi_16_data_int;
 
   // signal name changes
 
@@ -325,22 +330,6 @@ module axi_hdmi_tx #(
     .oe_out (),
     .dataout (hdmi_out_clk));
   end
-  if (FPGA_TECHNOLOGY == INTEL_AGILEX5) begin
-  tennm_ph2_ddio_out
-	            #(
-	            	.mode("MODE_DDR"),
-	            	.asclr_ena("ASCLR_ENA_NONE"),
-					.sclr_ena("SCLR_ENA_NONE")
-	            ) fr_out_data_ddio (	
-	    			.ena(1'b1),
-	    			.areset(areset),
-	    			.sreset(sreset),
-	            	.datainhi(~OUT_CLK_POLARITY),
-	            	.datainlo(OUT_CLK_POLARITY),
-	            	.dataout(hdmi_out_clk),
-	            	.clk (hdmi_clk)
-	            );	
-  end
   if (FPGA_TECHNOLOGY == XILINX_7SERIES) begin
   ODDR #(.INIT(1'b0)) i_clk_oddr (
     .R (1'b0),
@@ -352,7 +341,7 @@ module axi_hdmi_tx #(
     .Q (hdmi_out_clk));
   end
   endgenerate
-
+  
 endmodule
 
 // ***************************************************************************
