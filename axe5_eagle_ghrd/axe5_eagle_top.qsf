@@ -11,7 +11,7 @@ set_global_assignment -name PWRMGT_LINEAR_FORMAT_N "-12"
 set_global_assignment -name POWER_APPLY_THERMAL_MARGIN ADDITIONAL
 set_global_assignment -name TOP_LEVEL_ENTITY axe5_eagle_top
 set_global_assignment -name IP_SEARCH_PATHS ip/adi/**/*
-set_global_assignment -name LAST_QUARTUS_VERSION "23.4.1 Pro Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "24.1.0 Pro Edition"
 set_location_assignment PIN_T132 -to HPS_OSC_CLK_25MHz -comment IOBANK_HPS
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_OSC_CLK_25MHz -entity axe5_eagle_top
 set_location_assignment PIN_CK134 -to FPGA_RST
