@@ -229,8 +229,9 @@ module axe5_eagle_top (
    inout         	PWR_SCL,
    input         	SDM_CLK_25MHz,
    input         	HPS_COLD_RST,
-   input         	HPS_OSC_CLK_25MHz
-   
+   input         	HPS_OSC_CLK_25MHz,
+   input            src_rs_req,
+   output           src_rs_grant
 );
 
    //wire  [3:0] 	LPDDR4B_DQS_p, LPDDR4B_DQS_n, LPDDR4B_DMI;
@@ -361,7 +362,10 @@ module axe5_eagle_top (
    wire i_src_rs_priority; //             .src_rs_priority, PRIORITY BIT
    wire i_src_rs_req;      //             .src_rs_req,      SRC_REQ
    wire o_pma_cu_clk;      // o_pma_cu_clk.clk,             PMA clock from PLL for proper calculation. For simulation only
-	
+
+   assign i_src_rs_req = src_rs_req;
+   assign src_rs_grant = o_src_rs_grant;
+
    gts_reset_seq gts_reset_seq (
 	.o_src_rs_grant(o_src_rs_grant),
 	.i_src_rs_priority(i_src_rs_priority),
