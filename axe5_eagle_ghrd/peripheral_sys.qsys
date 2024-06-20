@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.-->
       }
       datum baseAddress
       {
-         value = "64";
+         value = "32";
          type = "String";
       }
    }
@@ -94,7 +94,7 @@ https://fpgasoftware.intel.com/eula.-->
       }
       datum baseAddress
       {
-         value = "80";
+         value = "16";
          type = "String";
       }
    }
@@ -144,7 +144,7 @@ https://fpgasoftware.intel.com/eula.-->
       }
       datum baseAddress
       {
-         value = "32";
+         value = "64";
          type = "String";
       }
    }
@@ -165,7 +165,7 @@ https://fpgasoftware.intel.com/eula.-->
       }
       datum baseAddress
       {
-         value = "16";
+         value = "80";
          type = "String";
       }
    }
@@ -186,7 +186,7 @@ https://fpgasoftware.intel.com/eula.-->
       }
       datum baseAddress
       {
-         value = "0";
+         value = "96";
          type = "String";
       }
    }
@@ -207,7 +207,7 @@ https://fpgasoftware.intel.com/eula.-->
       }
       datum baseAddress
       {
-         value = "96";
+         value = "0";
          type = "String";
       }
    }
@@ -322,15 +322,15 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;15&lt;/value&gt;
+                        &lt;value&gt;18&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                        &lt;value&gt;-1&lt;/value&gt;
+                        &lt;value&gt;250000000&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;15&lt;/value&gt;
+                        &lt;value&gt;18&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;
@@ -344,7 +344,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;consumedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;ADDRESS_MAP&lt;/key&gt;
-                        &lt;value&gt;&amp;lt;address-map&amp;gt;&amp;lt;slave name='rgb_led3.s1' start='0x0' end='0x10' datawidth='32' /&amp;gt;&amp;lt;slave name='rgb_led2.s1' start='0x10' end='0x20' datawidth='32' /&amp;gt;&amp;lt;slave name='rgb_led1.s1' start='0x20' end='0x30' datawidth='32' /&amp;gt;&amp;lt;slave name='rgb_led0.s1' start='0x30' end='0x40' datawidth='32' /&amp;gt;&amp;lt;slave name='dipsw.s1' start='0x40' end='0x50' datawidth='32' /&amp;gt;&amp;lt;slave name='pb.s1' start='0x50' end='0x60' datawidth='32' /&amp;gt;&amp;lt;slave name='sys_id.control_slave' start='0x60' end='0x68' datawidth='32' /&amp;gt;&amp;lt;slave name='usb_hub_rst.s1' start='0x70' end='0x80' datawidth='32' /&amp;gt;&amp;lt;/address-map&amp;gt;&lt;/value&gt;
+                        &lt;value&gt;&amp;lt;address-map&amp;gt;&amp;lt;slave name='sys_id.control_slave' start='0x0' end='0x8' datawidth='32' /&amp;gt;&amp;lt;slave name='pb.s1' start='0x10' end='0x20' datawidth='32' /&amp;gt;&amp;lt;slave name='dipsw.s1' start='0x20' end='0x30' datawidth='32' /&amp;gt;&amp;lt;slave name='rgb_led0.s1' start='0x30' end='0x40' datawidth='32' /&amp;gt;&amp;lt;slave name='rgb_led1.s1' start='0x40' end='0x50' datawidth='32' /&amp;gt;&amp;lt;slave name='rgb_led2.s1' start='0x50' end='0x60' datawidth='32' /&amp;gt;&amp;lt;slave name='rgb_led3.s1' start='0x60' end='0x70' datawidth='32' /&amp;gt;&amp;lt;slave name='usb_hub_rst.s1' start='0x70' end='0x80' datawidth='32' /&amp;gt;&amp;lt;/address-map&amp;gt;&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;ADDRESS_WIDTH&lt;/key&gt;
@@ -397,7 +397,7 @@ https://fpgasoftware.intel.com/eula.-->
             <ipxact:parameter parameterId="bspCpu" type="bit">
               <ipxact:name>bspCpu</ipxact:name>
               <ipxact:displayName>BSP CPU</ipxact:displayName>
-              <ipxact:value></ipxact:value>
+              <ipxact:value>false</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="componentDefinition" type="string">
               <ipxact:name>componentDefinition</ipxact:name>
@@ -509,7 +509,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;consumedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                            &lt;value&gt;0&lt;/value&gt;
+                            &lt;value&gt;250000000&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/consumedSystemInfos&gt;
                 &lt;/value&gt;
@@ -2070,7 +2070,7 @@ https://fpgasoftware.intel.com/eula.-->
             <ipxact:parameter parameterId="bspCpu" type="bit">
               <ipxact:name>bspCpu</ipxact:name>
               <ipxact:displayName>BSP CPU</ipxact:displayName>
-              <ipxact:value></ipxact:value>
+              <ipxact:value>false</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="componentDefinition" type="string">
               <ipxact:name>componentDefinition</ipxact:name>
@@ -2197,7 +2197,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;name&gt;s0_address&lt;/name&gt;
                         &lt;role&gt;address&lt;/role&gt;
                         &lt;direction&gt;Input&lt;/direction&gt;
-                        &lt;width&gt;24&lt;/width&gt;
+                        &lt;width&gt;10&lt;/width&gt;
                         &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                         &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                         &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -2271,7 +2271,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;addressSpan&lt;/key&gt;
-                            &lt;value&gt;16777216&lt;/value&gt;
+                            &lt;value&gt;1024&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;addressUnits&lt;/key&gt;
@@ -2521,7 +2521,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;name&gt;m0_address&lt;/name&gt;
                         &lt;role&gt;address&lt;/role&gt;
                         &lt;direction&gt;Output&lt;/direction&gt;
-                        &lt;width&gt;24&lt;/width&gt;
+                        &lt;width&gt;10&lt;/width&gt;
                         &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                         &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                         &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -2890,7 +2890,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;name&gt;s0_address&lt;/name&gt;
                     &lt;role&gt;address&lt;/role&gt;
                     &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;24&lt;/width&gt;
+                    &lt;width&gt;10&lt;/width&gt;
                     &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                     &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                     &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -2964,7 +2964,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;addressSpan&lt;/key&gt;
-                        &lt;value&gt;16777216&lt;/value&gt;
+                        &lt;value&gt;1024&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;addressUnits&lt;/key&gt;
@@ -3153,6 +3153,10 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;key&gt;dfhFeatureId&lt;/key&gt;
                         &lt;value&gt;35&lt;/value&gt;
                     &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;dfhFeatureType&lt;/key&gt;
+                        &lt;value&gt;3&lt;/value&gt;
+                    &lt;/entry&gt;
                 &lt;/parameterValueMap&gt;
             &lt;/parameters&gt;
         &lt;/interface&gt;
@@ -3210,7 +3214,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;name&gt;m0_address&lt;/name&gt;
                     &lt;role&gt;address&lt;/role&gt;
                     &lt;direction&gt;Output&lt;/direction&gt;
-                    &lt;width&gt;24&lt;/width&gt;
+                    &lt;width&gt;10&lt;/width&gt;
                     &lt;lowerBound&gt;0&lt;/lowerBound&gt;
                     &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
                     &lt;terminationValue&gt;0&lt;/terminationValue&gt;
@@ -3465,7 +3469,7 @@ https://fpgasoftware.intel.com/eula.-->
         &lt;parameterHdlType&gt;INTEGER&lt;/parameterHdlType&gt;
         &lt;parameterName&gt;HDL_ADDR_WIDTH&lt;/parameterName&gt;
         &lt;parameterType&gt;java.lang.Integer&lt;/parameterType&gt;
-        &lt;parameterValue&gt;24&lt;/parameterValue&gt;
+        &lt;parameterValue&gt;10&lt;/parameterValue&gt;
     &lt;/hdlParameterDescriptorDefinition&gt;
     &lt;hdlParameterDescriptorDefinition&gt;
         &lt;description&gt;Bridge burstcount width&lt;/description&gt;
@@ -12470,7 +12474,7 @@ https://fpgasoftware.intel.com/eula.-->
     <altera:connections>
       <altera:connection altera:kind="avalon" altera:version="24.1" altera:start="mm_bridge_0.m0" altera:end="sys_id.control_slave">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0060"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0000"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="domainAlias" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.burstAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
@@ -12491,7 +12495,7 @@ https://fpgasoftware.intel.com/eula.-->
       </altera:connection>
       <altera:connection altera:kind="avalon" altera:version="24.1" altera:start="mm_bridge_0.m0" altera:end="pb.s1">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0050"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0010"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="domainAlias" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.burstAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
@@ -12512,7 +12516,7 @@ https://fpgasoftware.intel.com/eula.-->
       </altera:connection>
       <altera:connection altera:kind="avalon" altera:version="24.1" altera:start="mm_bridge_0.m0" altera:end="dipsw.s1">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0040"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0020"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="domainAlias" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.burstAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
@@ -12554,7 +12558,7 @@ https://fpgasoftware.intel.com/eula.-->
       </altera:connection>
       <altera:connection altera:kind="avalon" altera:version="24.1" altera:start="mm_bridge_0.m0" altera:end="rgb_led1.s1">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0020"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0040"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="domainAlias" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.burstAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
@@ -12575,7 +12579,7 @@ https://fpgasoftware.intel.com/eula.-->
       </altera:connection>
       <altera:connection altera:kind="avalon" altera:version="24.1" altera:start="mm_bridge_0.m0" altera:end="rgb_led2.s1">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0010"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0050"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="domainAlias" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.burstAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
@@ -12596,7 +12600,7 @@ https://fpgasoftware.intel.com/eula.-->
       </altera:connection>
       <altera:connection altera:kind="avalon" altera:version="24.1" altera:start="mm_bridge_0.m0" altera:end="rgb_led3.s1">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
-        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0000"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0060"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="domainAlias" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.burstAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
@@ -12719,7 +12723,7 @@ https://fpgasoftware.intel.com/eula.-->
             <ipxact:busType vendor="intel" library="intel" name="avalon" version="24.1"></ipxact:busType>
             <ipxact:master>
               <ipxact:addressSpaceRef addressSpaceRef="mm_bridge_0.m0">
-                <ipxact:baseAddress>0x0000_0060</ipxact:baseAddress>
+                <ipxact:baseAddress>0x0000</ipxact:baseAddress>
               </ipxact:addressSpaceRef>
             </ipxact:master>
           </ipxact:busInterface>
@@ -12730,43 +12734,43 @@ https://fpgasoftware.intel.com/eula.-->
             <ipxact:segments>
               <ipxact:segment>
                 <ipxact:name>sys_id.control_slave</ipxact:name>
-                <ipxact:addressOffset>0x0000_0060</ipxact:addressOffset>
-                <ipxact:range>0x0000_0008</ipxact:range>
+                <ipxact:addressOffset>0x0000</ipxact:addressOffset>
+                <ipxact:range>0x0008</ipxact:range>
               </ipxact:segment>
               <ipxact:segment>
                 <ipxact:name>pb.s1</ipxact:name>
-                <ipxact:addressOffset>0x0000_0050</ipxact:addressOffset>
-                <ipxact:range>0x0000_0010</ipxact:range>
+                <ipxact:addressOffset>0x0010</ipxact:addressOffset>
+                <ipxact:range>0x0010</ipxact:range>
               </ipxact:segment>
               <ipxact:segment>
                 <ipxact:name>dipsw.s1</ipxact:name>
-                <ipxact:addressOffset>0x0000_0040</ipxact:addressOffset>
-                <ipxact:range>0x0000_0010</ipxact:range>
+                <ipxact:addressOffset>0x0020</ipxact:addressOffset>
+                <ipxact:range>0x0010</ipxact:range>
               </ipxact:segment>
               <ipxact:segment>
                 <ipxact:name>rgb_led0.s1</ipxact:name>
-                <ipxact:addressOffset>0x0000_0030</ipxact:addressOffset>
-                <ipxact:range>0x0000_0010</ipxact:range>
+                <ipxact:addressOffset>0x0030</ipxact:addressOffset>
+                <ipxact:range>0x0010</ipxact:range>
               </ipxact:segment>
               <ipxact:segment>
                 <ipxact:name>rgb_led1.s1</ipxact:name>
-                <ipxact:addressOffset>0x0000_0020</ipxact:addressOffset>
-                <ipxact:range>0x0000_0010</ipxact:range>
+                <ipxact:addressOffset>0x0040</ipxact:addressOffset>
+                <ipxact:range>0x0010</ipxact:range>
               </ipxact:segment>
               <ipxact:segment>
                 <ipxact:name>rgb_led2.s1</ipxact:name>
-                <ipxact:addressOffset>0x0000_0010</ipxact:addressOffset>
-                <ipxact:range>0x0000_0010</ipxact:range>
+                <ipxact:addressOffset>0x0050</ipxact:addressOffset>
+                <ipxact:range>0x0010</ipxact:range>
               </ipxact:segment>
               <ipxact:segment>
                 <ipxact:name>rgb_led3.s1</ipxact:name>
-                <ipxact:addressOffset>0x0000_0000</ipxact:addressOffset>
-                <ipxact:range>0x0000_0010</ipxact:range>
+                <ipxact:addressOffset>0x0060</ipxact:addressOffset>
+                <ipxact:range>0x0010</ipxact:range>
               </ipxact:segment>
               <ipxact:segment>
                 <ipxact:name>usb_hub_rst.s1</ipxact:name>
-                <ipxact:addressOffset>0x0000_0070</ipxact:addressOffset>
-                <ipxact:range>0x0000_0010</ipxact:range>
+                <ipxact:addressOffset>0x0070</ipxact:addressOffset>
+                <ipxact:range>0x0010</ipxact:range>
               </ipxact:segment>
             </ipxact:segments>
           </ipxact:addressSpace>
