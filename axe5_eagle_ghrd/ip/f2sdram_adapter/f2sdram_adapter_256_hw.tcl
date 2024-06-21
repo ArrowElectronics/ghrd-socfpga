@@ -3,19 +3,19 @@
 # SPDX-License-Identifier: MIT-0
 #
 
-package require -exact qsys 24.1
+package require -exact qsys 23.4
 
 
 #
-# module f2sdram_adapter_64
+# module f2sdram_adapter_256
 #
 set_module_property DESCRIPTION ""
-set_module_property NAME f2sdram_adapter_64
+set_module_property NAME f2sdram_adapter_256
 set_module_property VERSION 1.0
 set_module_property INTERNAL false
 set_module_property OPAQUE_ADDRESS_MAP true
 set_module_property AUTHOR "RSF"
-set_module_property DISPLAY_NAME f2sdram_adapter_64
+set_module_property DISPLAY_NAME f2sdram_adapter_256
 set_module_property INSTANTIATE_IN_SYSTEM_MODULE true
 set_module_property EDITABLE false
 set_module_property REPORT_TO_TALKBACK false
@@ -130,16 +130,16 @@ add_interface_port axi4_man man_bid bid Input 5
 add_interface_port axi4_man man_bready bready Output 1
 add_interface_port axi4_man man_bresp bresp Input 2
 add_interface_port axi4_man man_bvalid bvalid Input 1
-add_interface_port axi4_man man_rdata rdata Input 64
+add_interface_port axi4_man man_rdata rdata Input 256
 add_interface_port axi4_man man_rid rid Input 5
 add_interface_port axi4_man man_rlast rlast Input 1
 add_interface_port axi4_man man_rready rready Output 1
 add_interface_port axi4_man man_rresp rresp Input 2
 add_interface_port axi4_man man_rvalid rvalid Input 1
-add_interface_port axi4_man man_wdata wdata Output 64
+add_interface_port axi4_man man_wdata wdata Output 256
 add_interface_port axi4_man man_wlast wlast Output 1
 add_interface_port axi4_man man_wready wready Input 1
-add_interface_port axi4_man man_wstrb wstrb Output 8
+add_interface_port axi4_man man_wstrb wstrb Output 32
 add_interface_port axi4_man man_wvalid wvalid Output 1
 add_interface_port axi4_man man_aruser aruser Output 8
 add_interface_port axi4_man man_awuser awuser Output 8
@@ -210,16 +210,16 @@ add_interface_port axi4_sub sub_bid bid Output 5
 add_interface_port axi4_sub sub_bready bready Input 1
 add_interface_port axi4_sub sub_bresp bresp Output 2
 add_interface_port axi4_sub sub_bvalid bvalid Output 1
-add_interface_port axi4_sub sub_rdata rdata Output 64
+add_interface_port axi4_sub sub_rdata rdata Output 256
 add_interface_port axi4_sub sub_rid rid Output 5
 add_interface_port axi4_sub sub_rlast rlast Output 1
 add_interface_port axi4_sub sub_rready rready Input 1
 add_interface_port axi4_sub sub_rresp rresp Output 2
 add_interface_port axi4_sub sub_rvalid rvalid Output 1
-add_interface_port axi4_sub sub_wdata wdata Input 64
+add_interface_port axi4_sub sub_wdata wdata Input 256
 add_interface_port axi4_sub sub_wlast wlast Input 1
 add_interface_port axi4_sub sub_wready wready Output 1
-add_interface_port axi4_sub sub_wstrb wstrb Input 8
+add_interface_port axi4_sub sub_wstrb wstrb Input 32
 add_interface_port axi4_sub sub_wvalid wvalid Input 1
 add_interface_port axi4_sub sub_aruser aruser Input 8
 add_interface_port axi4_sub sub_awuser awuser Input 8
@@ -274,16 +274,16 @@ module ${output_name} (
 	input  wire         sub_bready,
 	output wire \[1:0\]   sub_bresp,
 	output wire         sub_bvalid,
-	output wire \[63:0\] sub_rdata,
+	output wire \[255:0\] sub_rdata,
 	output wire \[4:0\]   sub_rid,
 	output wire         sub_rlast,
 	input  wire         sub_rready,
 	output wire \[1:0\]   sub_rresp,
 	output wire         sub_rvalid,
-	input  wire \[63:0\] sub_wdata,
+	input  wire \[255:0\] sub_wdata,
 	input  wire         sub_wlast,
 	output wire         sub_wready,
-	input  wire \[7:0\]  sub_wstrb,
+	input  wire \[31:0\]  sub_wstrb,
 	input  wire         sub_wvalid,
 	input  wire \[7:0\]   sub_aruser,
 	input  wire \[7:0\]   sub_awuser,
@@ -322,16 +322,16 @@ module ${output_name} (
 	output wire         man_bready,
 	input  wire \[1:0\]   man_bresp,
 	input  wire         man_bvalid,
-	input  wire \[63:0\] man_rdata,
+	input  wire \[255:0\] man_rdata,
 	input  wire \[4:0\]   man_rid,
 	input  wire         man_rlast,
 	output wire         man_rready,
 	input  wire \[1:0\]   man_rresp,
 	input  wire         man_rvalid,
-	output wire \[63:0\] man_wdata,
+	output wire \[255:0\] man_wdata,
 	output wire         man_wlast,
 	input  wire         man_wready,
-	output wire \[7:0\]  man_wstrb,
+	output wire \[31:0\]  man_wstrb,
 	output wire         man_wvalid,
 	output wire \[7:0\]   man_aruser,
 	output wire \[7:0\]   man_awuser,
