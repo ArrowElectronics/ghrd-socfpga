@@ -27,8 +27,9 @@
 `define wFAB_QSPI
 `define wADDA
 `define wHDMI
-//`define wLPDDR4B
 `define wLPDDR4A //EMIF HPS
+`define wLPDDR4B //EMIF FPGA
+
 //`define wFMC
 //`define wCRUVI_HS_1
 //`define wCRUVI_HS_2
@@ -59,24 +60,24 @@ module axe5_eagle_top (
    inout [7:0]   	USB_DATA,
    input         	USB_CLK, USB_NXT, USB_DIR,
    output        	USB_STP, 
-   inout	  	USB_RST,
+   inout	  		USB_RST,
    output        	USB_SSTX_p, USB_SSTX_n, 
    input         	USB_SSRX_p, USB_SSRX_n, 
    input         	USB_REFCLK_p, USB_REFCLK_n, 
-   output	  	USB_HUB_RST,   
+   output	  		USB_HUB_RST,   
    `endif
    `ifdef wHPS_SD
    output        	SD_CLK,
-   inout	  	SD_CMD,
+   inout	  		SD_CMD,
    inout         	SD_DETECT,
    inout  [3:0]  	SD_DAT,
    `endif
    `ifdef wHPS
    inout [1:0]   	HPS_PB,
-   inout 	     	HPS_DIPSW[0:0],
+   inout 	     	HPS_DIPSW[1:0],
+   input         	HPS_COLD_RST,
+   input         	HPS_OSC_CLK_25MHz,   
    `endif
-   
-
    `ifdef wFAB_I2C1
    inout         	MUX_I2C_SDA,
    inout         	MUX_I2C_SCL, MUX_I2C_INT,
@@ -128,7 +129,7 @@ module axe5_eagle_top (
    `endif
    `ifdef wLPDDR4A
    output        	LPDDR4A_CK_P, LPDDR4A_CK_N, LPDDR4A_RST, 
-	input         	LPDDR4A_REFCK_p,
+	input         	LPDDR4A_REFCK,
    output [5:0]  	LPDDR4A_CA,
    output	     	LPDDR4A_CKE, LPDDR4A_CS_N,
    inout  [31:0] 	LPDDR4A_DQ,
@@ -139,9 +140,9 @@ module axe5_eagle_top (
    `endif
    `ifdef wLPDDR4B
    output        	LPDDR4B_CK_P, LPDDR4B_CK_N, LPDDR4B_RST, 
-   input         	LPDDR4B_REFCK_p,
+   input         	LPDDR4B_REFCK,
    output [5:0]  	LPDDR4B_CA,
-   output		LPDDR4B_CKE, LPDDR4B_CS_N,
+   output			LPDDR4B_CKE, LPDDR4B_CS_N,
    inout  [31:0] 	LPDDR4B_DQ,
    inout         	LPDDR4B_DQSA1_p, LPDDR4B_DQSA1_n, LPDDR4B_DQSA0_p, LPDDR4B_DQSA0_n,
    inout         	LPDDR4B_DQSB1_p, LPDDR4B_DQSB1_n, LPDDR4B_DQSB0_p, LPDDR4B_DQSB0_n,
@@ -223,23 +224,13 @@ module axe5_eagle_top (
 	
    input         	SFP_REFCLK_p, SFP_REFCLK_n,
 
-   input         	REFCLK_3B0_p, REFCLK_3B0_n,
-   input         	FPGA_RST,
+   input         	REFCLK_3B0,
+   input         	FPGA_RST_n,
    inout         	PWR_SDA,
    inout         	PWR_SCL,
-   input         	SDM_CLK_25MHz,
-   input         	HPS_COLD_RST,
-   input         	HPS_OSC_CLK_25MHz
+   input         	SDM_CLK_25MHz
    
 );
-
-   //wire  [3:0] 	LPDDR4B_DQS_p, LPDDR4B_DQS_n, LPDDR4B_DMI;
-   //assign      	LPDDR4B_DQS_p[3:2] = LPDDR4B_DQSA_p;
-   //assign      	LPDDR4B_DQS_p[1:0] = LPDDR4B_DQSB_p;
-   //assign      	LPDDR4B_DQS_n[3:2] = LPDDR4B_DQSA_n;
-   //assign      	LPDDR4B_DQS_n[1:0] = LPDDR4B_DQSB_n;
-   //assign      	LPDDR4B_DMI   = {LPDDR4B_DMA, LPDDR4B_DMB};
-   
 	
    `ifdef wRGB_LED0
    wire [2:0] rgb_led0;
@@ -293,51 +284,13 @@ module axe5_eagle_top (
 	
    assign ETH1_MDIO = emac0_mdio_oe ? emac0_mdio_mdo : 1'bz;
    assign emac0_mdio_di = ETH1_MDIO;
-   
-   gmii2rgmii gmii2rgmii_shim (
-        .hps_gmii_mac_tx_clk_o  (emac0_tx_clk_o),
-        .hps_gmii_mac_rst_tx_n  (emac0_rst_tx_n),
-        .hps_gmii_mac_rst_rx_n  (emac0_rst_rx_n),
-        .hps_gmii_mac_txd_o     (emac0_txd),
-        .hps_gmii_mac_txen      (emac0_txen),
-        .hps_gmii_mac_txer      (emac0_txer),
-        .hps_gmii_mac_speed     (emac0_speed),
-        .hps_gmii_mac_tx_clk_i  (emac0_txclk),
-        .hps_gmii_mac_rx_clk    (emac0_rxclk),
-        .hps_gmii_mac_rxdv      (emac0_rxdv),
-        .hps_gmii_mac_rxer      (emac0_rxer),
-        .hps_gmii_mac_rxd       (emac0_rxd),
-        .hps_gmii_mac_col       (emac0_col),
-        .hps_gmii_mac_crs       (emac0_crs),
-        .phy_rgmii_rgmii_rx_clk (ETH1_RXCK),
-        .phy_rgmii_rgmii_rxd    (ETH1_RXD),
-        .phy_rgmii_rgmii_tx_clk (ETH1_TXCK),
-        .phy_rgmii_rgmii_txd    (ETH1_TXD),
-        .phy_rgmii_rgmii_tx_ctl (ETH1_TXTL),
-        .pll_50m_clock_clk      (pll_50M_clk),
-        .pll_5m_clock_clk       (pll_5M_clk),
-        .pll_25m_clock_clk      (pll_25M_clk),
-        .pll_2_5m_clock_clk     (pll_2p5M_clk),
-        .peri_reset_reset       (!emac0_app_rst_reset_n),
-        .peri_clock_clk         (_connected_to_peri_clock_clk_)
-   );
-	 
-   gmii2rgmii_pll gmii2rgmii_iopll (
-        .refclk   (SDM_CLK_25MHz), 
-        .locked   (),   		
-        .rst      (HPS_COLD_RST),      
-        .outclk_0 (pll_25M_clk),      
-        .outclk_1 (pll_2p5M_clk),     
-        .outclk_2 (pll_50M_clk),      
-        .outclk_3 (pll_5M_clk)        
-   );
 
    `endif
 
    `ifdef wFAB_I2C1
    
    hps_signal_buffer i2c1_sda_buffer (
-	.ck     (REFCLK_3B0_p), 
+	.ck     (REFCLK_3B0), 
 	.dout   (i2c1_sda_i),
 	.din    (1'b0),
 	.oe     (i2c1_sda_oe),
@@ -345,7 +298,7 @@ module axe5_eagle_top (
    );   
 	
    hps_signal_buffer i2c1_scl_buffer (
-	.ck     (REFCLK_3B0_p), 
+	.ck     (REFCLK_3B0), 
 	.dout   (i2c1_scl_i_clk),
 	.din    (1'b0),
 	.oe     (i2c1_scl_oe_clk),
@@ -354,207 +307,199 @@ module axe5_eagle_top (
 
    `endif
 
-   wire     osc_clock_bridge_out;
-	
-   //EG aggregates 
-   wire o_src_rs_grant;    //         rsif.src_rs_grant,    SRC_GRANT
-   wire i_src_rs_priority; //             .src_rs_priority, PRIORITY BIT
-   wire i_src_rs_req;      //             .src_rs_req,      SRC_REQ
-   wire o_pma_cu_clk;      // o_pma_cu_clk.clk,             PMA clock from PLL for proper calculation. For simulation only
-	
-   gts_reset_seq gts_reset_seq (
-	.o_src_rs_grant(o_src_rs_grant),
-	.i_src_rs_priority(i_src_rs_priority),
-	.i_src_rs_req(i_src_rs_req),
-	.o_pma_cu_clk(o_pma_cu_clk)
-   );
-
 	// Instantiate HPS system from Plaform Designer
    ghrd_system pd_system (
-        .sys_clk_clk              (REFCLK_3B0_p),
+        .sys_clk_clk              					(REFCLK_3B0),
+        .reset_pb_n_reset                       	(FPGA_RST_n),		
       `ifdef wHDMI
-        .hdmi_clk_clk             (HDMI_CLK),
-        .hdmi_h16_hsync           (HDMI_HS),
-        .hdmi_h16_vsync           (HDMI_VS),
-        .hdmi_h16_data_e          (HDMI_DE),
-        .hdmi_h16_data            (hdmi_data_pd),
-        .hdmi_h16_es_data         (),
-        .hdmi_h24_hsync           (),
-        .hdmi_h24_vsync           (),
-        .hdmi_h24_data_e          (),
-        .hdmi_h24_data            (),
-        .hdmi_h36_hsync           (),
-        .hdmi_h36_vsync           (),
-        .hdmi_h36_data_e          (),
-        .hdmi_h36_data            (),
+        .hdmi_clk_clk             					(HDMI_CLK),
+        .hdmi_h16_hsync           					(HDMI_HS),
+        .hdmi_h16_vsync           					(HDMI_VS),
+        .hdmi_h16_data_e          					(HDMI_DE),
+        .hdmi_h16_data            					(hdmi_data_pd),
+        .hdmi_h16_es_data         					(),
+        .hdmi_h24_hsync           					(),
+        .hdmi_h24_vsync           					(),
+        .hdmi_h24_data_e          					(),
+        .hdmi_h24_data            					(),
+        .hdmi_h36_hsync           					(),
+        .hdmi_h36_vsync           					(),
+        .hdmi_h36_data_e          					(),
+        .hdmi_h36_data            					(),
       `endif
       `ifdef wFAB_DIPSW
-        .dipsw_export             (FPGA_DIPSW),
+        .dipsw_export             					(FPGA_DIPSW),
       `endif
       `ifdef wFAB_PB
-        .pb_export                (FPGA_PB),
+        .pb_export                					(FPGA_PB),
       `endif
       `ifdef wRGB_LED0
-        .rgb_led0_export          (rgb_led0),
+        .rgb_led0_export          					(rgb_led0),
       `endif
       `ifdef wRGB_LED1
-        .rgb_led1_export          (rgb_led1),
+        .rgb_led1_export          					(rgb_led1),
       `endif
       `ifdef wRGB_LED2
-        .rgb_led2_export          (rgb_led2),
+        .rgb_led2_export          					(rgb_led2),
       `endif
       `ifdef wRGB_LED3
-        .rgb_led3_export          (rgb_led3),
+        .rgb_led3_export          					(rgb_led3),
       `endif
       `ifdef wFAB_EMAC
-        .emac0_mdio_mac_mdc       (emac0_mdio_mdc),
-        .emac0_mdio_mac_mdi       (emac0_mdio_di),
-        .emac0_mdio_mac_mdo       (emac0_mdio_mdo),
-        .emac0_mdio_mac_mdoe      (emac0_mdio_oe),
-        .emac0_app_rst_reset_n    (emac0_app_rst_reset_n),
-        .emac0_mac_tx_clk_o       (emac0_tx_clk_o),
-        .emac0_mac_tx_clk_i       (emac0_txclk),
-        .emac0_mac_rx_clk         (emac0_rxclk),
-        .emac0_mac_rst_tx_n       (emac0_rst_tx_n),
-        .emac0_mac_rst_rx_n       (emac0_rst_rx_n),
-        .emac0_mac_txen           (emac0_txen),
-        .emac0_mac_txer           (emac0_txer),
-        .emac0_mac_rxdv           (emac0_rxdv),
-        .emac0_mac_rxer           (emac0_rxer),
-        .emac0_mac_rxd            (emac0_rxd),
-        .emac0_mac_col            (emac0_col),
-        .emac0_mac_crs            (emac0_crs),
-        .emac0_mac_speed          (emac0_speed),
-        .emac0_mac_txd_o          (emac0_txd),
+        .emac0_mdio_mac_mdc       					(emac0_mdio_mdc),
+        .emac0_mdio_mac_mdi       					(emac0_mdio_di),
+        .emac0_mdio_mac_mdo       					(emac0_mdio_mdo),
+        .emac0_mdio_mac_mdoe      					(emac0_mdio_oe),
+        .emac0_app_rst_reset_n    					(emac0_app_rst_reset_n),
+        .emac0_mac_tx_clk_o       					(emac0_tx_clk_o),
+        .emac0_mac_tx_clk_i       					(emac0_txclk),
+        .emac0_mac_rx_clk         					(emac0_rxclk),
+        .emac0_mac_rst_tx_n       					(emac0_rst_tx_n),
+        .emac0_mac_rst_rx_n       					(emac0_rst_rx_n),
+        .emac0_mac_txen           					(emac0_txen),
+        .emac0_mac_txer           					(emac0_txer),
+        .emac0_mac_rxdv           					(emac0_rxdv),
+        .emac0_mac_rxer           					(emac0_rxer),
+        .emac0_mac_rxd            					(emac0_rxd),
+        .emac0_mac_col            					(emac0_col),
+        .emac0_mac_crs            					(emac0_crs),
+        .emac0_mac_speed          					(emac0_speed),
+        .emac0_mac_txd_o          					(emac0_txd),
       `endif
       `ifdef wADDA
-        .spim0_miso_i             (ADDA_DOUT),
-        .spim0_mosi_o             (ADDA_DIN),
-        .spim0_mosi_oe            (),
-        .spim0_ss_in_n            (1'b1),
-        .spim0_ss0_n_o            (ADDA_SYNC),
-        .spim0_ss1_n_o            (),
-        .spim0_sclk_out_clk       (ADDA_CLK),
-        .spim0_ss2_n_o            (),
-        .spim0_ss3_n_o            (),
+        .spim0_miso_i             					(ADDA_DOUT),
+        .spim0_mosi_o             					(ADDA_DIN),
+        .spim0_mosi_oe            					(),
+        .spim0_ss_in_n            					(1'b1),
+        .spim0_ss0_n_o            					(ADDA_SYNC),
+        .spim0_ss1_n_o            					(),
+        .spim0_sclk_out_clk       					(ADDA_CLK),
+        .spim0_ss2_n_o            					(),
+        .spim0_ss3_n_o            					(),
        `endif
       `ifdef wFAB_I2C1
-        .i2c1_scl_i_clk           (i2c1_scl_i_clk),
-        .i2c1_scl_oe_clk          (i2c1_scl_oe_clk),
-        .i2c1_sda_i               (i2c1_sda_i),
-        .i2c1_sda_oe              (i2c1_sda_oe),
+        .i2c1_scl_i_clk           					(i2c1_scl_i_clk),
+        .i2c1_scl_oe_clk          					(i2c1_scl_oe_clk),
+        .i2c1_sda_i               					(i2c1_sda_i),
+        .i2c1_sda_oe              					(i2c1_sda_oe),
       `endif
-        .hps_io_hps_osc_clk       (HPS_OSC_CLK_25MHz),
-        .hps_io_sdmmc_data0       (SD_DAT[0]),
-        .hps_io_sdmmc_data1       (SD_DAT[1]),
-        .hps_io_sdmmc_cclk        (SD_CLK),
-        .hps_io_sdmmc_data2       (SD_DAT[2]),
-        .hps_io_sdmmc_data3       (SD_DAT[3]),
-        .hps_io_sdmmc_cmd         (SD_CMD),
+      `ifdef wHPS
+        .hps_io_hps_osc_clk       					(HPS_OSC_CLK_25MHz),	  
       `ifdef wHPS_EMAC2
-        .hps_io_emac2_tx_clk      (HPS_ETH2_TXCK),
-        .hps_io_emac2_tx_ctl      (HPS_ETH2_TXCTL),
-        .hps_io_emac2_rx_clk      (HPS_ETH2_RXCK),
-        .hps_io_emac2_rx_ctl      (HPS_ETH2_RXCTL),
-        .hps_io_emac2_txd0        (HPS_ETH2_TXD[0]),
-        .hps_io_emac2_txd1        (HPS_ETH2_TXD[1]),
-        .hps_io_emac2_rxd0        (HPS_ETH2_RXD[0]),
-        .hps_io_emac2_rxd1        (HPS_ETH2_RXD[1]),
-        .hps_io_emac2_txd2        (HPS_ETH2_TXD[2]),
-        .hps_io_emac2_txd3        (HPS_ETH2_TXD[3]),
-        .hps_io_emac2_rxd2        (HPS_ETH2_RXD[2]),
-        .hps_io_emac2_rxd3        (HPS_ETH2_RXD[3]),
-        .hps_io_mdio2_mdio        (HPS_ETH2_MDIO),
-        .hps_io_mdio2_mdc         (HPS_ETH2_MDC),
-        .emac2_app_rst_reset_n    (),
+        .hps_io_emac2_tx_clk      					(HPS_ETH2_TXCK),
+        .hps_io_emac2_tx_ctl      					(HPS_ETH2_TXCTL),
+        .hps_io_emac2_rx_clk      					(HPS_ETH2_RXCK),
+        .hps_io_emac2_rx_ctl      					(HPS_ETH2_RXCTL),
+        .hps_io_emac2_txd0        					(HPS_ETH2_TXD[0]),
+        .hps_io_emac2_txd1        					(HPS_ETH2_TXD[1]),
+        .hps_io_emac2_rxd0        					(HPS_ETH2_RXD[0]),
+        .hps_io_emac2_rxd1        					(HPS_ETH2_RXD[1]),
+        .hps_io_emac2_txd2        					(HPS_ETH2_TXD[2]),
+        .hps_io_emac2_txd3        					(HPS_ETH2_TXD[3]),
+        .hps_io_emac2_rxd2        					(HPS_ETH2_RXD[2]),
+        .hps_io_emac2_rxd3        					(HPS_ETH2_RXD[3]),
+        .hps_io_mdio2_mdio        					(HPS_ETH2_MDIO),
+        .hps_io_mdio2_mdc         					(HPS_ETH2_MDC),
+        .emac2_app_rst_reset_n    					(),
+		.hps_io_gpio34								(HPS_ETH2_RST),		
       `endif
       `ifdef wHPS_UART0
-        .hps_io_uart0_tx          (HPS_UART0_TX),
-        .hps_io_uart0_rx          (HPS_UART0_RX),
+        .hps_io_uart0_tx          					(HPS_UART0_TX),
+        .hps_io_uart0_rx          					(HPS_UART0_RX),
       `endif
       `ifdef wHPS_I2C0
-        .hps_io_i2c0_sda          (HPS_I2C0_SDA),
-        .hps_io_i2c0_scl          (HPS_I2C0_SCL),
+        .hps_io_i2c0_sda          					(HPS_I2C0_SDA),
+        .hps_io_i2c0_scl          					(HPS_I2C0_SCL),
       `endif
       `ifdef wHPS_USB
-        .usb31_io_vbus_det        (1'b1),
-        .usb31_io_flt_bar         (1'b1),
-        .usb31_io_usb_ctrl        (),
-        .usb31_io_usb31_id        (1'b1),
-        .hps_io_usb1_clk          (USB_CLK),
-        .hps_io_usb1_stp          (USB_STP),
-        .hps_io_usb1_dir          (USB_DIR),
-        .hps_io_usb1_data0        (USB_DATA[0]),
-        .hps_io_usb1_data1        (USB_DATA[1]),
-        .hps_io_usb1_nxt          (USB_NXT),
-        .hps_io_usb1_data2        (USB_DATA[2]),
-        .hps_io_usb1_data3        (USB_DATA[3]),
-        .hps_io_usb1_data4        (USB_DATA[4]),
-        .hps_io_usb1_data5        (USB_DATA[5]),
-        .hps_io_usb1_data6        (USB_DATA[6]),
-        .hps_io_usb1_data7        (USB_DATA[7]),
+        .usb31_io_vbus_det        					(1'b1),
+        .usb31_io_flt_bar         					(1'b1),
+        .usb31_io_usb_ctrl        					(),
+        .usb31_io_usb31_id        					(1'b1),
+        .hps_io_usb1_clk          					(USB_CLK),
+        .hps_io_usb1_stp          					(USB_STP),
+        .hps_io_usb1_dir          					(USB_DIR),
+        .hps_io_usb1_data0        					(USB_DATA[0]),
+        .hps_io_usb1_data1        					(USB_DATA[1]),
+        .hps_io_usb1_nxt          					(USB_NXT),
+        .hps_io_usb1_data2        					(USB_DATA[2]),
+        .hps_io_usb1_data3        					(USB_DATA[3]),
+        .hps_io_usb1_data4        					(USB_DATA[4]),
+        .hps_io_usb1_data5        					(USB_DATA[5]),
+        .hps_io_usb1_data6        					(USB_DATA[6]),
+        .hps_io_usb1_data7        					(USB_DATA[7]),
 		  // EG aggregates
-        .usb31_phy_pma_cpu_clk_clk			(o_pma_cu_clk),              
-        .usb31_phy_refclk_p_clk			(USB_REFCLK_p),                 
-        .usb31_phy_refclk_n_clk			(USB_REFCLK_n),                 
+        .usb31_phy_pma_cpu_clk_clk					(o_pma_cu_clk),              
+        .usb31_phy_refclk_p_clk						(USB_REFCLK_p),                 
+        .usb31_phy_refclk_n_clk						(USB_REFCLK_n),                 
         .usb31_phy_rx_serial_n_i_rx_serial_n		(USB_SSRX_n),    
         .usb31_phy_rx_serial_p_i_rx_serial_p		(USB_SSRX_p),    
         .usb31_phy_tx_serial_n_o_tx_serial_n		(USB_SSTX_n),    
-        .usb31_phy_tx_serial_p_o_tx_serial_p(		USB_SSTX_p),    
-        .usb31_phy_reconfig_rst_reset			(),           
-        .usb31_phy_reconfig_clk_clk			(),             
-        .usb31_phy_reconfig_slave_address		(),       
+        .usb31_phy_tx_serial_p_o_tx_serial_p		(USB_SSTX_p),    
+        .usb31_phy_reconfig_rst_reset				(),           
+        .usb31_phy_reconfig_clk_clk					(),             
+        .usb31_phy_reconfig_slave_address			(),       
         .usb31_phy_reconfig_slave_byteenable		(),    
-        .usb31_phy_reconfig_slave_readdatavalid	(), 
-        .usb31_phy_reconfig_slave_read		(),          
-        .usb31_phy_reconfig_slave_write		(),         
-        .usb31_phy_reconfig_slave_readdata		(),      
-        .usb31_phy_reconfig_slave_writedata		(),     
-        .usb31_phy_reconfig_slave_waitrequest		(),   
-	.usb_hub_rst_export				(USB_HUB_RST), 					
+        .usb31_phy_reconfig_slave_readdatavalid		(), 
+        .usb31_phy_reconfig_slave_read				(),          
+        .usb31_phy_reconfig_slave_write				(),         
+        .usb31_phy_reconfig_slave_readdata			(),      
+        .usb31_phy_reconfig_slave_writedata			(),     
+        .usb31_phy_reconfig_slave_waitrequest		(),  
+		.hps_io_gpio28            					(USB_RST),
+		.usb_hub_rst_export							(USB_HUB_RST), 					
       `endif
-      `ifdef wHPS
+      `ifdef wHPS_SD		
+        .hps_io_sdmmc_data0       					(SD_DAT[0]),
+        .hps_io_sdmmc_data1       					(SD_DAT[1]),
+        .hps_io_sdmmc_cclk        					(SD_CLK),
+        .hps_io_sdmmc_data2       					(SD_DAT[2]),
+        .hps_io_sdmmc_data3       					(SD_DAT[3]),
+        .hps_io_sdmmc_cmd         					(SD_CMD),
+        .hps_io_gpio35            					(SD_DETECT),		
+      `endif		
       `ifdef wHPS_LED0
-        .hps_io_gpio6             (HPS_LED0),
+        .hps_io_gpio6             					(HPS_LED0),
       `endif
       `ifdef wHPS_LED1
-        .hps_io_gpio7             (HPS_LED1),
+        .hps_io_gpio7             					(HPS_LED1),
       `endif
-        .hps_io_gpio8             (HPS_PB[0]),
-        .hps_io_gpio9             (HPS_PB[1]),
-        .hps_io_gpio10            (HPS_DIPSW[0]),
-        //.hps_io_gpio11            (HPS_DIPSW[1]),
-        .hps_io_gpio28            (USB_RST),
-	.hps_io_gpio34		   (HPS_ETH2_RST),
-        .hps_io_gpio35            (SD_DETECT),
-      `ifdef wLPDDR4A //Port names changed 
-        .emif_bank3a_hps_emif_ref_clk_0_clk       (LPDDR4A_REFCK_p),
+      `ifdef wHPS_PB	  
+        .hps_io_gpio8             					(HPS_PB[0]),
+        .hps_io_gpio9             					(HPS_PB[1]),
+      `endif
+      `ifdef wHPS_DIPSW	  
+        .hps_io_gpio10            					(HPS_DIPSW[0]),
+        .hps_io_gpio1            					(HPS_DIPSW[1]),
+      `endif		
+      `ifdef wLPDDR4A //HPS EMIF
+        .emif_bank3a_hps_emif_ref_clk_0_clk       	(LPDDR4A_REFCK),
         .emif_bank3a_hps_emif_mem_0_mem_ck_t	    (LPDDR4A_CK_P),
-        .emif_bank3a_hps_emif_mem_0_mem_ck_c      (LPDDR4A_CK_N),
-        .emif_bank3a_hps_emif_mem_0_mem_cke       (LPDDR4A_CKE),
-        .emif_bank3a_hps_emif_mem_0_mem_reset_n   (LPDDR4A_RST),
-        .emif_bank3a_hps_emif_mem_0_mem_cs        (LPDDR4A_CS_N),
-        .emif_bank3a_hps_emif_mem_0_mem_ca        (LPDDR4A_CA), //?
-        .emif_bank3a_hps_emif_mem_0_mem_dq        (LPDDR4A_DQ),
-        .emif_bank3a_hps_emif_mem_0_mem_dqs_t     ({LPDDR4A_DQSB1_p, LPDDR4A_DQSB0_p, LPDDR4A_DQSA1_p, LPDDR4A_DQSA0_p}),
-        .emif_bank3a_hps_emif_mem_0_mem_dqs_c     ({LPDDR4A_DQSB1_n, LPDDR4A_DQSB0_n, LPDDR4A_DQSA1_n, LPDDR4A_DQSA0_n}),
-        .emif_bank3a_hps_emif_mem_0_mem_dmi       ({LPDDR4A_DMB1,LPDDR4A_DMB0,LPDDR4A_DMA1,LPDDR4A_DMA0}), //?
-        .emif_bank3a_hps_emif_oct_0_oct_rzqin     (LPDDR4A_OCT_RZQIN)
+        .emif_bank3a_hps_emif_mem_0_mem_ck_c      	(LPDDR4A_CK_N),
+        .emif_bank3a_hps_emif_mem_0_mem_cke       	(LPDDR4A_CKE),
+        .emif_bank3a_hps_emif_mem_0_mem_reset_n   	(LPDDR4A_RST),
+        .emif_bank3a_hps_emif_mem_0_mem_cs        	(LPDDR4A_CS_N),
+        .emif_bank3a_hps_emif_mem_0_mem_ca        	(LPDDR4A_CA),
+        .emif_bank3a_hps_emif_mem_0_mem_dq        	(LPDDR4A_DQ),
+        .emif_bank3a_hps_emif_mem_0_mem_dqs_t     	({LPDDR4A_DQSB1_p, LPDDR4A_DQSB0_p, LPDDR4A_DQSA1_p, LPDDR4A_DQSA0_p}),
+        .emif_bank3a_hps_emif_mem_0_mem_dqs_c     	({LPDDR4A_DQSB1_n, LPDDR4A_DQSB0_n, LPDDR4A_DQSA1_n, LPDDR4A_DQSA0_n}),
+        .emif_bank3a_hps_emif_mem_0_mem_dmi       	({LPDDR4A_DMB1,LPDDR4A_DMB0,LPDDR4A_DMA1,LPDDR4A_DMA0}),
+        .emif_bank3a_hps_emif_oct_0_oct_rzqin     	(LPDDR4A_OCT_RZQIN),
       `endif
       `endif
-      `ifdef wLPDDR4B
-        .bank2a_lpddr4_refclk_clk    (LPDDR4B_REFCK_p),
-        .bank2a_lpddr4_mem_ck_t      (LPDDR4B_CK_P),
-        .bank2a_lpddr4_mem_ck_c      (LPDDR4B_CK_N),
-        .bank2a_lpddr4_mem_cke       (LPDDR4B_CKE),
-        .bank2a_lpddr4_mem_reset_n   (LPDDR4B_RST),
-        .bank2a_lpddr4_mem_cs        (LPDDR4B_CS_N),
-        .bank2a_lpddr4_mem_ca        (LPDDR4B_CA),
-        .bank2a_lpddr4_mem_dq        (LPDDR4B_DQ),
-        .bank2a_lpddr4_mem_dqs_t     ({LPDDR4B_DQSB1_p, LPDDR4B_DQSB0_p, LPDDR4B_DQSA1_p, LPDDR4B_DQSA0_p}),
-        .bank2a_lpddr4_mem_dqs_c     ({LPDDR4B_DQSB1_n, LPDDR4B_DQSB0_n, LPDDR4B_DQSA1_n, LPDDR4B_DQSA0_n}),
-        .bank2a_lpddr4_mem_dmi       ({LPDDR4B_DMB1,LPDDR4B_DMB0,LPDDR4B_DMA1,LPDDR4B_DMA0}),
-        .bank2a_lpddr4_oct_oct_rzqin (LPDDR4B_OCT_RZQIN)
+      `ifdef wLPDDR4B //FPGA EMIF
+        .emif_bank2a_fpga_ref_clk_0_clk    			(LPDDR4B_REFCK),
+        .emif_bank2a_fpga_mem_0_mem_ck_t      		(LPDDR4B_CK_P),
+        .emif_bank2a_fpga_mem_0_mem_ck_c      		(LPDDR4B_CK_N),
+        .emif_bank2a_fpga_mem_0_mem_cke       		(LPDDR4B_CKE),
+        .emif_bank2a_fpga_mem_0_mem_reset_n  		(LPDDR4B_RST),
+        .emif_bank2a_fpga_mem_0_mem_cs       		(LPDDR4B_CS_N),
+        .emif_bank2a_fpga_mem_0_mem_ca     			(LPDDR4B_CA),
+        .emif_bank2a_fpga_mem_0_mem_dq     			(LPDDR4B_DQ),
+        .emif_bank2a_fpga_mem_0_mem_dqs_t  			({LPDDR4B_DQSB1_p, LPDDR4B_DQSB0_p, LPDDR4B_DQSA1_p, LPDDR4B_DQSA0_p}),
+        .emif_bank2a_fpga_mem_0_mem_dqs_c  			({LPDDR4B_DQSB1_n, LPDDR4B_DQSB0_n, LPDDR4B_DQSA1_n, LPDDR4B_DQSA0_n}),
+        .emif_bank2a_fpga_mem_0_mem_dmi    			({LPDDR4B_DMB1,LPDDR4B_DMB0,LPDDR4B_DMA1,LPDDR4B_DMA0}),
+        .emif_bank2a_fpga_oct_0_oct_rzqin 			(LPDDR4B_OCT_RZQIN)
       `endif
     );
 

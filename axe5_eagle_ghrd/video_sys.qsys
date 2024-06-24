@@ -50,6 +50,11 @@ https://fpgasoftware.intel.com/eula.-->
    }
    element axi_hdmi_tx.s_axi
    {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
       datum baseAddress
       {
          value = "0";
@@ -66,6 +71,11 @@ https://fpgasoftware.intel.com/eula.-->
    }
    element hdmi_dmac.s_axi
    {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
       datum baseAddress
       {
          value = "65536";
@@ -207,15 +217,15 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;18&lt;/value&gt;
+                        &lt;value&gt;3&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                        &lt;value&gt;250000000&lt;/value&gt;
+                        &lt;value&gt;200000000&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;18&lt;/value&gt;
+                        &lt;value&gt;3&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;
@@ -5303,7 +5313,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;clockRate&lt;/key&gt;
-                            &lt;value&gt;250000000&lt;/value&gt;
+                            &lt;value&gt;200000000&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;clockRateKnown&lt;/key&gt;
@@ -5347,7 +5357,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;consumedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                            &lt;value&gt;250000000&lt;/value&gt;
+                            &lt;value&gt;200000000&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/consumedSystemInfos&gt;
                 &lt;/value&gt;
@@ -5359,7 +5369,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;suppliedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                            &lt;value&gt;250000000&lt;/value&gt;
+                            &lt;value&gt;200000000&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/suppliedSystemInfos&gt;
                     &lt;consumedSystemInfos/&gt;
@@ -5439,7 +5449,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;clockRate&lt;/key&gt;
-                        &lt;value&gt;250000000&lt;/value&gt;
+                        &lt;value&gt;200000000&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;clockRateKnown&lt;/key&gt;
@@ -5684,7 +5694,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;consumedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                            &lt;value&gt;250000000&lt;/value&gt;
+                            &lt;value&gt;200000000&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/consumedSystemInfos&gt;
                 &lt;/value&gt;

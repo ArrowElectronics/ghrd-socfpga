@@ -577,11 +577,6 @@ https://fpgasoftware.intel.com/eula.-->
    }
    element sysid_qsys_0
    {
-      datum _originalVersion
-      {
-         value = "19.1.5";
-         type = "String";
-      }
    }
 }
 </ipxact:value>

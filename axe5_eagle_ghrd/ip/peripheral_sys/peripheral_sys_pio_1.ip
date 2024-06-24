@@ -748,7 +748,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="clockRate" type="longint">
           <ipxact:name>clockRate</ipxact:name>
           <ipxact:displayName>clockRate</ipxact:displayName>
-          <ipxact:value>250000000</ipxact:value>
+          <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="DEVICE_FAMILY" type="string">
           <ipxact:name>DEVICE_FAMILY</ipxact:name>
@@ -789,7 +789,7 @@ https://fpgasoftware.intel.com/eula.-->
         </ipxact:parameter>
         <ipxact:parameter parameterId="embeddedsw.CMacro.FREQ" type="string">
           <ipxact:name>embeddedsw.CMacro.FREQ</ipxact:name>
-          <ipxact:value>250000000</ipxact:value>
+          <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="embeddedsw.CMacro.HAS_IN" type="string">
           <ipxact:name>embeddedsw.CMacro.HAS_IN</ipxact:name>
@@ -1474,7 +1474,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                        &lt;value&gt;250000000&lt;/value&gt;
+                        &lt;value&gt;0&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;

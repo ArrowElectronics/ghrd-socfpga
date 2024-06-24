@@ -167,7 +167,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="EXPLICIT_CLOCK_RATE" type="longint">
           <ipxact:name>EXPLICIT_CLOCK_RATE</ipxact:name>
           <ipxact:displayName>Explicit clock rate</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
+          <ipxact:value>200000000</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="NUM_CLOCK_OUTPUTS" type="int">
           <ipxact:name>NUM_CLOCK_OUTPUTS</ipxact:name>

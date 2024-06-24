@@ -1,5 +1,3 @@
-set_location_assignment PIN_AC68 -to REFCLK_3B0_p -comment IOBANK_3B_B
-set_instance_assignment -name IO_STANDARD "1.2V TRUE DIFFERENTIAL SIGNALING" -to REFCLK_3B0_p -entity axe5_eagle_top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.2.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:22:23  JULY 13, 2023"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
@@ -10,24 +8,18 @@ set_global_assignment -name PWRMGT_VOLTAGE_OUTPUT_FORMAT "LINEAR FORMAT"
 set_global_assignment -name PWRMGT_LINEAR_FORMAT_N "-12"
 set_global_assignment -name POWER_APPLY_THERMAL_MARGIN ADDITIONAL
 set_global_assignment -name TOP_LEVEL_ENTITY axe5_eagle_top
-set_global_assignment -name IP_SEARCH_PATHS ip/adi/**/*
+set_global_assignment -name IP_SEARCH_PATHS "ip/**/*; ip/adi/**/*; ip/f2sdram_adapter/**/*; ip/reset_extender/**/*; ip/reset_synchronizer/**/*; ip/emif_axi_adaptor/**/*; ip/pb_reset/**/*"
 set_global_assignment -name LAST_QUARTUS_VERSION "24.1.0 Pro Edition"
-set_location_assignment PIN_T132 -to HPS_OSC_CLK_25MHz -comment IOBANK_HPS
+set_location_assignment PIN_T132 -to HPS_OSC_CLK_25MHz
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_OSC_CLK_25MHz -entity axe5_eagle_top
-set_location_assignment PIN_CK134 -to FPGA_RST
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_RST -entity axe5_eagle_top
-set_location_assignment PIN_J2 -to PWR_SDA
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to PWR_SDA -entity axe5_eagle_top
-set_location_assignment PIN_G2 -to PWR_SCL
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to PWR_SCL -entity axe5_eagle_top
 set_location_assignment PIN_B30 -to FPGA_PB[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_PB[0] -entity axe5_eagle_top
 set_location_assignment PIN_A30 -to FPGA_PB[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_PB[1] -entity axe5_eagle_top
 set_location_assignment PIN_CL54 -to FPGA_DIPSW[0]
-set_instance_assignment -name IO_STANDARD "1.2 V" -to FPGA_DIPSW[0] -entity axe5_eagle_top
+set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to FPGA_DIPSW[0] -entity axe5_eagle_top
 set_location_assignment PIN_CK63 -to FPGA_DIPSW[1]
-set_instance_assignment -name IO_STANDARD "1.2 V" -to FPGA_DIPSW[1] -entity axe5_eagle_top
+set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to FPGA_DIPSW[1] -entity axe5_eagle_top
 set_location_assignment PIN_B20 -to ADDA_CLK
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDA_CLK -entity axe5_eagle_top
 set_location_assignment PIN_A20 -to ADDA_DIN
@@ -44,7 +36,7 @@ set_location_assignment PIN_CL125 -to LED0G
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED0G -entity axe5_eagle_top
 set_location_assignment PIN_BR118 -to LED0B
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED0B -entity axe5_eagle_top
-set_location_assignment PIN_CF118 -to LED1R -comment IOBANK_5A
+set_location_assignment PIN_CF118 -to LED1R
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED1R -entity axe5_eagle_top
 set_location_assignment PIN_BW118 -to LED1G
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED1G -entity axe5_eagle_top
@@ -62,70 +54,66 @@ set_location_assignment PIN_CH132 -to LED3G
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED3G -entity axe5_eagle_top
 set_location_assignment PIN_CG135 -to LED3B
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED3B -entity axe5_eagle_top
-set_location_assignment PIN_CF9 -to HDMI_SPDIF
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_SPDIF
 set_location_assignment PIN_BH19 -to HDMI_VS
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_VS
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_VS -entity axe5_eagle_top
 set_location_assignment PIN_CF12 -to HDMI_HS
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_HS
-set_location_assignment PIN_BK31  -to HDMI_CLK
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CLK
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_HS -entity axe5_eagle_top
+set_location_assignment PIN_BK31 -to HDMI_CLK
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CLK -entity axe5_eagle_top
 set_location_assignment PIN_BK19 -to HDMI_DE
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_DE
-set_location_assignment PIN_BF16  -to HDMI_INT
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_INT
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_DE -entity axe5_eagle_top
 set_location_assignment PIN_BW19 -to HDMI_CT_HPD
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CT_HPD -entity axe5_eagle_top
 set_location_assignment PIN_BF25 -to HDMI_CEC_CLK
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CEC_CLK -entity axe5_eagle_top
 set_location_assignment PIN_BF32 -to HDMI_D[0]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[0]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[0] -entity axe5_eagle_top
 set_location_assignment PIN_CH12 -to HDMI_D[1]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[1] -entity axe5_eagle_top
 set_location_assignment PIN_BM22 -to HDMI_D[2]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[2]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[2] -entity axe5_eagle_top
 set_location_assignment PIN_BF21 -to HDMI_D[3]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[3]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[3] -entity axe5_eagle_top
 set_location_assignment PIN_BE21 -to HDMI_D[4]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[4]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[4] -entity axe5_eagle_top
 set_location_assignment PIN_BP22 -to HDMI_D[5]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[5]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[5] -entity axe5_eagle_top
 set_location_assignment PIN_BR22 -to HDMI_D[6]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[6]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[6] -entity axe5_eagle_top
 set_location_assignment PIN_BE25 -to HDMI_D[7]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[7]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[7] -entity axe5_eagle_top
 set_location_assignment PIN_BU22 -to HDMI_D[8]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[8]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[8] -entity axe5_eagle_top
 set_location_assignment PIN_BW28 -to HDMI_D[9]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[9]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[9] -entity axe5_eagle_top
 set_location_assignment PIN_BU28 -to HDMI_D[10]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[10]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[10] -entity axe5_eagle_top
 set_location_assignment PIN_BM31 -to HDMI_D[11]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[11]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[11] -entity axe5_eagle_top
 set_location_assignment PIN_BR28 -to HDMI_D[12]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[12]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[12] -entity axe5_eagle_top
 set_location_assignment PIN_BM28 -to HDMI_D[13]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[13]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[13] -entity axe5_eagle_top
 set_location_assignment PIN_BK28 -to HDMI_D[14]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[14]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[14] -entity axe5_eagle_top
 set_location_assignment PIN_BH28 -to HDMI_D[15]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[15]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[15] -entity axe5_eagle_top
 set_location_assignment PIN_BF36 -to HDMI_D[16]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[16]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[16] -entity axe5_eagle_top
 set_location_assignment PIN_BE43 -to HDMI_D[17]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[17]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[17] -entity axe5_eagle_top
 set_location_assignment PIN_BU31 -to HDMI_D[18]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[18]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[18] -entity axe5_eagle_top
 set_location_assignment PIN_BP31 -to HDMI_D[19]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[19]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[19] -entity axe5_eagle_top
 set_location_assignment PIN_BR31 -to HDMI_D[20]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[20]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[20] -entity axe5_eagle_top
 set_location_assignment PIN_BF29 -to HDMI_D[21]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[21]
-set_location_assignment PIN_BF40  -to HDMI_D[22]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[22]
-set_location_assignment PIN_BE29  -to HDMI_D[23]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[23]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[21] -entity axe5_eagle_top
+set_location_assignment PIN_BF40 -to HDMI_D[22]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[22] -entity axe5_eagle_top
+set_location_assignment PIN_BE29 -to HDMI_D[23]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[23] -entity axe5_eagle_top
 set_location_assignment PIN_R134 -to HPS_LED0
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_LED0 -entity axe5_eagle_top
 set_location_assignment PIN_AG115 -to HPS_LED1
@@ -164,36 +152,6 @@ set_location_assignment PIN_G134 -to USB_DATA[6]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[6] -entity axe5_eagle_top
 set_location_assignment PIN_G135 -to USB_DATA[7]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[7] -entity axe5_eagle_top
-set_location_assignment PIN_T124 -to HPS_ETH2_RST
-set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RST -entity axe5_eagle_top
-set_location_assignment PIN_M127 -to HPS_ETH2_TXCK
-set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXCK -entity axe5_eagle_top
-set_location_assignment PIN_K124 -to HPS_ETH2_TXD[0]
-set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[0] -entity axe5_eagle_top
-set_location_assignment PIN_Y127 -to HPS_ETH2_TXD[1]
-set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[1] -entity axe5_eagle_top
-set_location_assignment PIN_F127 -to HPS_ETH2_TXD[2]
-set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[2] -entity axe5_eagle_top
-set_location_assignment PIN_Y124 -to HPS_ETH2_TXD[3]
-set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[3] -entity axe5_eagle_top
-set_location_assignment PIN_AB127 -to HPS_ETH2_RXCTL
-set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXCTL -entity axe5_eagle_top
-set_location_assignment PIN_K127 -to HPS_ETH2_TXCTL
-set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXCTL -entity axe5_eagle_top
-set_location_assignment PIN_M124 -to HPS_ETH2_RXCK
-set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXCK -entity axe5_eagle_top
-set_location_assignment PIN_H127 -to HPS_ETH2_RXD[0]
-set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[0] -entity axe5_eagle_top
-set_location_assignment PIN_AB124 -to HPS_ETH2_RXD[1]
-set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[1] -entity axe5_eagle_top
-set_location_assignment PIN_F124 -to HPS_ETH2_RXD[2]
-set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[2] -entity axe5_eagle_top
-set_location_assignment PIN_D124 -to HPS_ETH2_RXD[3]
-set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[3] -entity axe5_eagle_top
-set_location_assignment PIN_Y132 -to HPS_ETH2_MDC
-set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_MDC -entity axe5_eagle_top
-set_location_assignment PIN_T127 -to HPS_ETH2_MDIO
-set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_MDIO -entity axe5_eagle_top
 set_location_assignment PIN_D132 -to SD_CLK
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_CLK -entity axe5_eagle_top
 set_location_assignment PIN_AB132 -to SD_CMD
@@ -208,126 +166,6 @@ set_location_assignment PIN_AA135 -to SD_DAT[2]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[2] -entity axe5_eagle_top
 set_location_assignment PIN_V127 -to SD_DAT[3]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[3] -entity axe5_eagle_top
-set_location_assignment PIN_BE61 -to FMC_REFCK_C2M_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to FMC_REFCK_C2M_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to FMC_REFCK_C2M_n -entity axe5_eagle_top
-set_location_assignment PIN_CH38 -to FMC_REFCK_M2C_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to FMC_REFCK_M2C_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to FMC_REFCK_M2C_n -entity axe5_eagle_top
-set_location_assignment PIN_BK38 -to FMC_CLK0_M2C_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to FMC_CLK0_M2C_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to FMC_CLK0_M2C_n -entity axe5_eagle_top
-set_location_assignment PIN_BF68 -to FMC_CLK1_M2C_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to FMC_CLK1_M2C_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to FMC_CLK1_M2C_n -entity axe5_eagle_top
-set_location_assignment PIN_BH49 -to FMC_SYNC_M2C_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to FMC_SYNC_M2C_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to FMC_SYNC_M2C_n -entity axe5_eagle_top
-set_location_assignment PIN_CH41 -to FMC_SYNC_C2M_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to FMC_SYNC_C2M_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to FMC_SYNC_C2M_n -entity axe5_eagle_top
-set_location_assignment PIN_CF19 -to LA00_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA00_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA00_n -entity axe5_eagle_top
-set_location_assignment PIN_CF22 -to LA01_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA01_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA01_n -entity axe5_eagle_top
-set_location_assignment PIN_CC22 -to LA02_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA02_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA02_n -entity axe5_eagle_top
-set_location_assignment PIN_CF28 -to LA03_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA03_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA03_n -entity axe5_eagle_top
-set_location_assignment PIN_CA31 -to LA04_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA04_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA04_n -entity axe5_eagle_top
-set_location_assignment PIN_CH31 -to LA05_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA05_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA05_n -entity axe5_eagle_top
-set_location_assignment PIN_CK8 -to LA06_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA06_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA06_n -entity axe5_eagle_top
-set_location_assignment PIN_CK11 -to LA07_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA07_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA07_n -entity axe5_eagle_top
-set_location_assignment PIN_CL14 -to LA08_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA08_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA08_n -entity axe5_eagle_top
-set_location_assignment PIN_CK17 -to LA09_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA09_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA09_n -entity axe5_eagle_top
-set_location_assignment PIN_CL20 -to LA10_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA10_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA10_n -entity axe5_eagle_top
-set_location_assignment PIN_CL23 -to LA11_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA11_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA11_n -entity axe5_eagle_top
-set_location_assignment PIN_BH38 -to LA12_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA12_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA12_n -entity axe5_eagle_top
-set_location_assignment PIN_BF57 -to LA13_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA13_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA13_n -entity axe5_eagle_top
-set_location_assignment PIN_BE46 -to LA14_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA14_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA14_n -entity axe5_eagle_top
-set_location_assignment PIN_BE64 -to LA15_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA15_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA15_n -entity axe5_eagle_top
-set_location_assignment PIN_BF50 -to LA16_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA16_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA16_n -entity axe5_eagle_top
-set_location_assignment PIN_BR41 -to LA17_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA17_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA17_n -entity axe5_eagle_top
-set_location_assignment PIN_BK49 -to LA18_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA18_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA18_n -entity axe5_eagle_top
-set_location_assignment PIN_CK73 -to LA19_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA19_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA19_n -entity axe5_eagle_top
-set_location_assignment PIN_CA38 -to LA20_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA20_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA20_n -entity axe5_eagle_top
-set_location_assignment PIN_BR38 -to LA21_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA21_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA21_n -entity axe5_eagle_top
-set_location_assignment PIN_CF49 -to LA22_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA22_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA22_n -entity axe5_eagle_top
-set_location_assignment PIN_BW49 -to LA23_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA23_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA23_n -entity axe5_eagle_top
-set_location_assignment PIN_CF52 -to LA24_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA24_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA24_n -entity axe5_eagle_top
-set_location_assignment PIN_CL51 -to LA25_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA25_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA25_n -entity axe5_eagle_top
-set_location_assignment PIN_BM52 -to LA26_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA26_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA26_n -entity axe5_eagle_top
-set_location_assignment PIN_CC52 -to LA27_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA27_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA27_n -entity axe5_eagle_top
-set_location_assignment PIN_BP41 -to LA28_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA28_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA28_n -entity axe5_eagle_top
-set_location_assignment PIN_CK33 -to LA29_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA29_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA29_n -entity axe5_eagle_top
-set_location_assignment PIN_CK35 -to LA30_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA30_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA30_n -entity axe5_eagle_top
-set_location_assignment PIN_CK39 -to LA31_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA31_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA31_n -entity axe5_eagle_top
-set_location_assignment PIN_CK48 -to LA32_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA32_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA32_n -entity axe5_eagle_top
-set_location_assignment PIN_CL42 -to LA33_p
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA33_p -entity axe5_eagle_top
-set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V SSTL" -to LA33_n -entity axe5_eagle_top
 set_location_assignment PIN_BM19 -to FPGA_QSPI_CS
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to FPGA_QSPI_CS -entity axe5_eagle_top
 set_location_assignment PIN_BU19 -to FPGA_QSPI_CLK
@@ -344,8 +182,6 @@ set_location_assignment PIN_CK2 -to FPGA_QSPI_D[3]
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to FPGA_QSPI_D[3] -entity axe5_eagle_top
 set_location_assignment PIN_BK22 -to DBG_TXD
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to DBG_TXD -entity axe5_eagle_top
-set_location_assignment PIN_CH4 -to DBG_RDX
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to DBG_RDX -entity axe5_eagle_top
 set_location_assignment PIN_N135 -to HPS_PB[0]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_PB[0] -entity axe5_eagle_top
 set_location_assignment PIN_AK120 -to HPS_PB[1]
@@ -356,11 +192,6 @@ set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_DIPSW[1] -entity axe5_
 
 set_location_assignment PIN_AK107 -to LPDDR4A_CK_P -comment IOBANK_3A_B
 set_location_assignment PIN_AK104 -to LPDDR4A_CK_N -comment IOBANK_3A_B
-set_location_assignment PIN_AN129 -to USB_SSTX_p -comment IOBANK_1C
-set_location_assignment PIN_AM135 -to USB_SSRX_p -comment IOBANK_1C
-set_location_assignment PIN_AN126 -to USB_SSTX_n -comment IOBANK_1C
-set_location_assignment PIN_AM133 -to USB_SSRX_n -comment IOBANK_1C
-set_location_assignment PIN_AP120 -to USB_REFCLK_p -comment IOBANK_1C
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
 set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "ACTIVE SERIAL X4"
@@ -369,18 +200,12 @@ set_global_assignment -name HPS_DAP_SPLIT_MODE "SDM PINS"
 set_global_assignment -name ACTIVE_SERIAL_CLOCK AS_FREQ_115MHZ_IOSC
 set_global_assignment -name DEVICE_INITIALIZATION_CLOCK INIT_INTOSC
 set_global_assignment -name HPS_DAP_NO_CERTIFICATE on
-set_location_assignment PIN_BU118 -to USB_HUB_RST -comment IO_BANK_5A
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to USB_HUB_RST
 set_global_assignment -name VERILOG_FILE ../sources/axe5_eagle_top.v
-set_global_assignment -name TCL_SCRIPT_FILE sources/agx5e065_pin_assignment.tcl
 set_global_assignment -name SDC_FILE axe5_eagle_top.sdc
-set_global_assignment -name IP_FILE ip/gts_reset_seq/gts_reset_seq.ip
-set_global_assignment -name QIP_FILE ip/gmii2rgmii_pll/gmii2rgmii_pll.qip
 set_global_assignment -name QSYS_FILE ghrd_system.qsys
 set_global_assignment -name QSYS_FILE hps_system.qsys
 set_global_assignment -name QSYS_FILE peripheral_sys.qsys
 set_global_assignment -name QSYS_FILE video_sys.qsys
-set_global_assignment -name IP_FILE ip/gmii2rgmii/gmii2rgmii.ip
 set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_clock_in.ip
 set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_reset_in.ip
 set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_mm_bridge_0.ip
@@ -394,11 +219,10 @@ set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_pio_5.ip
 set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_pio_6.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_clock_in.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_reset_in.ip
-set_global_assignment -name IP_FILE ip/video_sys/video_sys_iopll_0.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_mm_bridge_1.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_axi_dmac_0.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_axi_hdmi_tx_0.ip
-set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
 set_global_assignment -name USE_INIT_DONE SDM_IO0
 set_global_assignment -name USE_HPS_COLD_RESET SDM_IO10
@@ -415,12 +239,158 @@ set_instance_assignment -name PARTITION_COLOUR 4291867135 -to axe5_eagle_top -en
 set_instance_assignment -name PARTITION_COLOUR 4289714943 -to auto_fab_0 -entity axe5_eagle_top
 set_global_assignment -name IP_FILE ip/hps_system/hps_system_reset_in.ip
 set_global_assignment -name IP_FILE ip/hps_system/hps_system_intel_agilex_5_soc_0.ip
-set_global_assignment -name IP_FILE ip/hps_system/hps_system_emif_hps_ph2_0.ip
-set_global_assignment -name IP_FILE ip/hps_system/hps_system_f2sdram_adapter_64_0.ip
 set_global_assignment -name IP_FILE ip/hps_system/hps_system_clock_bridge_0.ip
-set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_clock_in.ip
-set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_s10_configuration_clock_0.ip
-set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_intel_user_rst_clkgate_0.ip
 set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_master_1.ip
 set_global_assignment -name SIGNALTAP_FILE stp1.stp
-set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_master_0.ip
+set_global_assignment -name IP_FILE ip/board_subsystem/board_subsystem_clock_in.ip
+set_global_assignment -name QSYS_FILE board_subsystem.qsys
+set_global_assignment -name IP_FILE ip/board_subsystem/board_subsystem_intel_vip_reset_gen_block_0.ip
+set_global_assignment -name IP_FILE ip/board_subsystem/board_subsystem_s10_user_rst_clkgate_0.ip
+set_global_assignment -name IP_FILE ip/board_subsystem/board_subsystem_reset_bridge_0.ip
+set_global_assignment -name IP_FILE ip/board_subsystem/board_subsystem_reset_controller_0.ip
+set_global_assignment -name IP_FILE ip/clock_subsystem/clock_subsystem_clock_in.ip
+set_global_assignment -name QSYS_FILE clock_subsystem.qsys
+set_global_assignment -name IP_FILE ip/clock_subsystem/clock_subsystem_iopll_0.ip
+set_global_assignment -name IP_FILE ip/clock_subsystem/clock_subsystem_mem_reset_handler_0.ip
+set_global_assignment -name IP_FILE ip/clock_subsystem/clock_subsystem_reset_bridge_0.ip
+set_global_assignment -name IP_FILE ip/clock_subsystem/clock_subsystem_intel_vvp_reset_extend_0.ip
+set_global_assignment -name IP_FILE ip/clock_subsystem/clock_subsystem_iopll_1.ip
+set_global_assignment -name IP_FILE ip/clock_subsystem/clock_subsystem_intel_vip_reset_sync_block_0.ip
+set_global_assignment -name IP_FILE ip/hps_system/hps_system_emif_hps_ph2_1.ip
+set_global_assignment -name IP_FILE ip/hps_system/hps_system_address_span_extender_0.ip
+set_global_assignment -name IP_FILE ip/hps_system/hps_system_master_1.ip
+set_global_assignment -name IP_FILE ip/hps_system/hps_system_f2sdram_adapter_256_0.ip
+set_global_assignment -name IP_FILE ip/hps_system/hps_system_mm_bridge_0.ip
+set_global_assignment -name IP_FILE ip/emif_subsystem/emif_subsystem_clock_in.ip
+set_global_assignment -name IP_FILE ip/emif_subsystem/emif_subsystem_reset_in.ip
+set_global_assignment -name QSYS_FILE emif_subsystem.qsys
+set_global_assignment -name IP_FILE ip/emif_subsystem/emif_subsystem_emif_ph2_0.ip
+set_global_assignment -name IP_FILE ip/emif_subsystem/emif_subsystem_emif_ph2_axil_driver_0.ip
+set_global_assignment -name IP_FILE ip/emif_subsystem/emif_subsystem_master_0.ip
+set_global_assignment -name IP_FILE ip/emif_subsystem/emif_subsystem_emif_axi_adaptor_eagle_0.ip
+set_location_assignment PIN_CK134 -to FPGA_RST_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_RST_n -entity axe5_eagle_top
+set_location_assignment PIN_CH4 -to DBG_RXD
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to DBG_RXD -entity axe5_eagle_top
+set_location_assignment PIN_AC68 -to REFCLK_3B0 -comment IOBANK_3B_B
+set_instance_assignment -name IO_STANDARD "1.3V TRUE DIFFERENTIAL SIGNALING" -to REFCLK_3B0 -entity axe5_eagle_top
+set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to REFCLK_3B0 -entity axe5_eagle_top
+set_location_assignment PIN_BM81 -to LPDDR4B_CK_P -comment IOBANK_2A_B
+set_location_assignment PIN_BP81 -to LPDDR4B_CK_N -comment IOBANK_2A_B
+set_location_assignment PIN_BW78 -to LPDDR4B_REFCK -comment IOBANK_2A_B
+set_instance_assignment -name IO_STANDARD "1.1V TRUE DIFFERENTIAL SIGNALING" -to LPDDR4B_REFCK -entity axe5_eagle_top
+set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to LPDDR4B_REFCK -entity axe5_eagle_top
+set_location_assignment PIN_BH92 -to LPDDR4B_RST -comment IOBANK_2A_B
+set_location_assignment PIN_BR78 -to LPDDR4B_CS_N -comment IOBANK_2A_B
+set_location_assignment PIN_BR81 -to LPDDR4B_CKE -comment IOBANK_2A_B
+set_location_assignment PIN_BR89 -to LPDDR4B_CA[0] -comment IOBANK_2A_B
+set_location_assignment PIN_BU89 -to LPDDR4B_CA[1] -comment IOBANK_2A_B
+set_location_assignment PIN_BR92 -to LPDDR4B_CA[2] -comment IOBANK_2A_B
+set_location_assignment PIN_BU92 -to LPDDR4B_CA[3] -comment IOBANK_2A_B
+set_location_assignment PIN_BW89 -to LPDDR4B_CA[4] -comment IOBANK_2A_B
+set_location_assignment PIN_CA89 -to LPDDR4B_CA[5] -comment IOBANK_2A_B
+set_location_assignment PIN_CL91 -to LPDDR4B_DQ[0] -comment IOBANK_2A_B
+set_location_assignment PIN_CK94 -to LPDDR4B_DQ[1] -comment IOBANK_2A_B
+set_location_assignment PIN_CK97 -to LPDDR4B_DQ[2] -comment IOBANK_2A_B
+set_location_assignment PIN_CL97 -to LPDDR4B_DQ[3] -comment IOBANK_2A_B
+set_location_assignment PIN_CK80 -to LPDDR4B_DQ[4] -comment IOBANK_2A_B
+set_location_assignment PIN_CL82 -to LPDDR4B_DQ[5] -comment IOBANK_2A_B
+set_location_assignment PIN_CK76 -to LPDDR4B_DQ[6] -comment IOBANK_2A_B
+set_location_assignment PIN_CL76 -to LPDDR4B_DQ[7] -comment IOBANK_2A_B
+set_location_assignment PIN_CC92 -to LPDDR4B_DQ[8] -comment IOBANK_2A_B
+set_location_assignment PIN_CA92 -to LPDDR4B_DQ[9] -comment IOBANK_2A_B
+set_location_assignment PIN_CF92 -to LPDDR4B_DQ[10] -comment IOBANK_2A_B
+set_location_assignment PIN_CH92 -to LPDDR4B_DQ[11] -comment IOBANK_2A_B
+set_location_assignment PIN_CA81 -to LPDDR4B_DQ[12] -comment IOBANK_2A_B
+set_location_assignment PIN_CC81 -to LPDDR4B_DQ[13] -comment IOBANK_2A_B
+set_location_assignment PIN_CH78 -to LPDDR4B_DQ[14] -comment IOBANK_2A_B
+set_location_assignment PIN_CF78 -to LPDDR4B_DQ[15] -comment IOBANK_2A_B
+set_location_assignment PIN_BR69 -to LPDDR4B_DQ[16] -comment IOBANK_2A_T
+set_location_assignment PIN_BU69 -to LPDDR4B_DQ[17] -comment IOBANK_2A_T
+set_location_assignment PIN_BR71 -to LPDDR4B_DQ[18] -comment IOBANK_2A_T
+set_location_assignment PIN_BU71 -to LPDDR4B_DQ[19] -comment IOBANK_2A_T
+set_location_assignment PIN_BU59 -to LPDDR4B_DQ[20] -comment IOBANK_2A_T
+set_location_assignment PIN_BR59 -to LPDDR4B_DQ[21] -comment IOBANK_2A_T
+set_location_assignment PIN_BW59 -to LPDDR4B_DQ[22] -comment IOBANK_2A_T
+set_location_assignment PIN_CA59 -to LPDDR4B_DQ[23] -comment IOBANK_2A_T
+set_location_assignment PIN_CF71 -to LPDDR4B_DQ[24] -comment IOBANK_2A_T
+set_location_assignment PIN_CH71 -to LPDDR4B_DQ[25] -comment IOBANK_2A_T
+set_location_assignment PIN_CC71 -to LPDDR4B_DQ[26] -comment IOBANK_2A_T
+set_location_assignment PIN_CA71 -to LPDDR4B_DQ[27] -comment IOBANK_2A_T
+set_location_assignment PIN_CF62 -to LPDDR4B_DQ[28] -comment IOBANK_2A_T
+set_location_assignment PIN_CH62 -to LPDDR4B_DQ[29] -comment IOBANK_2A_T
+set_location_assignment PIN_CF59 -to LPDDR4B_DQ[30] -comment IOBANK_2A_T
+set_location_assignment PIN_CH59 -to LPDDR4B_DQ[31] -comment IOBANK_2A_T
+set_location_assignment PIN_CH89 -to LPDDR4B_DQSA1_p -comment IOBANK_2A_B
+set_location_assignment PIN_CF89 -to LPDDR4B_DQSA1_n -comment IOBANK_2A_B
+set_location_assignment PIN_CL88 -to LPDDR4B_DQSA0_p -comment IOBANK_2A_B
+set_location_assignment PIN_CK88 -to LPDDR4B_DQSA0_n -comment IOBANK_2A_B
+set_location_assignment PIN_CH69 -to LPDDR4B_DQSB1_p -comment IOBANK_2A_T
+set_location_assignment PIN_CF69 -to LPDDR4B_DQSB1_n -comment IOBANK_2A_T
+set_location_assignment PIN_BW69 -to LPDDR4B_DQSB0_p -comment IOBANK_2A_T
+set_location_assignment PIN_CA69 -to LPDDR4B_DQSB0_n -comment IOBANK_2A_T
+set_location_assignment PIN_CF81 -to LPDDR4B_DMA1 -comment IOBANK_2A_B
+set_location_assignment PIN_CK85 -to LPDDR4B_DMA0 -comment IOBANK_2A_B
+set_location_assignment PIN_CA62 -to LPDDR4B_DMB1 -comment IOBANK_2A_T
+set_location_assignment PIN_BU62 -to LPDDR4B_DMB0 -comment IOBANK_2A_T
+set_location_assignment PIN_BH89 -to LPDDR4B_OCT_RZQIN -comment IOBANK_2A_B
+set_location_assignment PIN_U135 -to HPS_DIPSW[1]
+set_location_assignment PIN_AG111 -to LPDDR4A_RST -comment IOBANK_3A_B
+set_location_assignment PIN_M105 -to LPDDR4A_REFCK -comment IOBANK_3A_B
+set_instance_assignment -name IO_STANDARD "1.1V TRUE DIFFERENTIAL SIGNALING" -to LPDDR4A_REFCK -entity axe5_eagle_top
+set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to LPDDR4A_REFCK -entity axe5_eagle_top
+set_location_assignment PIN_T105 -to LPDDR4A_CS_N -comment IOBANK_3A_B
+set_location_assignment PIN_V108 -to LPDDR4A_CKE -comment IOBANK_3A_B
+set_location_assignment PIN_T114 -to LPDDR4A_CA[0] -comment IOBANK_3A_B
+set_location_assignment PIN_P114 -to LPDDR4A_CA[1] -comment IOBANK_3A_B
+set_location_assignment PIN_V117 -to LPDDR4A_CA[2] -comment IOBANK_3A_B
+set_location_assignment PIN_T117 -to LPDDR4A_CA[3] -comment IOBANK_3A_B
+set_location_assignment PIN_M114 -to LPDDR4A_CA[4] -comment IOBANK_3A_B
+set_location_assignment PIN_K114 -to LPDDR4A_CA[5] -comment IOBANK_3A_B
+set_location_assignment PIN_B128 -to LPDDR4A_DQ[0] -comment IOBANK_3A_B
+set_location_assignment PIN_A128 -to LPDDR4A_DQ[1] -comment IOBANK_3A_B
+set_location_assignment PIN_B130 -to LPDDR4A_DQ[2] -comment IOBANK_3A_B
+set_location_assignment PIN_A130 -to LPDDR4A_DQ[3] -comment IOBANK_3A_B
+set_location_assignment PIN_B116 -to LPDDR4A_DQ[4] -comment IOBANK_3A_B
+set_location_assignment PIN_A116 -to LPDDR4A_DQ[5] -comment IOBANK_3A_B
+set_location_assignment PIN_B113 -to LPDDR4A_DQ[6] -comment IOBANK_3A_B
+set_location_assignment PIN_A113 -to LPDDR4A_DQ[7] -comment IOBANK_3A_B
+set_location_assignment PIN_F117 -to LPDDR4A_DQ[8] -comment IOBANK_3A_B
+set_location_assignment PIN_H117 -to LPDDR4A_DQ[9] -comment IOBANK_3A_B
+set_location_assignment PIN_K117 -to LPDDR4A_DQ[10] -comment IOBANK_3A_B
+set_location_assignment PIN_M117 -to LPDDR4A_DQ[11] -comment IOBANK_3A_B
+set_location_assignment PIN_H108 -to LPDDR4A_DQ[12] -comment IOBANK_3A_B
+set_location_assignment PIN_F108 -to LPDDR4A_DQ[13] -comment IOBANK_3A_B
+set_location_assignment PIN_M108 -to LPDDR4A_DQ[14] -comment IOBANK_3A_B
+set_location_assignment PIN_K108 -to LPDDR4A_DQ[15] -comment IOBANK_3A_B
+set_location_assignment PIN_H98 -to LPDDR4A_DQ[16] -comment IOBANK_3A_T
+set_location_assignment PIN_F98 -to LPDDR4A_DQ[17] -comment IOBANK_3A_T
+set_location_assignment PIN_M98 -to LPDDR4A_DQ[18] -comment IOBANK_3A_T
+set_location_assignment PIN_K98 -to LPDDR4A_DQ[19] -comment IOBANK_3A_T
+set_location_assignment PIN_K87 -to LPDDR4A_DQ[20] -comment IOBANK_3A_T
+set_location_assignment PIN_M87 -to LPDDR4A_DQ[21] -comment IOBANK_3A_T
+set_location_assignment PIN_F84 -to LPDDR4A_DQ[22] -comment IOBANK_3A_T
+set_location_assignment PIN_D84 -to LPDDR4A_DQ[23] -comment IOBANK_3A_T
+set_location_assignment PIN_A106 -to LPDDR4A_DQ[24] -comment IOBANK_3A_T
+set_location_assignment PIN_B103 -to LPDDR4A_DQ[25] -comment IOBANK_3A_T
+set_location_assignment PIN_B106 -to LPDDR4A_DQ[26] -comment IOBANK_3A_T
+set_location_assignment PIN_A110 -to LPDDR4A_DQ[27] -comment IOBANK_3A_T
+set_location_assignment PIN_B91 -to LPDDR4A_DQ[28] -comment IOBANK_3A_T
+set_location_assignment PIN_A94 -to LPDDR4A_DQ[29] -comment IOBANK_3A_T
+set_location_assignment PIN_B88 -to LPDDR4A_DQ[30] -comment IOBANK_3A_T
+set_location_assignment PIN_A91 -to LPDDR4A_DQ[31] -comment IOBANK_3A_T
+set_location_assignment PIN_F114 -to LPDDR4A_DQSA1_p -comment IOBANK_3A_B
+set_location_assignment PIN_D114 -to LPDDR4A_DQSA1_n -comment IOBANK_3A_B
+set_location_assignment PIN_B122 -to LPDDR4A_DQSA0_p -comment IOBANK_3A_B
+set_location_assignment PIN_A125 -to LPDDR4A_DQSA0_n -comment IOBANK_3A_B
+set_location_assignment PIN_A101 -to LPDDR4A_DQSB1_p -comment IOBANK_3A_T
+set_location_assignment PIN_B101 -to LPDDR4A_DQSB1_n -comment IOBANK_3A_T
+set_location_assignment PIN_F95 -to LPDDR4A_DQSB0_p -comment IOBANK_3A_T
+set_location_assignment PIN_D95 -to LPDDR4A_DQSB0_n -comment IOBANK_3A_T
+set_location_assignment PIN_F105 -to LPDDR4A_DMA1 -comment IOBANK_3A_B
+set_location_assignment PIN_B119 -to LPDDR4A_DMA0 -comment IOBANK_3A_B
+set_location_assignment PIN_B97 -to LPDDR4A_DMB1 -comment IOBANK_3A_T
+set_location_assignment PIN_H87 -to LPDDR4A_DMB0 -comment IOBANK_3A_T
+set_location_assignment PIN_AK111 -to LPDDR4A_OCT_RZQIN -comment IOBANK_3A_B
+set_global_assignment -name IP_FILE ip/emif_subsystem/emif_subsystem_axi_bridge_0.ip
+set_global_assignment -name IP_FILE ip/emif_subsystem/emif_subsystem_address_span_extender_0.ip
