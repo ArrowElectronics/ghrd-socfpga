@@ -18,13 +18,14 @@
 		<parameter name="LPDDR4_MEM_DEVICE_WR_DBI_EN" value="false" />
 		<parameter name="LPDDR4_MEM_DEVICE_RD_DBI_EN" value="false" />
 		<parameter name="LPDDR4_MEM_DEVICE_DM_EN" value="false" />
+		<parameter name="LPDDR4_MEM_DEVICE_PER_BANK_REF_EN" value="true" />
 		<parameter name="LPDDR4_MEM_DEVICE_BURST_LENGTH" value="16" />
 		<parameter name="LPDDR4_MEM_DEVICE_JEDEC_VALIDATION_EN" value="true" />
 		<parameter name="LPDDR4_MEM_DEVICE_SPEEDBIN" value="2667" />
 		<parameter name="LPDDR4_MEM_DEVICE_WLS" value="1" />
 		<parameter name="LPDDR4_MEM_DEVICE_CL_CYC" value="24" />
 		<parameter name="LPDDR4_MEM_DEVICE_CWL_CYC" value="22" />
-		<parameter name="LPDDR4_MEM_DEVICE_RD_PREAMBLE_CYC" value="1" />
+		<parameter name="LPDDR4_MEM_DEVICE_RD_PREAMBLE_CYC" value="0" />
 		<parameter name="LPDDR4_MEM_DEVICE_RD_POSTAMBLE_CYC" value="0" />
 		<parameter name="LPDDR4_MEM_DEVICE_WR_POSTAMBLE_CYC" value="0" />
 		<parameter name="LPDDR4_MEM_DEVICE_TSR_NS" value="15.0" />
@@ -39,14 +40,14 @@
 		<parameter name="LPDDR4_MEM_DEVICE_TWR_NS" value="18.0" />
 		<parameter name="LPDDR4_MEM_DEVICE_TWTR_NS" value="10.0" />
 		<parameter name="LPDDR4_MEM_DEVICE_TRRD_NS" value="10.0" />
-		<parameter name="LPDDR4_MEM_DEVICE_TPPD_CYC" value="8" />
+		<parameter name="LPDDR4_MEM_DEVICE_TPPD_CYC" value="4" />
 		<parameter name="LPDDR4_MEM_DEVICE_TFAW_NS" value="40.0" />
 		<parameter name="LPDDR4_MEM_DEVICE_TRC_NS" value="63.0" />
 		<parameter name="LPDDR4_MEM_DEVICE_TREFW_MS" value="32.0" />
 		<parameter name="LPDDR4_MEM_DEVICE_MINNUMREFSREQ" value="8192" />
 		<parameter name="LPDDR4_MEM_DEVICE_TREFI_NS" value="3904.0" />
 		<parameter name="LPDDR4_MEM_DEVICE_TRFCAB_NS" value="380.0" />
-		<parameter name="LPDDR4_MEM_DEVICE_TRFCPB_NS" value="0.0" />
+		<parameter name="LPDDR4_MEM_DEVICE_TRFCPB_NS" value="190.0" />
 		<parameter name="LPDDR4_MEM_DEVICE_TCKE_NS" value="7.5" />
 		<parameter name="LPDDR4_MEM_DEVICE_TCMDCKE_NS" value="2.25" />
 		<parameter name="LPDDR4_MEM_DEVICE_TCKELCK_NS" value="5.0" />

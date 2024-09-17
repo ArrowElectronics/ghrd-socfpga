@@ -9,7 +9,7 @@ set_global_assignment -name PWRMGT_LINEAR_FORMAT_N "-12"
 set_global_assignment -name POWER_APPLY_THERMAL_MARGIN ADDITIONAL
 set_global_assignment -name TOP_LEVEL_ENTITY axe5_eagle_top
 set_global_assignment -name IP_SEARCH_PATHS "ip/**/*; ip/adi/**/*; ip/f2sdram_adapter/**/*; ip/reset_extender/**/*; ip/reset_synchronizer/**/*; ip/emif_axi_adaptor/**/*; ip/pb_reset/**/*"
-set_global_assignment -name LAST_QUARTUS_VERSION "24.1.0 Pro Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "24.2.0 Pro Edition"
 set_location_assignment PIN_T132 -to HPS_OSC_CLK_25MHz
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_OSC_CLK_25MHz -entity axe5_eagle_top
 set_location_assignment PIN_B30 -to FPGA_PB[0]
@@ -197,8 +197,8 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
 set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "ACTIVE SERIAL X4"
 set_global_assignment -name ON_CHIP_BITSTREAM_DECOMPRESSION OFF
 set_global_assignment -name HPS_DAP_SPLIT_MODE "SDM PINS"
-set_global_assignment -name ACTIVE_SERIAL_CLOCK AS_FREQ_115MHZ_IOSC
-set_global_assignment -name DEVICE_INITIALIZATION_CLOCK INIT_INTOSC
+set_global_assignment -name ACTIVE_SERIAL_CLOCK AS_FREQ_125MHZ
+set_global_assignment -name DEVICE_INITIALIZATION_CLOCK OSC_CLK_1_25MHZ
 set_global_assignment -name HPS_DAP_NO_CERTIFICATE on
 set_global_assignment -name VERILOG_FILE ../sources/axe5_eagle_top.v
 set_global_assignment -name SDC_FILE axe5_eagle_top.sdc
@@ -222,7 +222,7 @@ set_global_assignment -name IP_FILE ip/video_sys/video_sys_reset_in.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_mm_bridge_1.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_axi_dmac_0.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_axi_hdmi_tx_0.ip
-set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name ENABLE_SIGNALTAP OFF
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
 set_global_assignment -name USE_INIT_DONE SDM_IO0
 set_global_assignment -name USE_HPS_COLD_RESET SDM_IO10
@@ -241,7 +241,6 @@ set_global_assignment -name IP_FILE ip/hps_system/hps_system_reset_in.ip
 set_global_assignment -name IP_FILE ip/hps_system/hps_system_intel_agilex_5_soc_0.ip
 set_global_assignment -name IP_FILE ip/hps_system/hps_system_clock_bridge_0.ip
 set_global_assignment -name IP_FILE ip/ghrd_system/ghrd_system_master_1.ip
-set_global_assignment -name SIGNALTAP_FILE stp1.stp
 set_global_assignment -name IP_FILE ip/board_subsystem/board_subsystem_clock_in.ip
 set_global_assignment -name QSYS_FILE board_subsystem.qsys
 set_global_assignment -name IP_FILE ip/board_subsystem/board_subsystem_intel_vip_reset_gen_block_0.ip
@@ -267,7 +266,6 @@ set_global_assignment -name QSYS_FILE emif_subsystem.qsys
 set_global_assignment -name IP_FILE ip/emif_subsystem/emif_subsystem_emif_ph2_0.ip
 set_global_assignment -name IP_FILE ip/emif_subsystem/emif_subsystem_emif_ph2_axil_driver_0.ip
 set_global_assignment -name IP_FILE ip/emif_subsystem/emif_subsystem_master_0.ip
-set_global_assignment -name IP_FILE ip/emif_subsystem/emif_subsystem_emif_axi_adaptor_eagle_0.ip
 set_location_assignment PIN_CK134 -to FPGA_RST_n
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_RST_n -entity axe5_eagle_top
 set_location_assignment PIN_CH4 -to DBG_RXD
@@ -394,3 +392,4 @@ set_location_assignment PIN_H87 -to LPDDR4A_DMB0 -comment IOBANK_3A_T
 set_location_assignment PIN_AK111 -to LPDDR4A_OCT_RZQIN -comment IOBANK_3A_B
 set_global_assignment -name IP_FILE ip/emif_subsystem/emif_subsystem_axi_bridge_0.ip
 set_global_assignment -name IP_FILE ip/emif_subsystem/emif_subsystem_address_span_extender_0.ip
+set_global_assignment -name AUTO_RESTART_CONFIGURATION OFF
