@@ -20,10 +20,10 @@ https://fpgasoftware.intel.com/eula.-->
   <ipxact:busInterfaces>
     <ipxact:busInterface>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="clock" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="clock" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -57,10 +57,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="reset" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="reset" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -89,10 +89,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>s1</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="avalon" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="avalon" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="avalon" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="avalon" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -324,6 +324,11 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:displayName>Waitrequest allowance</ipxact:displayName>
           <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
+        <ipxact:parameter parameterId="waitrequestTimeout" type="int">
+          <ipxact:name>waitrequestTimeout</ipxact:name>
+          <ipxact:displayName>Waitrequest Timeout</ipxact:displayName>
+          <ipxact:value>1024</ipxact:value>
+        </ipxact:parameter>
         <ipxact:parameter parameterId="wellBehavedWaitrequest" type="bit">
           <ipxact:name>wellBehavedWaitrequest</ipxact:name>
           <ipxact:displayName>Well-behaved waitrequest</ipxact:displayName>
@@ -425,10 +430,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>external_connection</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="conduit" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -668,7 +673,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="clockRate" type="longint">
           <ipxact:name>clockRate</ipxact:name>
           <ipxact:displayName>clockRate</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
+          <ipxact:value>200000000</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="DEVICE_FAMILY" type="string">
           <ipxact:name>DEVICE_FAMILY</ipxact:name>
@@ -709,7 +714,7 @@ https://fpgasoftware.intel.com/eula.-->
         </ipxact:parameter>
         <ipxact:parameter parameterId="embeddedsw.CMacro.FREQ" type="string">
           <ipxact:name>embeddedsw.CMacro.FREQ</ipxact:name>
-          <ipxact:value>0</ipxact:value>
+          <ipxact:value>200000000</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="embeddedsw.CMacro.HAS_IN" type="string">
           <ipxact:name>embeddedsw.CMacro.HAS_IN</ipxact:name>
@@ -1099,6 +1104,10 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;value&gt;0&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
+                        &lt;key&gt;waitrequestTimeout&lt;/key&gt;
+                        &lt;value&gt;1024&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
                         &lt;key&gt;wellBehavedWaitrequest&lt;/key&gt;
                         &lt;value&gt;false&lt;/value&gt;
                     &lt;/entry&gt;
@@ -1331,7 +1340,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
+                        &lt;value&gt;200000000&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;

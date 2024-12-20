@@ -200,7 +200,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;consumedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                        &lt;value&gt;148437500&lt;/value&gt;
+                        &lt;value&gt;148529412&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/consumedSystemInfos&gt;
             &lt;/value&gt;
@@ -213,20 +213,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;consumedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                        &lt;value&gt;148437500&lt;/value&gt;
-                    &lt;/entry&gt;
-                &lt;/consumedSystemInfos&gt;
-            &lt;/value&gt;
-        &lt;/entry&gt;
-        &lt;entry&gt;
-            &lt;key&gt;iopll_outclk2&lt;/key&gt;
-            &lt;value&gt;
-                &lt;connectionPointName&gt;iopll_outclk2&lt;/connectionPointName&gt;
-                &lt;suppliedSystemInfos/&gt;
-                &lt;consumedSystemInfos&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                        &lt;value&gt;197916667&lt;/value&gt;
+                        &lt;value&gt;148529412&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/consumedSystemInfos&gt;
             &lt;/value&gt;
@@ -1167,7 +1154,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;clockRate&lt;/key&gt;
-                            &lt;value&gt;148437500&lt;/value&gt;
+                            &lt;value&gt;148529412&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;clockRateKnown&lt;/key&gt;
@@ -1213,7 +1200,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;clockRate&lt;/key&gt;
-                            &lt;value&gt;148437500&lt;/value&gt;
+                            &lt;value&gt;148529412&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;clockRateKnown&lt;/key&gt;
@@ -1259,7 +1246,7 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;clockRate&lt;/key&gt;
-                            &lt;value&gt;197916667&lt;/value&gt;
+                            &lt;value&gt;194230769&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;clockRateKnown&lt;/key&gt;
@@ -1279,7 +1266,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;/boundary&gt;
     &lt;originalModuleInfo&gt;
         &lt;className&gt;altera_iopll&lt;/className&gt;
-        &lt;version&gt;19.3.1&lt;/version&gt;
+        &lt;version&gt;20.0.0&lt;/version&gt;
         &lt;displayName&gt;IOPLL Intel FPGA IP&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
@@ -1327,7 +1314,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;suppliedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                            &lt;value&gt;148437500&lt;/value&gt;
+                            &lt;value&gt;148529412&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/suppliedSystemInfos&gt;
                     &lt;consumedSystemInfos/&gt;
@@ -1340,7 +1327,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;suppliedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                            &lt;value&gt;148437500&lt;/value&gt;
+                            &lt;value&gt;148529412&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/suppliedSystemInfos&gt;
                     &lt;consumedSystemInfos/&gt;
@@ -1353,7 +1340,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;suppliedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                            &lt;value&gt;197916667&lt;/value&gt;
+                            &lt;value&gt;194230769&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/suppliedSystemInfos&gt;
                     &lt;consumedSystemInfos/&gt;
@@ -1515,7 +1502,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;clockRate&lt;/key&gt;
-                        &lt;value&gt;148437500&lt;/value&gt;
+                        &lt;value&gt;148529412&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;clockRateKnown&lt;/key&gt;
@@ -1561,7 +1548,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;clockRate&lt;/key&gt;
-                        &lt;value&gt;148437500&lt;/value&gt;
+                        &lt;value&gt;148529412&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;clockRateKnown&lt;/key&gt;
@@ -1607,7 +1594,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;clockRate&lt;/key&gt;
-                        &lt;value&gt;197916667&lt;/value&gt;
+                        &lt;value&gt;194230769&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;clockRateKnown&lt;/key&gt;
@@ -2305,18 +2292,18 @@ https://fpgasoftware.intel.com/eula.-->
       </altera:module>
     </altera:modules>
     <altera:connections>
-      <altera:connection altera:kind="clock" altera:version="24.1" altera:start="input_clock_bridge.out_clk" altera:end="reset_extender.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="24.1" altera:start="input_clock_bridge.out_clk" altera:end="iopll.refclk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="24.1" altera:start="iopll.outclk2" altera:end="clk_200m_rst_sync.clock_in"></altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="24.1" altera:start="reset_handler.conduit_0" altera:end="iopll.locked">
+      <altera:connection altera:kind="clock" altera:version="24.3" altera:start="input_clock_bridge.out_clk" altera:end="reset_extender.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="24.3" altera:start="input_clock_bridge.out_clk" altera:end="iopll.refclk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="24.3" altera:start="iopll.outclk2" altera:end="clk_200m_rst_sync.clock_in"></altera:connection>
+      <altera:connection altera:kind="conduit" altera:version="24.3" altera:start="reset_handler.conduit_0" altera:end="iopll.locked">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="reset" altera:version="24.1" altera:start="reset_extender.out_reset" altera:end="clk_200m_rst_sync.reset_in"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="24.1" altera:start="reset_handler.reset_n_out" altera:end="reset_extender.in_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="24.3" altera:start="reset_extender.out_reset" altera:end="clk_200m_rst_sync.reset_in"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="24.3" altera:start="reset_handler.reset_n_out" altera:end="reset_extender.in_reset"></altera:connection>
     </altera:connections>
     <altera:interconnect_requirements></altera:interconnect_requirements>
     <altera:wire_level_connections></altera:wire_level_connections>

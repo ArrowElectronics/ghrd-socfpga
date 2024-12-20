@@ -121,7 +121,12 @@ module axi_hdmi_tx_vdma (
       vdma_fs_toggle_m2 <= vdma_fs_toggle_m1;
       vdma_fs_toggle_m3 <= vdma_fs_toggle_m2;
     end
-    hdmi_fs <= vdma_fs_toggle_m2 ^ vdma_fs_toggle_m3;
+    // sjk hdmi_fs <= vdma_fs_toggle_m2 ^ vdma_fs_toggle_m3;
+  end
+  
+  //sjk
+  always @(posedge vdma_clk) begin
+	hdmi_fs <= vdma_fs_toggle_m2 ^ vdma_fs_toggle_m3;
   end
 
   // dma frame sync

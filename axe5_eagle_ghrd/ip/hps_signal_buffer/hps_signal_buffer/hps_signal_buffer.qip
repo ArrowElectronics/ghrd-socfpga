@@ -1,0 +1,64 @@
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name IP_TOOL_NAME "QsysPrimePro"
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name IP_TOOL_VERSION "24.3"
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name IP_TOOL_VENDOR_NAME "Intel Corporation"
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name IP_TOP_LEVEL_COMPONENT_NAME "altera_gpio"
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name PRE_COMPILED_MODULE "ON"
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name OCS_IP_FILE [file join $::quartus(qip_path) "../hps_signal_buffer.ip"]
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name OCS_IP_TYPE "altera_gpio"
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name OCS_IP_VERSION "22.1.0"
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name OCS_IP_HASH "dfphogy"
+set_global_assignment -library "hps_signal_buffer" -name SOPCINFO_FILE [file join $::quartus(qip_path) "hps_signal_buffer.sopcinfo"]
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name SLD_INFO "QSYS_NAME hps_signal_buffer HAS_SOPCINFO 1 GENERATION_ID 0"
+set_global_assignment -library "hps_signal_buffer" -name MISC_FILE [file join $::quartus(qip_path) "hps_signal_buffer.cmp"]
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name IP_TARGETED_DEVICE_FAMILY "Agilex 5"
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name IP_TARGETED_PART_TRAIT "part.DEVICE_IOBANK_REVISION::IO96B"
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name IP_GENERATED_DEVICE_FAMILY "{Agilex 5}"
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "hps_signal_buffer" -name MISC_FILE [file join $::quartus(qip_path) "../hps_signal_buffer.ip"]
+
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_NAME "YWx0ZXJhX2dwaW8="
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_DISPLAY_NAME "R1BJTyBDb3JlIEludGVsIEZQR0EgSVA="
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_INTERNAL "On"
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_VERSION "MjIuMS4w"
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_DESCRIPTION "SW50ZWwgRlBHQSBHUElPIENvcmU="
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_COMPONENT_GROUP "SS9P"
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_COMPONENT_NAME "aHBzX3NpZ25hbF9idWZmZXJfYWx0ZXJhX2dwaW9fMjIxMF9kZnBob2d5"
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_COMPONENT_DISPLAY_NAME "R1BJTyBJbnRlbCBGUEdBIElQ"
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_COMPONENT_VERSION "MjIuMS4w"
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_COMPONENT_DESCRIPTION "VGhlIEdQSU8gSW50ZWwgRlBHQSBJUCBwcm92aWRlcyBmZWF0dXJlcyB0byBzdXBwb3J0IHRoZSBkZXZpY2UgSS9PIGJsb2Nrcy4gWW91IGNhbiB1c2UgR1BJT3MgaW4gZ2VuZXJhbCBhcHBsaWNhdGlvbnMgdGhhdCBhcmUgbm90IHNwZWNpZmljIHRvIHRyYW5zY2VpdmVycywgbWVtb3J5IGludGVyZmFjZXMsIG9yIExWRFMuIFlvdSBjYW4gdXNlIHRoZSBJbnRlbCBRdWFydHVzIFByaW1lIHBhcmFtZXRlciBlZGl0b3IgdG8gY29uZmlndXJlIHRoZSBHUElPIEludGVsIEZQR0EgSVAu"
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_COMPONENT_GROUP "QmFzaWMgRnVuY3Rpb25zL0kvTw=="
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzEzNi5odG1s"
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4Mzc4MC5odG1s"
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzc3MjEzOC5odG1s"
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzUxOC5odG1s"
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzQ3OS5odG1s"
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name IP_COMPONENT_NAME "aHBzX3NpZ25hbF9idWZmZXI="
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name IP_COMPONENT_DISPLAY_NAME "c3lzdGVt"
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "hps_signal_buffer" -library "hps_signal_buffer" -name IP_COMPONENT_VERSION "MS4w"
+
+set_instance_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name MESSAGE_DISABLE 10034
+set_instance_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name MESSAGE_DISABLE 10230
+set_instance_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name MESSAGE_DISABLE 10036
+
+set_global_assignment -library "altera_gpio_core10_ph2_2210" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "altera_gpio_core10_ph2_2210/synth/altera_gpio.sv"]
+set_global_assignment -library "altera_gpio_2210" -name VERILOG_FILE [file join $::quartus(qip_path) "altera_gpio_2210/synth/hps_signal_buffer_altera_gpio_2210_dfphogy.v"]
+set_global_assignment -library "hps_signal_buffer" -name VERILOG_FILE [file join $::quartus(qip_path) "synth/hps_signal_buffer.v"]
+
+
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_TOOL_NAME "altera_gpio"
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_TOOL_VERSION "22.1.0"
+set_global_assignment -entity "hps_signal_buffer_altera_gpio_2210_dfphogy" -library "altera_gpio_2210" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_TOOL_NAME "altera_gpio_core10_ph2"
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_TOOL_VERSION "22.1.0"
+set_global_assignment -entity "altera_gpio" -library "altera_gpio_core10_ph2_2210" -name IP_TOOL_ENV "QsysPrimePro"
+

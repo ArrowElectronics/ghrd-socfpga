@@ -20,10 +20,10 @@ https://fpgasoftware.intel.com/eula.-->
   <ipxact:busInterfaces>
     <ipxact:busInterface>
       <ipxact:name>s_axi_clock</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="clock" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="clock" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -57,10 +57,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>s_axi_reset</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="reset" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="reset" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -89,10 +89,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>s_axi</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="axi4lite" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="axi4lite" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="axi4lite" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="axi4lite" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -301,6 +301,26 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:displayName>maximumOutstandingTransactions</ipxact:displayName>
           <ipxact:value>1</ipxact:value>
         </ipxact:parameter>
+        <ipxact:parameter parameterId="dataCheck" type="bit">
+          <ipxact:name>dataCheck</ipxact:name>
+          <ipxact:displayName>dataCheck</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="addressCheck" type="bit">
+          <ipxact:name>addressCheck</ipxact:name>
+          <ipxact:displayName>addressCheck</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="securityAttribute" type="bit">
+          <ipxact:name>securityAttribute</ipxact:name>
+          <ipxact:displayName>securityAttribute</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="userData" type="bit">
+          <ipxact:name>userData</ipxact:name>
+          <ipxact:displayName>userData</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
         <ipxact:parameter parameterId="readAcceptanceCapability" type="longint">
           <ipxact:name>readAcceptanceCapability</ipxact:name>
           <ipxact:displayName>Read acceptance capability</ipxact:displayName>
@@ -385,10 +405,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>interrupt_sender</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="interrupt" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="interrupt" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="interrupt" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="interrupt" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -437,10 +457,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>m_src_axi_clock</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="clock" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="clock" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -474,10 +494,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>m_src_axi_reset</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="reset" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="reset" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -506,10 +526,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>if_m_axis_aclk</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="clock" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="clock" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -543,10 +563,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>if_m_axis_xfer_req</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="conduit" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -580,10 +600,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>m_axis</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="axi4stream" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="axi4stream" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="axi4stream" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="axi4stream" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -636,10 +656,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>m_src_axi</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="axi4" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="axi4" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="axi4" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="axi4" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -928,6 +948,26 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:displayName>maximumOutstandingTransactions</ipxact:displayName>
           <ipxact:value>1</ipxact:value>
         </ipxact:parameter>
+        <ipxact:parameter parameterId="dataCheck" type="bit">
+          <ipxact:name>dataCheck</ipxact:name>
+          <ipxact:displayName>dataCheck</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="addressCheck" type="bit">
+          <ipxact:name>addressCheck</ipxact:name>
+          <ipxact:displayName>addressCheck</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="securityAttribute" type="bit">
+          <ipxact:name>securityAttribute</ipxact:name>
+          <ipxact:displayName>securityAttribute</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="userData" type="bit">
+          <ipxact:name>userData</ipxact:name>
+          <ipxact:displayName>userData</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
         <ipxact:parameter parameterId="readIssuingCapability" type="longint">
           <ipxact:name>readIssuingCapability</ipxact:name>
           <ipxact:displayName>Read issuing capability</ipxact:displayName>
@@ -942,6 +982,16 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:name>combinedIssuingCapability</ipxact:name>
           <ipxact:displayName>Combined issuing capability</ipxact:displayName>
           <ipxact:value>8</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="enableConcurrentSubordinateAccess" type="longint">
+          <ipxact:name>enableConcurrentSubordinateAccess</ipxact:name>
+          <ipxact:displayName>enableConcurrentSubordinateAccess</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="noRepeatedIdsBetweenSubordinates" type="longint">
+          <ipxact:name>noRepeatedIdsBetweenSubordinates</ipxact:name>
+          <ipxact:displayName>noRepeatedIdsBetweenSubordinates</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="issuesINCRBursts" type="bit">
           <ipxact:name>issuesINCRBursts</ipxact:name>
@@ -1991,12 +2041,12 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="CLK_DOMAIN_REQ" type="int">
           <ipxact:name>CLK_DOMAIN_REQ</ipxact:name>
           <ipxact:displayName>CLK_DOMAIN_REQ</ipxact:displayName>
-          <ipxact:value>2</ipxact:value>
+          <ipxact:value>1</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="CLK_DOMAIN_SRC_AXI" type="int">
           <ipxact:name>CLK_DOMAIN_SRC_AXI</ipxact:name>
           <ipxact:displayName>CLK_DOMAIN_SRC_AXI</ipxact:displayName>
-          <ipxact:value>2</ipxact:value>
+          <ipxact:value>1</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="CLK_DOMAIN_SRC_SAXI" type="int">
           <ipxact:name>CLK_DOMAIN_SRC_SAXI</ipxact:name>
@@ -2016,7 +2066,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="CLK_DOMAIN_DEST_SAXI" type="int">
           <ipxact:name>CLK_DOMAIN_DEST_SAXI</ipxact:name>
           <ipxact:displayName>CLK_DOMAIN_DEST_SAXI</ipxact:displayName>
-          <ipxact:value>2</ipxact:value>
+          <ipxact:value>1</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="CLK_DOMAIN_DEST_FIFO" type="int">
           <ipxact:name>CLK_DOMAIN_DEST_FIFO</ipxact:name>
@@ -2417,6 +2467,22 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;entry&gt;
                         &lt;key&gt;maximumOutstandingTransactions&lt;/key&gt;
                         &lt;value&gt;1&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;dataCheck&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;addressCheck&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;securityAttribute&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;userData&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;readAcceptanceCapability&lt;/key&gt;
@@ -3028,6 +3094,22 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;value&gt;1&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
+                        &lt;key&gt;dataCheck&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;addressCheck&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;securityAttribute&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;userData&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
                         &lt;key&gt;readIssuingCapability&lt;/key&gt;
                         &lt;value&gt;8&lt;/value&gt;
                     &lt;/entry&gt;
@@ -3038,6 +3120,14 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;entry&gt;
                         &lt;key&gt;combinedIssuingCapability&lt;/key&gt;
                         &lt;value&gt;8&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;enableConcurrentSubordinateAccess&lt;/key&gt;
+                        &lt;value&gt;0&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;noRepeatedIdsBetweenSubordinates&lt;/key&gt;
+                        &lt;value&gt;0&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;issuesINCRBursts&lt;/key&gt;
@@ -3069,7 +3159,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;2&lt;/value&gt;
+                        &lt;value&gt;1&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;
@@ -3082,7 +3172,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;2&lt;/value&gt;
+                        &lt;value&gt;1&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;
@@ -3095,7 +3185,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;2&lt;/value&gt;
+                        &lt;value&gt;1&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;

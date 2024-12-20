@@ -16,14 +16,14 @@ https://fpgasoftware.intel.com/eula.-->
   <ipxact:vendor>Intel Corporation</ipxact:vendor>
   <ipxact:library>emif_subsystem_axi_bridge_0</ipxact:library>
   <ipxact:name>axi_bridge_0</ipxact:name>
-  <ipxact:version>19.4.0</ipxact:version>
+  <ipxact:version>19.8.3</ipxact:version>
   <ipxact:busInterfaces>
     <ipxact:busInterface>
       <ipxact:name>clk</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="clock" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="clock" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -57,10 +57,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>clk_reset</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="reset" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="reset" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -89,10 +89,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>s0</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="axi4" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="axi4" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="axi4" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="axi4" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -365,6 +365,26 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:displayName>maximumOutstandingTransactions</ipxact:displayName>
           <ipxact:value>1</ipxact:value>
         </ipxact:parameter>
+        <ipxact:parameter parameterId="dataCheck" type="bit">
+          <ipxact:name>dataCheck</ipxact:name>
+          <ipxact:displayName>dataCheck</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="addressCheck" type="bit">
+          <ipxact:name>addressCheck</ipxact:name>
+          <ipxact:displayName>addressCheck</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="securityAttribute" type="bit">
+          <ipxact:name>securityAttribute</ipxact:name>
+          <ipxact:displayName>securityAttribute</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="userData" type="bit">
+          <ipxact:name>userData</ipxact:name>
+          <ipxact:displayName>userData</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
         <ipxact:parameter parameterId="readAcceptanceCapability" type="longint">
           <ipxact:name>readAcceptanceCapability</ipxact:name>
           <ipxact:displayName>Read acceptance capability</ipxact:displayName>
@@ -449,10 +469,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>m0</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="axi4" version="24.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="axi4" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="axi4" version="24.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="axi4" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -789,6 +809,26 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:displayName>maximumOutstandingTransactions</ipxact:displayName>
           <ipxact:value>1</ipxact:value>
         </ipxact:parameter>
+        <ipxact:parameter parameterId="dataCheck" type="bit">
+          <ipxact:name>dataCheck</ipxact:name>
+          <ipxact:displayName>dataCheck</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="addressCheck" type="bit">
+          <ipxact:name>addressCheck</ipxact:name>
+          <ipxact:displayName>addressCheck</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="securityAttribute" type="bit">
+          <ipxact:name>securityAttribute</ipxact:name>
+          <ipxact:displayName>securityAttribute</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="userData" type="bit">
+          <ipxact:name>userData</ipxact:name>
+          <ipxact:displayName>userData</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
         <ipxact:parameter parameterId="readIssuingCapability" type="longint">
           <ipxact:name>readIssuingCapability</ipxact:name>
           <ipxact:displayName>Read issuing capability</ipxact:displayName>
@@ -803,6 +843,16 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:name>combinedIssuingCapability</ipxact:name>
           <ipxact:displayName>Combined issuing capability</ipxact:displayName>
           <ipxact:value>256</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="enableConcurrentSubordinateAccess" type="longint">
+          <ipxact:name>enableConcurrentSubordinateAccess</ipxact:name>
+          <ipxact:displayName>enableConcurrentSubordinateAccess</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="noRepeatedIdsBetweenSubordinates" type="longint">
+          <ipxact:name>noRepeatedIdsBetweenSubordinates</ipxact:name>
+          <ipxact:displayName>noRepeatedIdsBetweenSubordinates</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="issuesINCRBursts" type="bit">
           <ipxact:name>issuesINCRBursts</ipxact:name>
@@ -1860,7 +1910,7 @@ https://fpgasoftware.intel.com/eula.-->
       <ipxact:vendor>Intel Corporation</ipxact:vendor>
       <ipxact:library>emif_subsystem_axi_bridge_0</ipxact:library>
       <ipxact:name>altera_axi_bridge</ipxact:name>
-      <ipxact:version>19.4.0</ipxact:version>
+      <ipxact:version>19.8.3</ipxact:version>
     </altera:entity_info>
     <altera:altera_module_parameters>
       <ipxact:parameters>
@@ -1909,6 +1959,16 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:displayName>Use AWQOS signal</ipxact:displayName>
           <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_S0_AWSIZE" type="int">
+          <ipxact:name>USE_S0_AWSIZE</ipxact:name>
+          <ipxact:displayName>Use AWSIZE signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_S0_ARSIZE" type="int">
+          <ipxact:name>USE_S0_ARSIZE</ipxact:name>
+          <ipxact:displayName>Use ARSIZE signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
         <ipxact:parameter parameterId="USE_S0_AWREGION" type="int">
           <ipxact:name>USE_S0_AWREGION</ipxact:name>
           <ipxact:displayName>Use AWREGION signal</ipxact:displayName>
@@ -1932,6 +1992,16 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="USE_S0_AWPROT" type="int">
           <ipxact:name>USE_S0_AWPROT</ipxact:name>
           <ipxact:displayName>Use AWPROT signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_S0_RID" type="int">
+          <ipxact:name>USE_S0_RID</ipxact:name>
+          <ipxact:displayName>Use RID signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_S0_BID" type="int">
+          <ipxact:name>USE_S0_BID</ipxact:name>
+          <ipxact:displayName>Use BID signal</ipxact:displayName>
           <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="USE_M0_WSTRB" type="int">
@@ -2139,6 +2209,86 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:displayName>Use BUSER signal</ipxact:displayName>
           <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
+        <ipxact:parameter parameterId="BITSPERBYTE" type="int">
+          <ipxact:name>BITSPERBYTE</ipxact:name>
+          <ipxact:displayName>Additional Data Bits as User Signals</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="SAI_WIDTH" type="int">
+          <ipxact:name>SAI_WIDTH</ipxact:name>
+          <ipxact:displayName>SAI Width</ipxact:displayName>
+          <ipxact:value>1</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_M0_ADDRCHK" type="int">
+          <ipxact:name>USE_M0_ADDRCHK</ipxact:name>
+          <ipxact:displayName>Use ADDRCHK signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_M0_DATACHK" type="int">
+          <ipxact:name>USE_M0_DATACHK</ipxact:name>
+          <ipxact:displayName>Use DATACHK signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_M0_SAI" type="int">
+          <ipxact:name>USE_M0_SAI</ipxact:name>
+          <ipxact:displayName>Use SAI signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_M0_POISON" type="int">
+          <ipxact:name>USE_M0_POISON</ipxact:name>
+          <ipxact:displayName>Use POISON signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_M0_USER_DATA" type="int">
+          <ipxact:name>USE_M0_USER_DATA</ipxact:name>
+          <ipxact:displayName>Use USER_DATA signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_M0_AWAKEUP" type="int">
+          <ipxact:name>USE_M0_AWAKEUP</ipxact:name>
+          <ipxact:displayName>Use AWAKEUP signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_M0_TRACE" type="int">
+          <ipxact:name>USE_M0_TRACE</ipxact:name>
+          <ipxact:displayName>Use TRACE signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_S0_ADDRCHK" type="int">
+          <ipxact:name>USE_S0_ADDRCHK</ipxact:name>
+          <ipxact:displayName>Use ADDRCHK signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_S0_DATACHK" type="int">
+          <ipxact:name>USE_S0_DATACHK</ipxact:name>
+          <ipxact:displayName>Use DATACHK signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_S0_SAI" type="int">
+          <ipxact:name>USE_S0_SAI</ipxact:name>
+          <ipxact:displayName>Use SAI signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_S0_POISON" type="int">
+          <ipxact:name>USE_S0_POISON</ipxact:name>
+          <ipxact:displayName>Use POISON signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_S0_USER_DATA" type="int">
+          <ipxact:name>USE_S0_USER_DATA</ipxact:name>
+          <ipxact:displayName>Use USER_DATA signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_S0_AWAKEUP" type="int">
+          <ipxact:name>USE_S0_AWAKEUP</ipxact:name>
+          <ipxact:displayName>Use AWAKEUP signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="USE_S0_TRACE" type="int">
+          <ipxact:name>USE_S0_TRACE</ipxact:name>
+          <ipxact:displayName>Use TRACE signal</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
         <ipxact:parameter parameterId="AXI_VERSION" type="string">
           <ipxact:name>AXI_VERSION</ipxact:name>
           <ipxact:displayName>AXI Version</ipxact:displayName>
@@ -2182,6 +2332,11 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="ACE_LITE_SUPPORT" type="int">
           <ipxact:name>ACE_LITE_SUPPORT</ipxact:name>
           <ipxact:displayName>ACE Lite Support</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="ACE5_LITE_SUPPORT" type="int">
+          <ipxact:name>ACE5_LITE_SUPPORT</ipxact:name>
+          <ipxact:displayName>ACE5 Lite Support</ipxact:displayName>
           <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="SYNC_RESET" type="int">
@@ -2647,6 +2802,22 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;value&gt;1&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
+                        &lt;key&gt;dataCheck&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;addressCheck&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;securityAttribute&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;userData&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
                         &lt;key&gt;readAcceptanceCapability&lt;/key&gt;
                         &lt;value&gt;256&lt;/value&gt;
                     &lt;/entry&gt;
@@ -3075,6 +3246,22 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;value&gt;1&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
+                        &lt;key&gt;dataCheck&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;addressCheck&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;securityAttribute&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;userData&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
                         &lt;key&gt;readIssuingCapability&lt;/key&gt;
                         &lt;value&gt;256&lt;/value&gt;
                     &lt;/entry&gt;
@@ -3085,6 +3272,14 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;entry&gt;
                         &lt;key&gt;combinedIssuingCapability&lt;/key&gt;
                         &lt;value&gt;256&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;enableConcurrentSubordinateAccess&lt;/key&gt;
+                        &lt;value&gt;0&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;noRepeatedIdsBetweenSubordinates&lt;/key&gt;
+                        &lt;value&gt;0&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;issuesINCRBursts&lt;/key&gt;

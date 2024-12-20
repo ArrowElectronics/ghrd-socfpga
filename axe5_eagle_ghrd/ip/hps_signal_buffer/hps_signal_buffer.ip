@@ -16,14 +16,14 @@ https://fpgasoftware.intel.com/eula.-->
   <ipxact:vendor>Intel Corporation</ipxact:vendor>
   <ipxact:library>hps_signal_buffer</ipxact:library>
   <ipxact:name>gpio_0</ipxact:name>
-  <ipxact:version>22.0.0</ipxact:version>
+  <ipxact:version>22.1.0</ipxact:version>
   <ipxact:busInterfaces>
     <ipxact:busInterface>
       <ipxact:name>ck</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="conduit" version="23.4"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="23.4"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -57,10 +57,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>dout</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="conduit" version="23.4"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="23.4"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -104,10 +104,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>din</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="conduit" version="23.4"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="23.4"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -151,10 +151,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>oe</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="conduit" version="23.4"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="23.4"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -198,10 +198,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>pad_io</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="conduit" version="23.4"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="24.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="23.4"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="24.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -329,7 +329,7 @@ https://fpgasoftware.intel.com/eula.-->
       <ipxact:vendor>Intel Corporation</ipxact:vendor>
       <ipxact:library>hps_signal_buffer</ipxact:library>
       <ipxact:name>altera_gpio</ipxact:name>
-      <ipxact:version>22.0.0</ipxact:version>
+      <ipxact:version>22.1.0</ipxact:version>
     </altera:entity_info>
     <altera:altera_module_parameters>
       <ipxact:parameters>
@@ -523,6 +523,11 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="dflBitArray" type="string">
           <ipxact:name>dflBitArray</ipxact:name>
           <ipxact:displayName>dflBitArray</ipxact:displayName>
+          <ipxact:value></ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="cpuInfo" type="string">
+          <ipxact:name>cpuInfo</ipxact:name>
+          <ipxact:displayName>cpuInfo</ipxact:displayName>
           <ipxact:value></ipxact:value>
         </ipxact:parameter>
       </ipxact:parameters>

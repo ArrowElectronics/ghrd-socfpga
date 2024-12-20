@@ -217,7 +217,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;3&lt;/value&gt;
+                        &lt;value&gt;4&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_RATE&lt;/key&gt;
@@ -225,7 +225,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;3&lt;/value&gt;
+                        &lt;value&gt;4&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;
@@ -555,6 +555,22 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;entry&gt;
                             &lt;key&gt;maximumOutstandingTransactions&lt;/key&gt;
                             &lt;value&gt;1&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;dataCheck&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;addressCheck&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;securityAttribute&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;userData&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;readAcceptanceCapability&lt;/key&gt;
@@ -1228,6 +1244,22 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;value&gt;1&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
+                        &lt;key&gt;dataCheck&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;addressCheck&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;securityAttribute&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;userData&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
                         &lt;key&gt;readAcceptanceCapability&lt;/key&gt;
                         &lt;value&gt;1&lt;/value&gt;
                     &lt;/entry&gt;
@@ -1651,7 +1683,7 @@ https://fpgasoftware.intel.com/eula.-->
             <ipxact:parameter parameterId="liveModuleName" type="string">
               <ipxact:name>liveModuleName</ipxact:name>
               <ipxact:displayName>Live Module Name</ipxact:displayName>
-              <ipxact:value>video_sys_axi_hdmi_tx_0</ipxact:value>
+              <ipxact:value>axi_hdmi_tx_0</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="logicalView" type="string">
               <ipxact:name>logicalView</ipxact:name>
@@ -1979,6 +2011,22 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;entry&gt;
                             &lt;key&gt;maximumOutstandingTransactions&lt;/key&gt;
                             &lt;value&gt;1&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;dataCheck&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;addressCheck&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;securityAttribute&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;userData&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;readAcceptanceCapability&lt;/key&gt;
@@ -2590,6 +2638,22 @@ https://fpgasoftware.intel.com/eula.-->
                             &lt;value&gt;1&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
+                            &lt;key&gt;dataCheck&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;addressCheck&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;securityAttribute&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;userData&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
                             &lt;key&gt;readIssuingCapability&lt;/key&gt;
                             &lt;value&gt;8&lt;/value&gt;
                         &lt;/entry&gt;
@@ -2600,6 +2664,14 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;entry&gt;
                             &lt;key&gt;combinedIssuingCapability&lt;/key&gt;
                             &lt;value&gt;8&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;enableConcurrentSubordinateAccess&lt;/key&gt;
+                            &lt;value&gt;0&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;noRepeatedIdsBetweenSubordinates&lt;/key&gt;
+                            &lt;value&gt;0&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;issuesINCRBursts&lt;/key&gt;
@@ -3017,6 +3089,22 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;entry&gt;
                         &lt;key&gt;maximumOutstandingTransactions&lt;/key&gt;
                         &lt;value&gt;1&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;dataCheck&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;addressCheck&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;securityAttribute&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;userData&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;readAcceptanceCapability&lt;/key&gt;
@@ -3628,6 +3716,22 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;value&gt;1&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
+                        &lt;key&gt;dataCheck&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;addressCheck&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;securityAttribute&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;userData&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
                         &lt;key&gt;readIssuingCapability&lt;/key&gt;
                         &lt;value&gt;8&lt;/value&gt;
                     &lt;/entry&gt;
@@ -3638,6 +3742,14 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;entry&gt;
                         &lt;key&gt;combinedIssuingCapability&lt;/key&gt;
                         &lt;value&gt;8&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;enableConcurrentSubordinateAccess&lt;/key&gt;
+                        &lt;value&gt;0&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;noRepeatedIdsBetweenSubordinates&lt;/key&gt;
+                        &lt;value&gt;0&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;issuesINCRBursts&lt;/key&gt;
@@ -3743,7 +3855,7 @@ https://fpgasoftware.intel.com/eula.-->
             <ipxact:parameter parameterId="bspCpu" type="bit">
               <ipxact:name>bspCpu</ipxact:name>
               <ipxact:displayName>BSP CPU</ipxact:displayName>
-              <ipxact:value></ipxact:value>
+              <ipxact:value>false</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="componentDefinition" type="string">
               <ipxact:name>componentDefinition</ipxact:name>
@@ -4083,6 +4195,10 @@ https://fpgasoftware.intel.com/eula.-->
                             &lt;value&gt;0&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
+                            &lt;key&gt;waitrequestTimeout&lt;/key&gt;
+                            &lt;value&gt;1024&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
                             &lt;key&gt;wellBehavedWaitrequest&lt;/key&gt;
                             &lt;value&gt;false&lt;/value&gt;
                         &lt;/entry&gt;
@@ -4373,7 +4489,15 @@ https://fpgasoftware.intel.com/eula.-->
                             &lt;value&gt;0&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
+                            &lt;key&gt;waitrequestTimeout&lt;/key&gt;
+                            &lt;value&gt;1024&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
                             &lt;key&gt;writeWaitTime&lt;/key&gt;
+                            &lt;value&gt;0&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;enableConcurrentSubordinateAccess&lt;/key&gt;
                             &lt;value&gt;0&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/parameterValueMap&gt;
@@ -4776,6 +4900,10 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;value&gt;0&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
+                        &lt;key&gt;waitrequestTimeout&lt;/key&gt;
+                        &lt;value&gt;1024&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
                         &lt;key&gt;wellBehavedWaitrequest&lt;/key&gt;
                         &lt;value&gt;false&lt;/value&gt;
                     &lt;/entry&gt;
@@ -4825,6 +4953,10 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;entry&gt;
                         &lt;key&gt;dfhFeatureId&lt;/key&gt;
                         &lt;value&gt;35&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;dfhFeatureType&lt;/key&gt;
+                        &lt;value&gt;3&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/parameterValueMap&gt;
             &lt;/parameters&gt;
@@ -5062,7 +5194,15 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;value&gt;0&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
+                        &lt;key&gt;waitrequestTimeout&lt;/key&gt;
+                        &lt;value&gt;1024&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
                         &lt;key&gt;writeWaitTime&lt;/key&gt;
+                        &lt;value&gt;0&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;enableConcurrentSubordinateAccess&lt;/key&gt;
                         &lt;value&gt;0&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/parameterValueMap&gt;
@@ -5554,7 +5694,7 @@ https://fpgasoftware.intel.com/eula.-->
             <ipxact:parameter parameterId="bspCpu" type="bit">
               <ipxact:name>bspCpu</ipxact:name>
               <ipxact:displayName>BSP CPU</ipxact:displayName>
-              <ipxact:value></ipxact:value>
+              <ipxact:value>false</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="componentDefinition" type="string">
               <ipxact:name>componentDefinition</ipxact:name>
@@ -5896,7 +6036,7 @@ https://fpgasoftware.intel.com/eula.-->
       </altera:module>
     </altera:modules>
     <altera:connections>
-      <altera:connection altera:kind="avalon" altera:version="24.1" altera:start="mm_video_bridge.m0" altera:end="hdmi_dmac.s_axi">
+      <altera:connection altera:kind="avalon" altera:version="24.3" altera:start="mm_video_bridge.m0" altera:end="hdmi_dmac.s_axi">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x00010000"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -5917,7 +6057,7 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="avalon" altera:version="24.1" altera:start="mm_video_bridge.m0" altera:end="axi_hdmi_tx.s_axi">
+      <altera:connection altera:kind="avalon" altera:version="24.3" altera:start="mm_video_bridge.m0" altera:end="axi_hdmi_tx.s_axi">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0000"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -5938,19 +6078,19 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="axi4stream" altera:version="24.1" altera:start="hdmi_dmac.m_axis" altera:end="axi_hdmi_tx.vdma_if"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="24.1" altera:start="system_clock.out_clk" altera:end="system_reset.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="24.1" altera:start="system_clock.out_clk" altera:end="mm_video_bridge.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="24.1" altera:start="system_clock.out_clk" altera:end="hdmi_dmac.if_m_axis_aclk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="24.1" altera:start="system_clock.out_clk" altera:end="hdmi_dmac.m_src_axi_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="24.1" altera:start="system_clock.out_clk" altera:end="hdmi_dmac.s_axi_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="24.1" altera:start="system_clock.out_clk" altera:end="axi_hdmi_tx.s_axi_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="24.1" altera:start="system_clock.out_clk" altera:end="axi_hdmi_tx.vdma_clock"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="24.1" altera:start="system_reset.out_reset" altera:end="hdmi_dmac.m_src_axi_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="24.1" altera:start="system_reset.out_reset" altera:end="mm_video_bridge.reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="24.1" altera:start="system_reset.out_reset" altera:end="hdmi_dmac.s_axi_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="24.1" altera:start="system_reset.out_reset" altera:end="axi_hdmi_tx.s_axi_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="24.1" altera:start="system_reset.out_reset" altera:end="axi_hdmi_tx.vdma_reset"></altera:connection>
+      <altera:connection altera:kind="axi4stream" altera:version="24.3" altera:start="hdmi_dmac.m_axis" altera:end="axi_hdmi_tx.vdma_if"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="24.3" altera:start="system_clock.out_clk" altera:end="system_reset.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="24.3" altera:start="system_clock.out_clk" altera:end="mm_video_bridge.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="24.3" altera:start="system_clock.out_clk" altera:end="hdmi_dmac.if_m_axis_aclk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="24.3" altera:start="system_clock.out_clk" altera:end="hdmi_dmac.m_src_axi_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="24.3" altera:start="system_clock.out_clk" altera:end="hdmi_dmac.s_axi_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="24.3" altera:start="system_clock.out_clk" altera:end="axi_hdmi_tx.s_axi_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="24.3" altera:start="system_clock.out_clk" altera:end="axi_hdmi_tx.vdma_clock"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="24.3" altera:start="system_reset.out_reset" altera:end="hdmi_dmac.m_src_axi_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="24.3" altera:start="system_reset.out_reset" altera:end="mm_video_bridge.reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="24.3" altera:start="system_reset.out_reset" altera:end="hdmi_dmac.s_axi_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="24.3" altera:start="system_reset.out_reset" altera:end="axi_hdmi_tx.s_axi_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="24.3" altera:start="system_reset.out_reset" altera:end="axi_hdmi_tx.vdma_reset"></altera:connection>
     </altera:connections>
     <altera:interconnect_requirements></altera:interconnect_requirements>
     <altera:wire_level_connections></altera:wire_level_connections>
@@ -5975,20 +6115,20 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:busInterfaces>
           <ipxact:busInterface>
             <ipxact:name>hdmi_dmac.m_src_axi</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="axi4" version="24.1"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="axi4" version="24.3"></ipxact:busType>
             <ipxact:master></ipxact:master>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>hdmi_dmac.s_axi</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="axi4lite" version="24.1"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="axi4lite" version="24.3"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>axi_hdmi_tx.s_axi</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="axi4lite" version="24.1"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="axi4lite" version="24.3"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>mm_video_bridge.m0</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="24.1"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="24.3"></ipxact:busType>
             <ipxact:master>
               <ipxact:addressSpaceRef addressSpaceRef="mm_video_bridge.m0">
                 <ipxact:baseAddress>0x0001_0000</ipxact:baseAddress>
