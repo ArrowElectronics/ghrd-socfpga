@@ -17,7 +17,7 @@
 `define wHPS_LED0
 `define wHPS_LED1
 
-`define wFAB_EMAC0
+//`define wFAB_EMAC0
 //`define wDBG_UART
 `define wRGB_LED0
 `define wRGB_LED1
@@ -86,6 +86,7 @@ module axe5_falcon_top (
    output        	RGMII_MDC,
    inout         	RGMII_MDIO,
    `endif
+   
    `ifdef wHPS_EMAC2
    inout         	HPS_ETH2_RST, 
    output        	HPS_ETH2_TXCK, HPS_ETH2_TXCTL,
@@ -306,7 +307,8 @@ module axe5_falcon_top (
         .emac1_rgmii_tx_ctl           				(RGMII0_TXCTL),
         .emac1_rgmii_rxd            				(RGMII0_RXD),
         .emac1_rgmii_txd          					(RGMII0_TXD),
-        .emac1_app_rst_reset_n						(RGMII_RST),
+        .emac1_app_rst_reset_n						(),
+        .eth1_rst_export							(RGMII_RST),       
       `endif
       `ifdef wFAB_I2C0
         .hps_i2c0_scl_i_clk           				(i2c0_scl_i_clk),
@@ -347,18 +349,18 @@ module axe5_falcon_top (
         .hps_io_i3c0_scl                         (HPS_I3C0_SCL),
       `endif
       `ifdef wHPS_USB
-        .hps_io_usb0_clk                      (USB_CLK),                      //   input,   width = 1,                         .usb0_clk
-        .hps_io_usb0_stp                      (USB_STP),                      //  output,   width = 1,                         .usb0_stp
-        .hps_io_usb0_dir                      (USB_DIR),                      //   input,   width = 1,                         .usb0_dir
-        .hps_io_usb0_data0                    (USB_DATA[0]),                    //   inout,   width = 1,                         .usb0_data0
-        .hps_io_usb0_data1                    (USB_DATA[1]),                    //   inout,   width = 1,                         .usb0_data1
-        .hps_io_usb0_nxt                      (USB_NXT),                      //   input,   width = 1,                         .usb0_nxt
-        .hps_io_usb0_data2                    (USB_DATA[2]),                    //   inout,   width = 1,                         .usb0_data2
-        .hps_io_usb0_data3                    (USB_DATA[3]),                    //   inout,   width = 1,                         .usb0_data3
-        .hps_io_usb0_data4                    (USB_DATA[4]),                    //   inout,   width = 1,                         .usb0_data4
-        .hps_io_usb0_data5                    (USB_DATA[5]),                    //   inout,   width = 1,                         .usb0_data5
-        .hps_io_usb0_data6                    (USB_DATA[6]),                    //   inout,   width = 1,                         .usb0_data6
-        .hps_io_usb0_data7                    (USB_DATA[7]),                    //   inout,   width = 1,                         .usb0_data6
+        .hps_io_usb0_clk                      (USB_CLK),                      
+        .hps_io_usb0_stp                      (USB_STP),                      
+        .hps_io_usb0_dir                      (USB_DIR),                      
+        .hps_io_usb0_data0                    (USB_DATA[0]),                    
+        .hps_io_usb0_data1                    (USB_DATA[1]),                    
+        .hps_io_usb0_nxt                      (USB_NXT),                      
+        .hps_io_usb0_data2                    (USB_DATA[2]),                    
+        .hps_io_usb0_data3                    (USB_DATA[3]),                    
+        .hps_io_usb0_data4                    (USB_DATA[4]),                    
+        .hps_io_usb0_data5                    (USB_DATA[5]),                    
+        .hps_io_usb0_data6                    (USB_DATA[6]),                    
+        .hps_io_usb0_data7                    (USB_DATA[7]),                    
 		  .hps_io_gpio28            				 (USB_RST),
 		  .usb_hub_rst_export						 (USB_HUB_RST), 					
       `endif

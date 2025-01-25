@@ -1,7 +1,7 @@
 set_global_assignment -name TOP_LEVEL_ENTITY axe5_falcon_top
 
 
-set_global_assignment -name LAST_QUARTUS_VERSION "25.3.0 Pro Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "25.3.0 SP0.27 Pro Edition"
 set_global_assignment -name DEVICE A5EE013BB23BE6S
 set_global_assignment -name FAMILY "Agilex 5"
 set_global_assignment -name AUTO_RESTART_CONFIGURATION OFF
@@ -78,7 +78,6 @@ set_global_assignment -name IP_FILE ip/mipi_subsystem/vvp_vfw_csi2_2.ip
 set_global_assignment -name IP_FILE ip/mipi_subsystem/vvp_vfr.ip
 set_global_assignment -name USE_HPS_COLD_RESET SDM_IO10
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
-set_global_assignment -name QSYS_FILE niosv_system.qsys
 set_global_assignment -name IP_FILE ip/video_sys/hdmi_clock_bridge.ip
 set_global_assignment -name IP_FILE ip/video_sys/hdmi_reset_bridge.ip
 set_global_assignment -name IP_FILE ip/video_sys/hdmi_vvp_vfr.ip
@@ -89,3 +88,5 @@ set_global_assignment -name IP_FILE ip/video_sys/hdmi_clock_out_ddio.ip
 set_global_assignment -name BOARD default
 set_global_assignment -name POWER_APPLY_THERMAL_MARGIN ADDITIONAL
 set_global_assignment -name IP_FILE ip/board_subsystem/intel_vip_reset_gen_block_1.ip
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+

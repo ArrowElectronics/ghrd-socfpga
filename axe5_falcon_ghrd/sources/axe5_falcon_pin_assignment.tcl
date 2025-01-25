@@ -17,14 +17,14 @@ set wHPS_LED1 1
 set wHPS_UART0 1
 set wHPS_I2C1 1
 set wHPS_I3C0 1
-set wFAB_I2C1 0
+set wFAB_I2C0 1
 set wHPS_PB 1
 set wHPS_DIPSW 1
 set wHPS_USB 1
 set wHPS_EMAC2 1
 set wHPS_SD 1
 set wHPS 1
-set wFAB_EMAC0 1
+set wFAB_EMAC0 0
 set wFAB_EMAC1 0
 set wFAB_PB 1
 set wFAB_DIPSW 1
@@ -33,13 +33,15 @@ set wCAMERA0 1
 set wCAMERA1 1
 set wCRUVI_HSX 1
 set wCRUVI_HSZ 0
-set wCRUVI_RGMII 1
+set wCRUVI_RGMII 0
 set wCRUVI_LS 0
 set wPMOD 0
 set wDBG_UART 0
 
 set_location_assignment PIN_AN67   -to HPS_OSC_CLK_25MHz
 set_instance_assignment -name IO_STANDARD "1.8-V" -to HPS_OSC_CLK_25MHz
+
+set_instance_assignment -name IO_STANDARD "1.8-V" -to HPS_COLD_nRESET
 
 ############## BANK 2A_T (1.2V) ##############
 if {$wMIPI == 1} {
@@ -541,11 +543,11 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_DIPSW[3]
 set_location_assignment PIN_BE8  -to VSEL_1V3
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to VSEL_1V3
 
-if {$wFAB_I2C1 == 1} {
-set_location_assignment PIN_AC2  -to I2C_SCL
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to I2C_SCL
-set_location_assignment PIN_AC1  -to I2C_SDA
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to I2C_SDA
+if {$wFAB_I2C0 == 1} {
+set_location_assignment PIN_AC2  -to MUX_I2C_SCL
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to MUX_I2C_SCL
+set_location_assignment PIN_AC1  -to MUX_I2C_SDA
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to MUX_I2C_SDA
 set_location_assignment PIN_AF1  -to MUX_I2C_INT
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to MUX_I2C_INT
 }
