@@ -1,5 +1,5 @@
 // 
-// SPDX-FileCopyrightText: Copyright (C) 2024 Arrow Electronics, Inc. 
+// SPDX-FileCopyrightText: Copyright (C) 2025 Arrow Electronics, Inc. 
 // SPDX-License-Identifier: MIT-0 
 //
 
@@ -16,7 +16,7 @@
 `define wHPS_LED0
 `define wHPS_LED1
 
-//`define wFAB_EMAC
+`define wFAB_EMAC
 `define wRGB_LED0
 `define wRGB_LED1
 `define wRGB_LED2
@@ -276,15 +276,10 @@ module axe5_eagle_top (
    `endif   
 
    `ifdef wFAB_EMAC
-   wire        emac0_txen, emac0_txer, emac0_rxdv, emac0_rxer, emac0_col, emac0_crs, emac0_txclk, emac0_rxclk, emac0_tx_clk_o;
-   wire        emac0_rst_rx_n, emac0_rst_tx_n, emac0_app_rst_reset_n, emac0_mdio_mdc, emac0_mdio_di, emac0_mdio_mdo, emac0_mdio_oe;
-   wire [7:0]  emac0_rxd, emac0_txd;
-   wire [2:0]  emac0_speed;
-   wire        pll_25M_clk, pll_2p5M_clk, pll_50M_clk, pll_5M_clk;
+   wire	emac0_mdio_mdc, emac0_mdio_di, emac0_mdio_mdo, emac0_mdio_oe;
 	
    assign ETH1_MDIO = emac0_mdio_oe ? emac0_mdio_mdo : 1'bz;
    assign emac0_mdio_di = ETH1_MDIO;
-
    `endif
 
    `ifdef wFAB_I2C1
@@ -346,25 +341,17 @@ module axe5_eagle_top (
         .rgb_led3_export          					(rgb_led3),
       `endif
       `ifdef wFAB_EMAC
-        .emac0_mdio_mac_mdc       					(emac0_mdio_mdc),
+        .emac0_mdio_mac_mdc       					(ETH1_MDC),
         .emac0_mdio_mac_mdi       					(emac0_mdio_di),
         .emac0_mdio_mac_mdo       					(emac0_mdio_mdo),
         .emac0_mdio_mac_mdoe      					(emac0_mdio_oe),
-        .emac0_app_rst_reset_n    					(emac0_app_rst_reset_n),
-        .emac0_mac_tx_clk_o       					(emac0_tx_clk_o),
-        .emac0_mac_tx_clk_i       					(emac0_txclk),
-        .emac0_mac_rx_clk         					(emac0_rxclk),
-        .emac0_mac_rst_tx_n       					(emac0_rst_tx_n),
-        .emac0_mac_rst_rx_n       					(emac0_rst_rx_n),
-        .emac0_mac_txen           					(emac0_txen),
-        .emac0_mac_txer           					(emac0_txer),
-        .emac0_mac_rxdv           					(emac0_rxdv),
-        .emac0_mac_rxer           					(emac0_rxer),
-        .emac0_mac_rxd            					(emac0_rxd),
-        .emac0_mac_col            					(emac0_col),
-        .emac0_mac_crs            					(emac0_crs),
-        .emac0_mac_speed          					(emac0_speed),
-        .emac0_mac_txd_o          					(emac0_txd),
+        .emac0_rgmii_tx_clk       					(ETH1_TXCK),
+        .emac0_rgmii_rx_clk         				(ETH1_RXCK),
+        .emac0_rgmii_rx_ctl           				(ETH1_RXCTL),
+        .emac0_rgmii_tx_ctl           				(ETH1_TXCTL),
+        .emac0_rgmii_rxd            				(ETH1_RXD),
+        .emac0_rgmii_txd          					(ETH1_TXD),
+        .eth1_rst_export							(ETH1_RST),
       `endif
       `ifdef wADDA
         .spim0_miso_i             					(ADDA_DOUT),

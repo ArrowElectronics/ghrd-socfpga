@@ -1,10 +1,13 @@
 #
-# SPDX-FileCopyrightText: Copyright (C) 2024 Arrow Electronics, Inc. 
+# SPDX-FileCopyrightText: Copyright (C) 2025 Arrow Electronics, Inc. 
 # SPDX-License-Identifier: MIT-0 
 #
 
+set REV_02 0
+set REV_03 1
+
 set wADDA 1
-set wFAB_EMAC 0
+set wFAB_EMAC 1
 set wRGB_LED0 1
 set wRGB_LED1 1
 set wRGB_LED2 1
@@ -23,7 +26,7 @@ set wFAB_I2C1 1
 set wHPS_PB 1
 set wHPS_DIPSW 1
 set wHPS_USB 1
-set wHPS_EMAC2 0
+set wHPS_EMAC2 1
 set wHPS_SD 1
 set wHPS 1
 set wFMC 0
@@ -100,7 +103,6 @@ set_location_assignment PIN_A17  -to ADDA_RST
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDA_RST
 }
 
-
 # Bank HVIO_6C (1.8V)
 if {$wFAB_EMAC == 1} {
 set_location_assignment PIN_F27  -to ETH1_RST
@@ -119,16 +121,28 @@ set_location_assignment PIN_F18  -to ETH1_RXCTL
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXCTL
 set_location_assignment PIN_F15  -to ETH1_TXCTL
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_TXCTL
-set_location_assignment PIN_D8   -to ETH1_RXCK
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXCK
 set_location_assignment PIN_K8   -to ETH1_RXD[0]
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXD[0]
-set_location_assignment PIN_F8   -to ETH1_RXD[1]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXD[1]
 set_location_assignment PIN_H8   -to ETH1_RXD[2]
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXD[2]
 set_location_assignment PIN_C2   -to ETH1_RXD[3]
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXD[3]
+if {$REV_02 == 1} {
+set_location_assignment PIN_D8   -to ETH1_RXCK
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXCK
+set_location_assignment PIN_F8   -to ETH1_RXD[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXD[1]
+}
+if {$REV_03 == 1} {
+set_location_assignment PIN_F8   -to ETH1_RXCK
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXCK
+set_location_assignment PIN_D8   -to ETH1_RXD[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXD[1]
+}
+set_location_assignment PIN_G1 -to ETH1_MDC -comment IOBANK_6C
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_MDC -entity axe5_eagle_top
+set_location_assignment PIN_J1 -to ETH1_MDIO -comment IOBANK_6C
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_MDIO -entity axe5_eagle_top
 }
 
 # Bank HVIO_5A
@@ -303,7 +317,9 @@ set_location_assignment PIN_G134  -to USB_DATA[6]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[6]
 set_location_assignment PIN_G135  -to USB_DATA[7]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[7]
-
+set_location_assignment PIN_BU118 -to USB_HUB_RST -comment IO_BANK_5A
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to USB_HUB_RST
+}
 
 # Bank 1C (GXBL1C) SJK ??
 #set_location_assignment PIN_AP120  -to USB_REFCLK_p
@@ -315,7 +331,7 @@ set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[7]
 #set_location_assignment PIN_AM135  -to USB_SSRX_p
 #set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to USB_SSRX_p
 #set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to USB_SSRX_n
-}
+
 
 # Bank HPS_IOB (1.8V)
 if {$wHPS_EMAC2 == 1} {
