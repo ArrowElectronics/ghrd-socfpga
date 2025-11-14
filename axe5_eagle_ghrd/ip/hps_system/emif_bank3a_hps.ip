@@ -13,17 +13,17 @@ Intel and sold by Intel or its authorized distributors.  Please
 refer to the applicable agreement for further details, at
 https://fpgasoftware.intel.com/eula.-->
 <ipxact:component xmlns:altera="http://www.altera.com/XMLSchema/IPXact2014/extensions" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
-  <ipxact:vendor>Intel Corporation</ipxact:vendor>
+  <ipxact:vendor>Altera Corporation</ipxact:vendor>
   <ipxact:library>emif_bank3a_hps</ipxact:library>
   <ipxact:name>emif_bank3a_hps</ipxact:name>
-  <ipxact:version>3.0.0</ipxact:version>
+  <ipxact:version>4.1.0</ipxact:version>
   <ipxact:busInterfaces>
     <ipxact:busInterface>
       <ipxact:name>io96b0_to_hps</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="conduit" version="25.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="25.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="25.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="25.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -545,10 +545,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>mem_0</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="conduit" version="25.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="25.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="25.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="25.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -630,10 +630,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>mem_ck_0</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="conduit" version="25.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="25.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="25.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="25.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -675,10 +675,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>mem_reset_n</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="conduit" version="25.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="25.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="25.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="25.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -712,10 +712,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>oct_0</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="conduit" version="25.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="25.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="25.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="25.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -749,10 +749,10 @@ https://fpgasoftware.intel.com/eula.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>ref_clk</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="clock" version="25.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="clock" version="25.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="25.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="25.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -1965,10 +1965,10 @@ https://fpgasoftware.intel.com/eula.-->
   </ipxact:model>
   <ipxact:vendorExtensions>
     <altera:entity_info>
-      <ipxact:vendor>Intel Corporation</ipxact:vendor>
+      <ipxact:vendor>Altera Corporation</ipxact:vendor>
       <ipxact:library>emif_bank3a_hps</ipxact:library>
       <ipxact:name>emif_io96b_hps</ipxact:name>
-      <ipxact:version>3.0.0</ipxact:version>
+      <ipxact:version>4.1.0</ipxact:version>
     </altera:entity_info>
     <altera:altera_module_parameters>
       <ipxact:parameters>
@@ -3055,11 +3055,6 @@ https://fpgasoftware.intel.com/eula.-->
                 <ipxact:displayName>Die Density</ipxact:displayName>
                 <ipxact:value>4</ipxact:value>
               </ipxact:parameter>
-              <ipxact:parameter parameterId="SYSINFO_DEVICE_GROUP" type="string">
-                <ipxact:name>SYSINFO_DEVICE_GROUP</ipxact:name>
-                <ipxact:displayName>SYSINFO_DEVICE_GROUP</ipxact:displayName>
-                <ipxact:value>B</ipxact:value>
-              </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_MINNUMREFSREQ" type="real">
                 <ipxact:name>MEM_MINNUMREFSREQ</ipxact:name>
                 <ipxact:displayName>Min Number of Refs Reqd</ipxact:displayName>
@@ -3084,11 +3079,6 @@ https://fpgasoftware.intel.com/eula.-->
                 <ipxact:name>PHY_TERM_X_R_S_CK_OUTPUT_OHM</ipxact:name>
                 <ipxact:displayName>Phy CK Drive Strength</ipxact:displayName>
                 <ipxact:value>SERIES_40_OHM_CAL</ipxact:value>
-              </ipxact:parameter>
-              <ipxact:parameter parameterId="SYSINFO_DEVICE_FAMILY" type="string">
-                <ipxact:name>SYSINFO_DEVICE_FAMILY</ipxact:name>
-                <ipxact:displayName>SYSINFO_DEVICE_FAMILY</ipxact:displayName>
-                <ipxact:value>Agilex 5</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="INSTANCE_ID" type="int">
                 <ipxact:name>INSTANCE_ID</ipxact:name>
@@ -3142,7 +3132,7 @@ https://fpgasoftware.intel.com/eula.-->
               </ipxact:parameter>
               <ipxact:parameter parameterId="CTRL_AUTO_PRECHARGE_EN" type="bit">
                 <ipxact:name>CTRL_AUTO_PRECHARGE_EN</ipxact:name>
-                <ipxact:displayName>CTRL_AUTO_PRECHARGE_EN</ipxact:displayName>
+                <ipxact:displayName>Force Auto-Precharge</ipxact:displayName>
                 <ipxact:value>false</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="PHY_REFCLK_FREQ_MHZ_AUTOSET_EN" type="bit">
@@ -3198,17 +3188,12 @@ https://fpgasoftware.intel.com/eula.-->
               <ipxact:parameter parameterId="ADV_CAL_ENABLE_REQ" type="bit">
                 <ipxact:name>ADV_CAL_ENABLE_REQ</ipxact:name>
                 <ipxact:displayName>Enable REQ Calibration</ipxact:displayName>
-                <ipxact:value>true</ipxact:value>
+                <ipxact:value>false</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="ADV_CAL_ENABLE_MARGIN" type="bit">
                 <ipxact:name>ADV_CAL_ENABLE_MARGIN</ipxact:name>
                 <ipxact:displayName>Enable Margining during Calibration</ipxact:displayName>
                 <ipxact:value>false</ipxact:value>
-              </ipxact:parameter>
-              <ipxact:parameter parameterId="SYSINFO_DEVICE_IOBANK_REVISION" type="string">
-                <ipxact:name>SYSINFO_DEVICE_IOBANK_REVISION</ipxact:name>
-                <ipxact:displayName>SYSINFO_DEVICE_IOBANK_REVISION</ipxact:displayName>
-                <ipxact:value>IO96B</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_PER_BANK_REF_EN" type="int">
                 <ipxact:name>MEM_PER_BANK_REF_EN</ipxact:name>
@@ -3260,11 +3245,6 @@ https://fpgasoftware.intel.com/eula.-->
                 <ipxact:displayName>PHY_TERM_X_DQS_IO_STD_TYPE</ipxact:displayName>
                 <ipxact:value>DF_LVSTL</ipxact:value>
               </ipxact:parameter>
-              <ipxact:parameter parameterId="SYSINFO_DEVICE_SPEEDGRADE" type="string">
-                <ipxact:name>SYSINFO_DEVICE_SPEEDGRADE</ipxact:name>
-                <ipxact:displayName>SYSINFO_DEVICE_SPEEDGRADE</ipxact:displayName>
-                <ipxact:value>4</ipxact:value>
-              </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_TWR_NS" type="real">
                 <ipxact:name>MEM_TWR_NS</ipxact:name>
                 <ipxact:displayName>tWR</ipxact:displayName>
@@ -3300,20 +3280,10 @@ https://fpgasoftware.intel.com/eula.-->
                 <ipxact:displayName>Use LPDDR4X</ipxact:displayName>
                 <ipxact:value>false</ipxact:value>
               </ipxact:parameter>
-              <ipxact:parameter parameterId="ADV_CAL_ENABLE_WR_DFE" type="bit">
-                <ipxact:name>ADV_CAL_ENABLE_WR_DFE</ipxact:name>
-                <ipxact:displayName>Enable Write DFE Training</ipxact:displayName>
-                <ipxact:value>false</ipxact:value>
-              </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_ODT_CA_X_CA_ENABLE" type="string">
                 <ipxact:name>MEM_ODT_CA_X_CA_ENABLE</ipxact:name>
                 <ipxact:displayName>Mem CA Termination Enable</ipxact:displayName>
                 <ipxact:value>true</ipxact:value>
-              </ipxact:parameter>
-              <ipxact:parameter parameterId="SYSINFO_BOARD_TRAIT" type="string">
-                <ipxact:name>SYSINFO_BOARD_TRAIT</ipxact:name>
-                <ipxact:displayName>SYSINFO_BOARD_TRAIT</ipxact:displayName>
-                <ipxact:value></ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_TDQSCK_MAX_NS" type="real">
                 <ipxact:name>MEM_TDQSCK_MAX_NS</ipxact:name>
@@ -3327,18 +3297,13 @@ https://fpgasoftware.intel.com/eula.-->
               </ipxact:parameter>
               <ipxact:parameter parameterId="DIAG_HMC_ADDR_SWAP_EN" type="bit">
                 <ipxact:name>DIAG_HMC_ADDR_SWAP_EN</ipxact:name>
-                <ipxact:displayName>HMC ADDR SWAP</ipxact:displayName>
+                <ipxact:displayName>Enable Row/CS Swap</ipxact:displayName>
                 <ipxact:value>false</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_TRRD_NS" type="real">
                 <ipxact:name>MEM_TRRD_NS</ipxact:name>
                 <ipxact:displayName>tRRD</ipxact:displayName>
                 <ipxact:value>10.0</ipxact:value>
-              </ipxact:parameter>
-              <ipxact:parameter parameterId="SYSINFO_DEVICE" type="string">
-                <ipxact:name>SYSINFO_DEVICE</ipxact:name>
-                <ipxact:displayName>SYSINFO_DEVICE</ipxact:displayName>
-                <ipxact:value>A5ED065BB32AE4SR0</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_TCSCKEH_NS" type="real">
                 <ipxact:name>MEM_TCSCKEH_NS</ipxact:name>
@@ -3420,11 +3385,6 @@ https://fpgasoftware.intel.com/eula.-->
                 <ipxact:displayName>tDQSCK_MIN</ipxact:displayName>
                 <ipxact:value>1.5</ipxact:value>
               </ipxact:parameter>
-              <ipxact:parameter parameterId="SYSINFO_DEVICE_DIE_REVISIONS" type="string">
-                <ipxact:name>SYSINFO_DEVICE_DIE_REVISIONS</ipxact:name>
-                <ipxact:displayName>SYSINFO_DEVICE_DIE_REVISIONS</ipxact:displayName>
-                <ipxact:value>MAIN_SM7_REVA</ipxact:value>
-              </ipxact:parameter>
               <ipxact:parameter parameterId="TURNAROUND_W2R_SAMECS_CYC" type="int">
                 <ipxact:name>TURNAROUND_W2R_SAMECS_CYC</ipxact:name>
                 <ipxact:displayName>Additional write-to-read turnaround time (same rank)</ipxact:displayName>
@@ -3475,15 +3435,10 @@ https://fpgasoftware.intel.com/eula.-->
                 <ipxact:displayName>Mem VrefDQ Range</ipxact:displayName>
                 <ipxact:value>1</ipxact:value>
               </ipxact:parameter>
-              <ipxact:parameter parameterId="SYSINFO_SUPPORTS_VID" type="string">
-                <ipxact:name>SYSINFO_SUPPORTS_VID</ipxact:name>
-                <ipxact:displayName>SYSINFO_SUPPORTS_VID</ipxact:displayName>
-                <ipxact:value>0</ipxact:value>
-              </ipxact:parameter>
               <ipxact:parameter parameterId="ADV_CAL_ENABLE_WEQ" type="bit">
                 <ipxact:name>ADV_CAL_ENABLE_WEQ</ipxact:name>
                 <ipxact:displayName>Enable WEQ Calibration</ipxact:displayName>
-                <ipxact:value>true</ipxact:value>
+                <ipxact:value>false</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="PHY_TERM_X_R_T_DQ_INPUT_OHM" type="string">
                 <ipxact:name>PHY_TERM_X_R_T_DQ_INPUT_OHM</ipxact:name>
@@ -3530,11 +3485,6 @@ https://fpgasoftware.intel.com/eula.-->
                 <ipxact:displayName>Extra Diagnostic Parameters</ipxact:displayName>
                 <ipxact:value></ipxact:value>
               </ipxact:parameter>
-              <ipxact:parameter parameterId="SYSINFO_BOARD" type="string">
-                <ipxact:name>SYSINFO_BOARD</ipxact:name>
-                <ipxact:displayName>SYSINFO_BOARD</ipxact:displayName>
-                <ipxact:value>default</ipxact:value>
-              </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_TCSCKE_NS" type="real">
                 <ipxact:name>MEM_TCSCKE_NS</ipxact:name>
                 <ipxact:displayName>tCSCKE</ipxact:displayName>
@@ -3550,11 +3500,6 @@ https://fpgasoftware.intel.com/eula.-->
                 <ipxact:displayName>tRTP</ipxact:displayName>
                 <ipxact:value>7.5</ipxact:value>
               </ipxact:parameter>
-              <ipxact:parameter parameterId="SYSINFO_DEVICE_BASE_DIE" type="string">
-                <ipxact:name>SYSINFO_DEVICE_BASE_DIE</ipxact:name>
-                <ipxact:displayName>SYSINFO_DEVICE_BASE_DIE</ipxact:displayName>
-                <ipxact:value>SM7</ipxact:value>
-              </ipxact:parameter>
               <ipxact:parameter parameterId="TURNAROUND_W2R_DIFFCS_CYC" type="int">
                 <ipxact:name>TURNAROUND_W2R_DIFFCS_CYC</ipxact:name>
                 <ipxact:displayName>Additional write-to-read turnaround time (different ranks)</ipxact:displayName>
@@ -3563,7 +3508,7 @@ https://fpgasoftware.intel.com/eula.-->
               <ipxact:parameter parameterId="CTRL_PERFORMANCE_PROFILE" type="string">
                 <ipxact:name>CTRL_PERFORMANCE_PROFILE</ipxact:name>
                 <ipxact:displayName>Controller Performance Profile</ipxact:displayName>
-                <ipxact:value>default</ipxact:value>
+                <ipxact:value>SEQ</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="EX_DESIGN_PMON_CH3_EN" type="bit">
                 <ipxact:name>EX_DESIGN_PMON_CH3_EN</ipxact:name>
@@ -3593,11 +3538,6 @@ https://fpgasoftware.intel.com/eula.-->
               <ipxact:parameter parameterId="CTRL_ECC_AUTOCORRECT_EN" type="bit">
                 <ipxact:name>CTRL_ECC_AUTOCORRECT_EN</ipxact:name>
                 <ipxact:displayName>Use ECC Autocorrection</ipxact:displayName>
-                <ipxact:value>false</ipxact:value>
-              </ipxact:parameter>
-              <ipxact:parameter parameterId="ADV_CAL_ENABLE_RD_DFE" type="bit">
-                <ipxact:name>ADV_CAL_ENABLE_RD_DFE</ipxact:name>
-                <ipxact:displayName>Enable Read DFE Training</ipxact:displayName>
                 <ipxact:value>false</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_TCKE_NS" type="real">
@@ -3640,11 +3580,6 @@ https://fpgasoftware.intel.com/eula.-->
                 <ipxact:displayName>Pin Swizzle Map</ipxact:displayName>
                 <ipxact:value></ipxact:value>
               </ipxact:parameter>
-              <ipxact:parameter parameterId="SYSINFO_DEVICE_POWER_MODEL" type="string">
-                <ipxact:name>SYSINFO_DEVICE_POWER_MODEL</ipxact:name>
-                <ipxact:displayName>SYSINFO_DEVICE_POWER_MODEL</ipxact:displayName>
-                <ipxact:value>STANDARD_POWER_FIXED</ipxact:value>
-              </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_TRFCPB_NS" type="real">
                 <ipxact:name>MEM_TRFCPB_NS</ipxact:name>
                 <ipxact:displayName>tRFCpb</ipxact:displayName>
@@ -3684,11 +3619,6 @@ https://fpgasoftware.intel.com/eula.-->
                 <ipxact:name>MEM_TRPAB_NS</ipxact:name>
                 <ipxact:displayName>tRPab</ipxact:displayName>
                 <ipxact:value>21.0</ipxact:value>
-              </ipxact:parameter>
-              <ipxact:parameter parameterId="SYSINFO_DEVICE_TEMPERATURE_GRADE" type="string">
-                <ipxact:name>SYSINFO_DEVICE_TEMPERATURE_GRADE</ipxact:name>
-                <ipxact:displayName>SYSINFO_DEVICE_TEMPERATURE_GRADE</ipxact:displayName>
-                <ipxact:value>EXTENDED</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="PHY_TERM_X_R_T_GPIO_INPUT_OHM" type="string">
                 <ipxact:name>PHY_TERM_X_R_T_GPIO_INPUT_OHM</ipxact:name>

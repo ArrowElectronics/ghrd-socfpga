@@ -39,6 +39,7 @@
 //`define wSFP10G_2
 //`define wFMC_XCVRS
 //`define wPCIe
+//`define smartVID
 
 
 module axe5_eagle_top (
@@ -63,7 +64,7 @@ module axe5_eagle_top (
    inout	  		USB_RST,
    output        	USB_SSTX_p, USB_SSTX_n, 
    input         	USB_SSRX_p, USB_SSRX_n, 
-   input         	USB_REFCLK_p, USB_REFCLK_n, 
+   input         	USB_REFCLK_p,
    output	  		USB_HUB_RST,   
    `endif
    `ifdef wHPS_SD
@@ -75,7 +76,7 @@ module axe5_eagle_top (
    `ifdef wHPS
    inout [1:0]   	HPS_PB,
    inout 	     	HPS_DIPSW[1:0],
-   input         	HPS_COLD_RST,
+  // input         	HPS_COLD_RST,
    input         	HPS_OSC_CLK_25MHz,   
    `endif
    `ifdef wFAB_I2C1
@@ -217,18 +218,25 @@ module axe5_eagle_top (
    output        	SFPA_TD_p, SFPA_TD_n,
    output        	SFPA_RD_p, SFPA_RD_n,
    `endif
-   `ifdef wSFP10G_1
+   `ifdef wSFP10G_2
    output        	SFPB_TD_p, SFPB_TD_n,
    output        	SFPB_RD_p, SFPB_RD_n,
    `endif
-	
-   input         	SFP_REFCLK_p, SFP_REFCLK_n,
 
-   input         	REFCLK_3B0,
-   input         	FPGA_RST_n,
+   `ifdef wSFP10G_1
+   input         	SFP_REFCLK_p, SFP_REFCLK_n,
+   `elsif wSFP10G_1
+   input         	SFP_REFCLK_p, SFP_REFCLK_n,
+   `endif
+
+   `ifdef smartVID
    inout         	PWR_SDA,
    inout         	PWR_SCL,
-   input         	SDM_CLK_25MHz
+   `endif
+
+   input         	REFCLK_3B0,
+   input         	FPGA_RST_n
+   //input         	SDM_CLK_25MHz
    
 );
 	
@@ -418,7 +426,6 @@ module axe5_eagle_top (
 		  // EG aggregates
         .usb31_phy_pma_cpu_clk_clk					(o_pma_cu_clk),              
         .usb31_phy_refclk_p_clk						(USB_REFCLK_p),                 
-        .usb31_phy_refclk_n_clk						(USB_REFCLK_n),                 
         .usb31_phy_rx_serial_n_i_rx_serial_n		(USB_SSRX_n),    
         .usb31_phy_rx_serial_p_i_rx_serial_p		(USB_SSRX_p),    
         .usb31_phy_tx_serial_n_o_tx_serial_n		(USB_SSTX_n),    

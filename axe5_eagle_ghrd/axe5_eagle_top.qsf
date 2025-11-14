@@ -18,7 +18,7 @@ set_global_assignment -name DEVICE_INITIALIZATION_CLOCK OSC_CLK_1_25MHZ
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 24.3.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:08:12  DECEMBER 12, 2024"
 set_global_assignment -name BOARD default
-set_global_assignment -name LAST_QUARTUS_VERSION "25.1.0 Pro Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "25.3.0 Pro Edition"
 set_global_assignment -name VERILOG_FILE sources/axe5_eagle_top.v
 set_global_assignment -name QSYS_FILE ghrd_system.qsys
 set_global_assignment -name QSYS_FILE board_subsystem.qsys
@@ -48,7 +48,7 @@ set_global_assignment -name IP_FILE ip/hps_system/hps_system_f2sdram_adapter_256
 set_global_assignment -name IP_FILE ip/hps_system/f2h_mm_bridge.ip
 set_global_assignment -name IP_FILE ip/hps_system/f2h_master.ip
 set_global_assignment -name IP_FILE ip/hps_system/ace5lite_cache_coherency_translator.ip
-set_global_assignment -name IP_FILE ip/hps_system/intel_agilex_5_soc_0.ip
+set_global_assignment -name IP_FILE ip/hps_system/intel_agilex_5_soc_1.ip
 set_global_assignment -name IP_FILE ip/hps_system/emif_bank3a_hps.ip
 set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_clock_in.ip
 set_global_assignment -name IP_FILE ip/peripheral_sys/peripheral_sys_reset_in.ip
@@ -79,4 +79,5 @@ set_global_assignment -name IP_FILE ip/video_sys/video_sys_mm_bridge_1.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_axi_dmac_0.ip
 set_global_assignment -name IP_FILE ip/video_sys/video_sys_axi_hdmi_tx_0.ip
 set_global_assignment -name HPS_INITIALIZATION "HPS FIRST"
+
 

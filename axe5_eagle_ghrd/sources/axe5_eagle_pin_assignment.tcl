@@ -43,12 +43,8 @@ set wFMC_XCVRS 0
 set wPCIe 0
 set smartVID 0
 
-#set_location_assignment PIN_BR102  -to SDM_CLK_25MHz
-#set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to SDM_CLK_25MHz
 set_location_assignment PIN_T132   -to HPS_OSC_CLK_25MHz
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_OSC_CLK_25MHz
-#set_location_assignment PIN_CH109  -to HPS_COLD_RST
-#set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_COLD_RST
 
 # Bank HVIO_5A
 set_location_assignment PIN_CK134  -to FPGA_RST_n
@@ -57,6 +53,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_RST_n
 if {$wSFP10G_A == 1 || $wSFP10G_B == 1} {
 # Bank 1C (GXBL1C)
 set_location_assignment PIN_AT120  -to SFP_REFCLK_p
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to SFP_REFCLK_p
 }
 
 if {$smartVID == 1} {
@@ -185,8 +182,8 @@ set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to REFCLK_3B0
 
 # Bank HVIO_6A/6B (1.8V)
 if {$wHDMI == 1} {
-#set_location_assignment PIN_CF9  -to HDMI_SPDIF
-#set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_SPDIF
+set_location_assignment PIN_CF9  -to HDMI_SPDIF
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_SPDIF
 set_location_assignment PIN_BH19  -to HDMI_VS
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_VS
 set_location_assignment PIN_CF12  -to HDMI_HS
@@ -195,8 +192,8 @@ set_location_assignment PIN_BK31  -to HDMI_CLK
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CLK
 set_location_assignment PIN_BK19  -to HDMI_DE
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_DE
-#set_location_assignment PIN_BF16  -to HDMI_INT
-#set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_INT
+set_location_assignment PIN_BF16  -to HDMI_INT
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_INT
 set_location_assignment PIN_BW19  -to HDMI_CT_HPD
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CT_HPD
 set_location_assignment PIN_BF25  -to HDMI_CEC_CLK
@@ -321,16 +318,19 @@ set_location_assignment PIN_BU118 -to USB_HUB_RST -comment IO_BANK_5A
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to USB_HUB_RST
 }
 
-# Bank 1C (GXBL1C) SJK ??
-#set_location_assignment PIN_AP120  -to USB_REFCLK_p
-#set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to USB_REFCLK_p
-#set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to USB_REFCLK_n
-#set_location_assignment PIN_AN129  -to USB_SSTX_p
-#set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to USB_SSTX_p
-#set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to USB_SSTX_n
-#set_location_assignment PIN_AM135  -to USB_SSRX_p
-#set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to USB_SSRX_p
-#set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to USB_SSRX_n
+# Bank 1C (GXBL1C)
+set_location_assignment PIN_AP120  -to USB_REFCLK_p
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to USB_REFCLK_p
+set_location_assignment PIN_AP115  -to USB_REFCLK_p(n)
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to USB_REFCLK_p(n)
+set_location_assignment PIN_AN129  -to USB_SSTX_p
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to USB_SSTX_p
+set_location_assignment PIN_AN126  -to USB_SSTX_n
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to USB_SSTX_n
+set_location_assignment PIN_AM135  -to USB_SSRX_p
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to USB_SSRX_p
+set_location_assignment PIN_AM133  -to USB_SSRX_n
+set_instance_assignment -name IO_STANDARD "HIGH SPEED DIFFERENTIAL I/O" -to USB_SSRX_n
 
 
 # Bank HPS_IOB (1.8V)
