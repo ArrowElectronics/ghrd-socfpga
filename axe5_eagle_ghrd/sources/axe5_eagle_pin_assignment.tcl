@@ -41,7 +41,7 @@ set wSFP10G_A 0
 set wSFP10G_B 0
 set wFMC_XCVRS 0
 set wPCIe 0
-set smartVID 0
+set smartVID 0	;# For Agilex-5 E-series group-A devices
 
 set_location_assignment PIN_T132   -to HPS_OSC_CLK_25MHz
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_OSC_CLK_25MHz
@@ -529,7 +529,7 @@ set_location_assignment PIN_H87   -to LPDDR4A_DMB0 -comment IOBANK_3A_T
 set_location_assignment PIN_AK111   -to LPDDR4A_OCT_RZQIN -comment IOBANK_3A_B
 }
 
-# Bank 2B FMC_ADJ=1.2V  SJK signals commented out ??
+# Bank 2B FMC_ADJ=1.3V 
 if {$wFMC == 1} {
 #set_location_assignment PIN_BE61  -to FMC_REFCK_C2M_p
 #set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to FMC_REFCK_C2M_p
@@ -551,6 +551,7 @@ set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to FMC_CLK1_M2C_p
 #set_location_assignment PIN_CH41  -to FMC_SYNC_C2M_p
 #set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to FMC_SYNC_C2M_p
 #set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to FMC_SYNC_C2M_n
+# LA00 - LA16 being usedas differential outputs											   
 set_location_assignment PIN_CF19  -to LA00_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to LA00_p
 set_location_assignment PIN_CF22  -to LA01_p
@@ -585,6 +586,7 @@ set_location_assignment PIN_BE64  -to LA15_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to LA15_p
 set_location_assignment PIN_BF50  -to LA16_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to LA16_p
+# LA17 - LA33 being used as differential inputs, needing input termination assignment																					 
 set_location_assignment PIN_BR41  -to LA17_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to LA17_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to LA17_n
@@ -657,7 +659,7 @@ set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to LA33_p
 
 
 if {$wCRUVI_HS_1 == 1} {
-# BANK 3B (1.2V)
+# BANK 3B (1.3V)
 set_location_assignment PIN_B45  -to CX_HSIO
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to CX_HSIO
 set_location_assignment PIN_A48  -to CX_HSO
@@ -666,60 +668,51 @@ set_location_assignment PIN_A51  -to CX_RESET
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to CX_RESET
 set_location_assignment PIN_A63  -to CX_HSI
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to CX_HSI
+# CX_An_p and CX_Bn_p are used as differential pins												   
 set_location_assignment PIN_P44  -to CX_B5_p
-#set_location_assignment PIN_T44  -to CX_B5_n
+
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B5_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B5_n
+
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CX_B5_p
 set_location_assignment PIN_V58  -to CX_B4_p
-#set_location_assignment PIN_T58  -to CX_B4_n
+# CX_Bn_p pins being used as differential input, need the Input Termination assignment
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B4_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B4_n
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CX_B4_p
 set_location_assignment PIN_P55  -to CX_B3_p
-#set_location_assignment PIN_T55  -to CX_B3_n
+
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B3_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B3_n
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CX_B3_p
 set_location_assignment PIN_K55  -to CX_B2_p
-#set_location_assignment PIN_M55  -to CX_B2_n
+
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B2_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B2_n
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CX_B2_p
 set_location_assignment PIN_M58  -to CX_B1_p
-#set_location_assignment PIN_K58  -to CX_B1_n
+
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B1_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B1_n
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CX_B1_p
 set_location_assignment PIN_F55  -to CX_B0_p
-#set_location_assignment PIN_D55  -to CX_B0_n
+
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B0_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B0_n
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CX_B0_p
+
 set_location_assignment PIN_D44  -to CX_A0_p
-#set_location_assignment PIN_F44  -to CX_A0_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_A0_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_A0_n
+
 set_location_assignment PIN_H58  -to CX_A1_p
-#set_location_assignment PIN_F58  -to CX_A1_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_A1_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_A1_n
+
 set_location_assignment PIN_F47  -to CX_A2_p
-#set_location_assignment PIN_H47  -to CX_A2_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_A2_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_A2_n
+
 set_location_assignment PIN_M47  -to CX_A3_p
-#set_location_assignment PIN_K47  -to CX_A3_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_A3_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_A3_n
+
 set_location_assignment PIN_V47  -to CX_A4_p
-#set_location_assignment PIN_T47  -to CX_A4_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_A4_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_A4_n
+
 set_location_assignment PIN_K44  -to CX_A5_p
-#set_location_assignment PIN_M44  -to CX_A5_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_A5_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_A5_n
+
 
 # HVIO BANK 5B (3.3V)
 set_location_assignment PIN_BR112  -to CX_SMB_ALERT
@@ -742,60 +735,50 @@ set_location_assignment PIN_A60  -to CY_RESET
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to CY_RESET
 set_location_assignment PIN_B56  -to CY_HSI
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to CY_HSI
+
+# CY_An_p and CY_Bn_p are used as differential pins												   
 set_location_assignment PIN_H67  -to CY_B5_p
-#set_location_assignment PIN_F67  -to CY_B5_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_B5_p
 #set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_B5_n
-set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CY_B5_p
+
 set_location_assignment PIN_F77  -to CY_B4_p
-#set_location_assignment PIN_H77  -to CY_B4_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_B4_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_B4_n
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CY_B4_p
+
 set_location_assignment PIN_K77  -to CY_B3_p
-#set_location_assignment PIN_M77  -to CY_B3_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_B3_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_B3_n
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CY_B3_p
+
 set_location_assignment PIN_D74  -to CY_B2_p
-#set_location_assignment PIN_F74  -to CY_B2_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_B2_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_B2_n
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CY_B2_p
+
 set_location_assignment PIN_V77  -to CY_B1_p
-#set_location_assignment PIN_T77  -to CY_B1_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_B1_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_B1_n
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CY_B1_p
+
 set_location_assignment PIN_M74  -to CY_B0_p
-#set_location_assignment PIN_K74  -to CY_B0_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_B0_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_B0_n
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CY_B0_p
+
 set_location_assignment PIN_T65  -to CY_A0_p
-#set_location_assignment PIN_P65  -to CY_A0_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_A0_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_A0_n
+
 set_location_assignment PIN_P74  -to CY_A1_p
-#set_location_assignment PIN_T74  -to CY_A1_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_A1_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_A1_n
+
 set_location_assignment PIN_M65  -to CY_A2_p
-#set_location_assignment PIN_K65  -to CY_A2_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_A2_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_A2_n
+
 set_location_assignment PIN_V67  -to CY_A3_p
-#set_location_assignment PIN_T67  -to CY_A3_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_A3_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_A3_n
+
 set_location_assignment PIN_M67  -to CY_A4_p
-#set_location_assignment PIN_K67  -to CY_A4_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_A4_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_A4_n
+
 set_location_assignment PIN_F65  -to CY_A5_p
-#set_location_assignment PIN_D65  -to CY_A5_n
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_A5_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_A5_n
+
 
 # HVIO BANK 5V (3.3V)
 set_location_assignment PIN_CG134  -to CY_SMB_ALERT
@@ -949,13 +932,13 @@ set_location_assignment PIN_AW129  -to PER_p[3]
 }
 
 if {$wFMC_XCVRS == 1} {
-# Bank 4B (GXBR4B) SJK ??
+# Bank 4B (GXBR4B)
 #set_location_assignment PIN_AV16  -to FMC_GBTCLK_p[0]
 #set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to FMC_GBTCLK_p[0]
-#set_instance_assignment -name IO_STANDARD "High Speed Differenial I/O" -to FMC_GBTCLK_p[0]
-#set_instance_assignment -name IO_STANDARD "High Speed Differenial I/O" -to FMC_GBTCLK_n[0]
+
 set_location_assignment PIN_AY16  -to FMC_GT_CK_p[0]
-#set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to FMC_GT_CK_p[0]
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to FMC_GT_CK_p[0]
+
 set_location_assignment PIN_BF1  -to DP_M2C_p[0]
 set_location_assignment PIN_BD1  -to DP_M2C_p[1]
 set_location_assignment PIN_BB1  -to DP_M2C_p[2]
@@ -1001,15 +984,14 @@ set_instance_assignment -name HSSI_PARAMETER "rx_termination_mode=RX_TERMINATION
 # Bank 4C (GXBR4C)
 #set_location_assignment PIN_AP16  -to FMC_GBTCLK_p[1]
 #set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to FMC_GBTCLK_p[1]
-#set_instance_assignment -name IO_STANDARD "High Speed Differenial I/O" -to FMC_GBTCLK_p[1]
-#set_instance_assignment -name IO_STANDARD "High Speed Differenial I/O" -to FMC_GBTCLK_n[1]
+
 set_location_assignment PIN_AT16  -to FMC_GT_CK_p[1]
-#set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to FMC_GT_CK_p[1]
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to FMC_GT_CK_p[1]
 set_location_assignment PIN_AV1  -to DP_M2C_p[4]
 set_location_assignment PIN_AT1  -to DP_M2C_p[5]
 set_location_assignment PIN_AP1  -to DP_M2C_p[6]
 set_location_assignment PIN_AM1  -to DP_M2C_p[7]
-#set_location_assignment PIN_GTSR4C_TX_CH0P  -to DP_C2M_p[4]
+#set_location_assignment PIN_GTSR4C_TX_CH0P  -to DP_C2M_p[4]f?
 #set_location_assignment PIN_GTSR4C_TX_CH1P  -to DP_C2M_p[5]
 #set_location_assignment PIN_GTSR4C_TX_CH2P  -to DP_C2M_p[6]
 #set_location_assignment PIN_GTSR4C_TX_CH3P  -to DP_C2M_p[7]
