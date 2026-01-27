@@ -15,9 +15,10 @@ set wHDMI 1
 set wHPS_LED0 1
 set wHPS_LED1 1
 set wHPS_UART0 1
-set wHPS_I2C1 1
+set wHPS_I2C1 0
 set wHPS_I3C0 1
 set wFAB_I2C0 1
+set wFAB_I2C1 1
 set wHPS_PB 1
 set wHPS_DIPSW 1
 set wHPS_USB 1
@@ -38,7 +39,7 @@ set wCRUVI_LS 0
 set wPMOD 0
 set wDBG_UART 0
 
-set_location_assignment PIN_AN67   -to HPS_OSC_CLK_25MHz
+# set_location_assignment PIN_AN67   -to HPS_OSC_CLK_25MHz
 set_instance_assignment -name IO_STANDARD "1.8-V" -to HPS_OSC_CLK_25MHz
 
 set_instance_assignment -name IO_STANDARD "1.8-V" -to HPS_COLD_nRESET
@@ -384,6 +385,13 @@ set_location_assignment PIN_BV14  -to HDMI_D[23]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[23]
 }
 
+if {$wFAB_I2C1 == 1} {
+set_location_assignment PIN_DD3  -to HDMI_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_SCL
+set_location_assignment PIN_CR8  -to HDMI_SDA
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_SDA
+}
+
 
 ############## Bank  (3.3V) ##############
 if {$wCRUVI_LS == 1} {
@@ -441,8 +449,8 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CZ_REFCLK
 set_location_assignment PIN_BP1  -to FPGA_RST_N
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to FPGA_RST_N
 
-set_location_assignment PIN_BR8  -to VSEL_3V3
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to VSEL_3V3
+# set_location_assignment PIN_BR8  -to VSEL_3V3
+# set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to VSEL_3V3
 
 if {$wFAB_EMAC0 || $wFAB_EMAC1} {
 set_location_assignment PIN_BR6  -to RGMII_RESET
@@ -540,14 +548,14 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_DIPSW[3]
 }
 
 ############## Bank HVIO_6H (1.8V) ##############
-set_location_assignment PIN_BE8  -to VSEL_1V3
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to VSEL_1V3
+# set_location_assignment PIN_BE8  -to VSEL_1V3
+# set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to VSEL_1V3
 
 if {$wFAB_I2C0 == 1} {
-set_location_assignment PIN_AC2  -to MUX_I2C_SCL
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to MUX_I2C_SCL
-set_location_assignment PIN_AC1  -to MUX_I2C_SDA
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to MUX_I2C_SDA
+set_location_assignment PIN_AC2  -to I2C_SCL
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to I2C_SCL
+set_location_assignment PIN_AC1  -to I2C_SDA
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to I2C_SDA
 set_location_assignment PIN_AF1  -to MUX_I2C_INT
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to MUX_I2C_INT
 }
@@ -590,139 +598,139 @@ set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to RGMII1_RXD[3]
 ############## BANK HPS_IOA/HPS_IOB (1.8V) ##############
 if {$wHPS_DIPSW == 1} {
 # HPS_IOA_13
-set_location_assignment PIN_BP75  -to HPS_DIPSW[0]
+# set_location_assignment PIN_BP75  -to HPS_DIPSW[0]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_DIPSW[0]
 # HPS_IOA_14
-set_location_assignment PIN_BL74  -to HPS_DIPSW[1]
+# set_location_assignment PIN_BL74  -to HPS_DIPSW[1]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_DIPSW[1]
 }
 
 if {$wHPS_UART0 == 1} {
 # HPS_IOA_23
-set_location_assignment PIN_AJ74  -to HPS_UART0_TX
+# set_location_assignment PIN_AJ74  -to HPS_UART0_TX
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_UART0_TX
 # HPS_IOA_24
-set_location_assignment PIN_AJ75  -to HPS_UART0_RX
+# set_location_assignment PIN_AJ75  -to HPS_UART0_RX
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_UART0_RX
 }
 
 if {$wHPS_I2C1 == 1} {
 # HPS_IOA_21
-set_location_assignment PIN_BD75  -to HPS_I2C1_SDA
+# set_location_assignment PIN_BD75  -to HPS_I2C1_SDA
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_I2C1_SDA
 # HPS_IOA_22
-set_location_assignment PIN_AM74  -to HPS_I2C1_SCL
+# set_location_assignment PIN_AM74  -to HPS_I2C1_SCL
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_I2C1_SCL
 }
 
 if {$wHPS_LED0 == 1} {
 # HPS_IOA_15
-set_location_assignment PIN_BL75  -to HPS_LED0
+# set_location_assignment PIN_BL75  -to HPS_LED0
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_LED0
 }
 
 if {$wHPS_LED1 == 1} {
 # HPS_IOA_16
-set_location_assignment PIN_AP74  -to HPS_LED1
+# set_location_assignment PIN_AP74  -to HPS_LED1
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_LED1
 }
 
 if {$wHPS_PB == 1} {
 # HPS_IOA_17
-set_location_assignment PIN_BG74  -to HPS_PB[0]
+# set_location_assignment PIN_BG74  -to HPS_PB[0]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_PB[0]
 # HPS_IOA_18
-set_location_assignment PIN_AP75  -to HPS_PB[1]
+# set_location_assignment PIN_AP75  -to HPS_PB[1]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_PB[1]
 }
 
 if {$wHPS_I3C0 == 1} {
 # HPS_IOA_19
-set_location_assignment PIN_BD74  -to HPS_I3C0_SDA
+# set_location_assignment PIN_BD74  -to HPS_I3C0_SDA
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_I3C0_SDA
 # HPS_IOA_20
-set_location_assignment PIN_AN71  -to HPS_I3C0_SCL
+# set_location_assignment PIN_AN71  -to HPS_I3C0_SCL
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_I3C0_SCL
 }
 
 if {$wHPS_USB == 1} {
-set_location_assignment PIN_Y75  -to USB_RST
+# set_location_assignment PIN_Y75  -to USB_RST
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_RST
-set_location_assignment PIN_BC64  -to USB_CLK
+# set_location_assignment PIN_BC64  -to USB_CLK
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_CLK
-set_location_assignment PIN_BC67  -to USB_STP
+# set_location_assignment PIN_BC67  -to USB_STP
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_STP
-set_location_assignment PIN_AY67  -to USB_DIR
+# set_location_assignment PIN_AY67  -to USB_DIR
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DIR
-set_location_assignment PIN_BA75  -to USB_NXT
+# set_location_assignment PIN_BA75  -to USB_NXT
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_NXT
-set_location_assignment PIN_AN72  -to USB_DATA[0]
+# set_location_assignment PIN_AN72  -to USB_DATA[0]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[0]
-set_location_assignment PIN_AY69  -to USB_DATA[1]
+# set_location_assignment PIN_AY69  -to USB_DATA[1]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[1]
-set_location_assignment PIN_BC71  -to USB_DATA[2]
+# set_location_assignment PIN_BC71  -to USB_DATA[2]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[2]
-set_location_assignment PIN_AU74  -to USB_DATA[3]
+# set_location_assignment PIN_AU74  -to USB_DATA[3]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[3]
-set_location_assignment PIN_AY71  -to USB_DATA[4]
+# set_location_assignment PIN_AY71  -to USB_DATA[4]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[4]
-set_location_assignment PIN_AU75 -to USB_DATA[5]
+# set_location_assignment PIN_AU75 -to USB_DATA[5]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[5]
-set_location_assignment PIN_BC72  -to USB_DATA[6]
+# set_location_assignment PIN_BC72  -to USB_DATA[6]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[6]
-set_location_assignment PIN_BP74  -to USB_DATA[7]
+# set_location_assignment PIN_BP74  -to USB_DATA[7]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[7]
 }
 
 if {$wHPS_EMAC2 == 1} {
 # HPS_IOB_11
-set_location_assignment PIN_P75  -to HPS_ETH2_RST
+# set_location_assignment PIN_P75  -to HPS_ETH2_RST
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RST
 # HPS_IOB_13
-set_location_assignment PIN_L75  -to HPS_ETH2_TXCK
+# set_location_assignment PIN_L75  -to HPS_ETH2_TXCK
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXCK
-set_location_assignment PIN_F75  -to HPS_ETH2_TXD[0]
+# set_location_assignment PIN_F75  -to HPS_ETH2_TXD[0]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[0]
-set_location_assignment PIN_AD71  -to HPS_ETH2_TXD[1]
+# set_location_assignment PIN_AD71  -to HPS_ETH2_TXD[1]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[1]
-set_location_assignment PIN_F74  -to HPS_ETH2_TXD[2]
+# set_location_assignment PIN_F74  -to HPS_ETH2_TXD[2]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[2]
-set_location_assignment PIN_AA71  -to HPS_ETH2_TXD[3]
+# set_location_assignment PIN_AA71  -to HPS_ETH2_TXD[3]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[3]
-set_location_assignment PIN_AD72  -to HPS_ETH2_RXCTL
+# set_location_assignment PIN_AD72  -to HPS_ETH2_RXCTL
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXCTL
-set_location_assignment PIN_N72  -to HPS_ETH2_TXCTL
+# set_location_assignment PIN_N72  -to HPS_ETH2_TXCTL
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXCTL
-set_location_assignment PIN_N71   -to HPS_ETH2_RXCK
+# set_location_assignment PIN_N71   -to HPS_ETH2_RXCK
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXCK
-set_location_assignment PIN_K71   -to HPS_ETH2_RXD[0]
+# set_location_assignment PIN_K71   -to HPS_ETH2_RXD[0]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[0]
-set_location_assignment PIN_AK71   -to HPS_ETH2_RXD[1]
+# set_location_assignment PIN_AK71   -to HPS_ETH2_RXD[1]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[1]
-set_location_assignment PIN_C74   -to HPS_ETH2_RXD[2]
+# set_location_assignment PIN_C74   -to HPS_ETH2_RXD[2]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[2]
-set_location_assignment PIN_D71   -to HPS_ETH2_RXD[3]
+# set_location_assignment PIN_D71   -to HPS_ETH2_RXD[3]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[3]
-set_location_assignment PIN_AK67   -to HPS_ETH2_MDC
+# set_location_assignment PIN_AK67   -to HPS_ETH2_MDC
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_MDC
-set_location_assignment PIN_U74   -to HPS_ETH2_MDIO
+# set_location_assignment PIN_U74   -to HPS_ETH2_MDIO
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_MDIO
 }
 
 if {$wHPS_SD == 1} {
-set_location_assignment PIN_AC74  -to SD_CLK
+# set_location_assignment PIN_AC74  -to SD_CLK
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_CLK
-set_location_assignment PIN_AK69  -to SD_CMD
+# set_location_assignment PIN_AK69  -to SD_CMD
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_CMD
-set_location_assignment PIN_P74  -to SD_DETECT
+# set_location_assignment PIN_P74  -to SD_DETECT
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DETECT
-set_location_assignment PIN_AF75  -to SD_DAT[0]
+# set_location_assignment PIN_AF75  -to SD_DAT[0]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[0]
-set_location_assignment PIN_AC75  -to SD_DAT[1]
+# set_location_assignment PIN_AC75  -to SD_DAT[1]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[1]
-set_location_assignment PIN_AN64  -to SD_DAT[2]
+# set_location_assignment PIN_AN64  -to SD_DAT[2]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[2]
-set_location_assignment PIN_Y74  -to SD_DAT[3]
+# set_location_assignment PIN_Y74  -to SD_DAT[3]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[3]
 }
 

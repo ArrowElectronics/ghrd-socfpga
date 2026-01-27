@@ -6,7 +6,7 @@
 `timescale 1ns/10ps
 
 `define wHPS_UART0
-`define wHPS_I2C1
+//`define wHPS_I2C1
 `define wHPS_I3C0
 `define wHPS_EMAC2
 `define wHPS_USB
@@ -26,6 +26,7 @@
 `define wFAB_PB
 `define wFAB_DIPSW
 `define wFAB_I2C0
+`define wFAB_I2C1
 `define wHDMI
 `define wDDR4 //EMIF HPS
 
@@ -61,6 +62,7 @@ module axe5_falcon_top (
    input         	USB_CLK, USB_NXT, USB_DIR,
    output        	USB_STP, 
    inout	  		USB_RST,
+   output		USB_HUB_RST,
    `endif
    `ifdef wHPS_SD
    output        	SD_CLK,
@@ -71,13 +73,16 @@ module axe5_falcon_top (
    `ifdef wHPS
    inout [1:0]   	HPS_PB,
    inout [1:0]   	HPS_DIPSW,
-   input         	HPS_COLD_RST,
    input         	HPS_OSC_CLK_25MHz,   
    `endif
    `ifdef wFAB_I2C0
-   inout         	MUX_I2C_SDA,
-   inout         	MUX_I2C_SCL, MUX_I2C_INT,
+   inout         	I2C_SDA,
+   inout         	I2C_SCL, MUX_I2C_INT,
    `endif
+   `ifdef wFAB_I2C1
+   inout         	HDMI_SDA,
+   inout         	HDMI_SCL,
+   `endif   
    `ifdef wFAB_EMAC0
    output        	RGMII_RST, RGMII0_TXCK, RGMII0_TXCTL,
    output [3:0]  	RGMII0_TXD,
@@ -241,23 +246,43 @@ module axe5_falcon_top (
 
    `ifdef wFAB_I2C0
    
-   hps_signal_buffer i2c1_sda_buffer (
+   hps_signal_buffer i2c0_sda_buffer (
 	.ck     (CLK_25M_SYS), 
 	.dout   (i2c0_sda_i),
 	.din    (1'b0),
 	.oe     (i2c0_sda_oe),
-	.pad_io (MUX_I2C_SDA)
+	.pad_io (I2C_SDA)
    );   
 	
-   hps_signal_buffer i2c1_scl_buffer (
+   hps_signal_buffer i2c0_scl_buffer (
 	.ck     (CLK_25M_SYS), 
 	.dout   (i2c0_scl_i_clk),
 	.din    (1'b0),
 	.oe     (i2c0_scl_oe_clk),
-	.pad_io (MUX_I2C_SCL)
+	.pad_io (I2C_SCL)
    ); 	
 
    `endif
+   
+   `ifdef wFAB_I2C1
+   
+   hps_signal_buffer i2c1_sda_buffer (
+	.ck     (CLK_25M_SYS), 
+	.dout   (i2c1_sda_i),
+	.din    (1'b0),
+	.oe     (i2c1_sda_oe),
+	.pad_io (HDMI_SDA)
+   );   
+	
+   hps_signal_buffer i2c1_scl_buffer (
+	.ck     (CLK_25M_SYS), 
+	.dout   (i2c1_scl_i_clk),
+	.din    (1'b0),
+	.oe     (i2c1_scl_oe_clk),
+	.pad_io (HDMI_SCL)
+   ); 	
+
+   `endif   
 
 	// Instantiate HPS system from Plaform Designer
    ghrd_system pd_system (
@@ -316,6 +341,12 @@ module axe5_falcon_top (
         .hps_i2c0_sda_i               				(i2c0_sda_i),
         .hps_i2c0_sda_oe              				(i2c0_sda_oe),
       `endif
+      `ifdef wFAB_I2C1
+        .hps_i2c1_scl_i_clk           				(i2c1_scl_i_clk),
+        .hps_i2c1_scl_oe_clk          			   (i2c1_scl_oe_clk),
+        .hps_i2c1_sda_i               				(i2c1_sda_i),
+        .hps_i2c1_sda_oe              				(i2c1_sda_oe),
+      `endif      
       `ifdef wHPS
         .hps_io_hps_osc_clk       					(HPS_OSC_CLK_25MHz),	  
       `ifdef wHPS_EMAC2
