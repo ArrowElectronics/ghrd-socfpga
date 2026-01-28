@@ -56,66 +56,38 @@ set_instance_assignment -name IO_STANDARD "1.2-V" -to MIPI_RZQ
 if {$wCAMERA0 == 1} {
 set_location_assignment PIN_DP15  -to CSI0_C_P
 set_location_assignment PIN_DN15  -to CSI0_C_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI0_C_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI0_C_N
 set_location_assignment PIN_DP20  -to CSI0_D0_P
 set_location_assignment PIN_DN17  -to CSI0_D0_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI0_D0_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI0_D0_N
 set_location_assignment PIN_DP22  -to CSI0_D1_P
 set_location_assignment PIN_DN20  -to CSI0_D1_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI0_D1_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI0_D1_N
 set_location_assignment PIN_DP10  -to CSI0_D2_P
 set_location_assignment PIN_DP13  -to CSI0_D2_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI0_D2_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI0_D2_N
 set_location_assignment PIN_DP7  -to CSI0_D3_P
 set_location_assignment PIN_DN10  -to CSI0_D3_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI0_D3_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI0_D3_N
 }
 
 if {$wCAMERA1 == 1} {
 set_location_assignment PIN_DK18  -to CSI1_C_P
 set_location_assignment PIN_DJ18  -to CSI1_C_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI1_C_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI1_C_N
 set_location_assignment PIN_DJ21  -to CSI1_D0_P
 set_location_assignment PIN_DF21  -to CSI1_D0_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI1_D0_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI1_D0_N
 set_location_assignment PIN_DD21  -to CSI1_D1_P
 set_location_assignment PIN_DD18  -to CSI1_D1_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI1_D1_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI1_D1_N
 set_location_assignment PIN_DJ12  -to CSI1_D2_P
 set_location_assignment PIN_DF12  -to CSI1_D2_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI1_D2_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI1_D2_N
 set_location_assignment PIN_DD12  -to CSI1_D3_P
 set_location_assignment PIN_DD9  -to CSI1_D3_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI1_D3_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CSI1_D3_N
 }
 
 if {$wCRUVI_HSX == 1} {
 #set_location_assignment PIN_DD27  -to CX_B5_P
 #set_location_assignment PIN_DD24  -to CX_B5_N
-#set_instance_assignment -name IO_STANDARD "DPHY" -to CX_B5_P
-#set_instance_assignment -name IO_STANDARD "DPHY" -to CX_B5_N
 set_location_assignment PIN_DD35  -to CX_B4_P
 set_location_assignment PIN_DD32  -to CX_B4_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CX_B4_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CX_B4_N
 set_location_assignment PIN_DJ35  -to CX_B3_P
 set_location_assignment PIN_DF35  -to CX_B3_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CX_B3_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CX_B3_N
 set_location_assignment PIN_DK32  -to CX_B2_P
 set_location_assignment PIN_DJ32  -to CX_B2_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CX_B2_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CX_B2_N
 #set_location_assignment PIN_DJ27  -to CX_A4_P
 #set_location_assignment PIN_DF27  -to CX_A4_N
 #set_instance_assignment -name IO_STANDARD "1.2-V" -to CX_A4_P
@@ -131,28 +103,18 @@ set_location_assignment PIN_DP47  -to CX_HSI
 set_instance_assignment -name IO_STANDARD "1.2-V" -to CX_HSI
 #set_location_assignment PIN_DK56  -to CX_A0_P
 #set_location_assignment PIN_DJ56  -to CX_A0_N
-#set_instance_assignment -name IO_STANDARD "DPHY" -to CX_A0_P
-#set_instance_assignment -name IO_STANDARD "DPHY" -to CX_A0_N
 set_location_assignment PIN_DP70  -to CX_A1_P
 set_location_assignment PIN_DN68  -to CX_A1_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CX_A1_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CX_A1_N
 set_location_assignment PIN_DN73  -to CX_A2_P
 set_location_assignment PIN_DN74  -to CX_A2_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CX_A2_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CX_A2_N
 #set_location_assignment PIN_DP66  -to CX_A3_P
 #set_location_assignment PIN_DN63  -to CX_A3_N
-#set_instance_assignment -name IO_STANDARD "DPHY" -to CX_A3_P
-#set_instance_assignment -name IO_STANDARD "DPHY" -to CX_A3_N
 #set_location_assignment PIN_DP61  -to CX_B1_P
 #set_location_assignment PIN_DN61  -to CX_B1_N
 #set_instance_assignment -name IO_STANDARD "1.2-V" -to CX_B1_P
 #set_instance_assignment -name IO_STANDARD "1.2-V" -to CX_B1_N
 set_location_assignment PIN_DP68  -to CX_A5_P
 set_location_assignment PIN_DN66  -to CX_A5_N
-set_instance_assignment -name IO_STANDARD "DPHY" -to CX_A5_P
-set_instance_assignment -name IO_STANDARD "DPHY" -to CX_A5_N
 }
 
 if {$wCRUVI_HSZ == 1} {
@@ -321,8 +283,8 @@ set_location_assignment PIN_CR8  -to HDMI_SCL
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_SCL
 set_location_assignment PIN_DD3  -to HDMI_SDA
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_SDA
-set_location_assignment PIN_DM2  -to HDMI_PD
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_PD
+# set_location_assignment PIN_DM2  -to HDMI_PD
+# set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_PD
 set_location_assignment PIN_DC1  -to HDMI_VS
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_VS
 set_location_assignment PIN_DH1  -to HDMI_HS
@@ -331,8 +293,8 @@ set_location_assignment PIN_CE19  -to HDMI_CLK
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_CLK
 set_location_assignment PIN_DE1  -to HDMI_DE
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_DE
-set_location_assignment PIN_DF3  -to HDMI_HTPLG
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_HTPLG
+# set_location_assignment PIN_DF3  -to HDMI_HTPLG
+# set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_HTPLG
 set_location_assignment PIN_DN2  -to HDMI_CT_HPD
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_CT_HPD
 set_location_assignment PIN_DH2  -to HDMI_D[0]
@@ -598,139 +560,92 @@ set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to RGMII1_RXD[3]
 ############## BANK HPS_IOA/HPS_IOB (1.8V) ##############
 if {$wHPS_DIPSW == 1} {
 # HPS_IOA_13
-# set_location_assignment PIN_BP75  -to HPS_DIPSW[0]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_DIPSW[0]
 # HPS_IOA_14
-# set_location_assignment PIN_BL74  -to HPS_DIPSW[1]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_DIPSW[1]
 }
 
 if {$wHPS_UART0 == 1} {
 # HPS_IOA_23
-# set_location_assignment PIN_AJ74  -to HPS_UART0_TX
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_UART0_TX
 # HPS_IOA_24
-# set_location_assignment PIN_AJ75  -to HPS_UART0_RX
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_UART0_RX
 }
 
 if {$wHPS_I2C1 == 1} {
 # HPS_IOA_21
-# set_location_assignment PIN_BD75  -to HPS_I2C1_SDA
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_I2C1_SDA
 # HPS_IOA_22
-# set_location_assignment PIN_AM74  -to HPS_I2C1_SCL
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_I2C1_SCL
 }
 
 if {$wHPS_LED0 == 1} {
 # HPS_IOA_15
-# set_location_assignment PIN_BL75  -to HPS_LED0
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_LED0
 }
 
 if {$wHPS_LED1 == 1} {
 # HPS_IOA_16
-# set_location_assignment PIN_AP74  -to HPS_LED1
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_LED1
 }
 
 if {$wHPS_PB == 1} {
 # HPS_IOA_17
-# set_location_assignment PIN_BG74  -to HPS_PB[0]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_PB[0]
 # HPS_IOA_18
-# set_location_assignment PIN_AP75  -to HPS_PB[1]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_PB[1]
 }
 
 if {$wHPS_I3C0 == 1} {
 # HPS_IOA_19
-# set_location_assignment PIN_BD74  -to HPS_I3C0_SDA
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_I3C0_SDA
 # HPS_IOA_20
-# set_location_assignment PIN_AN71  -to HPS_I3C0_SCL
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_I3C0_SCL
 }
 
 if {$wHPS_USB == 1} {
-# set_location_assignment PIN_Y75  -to USB_RST
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_RST
-# set_location_assignment PIN_BC64  -to USB_CLK
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_CLK
-# set_location_assignment PIN_BC67  -to USB_STP
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_STP
-# set_location_assignment PIN_AY67  -to USB_DIR
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DIR
-# set_location_assignment PIN_BA75  -to USB_NXT
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_NXT
-# set_location_assignment PIN_AN72  -to USB_DATA[0]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[0]
-# set_location_assignment PIN_AY69  -to USB_DATA[1]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[1]
-# set_location_assignment PIN_BC71  -to USB_DATA[2]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[2]
-# set_location_assignment PIN_AU74  -to USB_DATA[3]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[3]
-# set_location_assignment PIN_AY71  -to USB_DATA[4]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[4]
-# set_location_assignment PIN_AU75 -to USB_DATA[5]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[5]
-# set_location_assignment PIN_BC72  -to USB_DATA[6]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[6]
-# set_location_assignment PIN_BP74  -to USB_DATA[7]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[7]
 }
 
 if {$wHPS_EMAC2 == 1} {
 # HPS_IOB_11
-# set_location_assignment PIN_P75  -to HPS_ETH2_RST
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RST
 # HPS_IOB_13
-# set_location_assignment PIN_L75  -to HPS_ETH2_TXCK
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXCK
-# set_location_assignment PIN_F75  -to HPS_ETH2_TXD[0]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[0]
-# set_location_assignment PIN_AD71  -to HPS_ETH2_TXD[1]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[1]
-# set_location_assignment PIN_F74  -to HPS_ETH2_TXD[2]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[2]
-# set_location_assignment PIN_AA71  -to HPS_ETH2_TXD[3]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[3]
-# set_location_assignment PIN_AD72  -to HPS_ETH2_RXCTL
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXCTL
-# set_location_assignment PIN_N72  -to HPS_ETH2_TXCTL
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXCTL
-# set_location_assignment PIN_N71   -to HPS_ETH2_RXCK
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXCK
-# set_location_assignment PIN_K71   -to HPS_ETH2_RXD[0]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[0]
-# set_location_assignment PIN_AK71   -to HPS_ETH2_RXD[1]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[1]
-# set_location_assignment PIN_C74   -to HPS_ETH2_RXD[2]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[2]
-# set_location_assignment PIN_D71   -to HPS_ETH2_RXD[3]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[3]
-# set_location_assignment PIN_AK67   -to HPS_ETH2_MDC
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_MDC
-# set_location_assignment PIN_U74   -to HPS_ETH2_MDIO
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_MDIO
 }
 
 if {$wHPS_SD == 1} {
-# set_location_assignment PIN_AC74  -to SD_CLK
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_CLK
-# set_location_assignment PIN_AK69  -to SD_CMD
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_CMD
-# set_location_assignment PIN_P74  -to SD_DETECT
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DETECT
-# set_location_assignment PIN_AF75  -to SD_DAT[0]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[0]
-# set_location_assignment PIN_AC75  -to SD_DAT[1]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[1]
-# set_location_assignment PIN_AN64  -to SD_DAT[2]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[2]
-# set_location_assignment PIN_Y74  -to SD_DAT[3]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[3]
 }
 
