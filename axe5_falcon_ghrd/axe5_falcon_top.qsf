@@ -85,9 +85,296 @@ set_global_assignment -name IP_FILE ip/video_sys/hdmi_vvp_tpg.ip
 set_global_assignment -name IP_FILE ip/video_sys/hdmi_vvp_cvo.ip
 set_global_assignment -name IP_FILE ip/video_sys/hdmi_vvp_fr2cv.ip
 set_global_assignment -name IP_FILE ip/video_sys/hdmi_clock_out_ddio.ip
-set_global_assignment -name BOARD default
 set_global_assignment -name POWER_APPLY_THERMAL_MARGIN ADDITIONAL
 set_global_assignment -name IP_FILE ip/board_subsystem/intel_vip_reset_gen_block_1.ip
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name OPTIMIZATION_MODE "SUPERIOR PERFORMANCE"
 
+set_global_assignment -name HPS_INITIALIZATION "HPS FIRST"
+set_instance_assignment -name IO_STANDARD "1.8-V" -to HPS_OSC_CLK_25MHz -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8-V" -to HPS_COLD_nRESET -entity axe5_falcon_top
+set_location_assignment PIN_DP55 -to B2A_REFCK_P
+set_instance_assignment -name IO_STANDARD "1.2-V TRUE DIFFERENTIAL SIGNALING" -to B2A_REFCK_P -entity axe5_falcon_top
+set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to B2A_REFCK_P -entity axe5_falcon_top
+set_location_assignment PIN_DP58 -to MIPI_RZQ
+set_instance_assignment -name IO_STANDARD "1.2-V" -to MIPI_RZQ -entity axe5_falcon_top
+set_location_assignment PIN_DP15 -to CSI0_C_P
+set_location_assignment PIN_DN15 -to CSI0_C_N
+set_location_assignment PIN_DP20 -to CSI0_D0_P
+set_location_assignment PIN_DN17 -to CSI0_D0_N
+set_location_assignment PIN_DP22 -to CSI0_D1_P
+set_location_assignment PIN_DN20 -to CSI0_D1_N
+set_location_assignment PIN_DP10 -to CSI0_D2_P
+set_location_assignment PIN_DP13 -to CSI0_D2_N
+set_location_assignment PIN_DP7 -to CSI0_D3_P
+set_location_assignment PIN_DN10 -to CSI0_D3_N
+set_location_assignment PIN_DK18 -to CSI1_C_P
+set_location_assignment PIN_DJ18 -to CSI1_C_N
+set_location_assignment PIN_DJ21 -to CSI1_D0_P
+set_location_assignment PIN_DF21 -to CSI1_D0_N
+set_location_assignment PIN_DD21 -to CSI1_D1_P
+set_location_assignment PIN_DD18 -to CSI1_D1_N
+set_location_assignment PIN_DJ12 -to CSI1_D2_P
+set_location_assignment PIN_DF12 -to CSI1_D2_N
+set_location_assignment PIN_DD12 -to CSI1_D3_P
+set_location_assignment PIN_DD9 -to CSI1_D3_N
+set_location_assignment PIN_DD35 -to CX_B4_P
+set_location_assignment PIN_DD32 -to CX_B4_N
+set_location_assignment PIN_DJ35 -to CX_B3_P
+set_location_assignment PIN_DF35 -to CX_B3_N
+set_location_assignment PIN_DK32 -to CX_B2_P
+set_location_assignment PIN_DJ32 -to CX_B2_N
+set_location_assignment PIN_DJ42 -to CX_HSIO
+set_instance_assignment -name IO_STANDARD "1.2-V" -to CX_HSIO -entity axe5_falcon_top
+set_location_assignment PIN_DF42 -to CX_HSO
+set_instance_assignment -name IO_STANDARD "1.2-V" -to CX_HSO -entity axe5_falcon_top
+set_location_assignment PIN_DN43 -to CX_RESET
+set_instance_assignment -name IO_STANDARD "1.2-V" -to CX_RESET -entity axe5_falcon_top
+set_location_assignment PIN_DP47 -to CX_HSI
+set_instance_assignment -name IO_STANDARD "1.2-V" -to CX_HSI -entity axe5_falcon_top
+set_location_assignment PIN_DP70 -to CX_A1_P
+set_location_assignment PIN_DN68 -to CX_A1_N
+set_location_assignment PIN_DN73 -to CX_A2_P
+set_location_assignment PIN_DN74 -to CX_A2_N
+set_location_assignment PIN_DP68 -to CX_A5_P
+set_location_assignment PIN_DN66 -to CX_A5_N
+set_location_assignment PIN_AB48 -to DDR4_CK_P
+set_location_assignment PIN_W48 -to DDR4_CK_N
+set_location_assignment PIN_W62 -to DDR4_RST
+set_location_assignment PIN_J51 -to DDR4_REFCK
+set_instance_assignment -name IO_STANDARD "1.2-V TRUE DIFFERENTIAL SIGNALING" -to DDR4_REFCK -entity axe5_falcon_top
+set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to DDR4_REFCK -entity axe5_falcon_top
+set_location_assignment PIN_T65 -to DDR4_CS_N
+set_location_assignment PIN_T59 -to DDR4_CKE
+set_location_assignment PIN_B66 -to DDR4_A[0]
+set_location_assignment PIN_A68 -to DDR4_A[1]
+set_location_assignment PIN_B68 -to DDR4_A[2]
+set_location_assignment PIN_A70 -to DDR4_A[3]
+set_location_assignment PIN_B63 -to DDR4_A[4]
+set_location_assignment PIN_A66 -to DDR4_A[5]
+set_location_assignment PIN_A61 -to DDR4_A[6]
+set_location_assignment PIN_B61 -to DDR4_A[7]
+set_location_assignment PIN_B58 -to DDR4_A[8]
+set_location_assignment PIN_A60 -to DDR4_A[9]
+set_location_assignment PIN_B55 -to DDR4_A[10]
+set_location_assignment PIN_A58 -to DDR4_A[11]
+set_location_assignment PIN_M48 -to DDR4_A[12]
+set_location_assignment PIN_G48 -to DDR4_A[13]
+set_location_assignment PIN_E48 -to DDR4_A[14]
+set_location_assignment PIN_J42 -to DDR4_A[15]
+set_location_assignment PIN_G42 -to DDR4_A[16]
+set_location_assignment PIN_M39 -to DDR4_BA[0]
+set_location_assignment PIN_G39 -to DDR4_BA[1]
+set_location_assignment PIN_E39 -to DDR4_BG
+set_location_assignment PIN_T39 -to DDR4_ALERT_N
+set_location_assignment PIN_AB56 -to DDR4_ODT
+set_location_assignment PIN_M65 -to DDR4_ACT_N
+set_location_assignment PIN_M51 -to DDR4_PAR
+set_location_assignment PIN_J65 -to DDR4_DQ[0]
+set_location_assignment PIN_G65 -to DDR4_DQ[1]
+set_location_assignment PIN_T62 -to DDR4_DQ[2]
+set_location_assignment PIN_M62 -to DDR4_DQ[3]
+set_location_assignment PIN_T56 -to DDR4_DQ[4]
+set_location_assignment PIN_M56 -to DDR4_DQ[5]
+set_location_assignment PIN_G56 -to DDR4_DQ[6]
+set_location_assignment PIN_E56 -to DDR4_DQ[7]
+set_location_assignment PIN_A50 -to DDR4_DQ[8]
+set_location_assignment PIN_B50 -to DDR4_DQ[9]
+set_location_assignment PIN_B53 -to DDR4_DQ[10]
+set_location_assignment PIN_A55 -to DDR4_DQ[11]
+set_location_assignment PIN_B41 -to DDR4_DQ[12]
+set_location_assignment PIN_A43 -to DDR4_DQ[13]
+set_location_assignment PIN_A38 -to DDR4_DQ[14]
+set_location_assignment PIN_B38 -to DDR4_DQ[15]
+set_location_assignment PIN_AB39 -to DDR4_DQ[16]
+set_location_assignment PIN_W39 -to DDR4_DQ[17]
+set_location_assignment PIN_M42 -to DDR4_DQ[18]
+set_location_assignment PIN_T42 -to DDR4_DQ[19]
+set_location_assignment PIN_AB24 -to DDR4_DQ[20]
+set_location_assignment PIN_W24 -to DDR4_DQ[21]
+set_location_assignment PIN_T27 -to DDR4_DQ[22]
+set_location_assignment PIN_M27 -to DDR4_DQ[23]
+set_location_assignment PIN_J35 -to DDR4_DQ[24]
+set_location_assignment PIN_G35 -to DDR4_DQ[25]
+set_location_assignment PIN_T32 -to DDR4_DQ[26]
+set_location_assignment PIN_M32 -to DDR4_DQ[27]
+set_location_assignment PIN_T24 -to DDR4_DQ[28]
+set_location_assignment PIN_M24 -to DDR4_DQ[29]
+set_location_assignment PIN_G24 -to DDR4_DQ[30]
+set_location_assignment PIN_E24 -to DDR4_DQ[31]
+set_location_assignment PIN_G32 -to DDR4_DQS3_P
+set_location_assignment PIN_E32 -to DDR4_DQS3_N
+set_location_assignment PIN_AB32 -to DDR4_DQS2_P
+set_location_assignment PIN_W32 -to DDR4_DQS2_N
+set_location_assignment PIN_B45 -to DDR4_DQS1_P
+set_location_assignment PIN_A47 -to DDR4_DQS1_N
+set_location_assignment PIN_G62 -to DDR4_DQS0_P
+set_location_assignment PIN_E62 -to DDR4_DQS0_N
+set_location_assignment PIN_J59 -to DDR4_DM0
+set_location_assignment PIN_B43 -to DDR4_DM1
+set_location_assignment PIN_T35 -to DDR4_DM2
+set_location_assignment PIN_J27 -to DDR4_DM3
+set_location_assignment PIN_T48 -to DDR4_OCT_RZQIN
+set_location_assignment PIN_CR6 -to CLK_25M_SYS
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CLK_25M_SYS -entity axe5_falcon_top
+set_location_assignment PIN_BJ23 -to USB_HUB_RST
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to USB_HUB_RST -entity axe5_falcon_top
+set_location_assignment PIN_DD3 -to HDMI_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_SCL -entity axe5_falcon_top
+set_location_assignment PIN_CR8 -to HDMI_SDA
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_SDA -entity axe5_falcon_top
+set_location_assignment PIN_DC1 -to HDMI_VS
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_VS -entity axe5_falcon_top
+set_location_assignment PIN_DH1 -to HDMI_HS
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_HS -entity axe5_falcon_top
+set_location_assignment PIN_CE19 -to HDMI_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_CLK -entity axe5_falcon_top
+set_location_assignment PIN_DE1 -to HDMI_DE
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_DE -entity axe5_falcon_top
+set_location_assignment PIN_DN2 -to HDMI_CT_HPD
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_CT_HPD -entity axe5_falcon_top
+set_location_assignment PIN_DH2 -to HDMI_D[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[0] -entity axe5_falcon_top
+set_location_assignment PIN_DC2 -to HDMI_D[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[1] -entity axe5_falcon_top
+set_location_assignment PIN_CV4 -to HDMI_D[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[2] -entity axe5_falcon_top
+set_location_assignment PIN_CV6 -to HDMI_D[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[3] -entity axe5_falcon_top
+set_location_assignment PIN_CV11 -to HDMI_D[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[4] -entity axe5_falcon_top
+set_location_assignment PIN_CV14 -to HDMI_D[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[5] -entity axe5_falcon_top
+set_location_assignment PIN_CV16 -to HDMI_D[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[6] -entity axe5_falcon_top
+set_location_assignment PIN_CV19 -to HDMI_D[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[7] -entity axe5_falcon_top
+set_location_assignment PIN_CR11 -to HDMI_D[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[8] -entity axe5_falcon_top
+set_location_assignment PIN_CR14 -to HDMI_D[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[9] -entity axe5_falcon_top
+set_location_assignment PIN_CR19 -to HDMI_D[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[10] -entity axe5_falcon_top
+set_location_assignment PIN_CH16 -to HDMI_D[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[11] -entity axe5_falcon_top
+set_location_assignment PIN_CH19 -to HDMI_D[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[12] -entity axe5_falcon_top
+set_location_assignment PIN_CH14 -to HDMI_D[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[13] -entity axe5_falcon_top
+set_location_assignment PIN_CG23 -to HDMI_D[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[14] -entity axe5_falcon_top
+set_location_assignment PIN_CE14 -to HDMI_D[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[15] -entity axe5_falcon_top
+set_location_assignment PIN_CG26 -to HDMI_D[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[16] -entity axe5_falcon_top
+set_location_assignment PIN_CD23 -to HDMI_D[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[17] -entity axe5_falcon_top
+set_location_assignment PIN_CH4 -to HDMI_D[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[18] -entity axe5_falcon_top
+set_location_assignment PIN_CA23 -to HDMI_D[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[19] -entity axe5_falcon_top
+set_location_assignment PIN_BV11 -to HDMI_D[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[20] -entity axe5_falcon_top
+set_location_assignment PIN_BV19 -to HDMI_D[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[21] -entity axe5_falcon_top
+set_location_assignment PIN_BV16 -to HDMI_D[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[22] -entity axe5_falcon_top
+set_location_assignment PIN_BV14 -to HDMI_D[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[23] -entity axe5_falcon_top
+set_location_assignment PIN_CE8 -to CX_SMB_ALERT
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CX_SMB_ALERT -entity axe5_falcon_top
+set_location_assignment PIN_DJ3 -to CX_SMB_SDA
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CX_SMB_SDA -entity axe5_falcon_top
+set_location_assignment PIN_CE6 -to CX_SMB_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CX_SMB_SCL -entity axe5_falcon_top
+set_location_assignment PIN_CH6 -to CX_REFCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CX_REFCLK -entity axe5_falcon_top
+set_location_assignment PIN_BP1 -to FPGA_RST_N
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to FPGA_RST_N -entity axe5_falcon_top
+set_location_assignment PIN_AE14 -to LED0R
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED0R -entity axe5_falcon_top
+set_location_assignment PIN_R11 -to LED0G
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED0G -entity axe5_falcon_top
+set_location_assignment PIN_R8 -to LED0B
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED0B -entity axe5_falcon_top
+set_location_assignment PIN_AT8 -to LED1R
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED1R -entity axe5_falcon_top
+set_location_assignment PIN_AH4 -to LED1G
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED1G -entity axe5_falcon_top
+set_location_assignment PIN_AH6 -to LED1B
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED1B -entity axe5_falcon_top
+set_location_assignment PIN_AE19 -to LED2R
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED2R -entity axe5_falcon_top
+set_location_assignment PIN_V19 -to LED2G
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED2G -entity axe5_falcon_top
+set_location_assignment PIN_V14 -to LED2B
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED2B -entity axe5_falcon_top
+set_location_assignment PIN_C19 -to LED3R
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED3R -entity axe5_falcon_top
+set_location_assignment PIN_B17 -to LED3G
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED3G -entity axe5_falcon_top
+set_location_assignment PIN_R19 -to LED3B
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED3B -entity axe5_falcon_top
+set_location_assignment PIN_AG26 -to FPGA_PB[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_PB[0] -entity axe5_falcon_top
+set_location_assignment PIN_AT6 -to FPGA_PB[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_PB[1] -entity axe5_falcon_top
+set_location_assignment PIN_AG31 -to FPGA_DIPSW[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_DIPSW[0] -entity axe5_falcon_top
+set_location_assignment PIN_AL37 -to FPGA_DIPSW[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_DIPSW[1] -entity axe5_falcon_top
+set_location_assignment PIN_H19 -to FPGA_DIPSW[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_DIPSW[2] -entity axe5_falcon_top
+set_location_assignment PIN_AH19 -to FPGA_DIPSW[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_DIPSW[3] -entity axe5_falcon_top
+set_location_assignment PIN_AC2 -to I2C_SCL
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to I2C_SCL -entity axe5_falcon_top
+set_location_assignment PIN_AC1 -to I2C_SDA
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to I2C_SDA -entity axe5_falcon_top
+set_location_assignment PIN_AF1 -to MUX_I2C_INT
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to MUX_I2C_INT -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_DIPSW[0] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_DIPSW[1] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_UART0_TX -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_UART0_RX -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_LED0 -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_LED1 -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_PB[0] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_PB[1] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_I3C0_SDA -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_I3C0_SCL -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_RST -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_CLK -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_STP -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DIR -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_NXT -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[0] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[1] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[2] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[3] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[4] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[5] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[6] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to USB_DATA[7] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RST -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXCK -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[0] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[1] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[2] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXD[3] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXCTL -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_TXCTL -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXCK -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[0] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[1] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[2] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_RXD[3] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_MDC -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_ETH2_MDIO -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_CLK -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_CMD -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DETECT -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[0] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[1] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[2] -entity axe5_falcon_top
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[3] -entity axe5_falcon_top
