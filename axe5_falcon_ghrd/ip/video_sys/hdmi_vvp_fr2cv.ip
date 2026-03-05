@@ -112,6 +112,14 @@ https://fpgasoftware.intel.com/eula.-->
                 <ipxact:name>cv_vid_out_h_sync</ipxact:name>
               </ipxact:physicalPort>
             </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>valid</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>cv_vid_out_valid</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
           </ipxact:portMaps>
         </ipxact:abstractionType>
       </ipxact:abstractionTypes>
@@ -178,7 +186,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="intel_cvg_cv_format.lite.USE_VALID" type="string">
               <ipxact:name>intel_cvg_cv_format.lite.USE_VALID</ipxact:name>
-              <ipxact:value>0</ipxact:value>
+              <ipxact:value>1</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="intel_cvg_cv_format.version" type="string">
               <ipxact:name>intel_cvg_cv_format.version</ipxact:name>
@@ -464,6 +472,19 @@ https://fpgasoftware.intel.com/eula.-->
         </ipxact:wire>
       </ipxact:port>
       <ipxact:port>
+        <ipxact:name>cv_vid_out_valid</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
         <ipxact:name>axi4s_fr_vid_in_tdata</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>in</ipxact:direction>
@@ -623,7 +644,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="LITE_USE_VALID" type="int">
           <ipxact:name>LITE_USE_VALID</ipxact:name>
           <ipxact:displayName>Valid signal</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
+          <ipxact:value>1</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="LITE_USE_READY" type="int">
           <ipxact:name>LITE_USE_READY</ipxact:name>
@@ -909,6 +930,15 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
                     &lt;terminationValue&gt;0&lt;/terminationValue&gt;
                 &lt;/port&gt;
+                &lt;port&gt;
+                    &lt;name&gt;cv_vid_out_valid&lt;/name&gt;
+                    &lt;role&gt;valid&lt;/role&gt;
+                    &lt;direction&gt;Output&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
             &lt;/ports&gt;
             &lt;assignments&gt;
                 &lt;assignmentValueMap&gt;
@@ -954,7 +984,7 @@ https://fpgasoftware.intel.com/eula.-->
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;intel_cvg_cv_format.lite.USE_VALID&lt;/key&gt;
-                        &lt;value&gt;0&lt;/value&gt;
+                        &lt;value&gt;1&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;intel_cvg_cv_format.version&lt;/key&gt;
@@ -1196,6 +1226,7 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:port_mapping altera:name="cv_vid_out_f" altera:internal="cv_vid_out_f"></altera:port_mapping>
         <altera:port_mapping altera:name="cv_vid_out_h_sync" altera:internal="cv_vid_out_h_sync"></altera:port_mapping>
         <altera:port_mapping altera:name="cv_vid_out_v_sync" altera:internal="cv_vid_out_v_sync"></altera:port_mapping>
+        <altera:port_mapping altera:name="cv_vid_out_valid" altera:internal="cv_vid_out_valid"></altera:port_mapping>
       </altera:interface_mapping>
       <altera:interface_mapping altera:name="vid_clock" altera:internal="hdmi_vvp_fr2cv.vid_clock" altera:type="clock" altera:dir="end">
         <altera:port_mapping altera:name="vid_clock_clk" altera:internal="vid_clock_clk"></altera:port_mapping>

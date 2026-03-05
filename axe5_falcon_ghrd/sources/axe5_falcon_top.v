@@ -233,7 +233,6 @@ module axe5_falcon_top (
    `ifdef wHDMI
 
    assign HDMI_CT_HPD   = 1'b1;
-   assign HDMI_CEC_CLK  = 1'b0;
      
    `endif   
 

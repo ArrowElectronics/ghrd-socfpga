@@ -348,9 +348,9 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[23]
 }
 
 if {$wFAB_I2C1 == 1} {
-set_location_assignment PIN_DD3  -to HDMI_SCL
+set_location_assignment PIN_CR8  -to HDMI_SCL
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_SCL
-set_location_assignment PIN_CR8  -to HDMI_SDA
+set_location_assignment PIN_DD3  -to HDMI_SDA
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_SDA
 }
 
