@@ -11,7 +11,7 @@ set wRGB_LED3 1
 set wHPS_LED0 1
 set wHPS_LED1 1
 set wDDR4 1
-set wHDMI 1
+set wHDMI 0
 set wHPS_LED0 1
 set wHPS_LED1 1
 set wHPS_UART0 1
@@ -29,9 +29,9 @@ set wFAB_EMAC0 0
 set wFAB_EMAC1 0
 set wFAB_PB 1
 set wFAB_DIPSW 1
-set wMIPI 1
-set wCAMERA0 1
-set wCAMERA1 1
+set wMIPI 0
+set wCAMERA0 0
+set wCAMERA1 0
 set wCRUVI_HSX 1
 set wCRUVI_HSZ 0
 set wCRUVI_RGMII 0

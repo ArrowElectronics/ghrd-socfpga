@@ -1,17 +1,15 @@
 <?xml version="1.0" ?>
-<!--Your use of Intel Corporation's design tools, logic functions 
+<!--Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Intel Program License 
-Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.-->
+Altera and sold by Altera or its authorized distributors.-->
 <ipxact:design xmlns:altera="http://www.altera.com/XMLSchema/IPXact2014/extensions" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
   <ipxact:vendor>Altera Corporation</ipxact:vendor>
   <ipxact:library>mipi_subsystem</ipxact:library>
@@ -168,7 +166,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="device" type="string">
           <ipxact:name>device</ipxact:name>
           <ipxact:displayName>Device</ipxact:displayName>
-          <ipxact:value>A5EE013BB23BE6S</ipxact:value>
+          <ipxact:value>A5EE013BB23BE6SCS</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="deviceFamily" type="string">
           <ipxact:name>deviceFamily</ipxact:name>
@@ -263,7 +261,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CPU_INFO_ID&lt;/key&gt;
-                        &lt;value&gt;4b3e3328&lt;/value&gt;
+                        &lt;value&gt;5a088c4d&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos&gt;
@@ -289,7 +287,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CPU_INFO_ID&lt;/key&gt;
-                        &lt;value&gt;4b3e3328&lt;/value&gt;
+                        &lt;value&gt;5a088c4d&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos&gt;
@@ -315,7 +313,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CPU_INFO_ID&lt;/key&gt;
-                        &lt;value&gt;4b3e3328&lt;/value&gt;
+                        &lt;value&gt;5a088c4d&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos&gt;
@@ -341,7 +339,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CPU_INFO_ID&lt;/key&gt;
-                        &lt;value&gt;4b3e3328&lt;/value&gt;
+                        &lt;value&gt;5a088c4d&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos&gt;
@@ -367,7 +365,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CPU_INFO_ID&lt;/key&gt;
-                        &lt;value&gt;4b3e3328&lt;/value&gt;
+                        &lt;value&gt;5a088c4d&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos&gt;
@@ -393,7 +391,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CPU_INFO_ID&lt;/key&gt;
-                        &lt;value&gt;4b3e3328&lt;/value&gt;
+                        &lt;value&gt;5a088c4d&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos&gt;
@@ -419,7 +417,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CPU_INFO_ID&lt;/key&gt;
-                        &lt;value&gt;4b3e3328&lt;/value&gt;
+                        &lt;value&gt;5a088c4d&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos&gt;
@@ -445,7 +443,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CPU_INFO_ID&lt;/key&gt;
-                        &lt;value&gt;4b3e3328&lt;/value&gt;
+                        &lt;value&gt;5a088c4d&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos&gt;
@@ -471,7 +469,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CPU_INFO_ID&lt;/key&gt;
-                        &lt;value&gt;4b3e3328&lt;/value&gt;
+                        &lt;value&gt;5a088c4d&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos&gt;
@@ -497,7 +495,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CPU_INFO_ID&lt;/key&gt;
-                        &lt;value&gt;4b3e3328&lt;/value&gt;
+                        &lt;value&gt;5a088c4d&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos&gt;
@@ -859,7 +857,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -4356,7 +4354,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;/boundary&gt;
     &lt;originalModuleInfo&gt;
         &lt;className&gt;intel_mipi_csi2&lt;/className&gt;
-        &lt;version&gt;3.0.0&lt;/version&gt;
+        &lt;version&gt;3.1.0&lt;/version&gt;
         &lt;displayName&gt;MIPI CSI-2 IP&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
@@ -7962,7 +7960,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -11459,7 +11457,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;/boundary&gt;
     &lt;originalModuleInfo&gt;
         &lt;className&gt;intel_mipi_csi2&lt;/className&gt;
-        &lt;version&gt;3.0.0&lt;/version&gt;
+        &lt;version&gt;3.1.0&lt;/version&gt;
         &lt;displayName&gt;MIPI CSI-2 IP&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
@@ -15065,7 +15063,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -17374,7 +17372,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;/boundary&gt;
     &lt;originalModuleInfo&gt;
         &lt;className&gt;intel_mipi_csi2&lt;/className&gt;
-        &lt;version&gt;3.0.0&lt;/version&gt;
+        &lt;version&gt;3.1.0&lt;/version&gt;
         &lt;displayName&gt;MIPI CSI-2 IP&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
@@ -19792,7 +19790,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -29184,7 +29182,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;/boundary&gt;
     &lt;originalModuleInfo&gt;
         &lt;className&gt;mipi_dphy&lt;/className&gt;
-        &lt;version&gt;6.1.0&lt;/version&gt;
+        &lt;version&gt;6.2.0&lt;/version&gt;
         &lt;displayName&gt;MIPI DPHY IP&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
@@ -39023,7 +39021,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -40840,7 +40838,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;/boundary&gt;
     &lt;originalModuleInfo&gt;
         &lt;className&gt;intel_mipi_csi2&lt;/className&gt;
-        &lt;version&gt;3.0.0&lt;/version&gt;
+        &lt;version&gt;3.1.0&lt;/version&gt;
         &lt;displayName&gt;MIPI CSI-2 IP&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
@@ -42766,7 +42764,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -43136,7 +43134,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -43795,7 +43793,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;/boundary&gt;
     &lt;originalModuleInfo&gt;
         &lt;className&gt;intel_vvp_demosaic&lt;/className&gt;
-        &lt;version&gt;24.5.0&lt;/version&gt;
+        &lt;version&gt;24.6.0&lt;/version&gt;
         &lt;displayName&gt;Demosaic&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
@@ -44576,7 +44574,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -45235,7 +45233,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;/boundary&gt;
     &lt;originalModuleInfo&gt;
         &lt;className&gt;intel_vvp_demosaic&lt;/className&gt;
-        &lt;version&gt;24.5.0&lt;/version&gt;
+        &lt;version&gt;24.6.0&lt;/version&gt;
         &lt;displayName&gt;Demosaic&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
@@ -46016,7 +46014,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -46675,7 +46673,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;/boundary&gt;
     &lt;originalModuleInfo&gt;
         &lt;className&gt;intel_vvp_demosaic&lt;/className&gt;
-        &lt;version&gt;24.5.0&lt;/version&gt;
+        &lt;version&gt;24.6.0&lt;/version&gt;
         &lt;displayName&gt;Demosaic&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
@@ -47456,7 +47454,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -48316,7 +48314,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;/boundary&gt;
     &lt;originalModuleInfo&gt;
         &lt;className&gt;intel_vvp_vfr&lt;/className&gt;
-        &lt;version&gt;24.6.0&lt;/version&gt;
+        &lt;version&gt;24.7.0&lt;/version&gt;
         &lt;displayName&gt;Video Frame Reader&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
@@ -49298,7 +49296,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -50116,7 +50114,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;/boundary&gt;
     &lt;originalModuleInfo&gt;
         &lt;className&gt;intel_vvp_vfw&lt;/className&gt;
-        &lt;version&gt;24.6.0&lt;/version&gt;
+        &lt;version&gt;24.7.0&lt;/version&gt;
         &lt;displayName&gt;Video Frame Writer&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
@@ -51056,7 +51054,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -51874,7 +51872,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;/boundary&gt;
     &lt;originalModuleInfo&gt;
         &lt;className&gt;intel_vvp_vfw&lt;/className&gt;
-        &lt;version&gt;24.6.0&lt;/version&gt;
+        &lt;version&gt;24.7.0&lt;/version&gt;
         &lt;displayName&gt;Video Frame Writer&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
@@ -52814,7 +52812,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -53632,7 +53630,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;/boundary&gt;
     &lt;originalModuleInfo&gt;
         &lt;className&gt;intel_vvp_vfw&lt;/className&gt;
-        &lt;version&gt;24.6.0&lt;/version&gt;
+        &lt;version&gt;24.7.0&lt;/version&gt;
         &lt;displayName&gt;Video Frame Writer&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
@@ -54572,7 +54570,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -54586,511 +54584,511 @@ https://fpgasoftware.intel.com/eula.-->
       </altera:module>
     </altera:modules>
     <altera:connections>
-      <altera:connection altera:kind="axi4stream" altera:version="25.3" altera:start="vvp_demosaic_0.axi4s_vid_out" altera:end="vvp_vfw_csi2_0.axi4s_vid_in"></altera:connection>
-      <altera:connection altera:kind="axi4stream" altera:version="25.3" altera:start="vvp_demosaic_1.axi4s_vid_out" altera:end="vvp_vfw_csi2_1.axi4s_vid_in"></altera:connection>
-      <altera:connection altera:kind="axi4stream" altera:version="25.3" altera:start="vvp_demosaic_2.axi4s_vid_out" altera:end="vvp_vfw_csi2_2.axi4s_vid_in"></altera:connection>
-      <altera:connection altera:kind="axi4stream" altera:version="25.3" altera:start="mipi_csi2_0.video_streaming_interface_0" altera:end="vvp_demosaic_0.axi4s_vid_in"></altera:connection>
-      <altera:connection altera:kind="axi4stream" altera:version="25.3" altera:start="mipi_csi2_1.video_streaming_interface_0" altera:end="vvp_demosaic_1.axi4s_vid_in"></altera:connection>
-      <altera:connection altera:kind="axi4stream" altera:version="25.3" altera:start="mipi_csi2_2.video_streaming_interface_0" altera:end="vvp_demosaic_2.axi4s_vid_in"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK0_CK_ppi_rx_hs_clk" altera:end="mipi_csi2_0.ck_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK0_D0_ppi_rx_hs_clk" altera:end="mipi_csi2_0.d0_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK0_D1_ppi_rx_hs_clk" altera:end="mipi_csi2_0.d1_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK0_D2_ppi_rx_hs_clk" altera:end="mipi_csi2_0.d2_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK0_D3_ppi_rx_hs_clk" altera:end="mipi_csi2_0.d3_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK1_CK_ppi_rx_hs_clk" altera:end="mipi_csi2_1.ck_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK1_D0_ppi_rx_hs_clk" altera:end="mipi_csi2_1.d0_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK1_D1_ppi_rx_hs_clk" altera:end="mipi_csi2_1.d1_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK1_D2_ppi_rx_hs_clk" altera:end="mipi_csi2_1.d2_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK1_D3_ppi_rx_hs_clk" altera:end="mipi_csi2_1.d3_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK2_CK_ppi_rx_hs_clk" altera:end="mipi_csi2_2.ck_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK2_D0_ppi_rx_hs_clk" altera:end="mipi_csi2_2.d0_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK2_D1_ppi_rx_hs_clk" altera:end="mipi_csi2_2.d1_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK3_CK_ppi_tx_hs_clk" altera:end="mipi_dsi2_0.ck_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK3_CK_ppi_tx_lp_clk" altera:end="mipi_dsi2_0.ck_ppi_tx_lp_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK3_D0_ppi_tx_hs_clk" altera:end="mipi_dsi2_0.d0_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK3_D0_ppi_tx_lp_clk" altera:end="mipi_dsi2_0.d0_ppi_tx_lp_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK3_D1_ppi_tx_hs_clk" altera:end="mipi_dsi2_0.d1_ppi_hs_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="mipi_dphy.LINK3_D1_ppi_tx_lp_clk" altera:end="mipi_dsi2_0.d1_ppi_tx_lp_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="vvp_demosaic_0.agent_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="vvp_demosaic_1.agent_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="vvp_demosaic_2.agent_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="mipi_csi2_0.axi4s_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="mipi_csi2_1.axi4s_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="mipi_csi2_2.axi4s_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="mipi_dsi2_0.axi4s_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="reset_in.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="vvp_demosaic_0.main_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="vvp_demosaic_1.main_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="vvp_demosaic_2.main_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="vvp_vfw_csi2_0.main_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="vvp_vfw_csi2_1.main_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="vvp_vfw_csi2_2.main_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="vvp_vfr.main_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="vvp_vfw_csi2_0.mem_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="vvp_vfw_csi2_1.mem_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="vvp_vfw_csi2_2.mem_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="vvp_vfr.mem_clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="mipi_dphy.reg_clk"></altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK0_CK_ppi_rx_err" altera:end="mipi_csi2_0.i_ck_ppi_rx_err">
+      <altera:connection altera:kind="axi4stream" altera:version="26.1" altera:start="vvp_demosaic_0.axi4s_vid_out" altera:end="vvp_vfw_csi2_0.axi4s_vid_in"></altera:connection>
+      <altera:connection altera:kind="axi4stream" altera:version="26.1" altera:start="vvp_demosaic_1.axi4s_vid_out" altera:end="vvp_vfw_csi2_1.axi4s_vid_in"></altera:connection>
+      <altera:connection altera:kind="axi4stream" altera:version="26.1" altera:start="vvp_demosaic_2.axi4s_vid_out" altera:end="vvp_vfw_csi2_2.axi4s_vid_in"></altera:connection>
+      <altera:connection altera:kind="axi4stream" altera:version="26.1" altera:start="mipi_csi2_0.video_streaming_interface_0" altera:end="vvp_demosaic_0.axi4s_vid_in"></altera:connection>
+      <altera:connection altera:kind="axi4stream" altera:version="26.1" altera:start="mipi_csi2_1.video_streaming_interface_0" altera:end="vvp_demosaic_1.axi4s_vid_in"></altera:connection>
+      <altera:connection altera:kind="axi4stream" altera:version="26.1" altera:start="mipi_csi2_2.video_streaming_interface_0" altera:end="vvp_demosaic_2.axi4s_vid_in"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK0_CK_ppi_rx_hs_clk" altera:end="mipi_csi2_0.ck_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK0_D0_ppi_rx_hs_clk" altera:end="mipi_csi2_0.d0_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK0_D1_ppi_rx_hs_clk" altera:end="mipi_csi2_0.d1_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK0_D2_ppi_rx_hs_clk" altera:end="mipi_csi2_0.d2_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK0_D3_ppi_rx_hs_clk" altera:end="mipi_csi2_0.d3_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK1_CK_ppi_rx_hs_clk" altera:end="mipi_csi2_1.ck_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK1_D0_ppi_rx_hs_clk" altera:end="mipi_csi2_1.d0_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK1_D1_ppi_rx_hs_clk" altera:end="mipi_csi2_1.d1_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK1_D2_ppi_rx_hs_clk" altera:end="mipi_csi2_1.d2_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK1_D3_ppi_rx_hs_clk" altera:end="mipi_csi2_1.d3_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK2_CK_ppi_rx_hs_clk" altera:end="mipi_csi2_2.ck_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK2_D0_ppi_rx_hs_clk" altera:end="mipi_csi2_2.d0_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK2_D1_ppi_rx_hs_clk" altera:end="mipi_csi2_2.d1_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK3_CK_ppi_tx_hs_clk" altera:end="mipi_dsi2_0.ck_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK3_CK_ppi_tx_lp_clk" altera:end="mipi_dsi2_0.ck_ppi_tx_lp_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK3_D0_ppi_tx_hs_clk" altera:end="mipi_dsi2_0.d0_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK3_D0_ppi_tx_lp_clk" altera:end="mipi_dsi2_0.d0_ppi_tx_lp_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK3_D1_ppi_tx_hs_clk" altera:end="mipi_dsi2_0.d1_ppi_hs_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="mipi_dphy.LINK3_D1_ppi_tx_lp_clk" altera:end="mipi_dsi2_0.d1_ppi_tx_lp_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="vvp_demosaic_0.agent_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="vvp_demosaic_1.agent_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="vvp_demosaic_2.agent_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="mipi_csi2_0.axi4s_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="mipi_csi2_1.axi4s_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="mipi_csi2_2.axi4s_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="mipi_dsi2_0.axi4s_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="reset_in.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="vvp_demosaic_0.main_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="vvp_demosaic_1.main_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="vvp_demosaic_2.main_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="vvp_vfw_csi2_0.main_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="vvp_vfw_csi2_1.main_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="vvp_vfw_csi2_2.main_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="vvp_vfr.main_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="vvp_vfw_csi2_0.mem_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="vvp_vfw_csi2_1.mem_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="vvp_vfw_csi2_2.mem_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="vvp_vfr.mem_clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="mipi_dphy.reg_clk"></altera:connection>
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK0_CK_ppi_rx_err" altera:end="mipi_csi2_0.i_ck_ppi_rx_err">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK0_CK_ppi_rx_hs" altera:end="mipi_csi2_0.ck_ppi_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK0_CK_ppi_rx_hs" altera:end="mipi_csi2_0.ck_ppi_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK0_CK_ppi_rx_lp" altera:end="mipi_csi2_0.ck_ppi_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK0_CK_ppi_rx_lp" altera:end="mipi_csi2_0.ck_ppi_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK0_D0_ppi_ctrl" altera:end="mipi_csi2_0.d0_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK0_D0_ppi_ctrl" altera:end="mipi_csi2_0.d0_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK0_D0_ppi_rx_err" altera:end="mipi_csi2_0.i_d0_ppi_rx_err">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK0_D0_ppi_rx_err" altera:end="mipi_csi2_0.i_d0_ppi_rx_err">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK0_D0_ppi_rx_hs" altera:end="mipi_csi2_0.d0_ppi_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK0_D0_ppi_rx_hs" altera:end="mipi_csi2_0.d0_ppi_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK0_D0_ppi_rx_lp" altera:end="mipi_csi2_0.d0_ppi_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK0_D0_ppi_rx_lp" altera:end="mipi_csi2_0.d0_ppi_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK0_D2_ppi_rx_err" altera:end="mipi_csi2_0.i_d2_ppi_rx_err">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK0_D2_ppi_rx_err" altera:end="mipi_csi2_0.i_d2_ppi_rx_err">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK0_D2_ppi_rx_hs" altera:end="mipi_csi2_0.d2_ppi_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK0_D2_ppi_rx_hs" altera:end="mipi_csi2_0.d2_ppi_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK0_D2_ppi_rx_lp" altera:end="mipi_csi2_0.d2_ppi_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK0_D2_ppi_rx_lp" altera:end="mipi_csi2_0.d2_ppi_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK0_D3_ppi_ctrl" altera:end="mipi_csi2_0.d3_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK0_D3_ppi_ctrl" altera:end="mipi_csi2_0.d3_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK1_CK_ppi_ctrl" altera:end="mipi_csi2_1.ck_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK1_CK_ppi_ctrl" altera:end="mipi_csi2_1.ck_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK1_CK_ppi_rx_err" altera:end="mipi_csi2_1.i_ck_ppi_rx_err">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK1_CK_ppi_rx_err" altera:end="mipi_csi2_1.i_ck_ppi_rx_err">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK1_CK_ppi_rx_hs" altera:end="mipi_csi2_1.ck_ppi_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK1_CK_ppi_rx_hs" altera:end="mipi_csi2_1.ck_ppi_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK1_D0_ppi_ctrl" altera:end="mipi_csi2_1.d0_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK1_D0_ppi_ctrl" altera:end="mipi_csi2_1.d0_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK1_D0_ppi_rx_err" altera:end="mipi_csi2_1.i_d0_ppi_rx_err">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK1_D0_ppi_rx_err" altera:end="mipi_csi2_1.i_d0_ppi_rx_err">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK1_D0_ppi_rx_hs" altera:end="mipi_csi2_1.d0_ppi_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK1_D0_ppi_rx_hs" altera:end="mipi_csi2_1.d0_ppi_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK1_D0_ppi_rx_lp" altera:end="mipi_csi2_1.d0_ppi_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK1_D0_ppi_rx_lp" altera:end="mipi_csi2_1.d0_ppi_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK1_D1_ppi_rx_err" altera:end="mipi_csi2_1.i_d1_ppi_rx_err">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK1_D1_ppi_rx_err" altera:end="mipi_csi2_1.i_d1_ppi_rx_err">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK1_D2_ppi_ctrl" altera:end="mipi_csi2_1.d2_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK1_D2_ppi_ctrl" altera:end="mipi_csi2_1.d2_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK1_D2_ppi_rx_err" altera:end="mipi_csi2_1.i_d2_ppi_rx_err">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK1_D2_ppi_rx_err" altera:end="mipi_csi2_1.i_d2_ppi_rx_err">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK1_D2_ppi_rx_hs" altera:end="mipi_csi2_1.d2_ppi_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK1_D2_ppi_rx_hs" altera:end="mipi_csi2_1.d2_ppi_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK1_D2_ppi_rx_lp" altera:end="mipi_csi2_1.d2_ppi_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK1_D2_ppi_rx_lp" altera:end="mipi_csi2_1.d2_ppi_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK1_D3_ppi_rx_err" altera:end="mipi_csi2_1.i_d3_ppi_rx_err">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK1_D3_ppi_rx_err" altera:end="mipi_csi2_1.i_d3_ppi_rx_err">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK2_CK_ppi_ctrl" altera:end="mipi_csi2_2.ck_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK2_CK_ppi_ctrl" altera:end="mipi_csi2_2.ck_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK2_CK_ppi_rx_err" altera:end="mipi_csi2_2.i_ck_ppi_rx_err">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK2_CK_ppi_rx_err" altera:end="mipi_csi2_2.i_ck_ppi_rx_err">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK2_CK_ppi_rx_hs" altera:end="mipi_csi2_2.ck_ppi_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK2_CK_ppi_rx_hs" altera:end="mipi_csi2_2.ck_ppi_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK2_CK_ppi_rx_lp" altera:end="mipi_csi2_2.ck_ppi_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK2_CK_ppi_rx_lp" altera:end="mipi_csi2_2.ck_ppi_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK2_D0_ppi_ctrl" altera:end="mipi_csi2_2.d0_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK2_D0_ppi_ctrl" altera:end="mipi_csi2_2.d0_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK2_D0_ppi_rx_err" altera:end="mipi_csi2_2.i_d0_ppi_rx_err">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK2_D0_ppi_rx_err" altera:end="mipi_csi2_2.i_d0_ppi_rx_err">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK2_D0_ppi_rx_hs" altera:end="mipi_csi2_2.d0_ppi_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK2_D0_ppi_rx_hs" altera:end="mipi_csi2_2.d0_ppi_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK2_D0_ppi_rx_lp" altera:end="mipi_csi2_2.d0_ppi_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK2_D0_ppi_rx_lp" altera:end="mipi_csi2_2.d0_ppi_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK3_CK_ppi_ctrl" altera:end="mipi_dsi2_0.ck_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK3_CK_ppi_ctrl" altera:end="mipi_dsi2_0.ck_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK3_CK_ppi_tx_hs" altera:end="mipi_dsi2_0.ck_ppi_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK3_CK_ppi_tx_hs" altera:end="mipi_dsi2_0.ck_ppi_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK3_CK_ppi_tx_lp" altera:end="mipi_dsi2_0.ck_ppi_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK3_CK_ppi_tx_lp" altera:end="mipi_dsi2_0.ck_ppi_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK3_D0_ppi_ctrl" altera:end="mipi_dsi2_0.d0_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK3_D0_ppi_ctrl" altera:end="mipi_dsi2_0.d0_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK3_D0_ppi_tx_hs" altera:end="mipi_dsi2_0.d0_ppi_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK3_D0_ppi_tx_hs" altera:end="mipi_dsi2_0.d0_ppi_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dphy.LINK3_D0_ppi_tx_lp" altera:end="mipi_dsi2_0.d0_ppi_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dphy.LINK3_D0_ppi_tx_lp" altera:end="mipi_dsi2_0.d0_ppi_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_0.ck_ppi_ctrl" altera:end="mipi_dphy.LINK0_CK_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_0.ck_ppi_ctrl" altera:end="mipi_dphy.LINK0_CK_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_1.ck_ppi_lp" altera:end="mipi_dphy.LINK1_CK_ppi_rx_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_1.ck_ppi_lp" altera:end="mipi_dphy.LINK1_CK_ppi_rx_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_0.d1_ppi_ctrl" altera:end="mipi_dphy.LINK0_D1_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_0.d1_ppi_ctrl" altera:end="mipi_dphy.LINK0_D1_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_1.d1_ppi_ctrl" altera:end="mipi_dphy.LINK1_D1_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_1.d1_ppi_ctrl" altera:end="mipi_dphy.LINK1_D1_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_2.d1_ppi_ctrl" altera:end="mipi_dphy.LINK2_D1_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_2.d1_ppi_ctrl" altera:end="mipi_dphy.LINK2_D1_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dsi2_0.d1_ppi_ctrl" altera:end="mipi_dphy.LINK3_D1_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dsi2_0.d1_ppi_ctrl" altera:end="mipi_dphy.LINK3_D1_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_0.d1_ppi_hs" altera:end="mipi_dphy.LINK0_D1_ppi_rx_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_0.d1_ppi_hs" altera:end="mipi_dphy.LINK0_D1_ppi_rx_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_1.d1_ppi_hs" altera:end="mipi_dphy.LINK1_D1_ppi_rx_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_1.d1_ppi_hs" altera:end="mipi_dphy.LINK1_D1_ppi_rx_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_2.d1_ppi_hs" altera:end="mipi_dphy.LINK2_D1_ppi_rx_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_2.d1_ppi_hs" altera:end="mipi_dphy.LINK2_D1_ppi_rx_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dsi2_0.d1_ppi_hs" altera:end="mipi_dphy.LINK3_D1_ppi_tx_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dsi2_0.d1_ppi_hs" altera:end="mipi_dphy.LINK3_D1_ppi_tx_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_0.d1_ppi_lp" altera:end="mipi_dphy.LINK0_D1_ppi_rx_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_0.d1_ppi_lp" altera:end="mipi_dphy.LINK0_D1_ppi_rx_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_1.d1_ppi_lp" altera:end="mipi_dphy.LINK1_D1_ppi_rx_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_1.d1_ppi_lp" altera:end="mipi_dphy.LINK1_D1_ppi_rx_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_2.d1_ppi_lp" altera:end="mipi_dphy.LINK2_D1_ppi_rx_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_2.d1_ppi_lp" altera:end="mipi_dphy.LINK2_D1_ppi_rx_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_dsi2_0.d1_ppi_lp" altera:end="mipi_dphy.LINK3_D1_ppi_tx_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_dsi2_0.d1_ppi_lp" altera:end="mipi_dphy.LINK3_D1_ppi_tx_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_0.d2_ppi_ctrl" altera:end="mipi_dphy.LINK0_D2_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_0.d2_ppi_ctrl" altera:end="mipi_dphy.LINK0_D2_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_1.d3_ppi_ctrl" altera:end="mipi_dphy.LINK1_D3_ppi_ctrl">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_1.d3_ppi_ctrl" altera:end="mipi_dphy.LINK1_D3_ppi_ctrl">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_0.d3_ppi_hs" altera:end="mipi_dphy.LINK0_D3_ppi_rx_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_0.d3_ppi_hs" altera:end="mipi_dphy.LINK0_D3_ppi_rx_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_1.d3_ppi_hs" altera:end="mipi_dphy.LINK1_D3_ppi_rx_hs">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_1.d3_ppi_hs" altera:end="mipi_dphy.LINK1_D3_ppi_rx_hs">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_0.d3_ppi_lp" altera:end="mipi_dphy.LINK0_D3_ppi_rx_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_0.d3_ppi_lp" altera:end="mipi_dphy.LINK0_D3_ppi_rx_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_1.d3_ppi_lp" altera:end="mipi_dphy.LINK1_D3_ppi_rx_lp">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_1.d3_ppi_lp" altera:end="mipi_dphy.LINK1_D3_ppi_rx_lp">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_0.i_d1_ppi_rx_err" altera:end="mipi_dphy.LINK0_D1_ppi_rx_err">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_0.i_d1_ppi_rx_err" altera:end="mipi_dphy.LINK0_D1_ppi_rx_err">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_2.i_d1_ppi_rx_err" altera:end="mipi_dphy.LINK2_D1_ppi_rx_err">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_2.i_d1_ppi_rx_err" altera:end="mipi_dphy.LINK2_D1_ppi_rx_err">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="conduit" altera:version="25.3" altera:start="mipi_csi2_0.i_d3_ppi_rx_err" altera:end="mipi_dphy.LINK0_D3_ppi_rx_err">
+      <altera:connection altera:kind="conduit" altera:version="26.1" altera:start="mipi_csi2_0.i_d3_ppi_rx_err" altera:end="mipi_dphy.LINK0_D3_ppi_rx_err">
         <altera:connection_parameter altera:parameter_name="endPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="endPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPort" altera:parameter_value=""></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="startPortLSB" altera:parameter_value="0"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="width" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="mipi_dphy.LINK0_CK_ppi_rx_hs_srst" altera:end="mipi_csi2_0.ck_ppi_rx_hs_srst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="mipi_dphy.LINK0_D0_ppi_rx_hs_srst" altera:end="mipi_csi2_0.d0_ppi_rx_hs_srst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="mipi_dphy.LINK0_D1_ppi_rx_hs_srst" altera:end="mipi_csi2_0.d1_ppi_rx_hs_srst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="mipi_dphy.LINK0_D2_ppi_rx_hs_srst" altera:end="mipi_csi2_0.d2_ppi_rx_hs_srst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="mipi_dphy.LINK0_D3_ppi_rx_hs_srst" altera:end="mipi_csi2_0.d3_ppi_rx_hs_srst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="mipi_dphy.LINK1_CK_ppi_rx_hs_srst" altera:end="mipi_csi2_1.ck_ppi_rx_hs_srst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="mipi_dphy.LINK1_D0_ppi_rx_hs_srst" altera:end="mipi_csi2_1.d0_ppi_rx_hs_srst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="mipi_dphy.LINK1_D1_ppi_rx_hs_srst" altera:end="mipi_csi2_1.d1_ppi_rx_hs_srst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="mipi_dphy.LINK1_D2_ppi_rx_hs_srst" altera:end="mipi_csi2_1.d2_ppi_rx_hs_srst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="mipi_dphy.LINK1_D3_ppi_rx_hs_srst" altera:end="mipi_csi2_1.d3_ppi_rx_hs_srst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="mipi_dphy.LINK2_CK_ppi_rx_hs_srst" altera:end="mipi_csi2_2.ck_ppi_rx_hs_srst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="mipi_dphy.LINK2_D0_ppi_rx_hs_srst" altera:end="mipi_csi2_2.d0_ppi_rx_hs_srst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="mipi_dphy.LINK2_D1_ppi_rx_hs_srst" altera:end="mipi_csi2_2.d1_ppi_rx_hs_srst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="vvp_demosaic_0.agent_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="vvp_demosaic_1.agent_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="vvp_demosaic_2.agent_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="mipi_dphy.arst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="mipi_csi2_0.axi4s_rst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="mipi_csi2_1.axi4s_rst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="mipi_csi2_2.axi4s_rst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="mipi_dsi2_0.axi4s_rst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="vvp_demosaic_0.main_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="vvp_demosaic_1.main_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="vvp_demosaic_2.main_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="vvp_vfw_csi2_0.main_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="vvp_vfw_csi2_1.main_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="vvp_vfw_csi2_2.main_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="vvp_vfr.main_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="vvp_vfw_csi2_0.mem_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="vvp_vfw_csi2_1.mem_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="vvp_vfw_csi2_2.mem_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="vvp_vfr.mem_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="mipi_dphy.reg_srst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="mipi_dphy.LINK0_CK_ppi_rx_hs_srst" altera:end="mipi_csi2_0.ck_ppi_rx_hs_srst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="mipi_dphy.LINK0_D0_ppi_rx_hs_srst" altera:end="mipi_csi2_0.d0_ppi_rx_hs_srst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="mipi_dphy.LINK0_D1_ppi_rx_hs_srst" altera:end="mipi_csi2_0.d1_ppi_rx_hs_srst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="mipi_dphy.LINK0_D2_ppi_rx_hs_srst" altera:end="mipi_csi2_0.d2_ppi_rx_hs_srst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="mipi_dphy.LINK0_D3_ppi_rx_hs_srst" altera:end="mipi_csi2_0.d3_ppi_rx_hs_srst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="mipi_dphy.LINK1_CK_ppi_rx_hs_srst" altera:end="mipi_csi2_1.ck_ppi_rx_hs_srst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="mipi_dphy.LINK1_D0_ppi_rx_hs_srst" altera:end="mipi_csi2_1.d0_ppi_rx_hs_srst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="mipi_dphy.LINK1_D1_ppi_rx_hs_srst" altera:end="mipi_csi2_1.d1_ppi_rx_hs_srst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="mipi_dphy.LINK1_D2_ppi_rx_hs_srst" altera:end="mipi_csi2_1.d2_ppi_rx_hs_srst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="mipi_dphy.LINK1_D3_ppi_rx_hs_srst" altera:end="mipi_csi2_1.d3_ppi_rx_hs_srst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="mipi_dphy.LINK2_CK_ppi_rx_hs_srst" altera:end="mipi_csi2_2.ck_ppi_rx_hs_srst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="mipi_dphy.LINK2_D0_ppi_rx_hs_srst" altera:end="mipi_csi2_2.d0_ppi_rx_hs_srst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="mipi_dphy.LINK2_D1_ppi_rx_hs_srst" altera:end="mipi_csi2_2.d1_ppi_rx_hs_srst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="vvp_demosaic_0.agent_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="vvp_demosaic_1.agent_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="vvp_demosaic_2.agent_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="mipi_dphy.arst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="mipi_csi2_0.axi4s_rst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="mipi_csi2_1.axi4s_rst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="mipi_csi2_2.axi4s_rst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="mipi_dsi2_0.axi4s_rst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="vvp_demosaic_0.main_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="vvp_demosaic_1.main_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="vvp_demosaic_2.main_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="vvp_vfw_csi2_0.main_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="vvp_vfw_csi2_1.main_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="vvp_vfw_csi2_2.main_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="vvp_vfr.main_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="vvp_vfw_csi2_0.mem_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="vvp_vfw_csi2_1.mem_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="vvp_vfw_csi2_2.mem_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="vvp_vfr.mem_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="mipi_dphy.reg_srst"></altera:connection>
     </altera:connections>
     <altera:interconnect_requirements></altera:interconnect_requirements>
     <altera:wire_level_connections></altera:wire_level_connections>
@@ -55134,22 +55132,22 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:busInterfaces>
           <ipxact:busInterface>
             <ipxact:name>vvp_vfr.av_mm_mem_read_host</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="25.3"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.1"></ipxact:busType>
             <ipxact:master></ipxact:master>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>vvp_vfw_csi2_0.av_mm_mem_write_host</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="25.3"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.1"></ipxact:busType>
             <ipxact:master></ipxact:master>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>vvp_vfw_csi2_1.av_mm_mem_write_host</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="25.3"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.1"></ipxact:busType>
             <ipxact:master></ipxact:master>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>vvp_vfw_csi2_2.av_mm_mem_write_host</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="25.3"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.1"></ipxact:busType>
             <ipxact:master></ipxact:master>
           </ipxact:busInterface>
         </ipxact:busInterfaces>

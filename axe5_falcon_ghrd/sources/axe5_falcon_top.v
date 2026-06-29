@@ -27,13 +27,13 @@
 `define wFAB_DIPSW
 `define wFAB_I2C0
 `define wFAB_I2C1
-`define wHDMI
+//`define wHDMI
 `define wDDR4 //EMIF HPS
 
-`define wMIPI
-`define wCAMERA0
-`define wCAMERA1
-`define wCRUVI_HSX
+//`define wMIPI
+//`define wCAMERA0
+//`define wCAMERA1
+//`define wCRUVI_HSX
 //`define wCRUVI_HSZ
 //`define wPMOD
 //`define wCRUVI_RGMII
@@ -291,8 +291,7 @@ module axe5_falcon_top (
         .niosv_dbg_uart_rxd                   (DBG_RXD),  
         .niosv_dbg_uart_txd                   (DBG_TXD),
       `endif
-
-		  `ifdef wHDMI
+      `ifdef wHDMI
         .hdmi_vid_out_data                    (HDMI_D), 
         .hdmi_vid_out_active                  (HDMI_DE), 
         .hdmi_vid_out_f                       (),  
@@ -336,16 +335,17 @@ module axe5_falcon_top (
       `endif
       `ifdef wFAB_I2C0
         .hps_i2c0_scl_i_clk           				(i2c0_scl_i_clk),
-        .hps_i2c0_scl_oe_clk          			   (i2c0_scl_oe_clk),
+        .hps_i2c0_scl_oe_clk          			   	(i2c0_scl_oe_clk),
         .hps_i2c0_sda_i               				(i2c0_sda_i),
         .hps_i2c0_sda_oe              				(i2c0_sda_oe),
       `endif
       `ifdef wFAB_I2C1
         .hps_i2c1_scl_i_clk           				(i2c1_scl_i_clk),
-        .hps_i2c1_scl_oe_clk          			   (i2c1_scl_oe_clk),
+        .hps_i2c1_scl_oe_clk          			   	(i2c1_scl_oe_clk),
         .hps_i2c1_sda_i               				(i2c1_sda_i),
         .hps_i2c1_sda_oe              				(i2c1_sda_oe),
-      `endif      
+      `endif 
+	  
       `ifdef wHPS
         .hps_io_hps_osc_clk       					(HPS_OSC_CLK_25MHz),	  
       `ifdef wHPS_EMAC2
@@ -375,24 +375,24 @@ module axe5_falcon_top (
         .hps_io_i2c1_scl          					(HPS_I2C1_SCL),
       `endif
       `ifdef wHPS_I3C0
-        .hps_io_i3c0_sda                         (HPS_I3C0_SDA), 
-        .hps_io_i3c0_scl                         (HPS_I3C0_SCL),
+        .hps_io_i3c0_sda                         	(HPS_I3C0_SDA), 
+        .hps_io_i3c0_scl                         	(HPS_I3C0_SCL),
       `endif
       `ifdef wHPS_USB
-        .hps_io_usb0_clk                      (USB_CLK),                      
-        .hps_io_usb0_stp                      (USB_STP),                      
-        .hps_io_usb0_dir                      (USB_DIR),                      
-        .hps_io_usb0_data0                    (USB_DATA[0]),                    
-        .hps_io_usb0_data1                    (USB_DATA[1]),                    
-        .hps_io_usb0_nxt                      (USB_NXT),                      
-        .hps_io_usb0_data2                    (USB_DATA[2]),                    
-        .hps_io_usb0_data3                    (USB_DATA[3]),                    
-        .hps_io_usb0_data4                    (USB_DATA[4]),                    
-        .hps_io_usb0_data5                    (USB_DATA[5]),                    
-        .hps_io_usb0_data6                    (USB_DATA[6]),                    
-        .hps_io_usb0_data7                    (USB_DATA[7]),                    
-		  .hps_io_gpio28            				 (USB_RST),
-		  .usb_hub_rst_export						 (USB_HUB_RST), 					
+        .hps_io_usb0_clk                      		(USB_CLK),                      
+        .hps_io_usb0_stp                      		(USB_STP),                      
+        .hps_io_usb0_dir                     		(USB_DIR),                      
+        .hps_io_usb0_data0                    		(USB_DATA[0]),                    
+        .hps_io_usb0_data1                    		(USB_DATA[1]),                    
+        .hps_io_usb0_nxt                      		(USB_NXT),                      
+        .hps_io_usb0_data2                    		(USB_DATA[2]),                    
+        .hps_io_usb0_data3                    		(USB_DATA[3]),                    
+        .hps_io_usb0_data4                    		(USB_DATA[4]),                    
+        .hps_io_usb0_data5                    		(USB_DATA[5]),                    
+        .hps_io_usb0_data6                    		(USB_DATA[6]),                    
+        .hps_io_usb0_data7                    		(USB_DATA[7]),                    
+		.hps_io_gpio28            				 	(USB_RST),
+		.usb_hub_rst_export						 	(USB_HUB_RST), 					
       `endif
       `ifdef wHPS_SD		
         .hps_io_sdmmc_data0       					(SD_DAT[0]),
@@ -418,57 +418,56 @@ module axe5_falcon_top (
         .hps_io_gpio13           					(HPS_DIPSW[1]),
       `endif		
       `ifdef wDDR4 //HPS EMIF
-        .emif_ddr4_2a_ref_clk_clk		      (DDR4_REFCK),
-        .emif_ddr4_2a_mem_ck_0_mem_ck_t		(DDR4_CK_P),
-        .emif_ddr4_2a_mem_ck_0_mem_ck_c      (DDR4_CK_N),
-        .emif_ddr4_2a_mem_0_mem_cke		      (DDR4_CKE),
-        .emif_ddr4_2a_mem_reset_n_mem_reset_n(DDR4_RST),
-        .emif_ddr4_2a_mem_0_mem_cs_n        	(DDR4_CS_N),
-        .emif_ddr4_2a_mem_0_mem_a	        	(DDR4_A),
-        .emif_ddr4_2a_mem_0_mem_dq	        	(DDR4_DQ),
-        .emif_ddr4_2a_mem_0_mem_dqs_t	     	({DDR4_DQS3_P, DDR4_DQS2_P, DDR4_DQS1_P, DDR4_DQS0_P}),
-        .emif_ddr4_2a_mem_0_mem_dqs_c	     	({DDR4_DQS3_N, DDR4_DQS2_N, DDR4_DQS1_N, DDR4_DQS0_N}),
-        .emif_ddr4_2a_oct_0_oct_rzqin	     	(DDR4_OCT_RZQIN),
-        .emif_ddr4_2a_mem_0_mem_odt	     	   (DDR4_ODT),
-        .emif_ddr4_2a_mem_0_mem_ba           (DDR4_BA),
-        .emif_ddr4_2a_mem_0_mem_bg           (DDR4_BG), 
-        .emif_ddr4_2a_mem_0_mem_act_n        (DDR4_ACT_N), 
-        .emif_ddr4_2a_mem_0_mem_par          (DDR4_PAR), 
-        .emif_ddr4_2a_mem_0_mem_alert_n      (DDR4_ALERT_N),
-        .emif_ddr4_2a_mem_0_mem_dbi_n        ({DDR4_DM3, DDR4_DM2, DDR4_DM1, DDR4_DM0}), 
-		  `endif
+        .emif_ddr4_2a_ref_clk_clk		     		(DDR4_REFCK),
+        .emif_ddr4_2a_mem_ck_0_mem_ck_t				(DDR4_CK_P),
+        .emif_ddr4_2a_mem_ck_0_mem_ck_c      		(DDR4_CK_N),
+        .emif_ddr4_2a_mem_0_mem_cke		      		(DDR4_CKE),
+        .emif_ddr4_2a_mem_reset_n_mem_reset_n		(DDR4_RST),
+        .emif_ddr4_2a_mem_0_mem_cs_n        		(DDR4_CS_N),
+        .emif_ddr4_2a_mem_0_mem_a	        		(DDR4_A),
+        .emif_ddr4_2a_mem_0_mem_dq	        		(DDR4_DQ),
+        .emif_ddr4_2a_mem_0_mem_dqs_t	     		({DDR4_DQS3_P, DDR4_DQS2_P, DDR4_DQS1_P, DDR4_DQS0_P}),
+        .emif_ddr4_2a_mem_0_mem_dqs_c	     		({DDR4_DQS3_N, DDR4_DQS2_N, DDR4_DQS1_N, DDR4_DQS0_N}),
+        .emif_ddr4_2a_oct_0_oct_rzqin	     		(DDR4_OCT_RZQIN),
+        .emif_ddr4_2a_mem_0_mem_odt	     	   		(DDR4_ODT),
+        .emif_ddr4_2a_mem_0_mem_ba           		(DDR4_BA),
+        .emif_ddr4_2a_mem_0_mem_bg           		(DDR4_BG), 
+        .emif_ddr4_2a_mem_0_mem_act_n        		(DDR4_ACT_N), 
+        .emif_ddr4_2a_mem_0_mem_par          		(DDR4_PAR), 
+        .emif_ddr4_2a_mem_0_mem_alert_n     	 	(DDR4_ALERT_N),
+        .emif_ddr4_2a_mem_0_mem_dbi_n        		({DDR4_DM3, DDR4_DM2, DDR4_DM1, DDR4_DM0}), 
       `endif
-		  
-        .eth1_rst_export                   (),  
-		  `ifdef wMIPI
-        .mipi_dphy_rzq_rzq                       (MIPI_RZQ), 
-        .mipi_dphy_refclk_clk                    (B2A_REFCK_P), 
-		  `ifdef wCAMERA0
-        .csi0_dphyx4_io_dphy_link_dp             ({CSI0_D3_P,CSI0_D2_P,CSI0_D1_P,CSI0_D0_P}), 
-        .csi0_dphyx4_io_dphy_link_dn             ({CSI0_D3_N,CSI0_D2_N,CSI0_D1_N,CSI0_D0_N}),
-        .csi0_dphyx4_io_dphy_link_cp             (CSI0_C_P),
-        .csi0_dphyx4_io_dphy_link_cn             (CSI0_C_N), 
-		  `endif
-		  `ifdef wCAMERA1
-        .csi1_dphyx4_io_dphy_link_dp             ({CSI1_D3_P,CSI1_D2_P,CSI1_D1_P,CSI1_D0_P}),
-        .csi1_dphyx4_io_dphy_link_dn             ({CSI1_D3_N,CSI1_D2_N,CSI1_D1_N,CSI1_D0_N}), 
-        .csi1_dphyx4_io_dphy_link_cp             (CSI1_C_P), 
-        .csi1_dphyx4_io_dphy_link_cn             (CSI1_C_N), 
-		  `endif
-		  `ifdef wCRUVI_HSX
+      `endif
+ 
+      `ifdef wMIPI
+        .mipi_dphy_rzq_rzq                       	(MIPI_RZQ), 
+        .mipi_dphy_refclk_clk                    	(B2A_REFCK_P), 
+      `ifdef wCAMERA0
+        .csi0_dphyx4_io_dphy_link_dp             	({CSI0_D3_P,CSI0_D2_P,CSI0_D1_P,CSI0_D0_P}), 
+        .csi0_dphyx4_io_dphy_link_dn             	({CSI0_D3_N,CSI0_D2_N,CSI0_D1_N,CSI0_D0_N}),
+        .csi0_dphyx4_io_dphy_link_cp             	(CSI0_C_P),
+        .csi0_dphyx4_io_dphy_link_cn             	(CSI0_C_N), 
+      `endif
+      `ifdef wCAMERA1
+        .csi1_dphyx4_io_dphy_link_dp            	 ({CSI1_D3_P,CSI1_D2_P,CSI1_D1_P,CSI1_D0_P}),
+        .csi1_dphyx4_io_dphy_link_dn             	({CSI1_D3_N,CSI1_D2_N,CSI1_D1_N,CSI1_D0_N}), 
+        .csi1_dphyx4_io_dphy_link_cp             	(CSI1_C_P), 
+        .csi1_dphyx4_io_dphy_link_cn             	(CSI1_C_N), 
+      `endif
+      `ifdef wCRUVI_HSX
 		  // CSI-2
-        .csi_dphyx2_io_dphy_link_dp              ({CX_B4_P, CX_B3_P}),
-        .csi_dphyx2_io_dphy_link_dn              ({CX_B4_N, CX_B3_N}),
-        .csi_dphyx2_io_dphy_link_cp              (CX_B2_P),
-        .csi_dphyx2_io_dphy_link_cn              (CX_B2_N), 
+        .csi_dphyx2_io_dphy_link_dp              	({CX_B4_P, CX_B3_P}),
+        .csi_dphyx2_io_dphy_link_dn              	({CX_B4_N, CX_B3_N}),
+        .csi_dphyx2_io_dphy_link_cp              	(CX_B2_P),
+        .csi_dphyx2_io_dphy_link_cn              	(CX_B2_N), 
         // DSI-2
-        .dsi_dphyx2_io_dphy_link_dp              ({CX_A2_P, CX_A1_P}),  
-        .dsi_dphyx2_io_dphy_link_dn              ({CX_A2_N, CX_A1_N}), 
-        .dsi_dphyx2_io_dphy_link_cp              (CX_A5_P),
-        .dsi_dphyx2_io_dphy_link_cn              (CX_A5_N)
+        .dsi_dphyx2_io_dphy_link_dp              	({CX_A2_P, CX_A1_P}),  
+        .dsi_dphyx2_io_dphy_link_dn              	({CX_A2_N, CX_A1_N}), 
+        .dsi_dphyx2_io_dphy_link_cp              	(CX_A5_P),
+        .dsi_dphyx2_io_dphy_link_cn              	(CX_A5_N)
         `endif
         `endif
-
+        .eth1_rst_export                   			() 		
 		);
 
 

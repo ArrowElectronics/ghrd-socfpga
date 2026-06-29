@@ -26,7 +26,6 @@
 `define wFAB_I2C1
 `define wFAB_QSPI
 `define wADDA
-`define wHDMI
 `define wLPDDR4A //EMIF HPS
 `define wLPDDR4B //EMIF FPGA
 
@@ -40,6 +39,7 @@
 //`define wFMC_XCVRS
 //`define wPCIe
 //`define smartVID
+//`define wHDMI
 
 
 module axe5_eagle_top (

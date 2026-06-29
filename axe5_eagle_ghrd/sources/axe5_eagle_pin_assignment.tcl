@@ -17,7 +17,7 @@ set wHPS_LED1 1
 set wFAB_QSPI 1
 set wLPDDR4A 1
 set wLPDDR4B 1
-set wHDMI 1
+set wHDMI 0
 set wHPS_LED0 1
 set wHPS_LED1 1
 set wHPS_UART0 1

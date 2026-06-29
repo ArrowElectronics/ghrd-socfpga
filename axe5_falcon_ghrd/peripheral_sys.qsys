@@ -1,17 +1,15 @@
 <?xml version="1.0" ?>
-<!--Your use of Intel Corporation's design tools, logic functions 
+<!--Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Intel Program License 
-Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.-->
+Altera and sold by Altera or its authorized distributors.-->
 <ipxact:design xmlns:altera="http://www.altera.com/XMLSchema/IPXact2014/extensions" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
   <ipxact:vendor>Altera Corporation</ipxact:vendor>
   <ipxact:library>peripheral_sys</ipxact:library>
@@ -269,7 +267,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="device" type="string">
           <ipxact:name>device</ipxact:name>
           <ipxact:displayName>Device</ipxact:displayName>
-          <ipxact:value>A5EE013BB23BE6S</ipxact:value>
+          <ipxact:value>A5EE013BB23BE6SCS</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="deviceFamily" type="string">
           <ipxact:name>deviceFamily</ipxact:name>
@@ -364,7 +362,7 @@ https://fpgasoftware.intel.com/eula.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CPU_INFO_ID&lt;/key&gt;
-                        &lt;value&gt;4b3e3328&lt;/value&gt;
+                        &lt;value&gt;5a088c4d&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos&gt;
@@ -726,7 +724,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -2120,7 +2118,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -2498,6 +2496,133 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                     &lt;/parameterValueMap&gt;
                 &lt;/parameters&gt;
+                &lt;cmsisInfo&gt;
+                    &lt;cmsisSrcFileContents&gt;&amp;lt;?xml version="1.0" encoding="utf-8"?&amp;gt;    
+&amp;lt;device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd" &amp;gt;
+  &amp;lt;peripherals&amp;gt;
+   &amp;lt;peripheral&amp;gt;
+      &amp;lt;name&amp;gt;altera_avalon_pio&amp;lt;/name&amp;gt;&amp;lt;baseAddress&amp;gt;0x00000000&amp;lt;/baseAddress&amp;gt; 
+      &amp;lt;addressBlock&amp;gt;
+        &amp;lt;offset&amp;gt;0x0&amp;lt;/offset&amp;gt;
+        &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+        &amp;lt;usage&amp;gt;registers&amp;lt;/usage&amp;gt;
+      &amp;lt;/addressBlock&amp;gt;
+      &amp;lt;registers&amp;gt;
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;DATA&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Data&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Reading from data returns the value present at the input ports. If the PIO core hardware is configured in output-only mode, reading from data returns an undefined value. Writing to data stores the value to a register that drives the output ports. If the PIO core hardware is configured in input-only mode, writing to data has no effect. If the PIO core hardware is in bidirectional mode, the registered value appears on an output port only when the corresponding bit in the direction register is set to 1 (output).&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x0&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;data&amp;lt;/name&amp;gt;
+           &amp;lt;description&amp;gt;Reads: Data value currently on PIO inputs. Writes: New value to drive on PIO outputs.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;DIRECTION&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Direction&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;The direction register controls the data direction for each PIO port, assuming the port is bidirectional. When bit n in direction is set to 1, port n drives out the value in the corresponding bit of the data register The direction register only exists when the PIO core hardware is configured in bidirectional mode. The mode (input, output, or bidirectional) is specified at system generation time, and cannot be changed at runtime. In input-only or output-only mode, the direction register does not exist. In this case, reading direction returns an undefined value, writing direction has no effect. After reset, all bits of direction are 0, so that all bidirectional I/O ports are configured as inputs. If those PIO ports are connected to device pins, the pins are held in a high-impedance state. In bi-directional mode, to change the direction of the PIO port, reprogram the direction register.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x4&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;direction&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Individual direction control for each I/O port. A value of 0 sets the direction to input; 1 sets the direction to output.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;IRQ_MASK&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Interrupt mask&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Setting a bit in the interruptmask register to 1 enables interrupts for the corresponding PIO input port. Interrupt behavior depends on the hardware configuration of the PIO core. The interruptmask register only exists when the hardware is configured to generate IRQs. If the core cannot generate IRQs, reading interruptmask returns an undefined value, and writing to interruptmask has no effect. After reset, all bits of interruptmask are zero, so that interrupts are disabled for all PIO ports.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x8&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;interruptmask&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;IRQ enable/disable for each input port. Setting a bit to 1 enables interrupts for the corresponding port.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;EDGE_CAP&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Edge capture&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Bit n in the edgecapture register is set to 1 whenever an edge is detected on input port n. An Avalon-MM master peripheral can read the edgecapture register to determine if an edge has occurred on any of the PIO input ports. If the option Enable bit-clearing for edge capture register is turned off, writing any value to the edgecapture register clears all bits in the register. Otherwise, writing a 1 to a particular bit in the register clears only that bit. The type of edge(s) to detect is fixed in hardware at system generation time. The edgecapture register only exists when the hardware is configured to capture edges. If the core is not configured to capture edges, reading from edgecapture returns an undefined value, and writing to edgecapture has no effect.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0xc&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;edgecapture&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Edge detection for each input port.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;
+         &amp;lt;name&amp;gt;SET_BIT&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Outset&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;You can use the outset register to set individual bits of the output port. For example, to set bit 6 of the output port, write 0x40 to the outset register. This register is only present when the option Enable individual bit set/clear output register is turned on.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x10&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;outset&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Specifies which bit of the output port to set.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;CLEAR_BITS&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Outclear&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;You can use the outclear register to clear individual bits of the output port. For example, writing 0x08 to the outclear register clears bit 3 of the output port. This register is only present when the option Enable individual bit set/clear output register is turned on.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x14&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;outclear&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Specifies which output bit to clear.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt;            
+    &amp;lt;/registers&amp;gt;
+   &amp;lt;/peripheral&amp;gt;
+  &amp;lt;/peripherals&amp;gt;
+&amp;lt;/device&amp;gt; &lt;/cmsisSrcFileContents&gt;
+                    &lt;addressGroup&gt;&lt;/addressGroup&gt;
+                    &lt;cmsisVars/&gt;
+                &lt;/cmsisInfo&gt;
             &lt;/interface&gt;
             &lt;interface&gt;
                 &lt;name&gt;external_connection&lt;/name&gt;
@@ -3273,7 +3398,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -4008,12 +4133,7 @@ https://fpgasoftware.intel.com/eula.-->
               <ipxact:name>cpuHashInfo</ipxact:name>
               <ipxact:displayName>CPU Hash Info</ipxact:displayName>
               <ipxact:value>&lt;cpuHashInfoDefinition&gt;
-    &lt;cpuHashInfoMap&gt;
-        &lt;entry&gt;
-            &lt;key&gt;mm_bridge.m0&lt;/key&gt;
-            &lt;value&gt;0:&lt;/value&gt;
-        &lt;/entry&gt;
-    &lt;/cpuHashInfoMap&gt;
+    &lt;cpuHashInfoMap/&gt;
 &lt;/cpuHashInfoDefinition&gt;</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="cpuInfo" type="string">
@@ -4834,7 +4954,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -6232,7 +6352,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -6602,7 +6722,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -6980,6 +7100,133 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                     &lt;/parameterValueMap&gt;
                 &lt;/parameters&gt;
+                &lt;cmsisInfo&gt;
+                    &lt;cmsisSrcFileContents&gt;&amp;lt;?xml version="1.0" encoding="utf-8"?&amp;gt;    
+&amp;lt;device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd" &amp;gt;
+  &amp;lt;peripherals&amp;gt;
+   &amp;lt;peripheral&amp;gt;
+      &amp;lt;name&amp;gt;altera_avalon_pio&amp;lt;/name&amp;gt;&amp;lt;baseAddress&amp;gt;0x00000000&amp;lt;/baseAddress&amp;gt; 
+      &amp;lt;addressBlock&amp;gt;
+        &amp;lt;offset&amp;gt;0x0&amp;lt;/offset&amp;gt;
+        &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+        &amp;lt;usage&amp;gt;registers&amp;lt;/usage&amp;gt;
+      &amp;lt;/addressBlock&amp;gt;
+      &amp;lt;registers&amp;gt;
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;DATA&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Data&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Reading from data returns the value present at the input ports. If the PIO core hardware is configured in output-only mode, reading from data returns an undefined value. Writing to data stores the value to a register that drives the output ports. If the PIO core hardware is configured in input-only mode, writing to data has no effect. If the PIO core hardware is in bidirectional mode, the registered value appears on an output port only when the corresponding bit in the direction register is set to 1 (output).&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x0&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;data&amp;lt;/name&amp;gt;
+           &amp;lt;description&amp;gt;Reads: Data value currently on PIO inputs. Writes: New value to drive on PIO outputs.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;DIRECTION&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Direction&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;The direction register controls the data direction for each PIO port, assuming the port is bidirectional. When bit n in direction is set to 1, port n drives out the value in the corresponding bit of the data register The direction register only exists when the PIO core hardware is configured in bidirectional mode. The mode (input, output, or bidirectional) is specified at system generation time, and cannot be changed at runtime. In input-only or output-only mode, the direction register does not exist. In this case, reading direction returns an undefined value, writing direction has no effect. After reset, all bits of direction are 0, so that all bidirectional I/O ports are configured as inputs. If those PIO ports are connected to device pins, the pins are held in a high-impedance state. In bi-directional mode, to change the direction of the PIO port, reprogram the direction register.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x4&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;direction&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Individual direction control for each I/O port. A value of 0 sets the direction to input; 1 sets the direction to output.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;IRQ_MASK&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Interrupt mask&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Setting a bit in the interruptmask register to 1 enables interrupts for the corresponding PIO input port. Interrupt behavior depends on the hardware configuration of the PIO core. The interruptmask register only exists when the hardware is configured to generate IRQs. If the core cannot generate IRQs, reading interruptmask returns an undefined value, and writing to interruptmask has no effect. After reset, all bits of interruptmask are zero, so that interrupts are disabled for all PIO ports.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x8&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;interruptmask&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;IRQ enable/disable for each input port. Setting a bit to 1 enables interrupts for the corresponding port.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;EDGE_CAP&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Edge capture&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Bit n in the edgecapture register is set to 1 whenever an edge is detected on input port n. An Avalon-MM master peripheral can read the edgecapture register to determine if an edge has occurred on any of the PIO input ports. If the option Enable bit-clearing for edge capture register is turned off, writing any value to the edgecapture register clears all bits in the register. Otherwise, writing a 1 to a particular bit in the register clears only that bit. The type of edge(s) to detect is fixed in hardware at system generation time. The edgecapture register only exists when the hardware is configured to capture edges. If the core is not configured to capture edges, reading from edgecapture returns an undefined value, and writing to edgecapture has no effect.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0xc&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;edgecapture&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Edge detection for each input port.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;
+         &amp;lt;name&amp;gt;SET_BIT&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Outset&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;You can use the outset register to set individual bits of the output port. For example, to set bit 6 of the output port, write 0x40 to the outset register. This register is only present when the option Enable individual bit set/clear output register is turned on.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x10&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;outset&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Specifies which bit of the output port to set.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;CLEAR_BITS&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Outclear&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;You can use the outclear register to clear individual bits of the output port. For example, writing 0x08 to the outclear register clears bit 3 of the output port. This register is only present when the option Enable individual bit set/clear output register is turned on.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x14&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;outclear&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Specifies which output bit to clear.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt;            
+    &amp;lt;/registers&amp;gt;
+   &amp;lt;/peripheral&amp;gt;
+  &amp;lt;/peripherals&amp;gt;
+&amp;lt;/device&amp;gt; &lt;/cmsisSrcFileContents&gt;
+                    &lt;addressGroup&gt;&lt;/addressGroup&gt;
+                    &lt;cmsisVars/&gt;
+                &lt;/cmsisInfo&gt;
             &lt;/interface&gt;
             &lt;interface&gt;
                 &lt;name&gt;external_connection&lt;/name&gt;
@@ -7755,7 +8002,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -8133,6 +8380,133 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                     &lt;/parameterValueMap&gt;
                 &lt;/parameters&gt;
+                &lt;cmsisInfo&gt;
+                    &lt;cmsisSrcFileContents&gt;&amp;lt;?xml version="1.0" encoding="utf-8"?&amp;gt;    
+&amp;lt;device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd" &amp;gt;
+  &amp;lt;peripherals&amp;gt;
+   &amp;lt;peripheral&amp;gt;
+      &amp;lt;name&amp;gt;altera_avalon_pio&amp;lt;/name&amp;gt;&amp;lt;baseAddress&amp;gt;0x00000000&amp;lt;/baseAddress&amp;gt; 
+      &amp;lt;addressBlock&amp;gt;
+        &amp;lt;offset&amp;gt;0x0&amp;lt;/offset&amp;gt;
+        &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+        &amp;lt;usage&amp;gt;registers&amp;lt;/usage&amp;gt;
+      &amp;lt;/addressBlock&amp;gt;
+      &amp;lt;registers&amp;gt;
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;DATA&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Data&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Reading from data returns the value present at the input ports. If the PIO core hardware is configured in output-only mode, reading from data returns an undefined value. Writing to data stores the value to a register that drives the output ports. If the PIO core hardware is configured in input-only mode, writing to data has no effect. If the PIO core hardware is in bidirectional mode, the registered value appears on an output port only when the corresponding bit in the direction register is set to 1 (output).&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x0&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;data&amp;lt;/name&amp;gt;
+           &amp;lt;description&amp;gt;Reads: Data value currently on PIO inputs. Writes: New value to drive on PIO outputs.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;DIRECTION&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Direction&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;The direction register controls the data direction for each PIO port, assuming the port is bidirectional. When bit n in direction is set to 1, port n drives out the value in the corresponding bit of the data register The direction register only exists when the PIO core hardware is configured in bidirectional mode. The mode (input, output, or bidirectional) is specified at system generation time, and cannot be changed at runtime. In input-only or output-only mode, the direction register does not exist. In this case, reading direction returns an undefined value, writing direction has no effect. After reset, all bits of direction are 0, so that all bidirectional I/O ports are configured as inputs. If those PIO ports are connected to device pins, the pins are held in a high-impedance state. In bi-directional mode, to change the direction of the PIO port, reprogram the direction register.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x4&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;direction&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Individual direction control for each I/O port. A value of 0 sets the direction to input; 1 sets the direction to output.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;IRQ_MASK&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Interrupt mask&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Setting a bit in the interruptmask register to 1 enables interrupts for the corresponding PIO input port. Interrupt behavior depends on the hardware configuration of the PIO core. The interruptmask register only exists when the hardware is configured to generate IRQs. If the core cannot generate IRQs, reading interruptmask returns an undefined value, and writing to interruptmask has no effect. After reset, all bits of interruptmask are zero, so that interrupts are disabled for all PIO ports.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x8&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;interruptmask&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;IRQ enable/disable for each input port. Setting a bit to 1 enables interrupts for the corresponding port.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;EDGE_CAP&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Edge capture&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Bit n in the edgecapture register is set to 1 whenever an edge is detected on input port n. An Avalon-MM master peripheral can read the edgecapture register to determine if an edge has occurred on any of the PIO input ports. If the option Enable bit-clearing for edge capture register is turned off, writing any value to the edgecapture register clears all bits in the register. Otherwise, writing a 1 to a particular bit in the register clears only that bit. The type of edge(s) to detect is fixed in hardware at system generation time. The edgecapture register only exists when the hardware is configured to capture edges. If the core is not configured to capture edges, reading from edgecapture returns an undefined value, and writing to edgecapture has no effect.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0xc&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;edgecapture&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Edge detection for each input port.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;
+         &amp;lt;name&amp;gt;SET_BIT&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Outset&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;You can use the outset register to set individual bits of the output port. For example, to set bit 6 of the output port, write 0x40 to the outset register. This register is only present when the option Enable individual bit set/clear output register is turned on.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x10&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;outset&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Specifies which bit of the output port to set.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;CLEAR_BITS&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Outclear&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;You can use the outclear register to clear individual bits of the output port. For example, writing 0x08 to the outclear register clears bit 3 of the output port. This register is only present when the option Enable individual bit set/clear output register is turned on.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x14&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;outclear&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Specifies which output bit to clear.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt;            
+    &amp;lt;/registers&amp;gt;
+   &amp;lt;/peripheral&amp;gt;
+  &amp;lt;/peripherals&amp;gt;
+&amp;lt;/device&amp;gt; &lt;/cmsisSrcFileContents&gt;
+                    &lt;addressGroup&gt;&lt;/addressGroup&gt;
+                    &lt;cmsisVars/&gt;
+                &lt;/cmsisInfo&gt;
             &lt;/interface&gt;
             &lt;interface&gt;
                 &lt;name&gt;external_connection&lt;/name&gt;
@@ -8908,7 +9282,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -9286,6 +9660,133 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                     &lt;/parameterValueMap&gt;
                 &lt;/parameters&gt;
+                &lt;cmsisInfo&gt;
+                    &lt;cmsisSrcFileContents&gt;&amp;lt;?xml version="1.0" encoding="utf-8"?&amp;gt;    
+&amp;lt;device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd" &amp;gt;
+  &amp;lt;peripherals&amp;gt;
+   &amp;lt;peripheral&amp;gt;
+      &amp;lt;name&amp;gt;altera_avalon_pio&amp;lt;/name&amp;gt;&amp;lt;baseAddress&amp;gt;0x00000000&amp;lt;/baseAddress&amp;gt; 
+      &amp;lt;addressBlock&amp;gt;
+        &amp;lt;offset&amp;gt;0x0&amp;lt;/offset&amp;gt;
+        &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+        &amp;lt;usage&amp;gt;registers&amp;lt;/usage&amp;gt;
+      &amp;lt;/addressBlock&amp;gt;
+      &amp;lt;registers&amp;gt;
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;DATA&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Data&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Reading from data returns the value present at the input ports. If the PIO core hardware is configured in output-only mode, reading from data returns an undefined value. Writing to data stores the value to a register that drives the output ports. If the PIO core hardware is configured in input-only mode, writing to data has no effect. If the PIO core hardware is in bidirectional mode, the registered value appears on an output port only when the corresponding bit in the direction register is set to 1 (output).&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x0&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;data&amp;lt;/name&amp;gt;
+           &amp;lt;description&amp;gt;Reads: Data value currently on PIO inputs. Writes: New value to drive on PIO outputs.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;DIRECTION&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Direction&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;The direction register controls the data direction for each PIO port, assuming the port is bidirectional. When bit n in direction is set to 1, port n drives out the value in the corresponding bit of the data register The direction register only exists when the PIO core hardware is configured in bidirectional mode. The mode (input, output, or bidirectional) is specified at system generation time, and cannot be changed at runtime. In input-only or output-only mode, the direction register does not exist. In this case, reading direction returns an undefined value, writing direction has no effect. After reset, all bits of direction are 0, so that all bidirectional I/O ports are configured as inputs. If those PIO ports are connected to device pins, the pins are held in a high-impedance state. In bi-directional mode, to change the direction of the PIO port, reprogram the direction register.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x4&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;direction&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Individual direction control for each I/O port. A value of 0 sets the direction to input; 1 sets the direction to output.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;IRQ_MASK&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Interrupt mask&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Setting a bit in the interruptmask register to 1 enables interrupts for the corresponding PIO input port. Interrupt behavior depends on the hardware configuration of the PIO core. The interruptmask register only exists when the hardware is configured to generate IRQs. If the core cannot generate IRQs, reading interruptmask returns an undefined value, and writing to interruptmask has no effect. After reset, all bits of interruptmask are zero, so that interrupts are disabled for all PIO ports.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x8&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;interruptmask&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;IRQ enable/disable for each input port. Setting a bit to 1 enables interrupts for the corresponding port.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;EDGE_CAP&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Edge capture&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Bit n in the edgecapture register is set to 1 whenever an edge is detected on input port n. An Avalon-MM master peripheral can read the edgecapture register to determine if an edge has occurred on any of the PIO input ports. If the option Enable bit-clearing for edge capture register is turned off, writing any value to the edgecapture register clears all bits in the register. Otherwise, writing a 1 to a particular bit in the register clears only that bit. The type of edge(s) to detect is fixed in hardware at system generation time. The edgecapture register only exists when the hardware is configured to capture edges. If the core is not configured to capture edges, reading from edgecapture returns an undefined value, and writing to edgecapture has no effect.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0xc&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;edgecapture&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Edge detection for each input port.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;
+         &amp;lt;name&amp;gt;SET_BIT&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Outset&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;You can use the outset register to set individual bits of the output port. For example, to set bit 6 of the output port, write 0x40 to the outset register. This register is only present when the option Enable individual bit set/clear output register is turned on.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x10&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;outset&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Specifies which bit of the output port to set.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;CLEAR_BITS&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Outclear&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;You can use the outclear register to clear individual bits of the output port. For example, writing 0x08 to the outclear register clears bit 3 of the output port. This register is only present when the option Enable individual bit set/clear output register is turned on.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x14&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;outclear&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Specifies which output bit to clear.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt;            
+    &amp;lt;/registers&amp;gt;
+   &amp;lt;/peripheral&amp;gt;
+  &amp;lt;/peripherals&amp;gt;
+&amp;lt;/device&amp;gt; &lt;/cmsisSrcFileContents&gt;
+                    &lt;addressGroup&gt;&lt;/addressGroup&gt;
+                    &lt;cmsisVars/&gt;
+                &lt;/cmsisInfo&gt;
             &lt;/interface&gt;
             &lt;interface&gt;
                 &lt;name&gt;external_connection&lt;/name&gt;
@@ -10061,7 +10562,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -10439,6 +10940,133 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                     &lt;/parameterValueMap&gt;
                 &lt;/parameters&gt;
+                &lt;cmsisInfo&gt;
+                    &lt;cmsisSrcFileContents&gt;&amp;lt;?xml version="1.0" encoding="utf-8"?&amp;gt;    
+&amp;lt;device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd" &amp;gt;
+  &amp;lt;peripherals&amp;gt;
+   &amp;lt;peripheral&amp;gt;
+      &amp;lt;name&amp;gt;altera_avalon_pio&amp;lt;/name&amp;gt;&amp;lt;baseAddress&amp;gt;0x00000000&amp;lt;/baseAddress&amp;gt; 
+      &amp;lt;addressBlock&amp;gt;
+        &amp;lt;offset&amp;gt;0x0&amp;lt;/offset&amp;gt;
+        &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+        &amp;lt;usage&amp;gt;registers&amp;lt;/usage&amp;gt;
+      &amp;lt;/addressBlock&amp;gt;
+      &amp;lt;registers&amp;gt;
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;DATA&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Data&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Reading from data returns the value present at the input ports. If the PIO core hardware is configured in output-only mode, reading from data returns an undefined value. Writing to data stores the value to a register that drives the output ports. If the PIO core hardware is configured in input-only mode, writing to data has no effect. If the PIO core hardware is in bidirectional mode, the registered value appears on an output port only when the corresponding bit in the direction register is set to 1 (output).&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x0&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;data&amp;lt;/name&amp;gt;
+           &amp;lt;description&amp;gt;Reads: Data value currently on PIO inputs. Writes: New value to drive on PIO outputs.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;DIRECTION&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Direction&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;The direction register controls the data direction for each PIO port, assuming the port is bidirectional. When bit n in direction is set to 1, port n drives out the value in the corresponding bit of the data register The direction register only exists when the PIO core hardware is configured in bidirectional mode. The mode (input, output, or bidirectional) is specified at system generation time, and cannot be changed at runtime. In input-only or output-only mode, the direction register does not exist. In this case, reading direction returns an undefined value, writing direction has no effect. After reset, all bits of direction are 0, so that all bidirectional I/O ports are configured as inputs. If those PIO ports are connected to device pins, the pins are held in a high-impedance state. In bi-directional mode, to change the direction of the PIO port, reprogram the direction register.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x4&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;direction&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Individual direction control for each I/O port. A value of 0 sets the direction to input; 1 sets the direction to output.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;IRQ_MASK&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Interrupt mask&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Setting a bit in the interruptmask register to 1 enables interrupts for the corresponding PIO input port. Interrupt behavior depends on the hardware configuration of the PIO core. The interruptmask register only exists when the hardware is configured to generate IRQs. If the core cannot generate IRQs, reading interruptmask returns an undefined value, and writing to interruptmask has no effect. After reset, all bits of interruptmask are zero, so that interrupts are disabled for all PIO ports.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x8&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;interruptmask&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;IRQ enable/disable for each input port. Setting a bit to 1 enables interrupts for the corresponding port.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;EDGE_CAP&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Edge capture&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Bit n in the edgecapture register is set to 1 whenever an edge is detected on input port n. An Avalon-MM master peripheral can read the edgecapture register to determine if an edge has occurred on any of the PIO input ports. If the option Enable bit-clearing for edge capture register is turned off, writing any value to the edgecapture register clears all bits in the register. Otherwise, writing a 1 to a particular bit in the register clears only that bit. The type of edge(s) to detect is fixed in hardware at system generation time. The edgecapture register only exists when the hardware is configured to capture edges. If the core is not configured to capture edges, reading from edgecapture returns an undefined value, and writing to edgecapture has no effect.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0xc&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;edgecapture&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Edge detection for each input port.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;
+         &amp;lt;name&amp;gt;SET_BIT&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Outset&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;You can use the outset register to set individual bits of the output port. For example, to set bit 6 of the output port, write 0x40 to the outset register. This register is only present when the option Enable individual bit set/clear output register is turned on.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x10&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;outset&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Specifies which bit of the output port to set.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;CLEAR_BITS&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Outclear&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;You can use the outclear register to clear individual bits of the output port. For example, writing 0x08 to the outclear register clears bit 3 of the output port. This register is only present when the option Enable individual bit set/clear output register is turned on.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x14&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;outclear&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Specifies which output bit to clear.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt;            
+    &amp;lt;/registers&amp;gt;
+   &amp;lt;/peripheral&amp;gt;
+  &amp;lt;/peripherals&amp;gt;
+&amp;lt;/device&amp;gt; &lt;/cmsisSrcFileContents&gt;
+                    &lt;addressGroup&gt;&lt;/addressGroup&gt;
+                    &lt;cmsisVars/&gt;
+                &lt;/cmsisInfo&gt;
             &lt;/interface&gt;
             &lt;interface&gt;
                 &lt;name&gt;external_connection&lt;/name&gt;
@@ -11214,7 +11842,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -11565,6 +12193,68 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                     &lt;/parameterValueMap&gt;
                 &lt;/parameters&gt;
+                &lt;cmsisInfo&gt;
+                    &lt;cmsisSrcFileContents&gt;&amp;lt;?xml version="1.0" encoding="utf-8"?&amp;gt;    
+&amp;lt;device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd" &amp;gt;
+  &amp;lt;peripherals&amp;gt;
+    &amp;lt;peripheral&amp;gt;
+      &amp;lt;name&amp;gt;altera_avalon_sysid&amp;lt;/name&amp;gt;&amp;lt;baseAddress&amp;gt;0x00000000&amp;lt;/baseAddress&amp;gt; 
+      &amp;lt;addressBlock&amp;gt;
+        &amp;lt;offset&amp;gt;0x0&amp;lt;/offset&amp;gt;
+        &amp;lt;size&amp;gt;8&amp;lt;/size&amp;gt;
+        &amp;lt;usage&amp;gt;registers&amp;lt;/usage&amp;gt;
+      &amp;lt;/addressBlock&amp;gt;
+      &amp;lt;registers&amp;gt;
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;ID&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;System ID&amp;lt;/displayName&amp;gt;
+            &amp;lt;description&amp;gt;A unique 32-bit value that is based on the contents of the QSys system. The id is similar to a check-sum value; QSys systems with different components, different configuration options, or both, produce different id values.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x0&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-only&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;${sysid_id_value}&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;id&amp;lt;/name&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-only&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;
+         &amp;lt;name&amp;gt;TIMESTAMP&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Time stamp&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;A unique 32-bit value that is based on the system generation time. The value is equivalent to the number of seconds after Jan. 1, 1970.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x4&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-only&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;${sysid_timestamp_value}&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;timestamp&amp;lt;/name&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-only&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt;            
+    &amp;lt;/registers&amp;gt;
+   &amp;lt;/peripheral&amp;gt;
+  &amp;lt;/peripherals&amp;gt;
+&amp;lt;/device&amp;gt; &lt;/cmsisSrcFileContents&gt;
+                    &lt;addressGroup&gt;&lt;/addressGroup&gt;
+                    &lt;cmsisVars&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;sysid_timestamp_value&lt;/key&gt;
+                            &lt;value&gt;0x0&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;sysid_id_value&lt;/key&gt;
+                            &lt;value&gt;0xdeadbeef&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/cmsisVars&gt;
+                &lt;/cmsisInfo&gt;
             &lt;/interface&gt;
         &lt;/interfaces&gt;
     &lt;/boundary&gt;
@@ -12125,7 +12815,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -12503,6 +13193,133 @@ https://fpgasoftware.intel.com/eula.-->
                         &lt;/entry&gt;
                     &lt;/parameterValueMap&gt;
                 &lt;/parameters&gt;
+                &lt;cmsisInfo&gt;
+                    &lt;cmsisSrcFileContents&gt;&amp;lt;?xml version="1.0" encoding="utf-8"?&amp;gt;    
+&amp;lt;device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd" &amp;gt;
+  &amp;lt;peripherals&amp;gt;
+   &amp;lt;peripheral&amp;gt;
+      &amp;lt;name&amp;gt;altera_avalon_pio&amp;lt;/name&amp;gt;&amp;lt;baseAddress&amp;gt;0x00000000&amp;lt;/baseAddress&amp;gt; 
+      &amp;lt;addressBlock&amp;gt;
+        &amp;lt;offset&amp;gt;0x0&amp;lt;/offset&amp;gt;
+        &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+        &amp;lt;usage&amp;gt;registers&amp;lt;/usage&amp;gt;
+      &amp;lt;/addressBlock&amp;gt;
+      &amp;lt;registers&amp;gt;
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;DATA&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Data&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Reading from data returns the value present at the input ports. If the PIO core hardware is configured in output-only mode, reading from data returns an undefined value. Writing to data stores the value to a register that drives the output ports. If the PIO core hardware is configured in input-only mode, writing to data has no effect. If the PIO core hardware is in bidirectional mode, the registered value appears on an output port only when the corresponding bit in the direction register is set to 1 (output).&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x0&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;data&amp;lt;/name&amp;gt;
+           &amp;lt;description&amp;gt;Reads: Data value currently on PIO inputs. Writes: New value to drive on PIO outputs.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;DIRECTION&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Direction&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;The direction register controls the data direction for each PIO port, assuming the port is bidirectional. When bit n in direction is set to 1, port n drives out the value in the corresponding bit of the data register The direction register only exists when the PIO core hardware is configured in bidirectional mode. The mode (input, output, or bidirectional) is specified at system generation time, and cannot be changed at runtime. In input-only or output-only mode, the direction register does not exist. In this case, reading direction returns an undefined value, writing direction has no effect. After reset, all bits of direction are 0, so that all bidirectional I/O ports are configured as inputs. If those PIO ports are connected to device pins, the pins are held in a high-impedance state. In bi-directional mode, to change the direction of the PIO port, reprogram the direction register.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x4&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;direction&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Individual direction control for each I/O port. A value of 0 sets the direction to input; 1 sets the direction to output.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;IRQ_MASK&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Interrupt mask&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Setting a bit in the interruptmask register to 1 enables interrupts for the corresponding PIO input port. Interrupt behavior depends on the hardware configuration of the PIO core. The interruptmask register only exists when the hardware is configured to generate IRQs. If the core cannot generate IRQs, reading interruptmask returns an undefined value, and writing to interruptmask has no effect. After reset, all bits of interruptmask are zero, so that interrupts are disabled for all PIO ports.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x8&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;interruptmask&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;IRQ enable/disable for each input port. Setting a bit to 1 enables interrupts for the corresponding port.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;EDGE_CAP&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Edge capture&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;Bit n in the edgecapture register is set to 1 whenever an edge is detected on input port n. An Avalon-MM master peripheral can read the edgecapture register to determine if an edge has occurred on any of the PIO input ports. If the option Enable bit-clearing for edge capture register is turned off, writing any value to the edgecapture register clears all bits in the register. Otherwise, writing a 1 to a particular bit in the register clears only that bit. The type of edge(s) to detect is fixed in hardware at system generation time. The edgecapture register only exists when the hardware is configured to capture edges. If the core is not configured to capture edges, reading from edgecapture returns an undefined value, and writing to edgecapture has no effect.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0xc&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;edgecapture&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Edge detection for each input port.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;read-write&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;
+         &amp;lt;name&amp;gt;SET_BIT&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Outset&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;You can use the outset register to set individual bits of the output port. For example, to set bit 6 of the output port, write 0x40 to the outset register. This register is only present when the option Enable individual bit set/clear output register is turned on.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x10&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;outset&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Specifies which bit of the output port to set.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt; 
+        &amp;lt;register&amp;gt;     
+         &amp;lt;name&amp;gt;CLEAR_BITS&amp;lt;/name&amp;gt;  
+         &amp;lt;displayName&amp;gt;Outclear&amp;lt;/displayName&amp;gt;
+         &amp;lt;description&amp;gt;You can use the outclear register to clear individual bits of the output port. For example, writing 0x08 to the outclear register clears bit 3 of the output port. This register is only present when the option Enable individual bit set/clear output register is turned on.&amp;lt;/description&amp;gt;
+         &amp;lt;addressOffset&amp;gt;0x14&amp;lt;/addressOffset&amp;gt;
+         &amp;lt;size&amp;gt;32&amp;lt;/size&amp;gt;
+         &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+         &amp;lt;resetValue&amp;gt;0x0&amp;lt;/resetValue&amp;gt;
+         &amp;lt;resetMask&amp;gt;0xffffffff&amp;lt;/resetMask&amp;gt; 
+         &amp;lt;fields&amp;gt;
+           &amp;lt;field&amp;gt;&amp;lt;name&amp;gt;outclear&amp;lt;/name&amp;gt;
+            &amp;lt;description&amp;gt;Specifies which output bit to clear.&amp;lt;/description&amp;gt;
+            &amp;lt;bitOffset&amp;gt;0x0&amp;lt;/bitOffset&amp;gt;
+            &amp;lt;bitWidth&amp;gt;32&amp;lt;/bitWidth&amp;gt;
+            &amp;lt;access&amp;gt;write-only&amp;lt;/access&amp;gt;
+        &amp;lt;/field&amp;gt;
+       &amp;lt;/fields&amp;gt;
+     &amp;lt;/register&amp;gt;            
+    &amp;lt;/registers&amp;gt;
+   &amp;lt;/peripheral&amp;gt;
+  &amp;lt;/peripherals&amp;gt;
+&amp;lt;/device&amp;gt; &lt;/cmsisSrcFileContents&gt;
+                    &lt;addressGroup&gt;&lt;/addressGroup&gt;
+                    &lt;cmsisVars/&gt;
+                &lt;/cmsisInfo&gt;
             &lt;/interface&gt;
             &lt;interface&gt;
                 &lt;name&gt;external_connection&lt;/name&gt;
@@ -13278,7 +14095,7 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="transformParameters" type="string">
@@ -13292,7 +14109,7 @@ https://fpgasoftware.intel.com/eula.-->
       </altera:module>
     </altera:modules>
     <altera:connections>
-      <altera:connection altera:kind="avalon" altera:version="25.3" altera:start="mm_bridge.m0" altera:end="sys_id.control_slave">
+      <altera:connection altera:kind="avalon" altera:version="26.1" altera:start="mm_bridge.m0" altera:end="sys_id.control_slave">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0000"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -13303,6 +14120,7 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableEccProtection" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableInstrumentation" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableOutOfOrderSupport" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.fifoDepth" altera:parameter_value="8"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.insertDefaultSlave" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectResetSource" altera:parameter_value="DEFAULT"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectType" altera:parameter_value="STANDARD"></altera:connection_parameter>
@@ -13310,10 +14128,11 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.optimizeRdFifoSize" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.piplineType" altera:parameter_value="PIPELINE_STAGE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.responseFifoType" altera:parameter_value="REGISTER_BASED"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.splitCommandsFor4KBoundary" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="avalon" altera:version="25.3" altera:start="mm_bridge.m0" altera:end="pb.s1">
+      <altera:connection altera:kind="avalon" altera:version="26.1" altera:start="mm_bridge.m0" altera:end="pb.s1">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0010"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -13324,6 +14143,7 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableEccProtection" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableInstrumentation" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableOutOfOrderSupport" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.fifoDepth" altera:parameter_value="8"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.insertDefaultSlave" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectResetSource" altera:parameter_value="DEFAULT"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectType" altera:parameter_value="STANDARD"></altera:connection_parameter>
@@ -13331,10 +14151,11 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.optimizeRdFifoSize" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.piplineType" altera:parameter_value="PIPELINE_STAGE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.responseFifoType" altera:parameter_value="REGISTER_BASED"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.splitCommandsFor4KBoundary" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="avalon" altera:version="25.3" altera:start="mm_bridge.m0" altera:end="dipsw.s1">
+      <altera:connection altera:kind="avalon" altera:version="26.1" altera:start="mm_bridge.m0" altera:end="dipsw.s1">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0020"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -13345,6 +14166,7 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableEccProtection" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableInstrumentation" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableOutOfOrderSupport" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.fifoDepth" altera:parameter_value="8"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.insertDefaultSlave" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectResetSource" altera:parameter_value="DEFAULT"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectType" altera:parameter_value="STANDARD"></altera:connection_parameter>
@@ -13352,10 +14174,11 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.optimizeRdFifoSize" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.piplineType" altera:parameter_value="PIPELINE_STAGE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.responseFifoType" altera:parameter_value="REGISTER_BASED"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.splitCommandsFor4KBoundary" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="avalon" altera:version="25.3" altera:start="mm_bridge.m0" altera:end="rgb_led0.s1">
+      <altera:connection altera:kind="avalon" altera:version="26.1" altera:start="mm_bridge.m0" altera:end="rgb_led0.s1">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0030"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -13366,6 +14189,7 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableEccProtection" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableInstrumentation" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableOutOfOrderSupport" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.fifoDepth" altera:parameter_value="8"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.insertDefaultSlave" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectResetSource" altera:parameter_value="DEFAULT"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectType" altera:parameter_value="STANDARD"></altera:connection_parameter>
@@ -13373,10 +14197,11 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.optimizeRdFifoSize" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.piplineType" altera:parameter_value="PIPELINE_STAGE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.responseFifoType" altera:parameter_value="REGISTER_BASED"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.splitCommandsFor4KBoundary" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="avalon" altera:version="25.3" altera:start="mm_bridge.m0" altera:end="rgb_led1.s1">
+      <altera:connection altera:kind="avalon" altera:version="26.1" altera:start="mm_bridge.m0" altera:end="rgb_led1.s1">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0040"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -13387,6 +14212,7 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableEccProtection" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableInstrumentation" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableOutOfOrderSupport" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.fifoDepth" altera:parameter_value="8"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.insertDefaultSlave" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectResetSource" altera:parameter_value="DEFAULT"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectType" altera:parameter_value="STANDARD"></altera:connection_parameter>
@@ -13394,10 +14220,11 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.optimizeRdFifoSize" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.piplineType" altera:parameter_value="PIPELINE_STAGE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.responseFifoType" altera:parameter_value="REGISTER_BASED"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.splitCommandsFor4KBoundary" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="avalon" altera:version="25.3" altera:start="mm_bridge.m0" altera:end="rgb_led2.s1">
+      <altera:connection altera:kind="avalon" altera:version="26.1" altera:start="mm_bridge.m0" altera:end="rgb_led2.s1">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0050"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -13408,6 +14235,7 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableEccProtection" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableInstrumentation" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableOutOfOrderSupport" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.fifoDepth" altera:parameter_value="8"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.insertDefaultSlave" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectResetSource" altera:parameter_value="DEFAULT"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectType" altera:parameter_value="STANDARD"></altera:connection_parameter>
@@ -13415,10 +14243,11 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.optimizeRdFifoSize" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.piplineType" altera:parameter_value="PIPELINE_STAGE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.responseFifoType" altera:parameter_value="REGISTER_BASED"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.splitCommandsFor4KBoundary" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="avalon" altera:version="25.3" altera:start="mm_bridge.m0" altera:end="rgb_led3.s1">
+      <altera:connection altera:kind="avalon" altera:version="26.1" altera:start="mm_bridge.m0" altera:end="rgb_led3.s1">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0060"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -13429,6 +14258,7 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableEccProtection" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableInstrumentation" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableOutOfOrderSupport" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.fifoDepth" altera:parameter_value="8"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.insertDefaultSlave" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectResetSource" altera:parameter_value="DEFAULT"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectType" altera:parameter_value="STANDARD"></altera:connection_parameter>
@@ -13436,10 +14266,11 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.optimizeRdFifoSize" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.piplineType" altera:parameter_value="PIPELINE_STAGE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.responseFifoType" altera:parameter_value="REGISTER_BASED"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.splitCommandsFor4KBoundary" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="avalon" altera:version="25.3" altera:start="mm_bridge.m0" altera:end="usb_hub_rst.s1">
+      <altera:connection altera:kind="avalon" altera:version="26.1" altera:start="mm_bridge.m0" altera:end="usb_hub_rst.s1">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0070"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -13450,6 +14281,7 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableEccProtection" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableInstrumentation" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableOutOfOrderSupport" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.fifoDepth" altera:parameter_value="8"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.insertDefaultSlave" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectResetSource" altera:parameter_value="DEFAULT"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectType" altera:parameter_value="STANDARD"></altera:connection_parameter>
@@ -13457,10 +14289,11 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.optimizeRdFifoSize" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.piplineType" altera:parameter_value="PIPELINE_STAGE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.responseFifoType" altera:parameter_value="REGISTER_BASED"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.splitCommandsFor4KBoundary" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="avalon" altera:version="25.3" altera:start="mm_bridge.m0" altera:end="eth1_rst.s1">
+      <altera:connection altera:kind="avalon" altera:version="26.1" altera:start="mm_bridge.m0" altera:end="eth1_rst.s1">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0080"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -13471,6 +14304,7 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableEccProtection" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableInstrumentation" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.enableOutOfOrderSupport" altera:parameter_value="FALSE"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.fifoDepth" altera:parameter_value="8"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.insertDefaultSlave" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectResetSource" altera:parameter_value="DEFAULT"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.interconnectType" altera:parameter_value="STANDARD"></altera:connection_parameter>
@@ -13478,30 +14312,31 @@ https://fpgasoftware.intel.com/eula.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.optimizeRdFifoSize" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.piplineType" altera:parameter_value="PIPELINE_STAGE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.responseFifoType" altera:parameter_value="REGISTER_BASED"></altera:connection_parameter>
+        <altera:connection_parameter altera:parameter_name="qsys_mm.splitCommandsFor4KBoundary" altera:parameter_value="FALSE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="reset_in.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="sys_id.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="mm_bridge.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="pb.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="dipsw.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="rgb_led0.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="rgb_led1.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="rgb_led2.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="rgb_led3.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="usb_hub_rst.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="25.3" altera:start="clock_in.out_clk" altera:end="eth1_rst.clk"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="sys_id.reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="mm_bridge.reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="pb.reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="dipsw.reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="rgb_led0.reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="rgb_led1.reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="rgb_led2.reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="rgb_led3.reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="usb_hub_rst.reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="25.3" altera:start="reset_in.out_reset" altera:end="eth1_rst.reset"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="reset_in.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="sys_id.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="mm_bridge.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="pb.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="dipsw.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="rgb_led0.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="rgb_led1.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="rgb_led2.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="rgb_led3.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="usb_hub_rst.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="clock_in.out_clk" altera:end="eth1_rst.clk"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="sys_id.reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="mm_bridge.reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="pb.reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="dipsw.reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="rgb_led0.reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="rgb_led1.reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="rgb_led2.reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="rgb_led3.reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="usb_hub_rst.reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="reset_in.out_reset" altera:end="eth1_rst.reset"></altera:connection>
     </altera:connections>
     <altera:interconnect_requirements></altera:interconnect_requirements>
     <altera:wire_level_connections></altera:wire_level_connections>
@@ -13533,43 +14368,43 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:busInterfaces>
           <ipxact:busInterface>
             <ipxact:name>sys_id.control_slave</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="25.3"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.1"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>pb.s1</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="25.3"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.1"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>dipsw.s1</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="25.3"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.1"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>rgb_led0.s1</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="25.3"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.1"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>rgb_led1.s1</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="25.3"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.1"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>rgb_led2.s1</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="25.3"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.1"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>rgb_led3.s1</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="25.3"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.1"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>usb_hub_rst.s1</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="25.3"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.1"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>eth1_rst.s1</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="25.3"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.1"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>mm_bridge.m0</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="25.3"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.1"></ipxact:busType>
             <ipxact:master>
               <ipxact:addressSpaceRef addressSpaceRef="mm_bridge.m0">
                 <ipxact:baseAddress>0x0000</ipxact:baseAddress>

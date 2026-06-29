@@ -1,17 +1,15 @@
 <?xml version="1.0" ?>
-<!--Your use of Intel Corporation's design tools, logic functions 
+<!--Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Intel Program License 
-Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.-->
+Altera and sold by Altera or its authorized distributors.-->
 <ipxact:design xmlns:altera="http://www.altera.com/XMLSchema/IPXact2014/extensions" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
   <ipxact:vendor>Altera Corporation</ipxact:vendor>
   <ipxact:library>board_subsystem</ipxact:library>
@@ -368,7 +366,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;originalModuleInfo&gt;
         &lt;className&gt;altera_clock_bridge&lt;/className&gt;
         &lt;version&gt;19.2.0&lt;/version&gt;
-        &lt;displayName&gt;Clock Bridge Intel FPGA IP&lt;/displayName&gt;
+        &lt;displayName&gt;Clock Bridge IP&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
         &lt;descriptors&gt;
@@ -425,6 +423,13 @@ https://fpgasoftware.intel.com/eula.-->
         &lt;/connPtSystemInfos&gt;
     &lt;/systemInfos&gt;
 &lt;/componentDefinition&gt;</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="cpuHashInfo" type="string">
+              <ipxact:name>cpuHashInfo</ipxact:name>
+              <ipxact:displayName>CPU Hash Info</ipxact:displayName>
+              <ipxact:value>&lt;cpuHashInfoDefinition&gt;
+    &lt;cpuHashInfoMap/&gt;
+&lt;/cpuHashInfoDefinition&gt;</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="cpuInfo" type="string">
               <ipxact:name>cpuInfo</ipxact:name>
@@ -568,30 +573,35 @@ https://fpgasoftware.intel.com/eula.-->
             &lt;fileSetFixedName&gt;board_subsystem_clock_in&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;QUARTUS_SYNTH&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_clock_in&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_clock_in&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;SIM_VERILOG&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_clock_in&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_clock_in&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;SIM_VHDL&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_clock_in&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_clock_in&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;CDC&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_clock_in&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_clock_in&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;CDC_VHDL&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
     &lt;/fileSets&gt;
 &lt;/generationInfoDefinition&gt;</ipxact:value>
@@ -625,11 +635,17 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="transformParameters" type="string">
+              <ipxact:name>transformParameters</ipxact:name>
+              <ipxact:displayName>Transform Parameters</ipxact:displayName>
+              <ipxact:value>&lt;transformParameterDescriptorDefinitionList/&gt;</ipxact:value>
             </ipxact:parameter>
           </ipxact:parameters>
         </altera:altera_module_parameters>
+        <altera:altera_ecc_parameter_mappings altera:parentModule=""></altera:altera_ecc_parameter_mappings>
       </altera:module>
       <altera:module altera:enabled="true" altera:auto_export="false">
         <altera:entity_info>
@@ -692,8 +708,8 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;/boundary&gt;
     &lt;originalModuleInfo&gt;
         &lt;className&gt;intel_user_rst_clkgate&lt;/className&gt;
-        &lt;version&gt;1.0.0&lt;/version&gt;
-        &lt;displayName&gt;Agilex Reset Release Intel FPGA IP&lt;/displayName&gt;
+        &lt;version&gt;1.0.1&lt;/version&gt;
+        &lt;displayName&gt;Reset Release IP&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
         &lt;descriptors&gt;
@@ -709,6 +725,13 @@ https://fpgasoftware.intel.com/eula.-->
         &lt;connPtSystemInfos/&gt;
     &lt;/systemInfos&gt;
 &lt;/componentDefinition&gt;</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="cpuHashInfo" type="string">
+              <ipxact:name>cpuHashInfo</ipxact:name>
+              <ipxact:displayName>CPU Hash Info</ipxact:displayName>
+              <ipxact:value>&lt;cpuHashInfoDefinition&gt;
+    &lt;cpuHashInfoMap/&gt;
+&lt;/cpuHashInfoDefinition&gt;</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="cpuInfo" type="string">
               <ipxact:name>cpuInfo</ipxact:name>
@@ -771,30 +794,35 @@ https://fpgasoftware.intel.com/eula.-->
             &lt;fileSetFixedName&gt;board_subsystem_intel_user_rst_clkgate_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;QUARTUS_SYNTH&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_intel_user_rst_clkgate_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_intel_user_rst_clkgate_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;SIM_VERILOG&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_intel_user_rst_clkgate_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_intel_user_rst_clkgate_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;SIM_VHDL&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_intel_user_rst_clkgate_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_intel_user_rst_clkgate_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;CDC&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_intel_user_rst_clkgate_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_intel_user_rst_clkgate_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;CDC_VHDL&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
     &lt;/fileSets&gt;
 &lt;/generationInfoDefinition&gt;</ipxact:value>
@@ -828,11 +856,17 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="transformParameters" type="string">
+              <ipxact:name>transformParameters</ipxact:name>
+              <ipxact:displayName>Transform Parameters</ipxact:displayName>
+              <ipxact:value>&lt;transformParameterDescriptorDefinitionList/&gt;</ipxact:value>
             </ipxact:parameter>
           </ipxact:parameters>
         </altera:altera_module_parameters>
+        <altera:altera_ecc_parameter_mappings altera:parentModule=""></altera:altera_ecc_parameter_mappings>
       </altera:module>
       <altera:module altera:enabled="true" altera:auto_export="false">
         <altera:entity_info>
@@ -963,7 +997,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;originalModuleInfo&gt;
         &lt;className&gt;altera_reset_bridge&lt;/className&gt;
         &lt;version&gt;19.2.0&lt;/version&gt;
-        &lt;displayName&gt;Reset Bridge Intel FPGA IP&lt;/displayName&gt;
+        &lt;displayName&gt;Reset Bridge IP&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
         &lt;descriptors&gt;
@@ -994,6 +1028,13 @@ https://fpgasoftware.intel.com/eula.-->
         &lt;/connPtSystemInfos&gt;
     &lt;/systemInfos&gt;
 &lt;/componentDefinition&gt;</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="cpuHashInfo" type="string">
+              <ipxact:name>cpuHashInfo</ipxact:name>
+              <ipxact:displayName>CPU Hash Info</ipxact:displayName>
+              <ipxact:value>&lt;cpuHashInfoDefinition&gt;
+    &lt;cpuHashInfoMap/&gt;
+&lt;/cpuHashInfoDefinition&gt;</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="cpuInfo" type="string">
               <ipxact:name>cpuInfo</ipxact:name>
@@ -1123,30 +1164,35 @@ https://fpgasoftware.intel.com/eula.-->
             &lt;fileSetFixedName&gt;board_subsystem_reset_bridge_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;QUARTUS_SYNTH&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_reset_bridge_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_reset_bridge_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;SIM_VERILOG&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_reset_bridge_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_reset_bridge_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;SIM_VHDL&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_reset_bridge_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_reset_bridge_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;CDC&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_reset_bridge_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_reset_bridge_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;CDC_VHDL&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
     &lt;/fileSets&gt;
 &lt;/generationInfoDefinition&gt;</ipxact:value>
@@ -1180,11 +1226,17 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="transformParameters" type="string">
+              <ipxact:name>transformParameters</ipxact:name>
+              <ipxact:displayName>Transform Parameters</ipxact:displayName>
+              <ipxact:value>&lt;transformParameterDescriptorDefinitionList/&gt;</ipxact:value>
             </ipxact:parameter>
           </ipxact:parameters>
         </altera:altera_module_parameters>
+        <altera:altera_ecc_parameter_mappings altera:parentModule=""></altera:altera_ecc_parameter_mappings>
       </altera:module>
       <altera:module altera:enabled="true" altera:auto_export="false">
         <altera:entity_info>
@@ -1361,6 +1413,13 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;/systemInfos&gt;
 &lt;/componentDefinition&gt;</ipxact:value>
             </ipxact:parameter>
+            <ipxact:parameter parameterId="cpuHashInfo" type="string">
+              <ipxact:name>cpuHashInfo</ipxact:name>
+              <ipxact:displayName>CPU Hash Info</ipxact:displayName>
+              <ipxact:value>&lt;cpuHashInfoDefinition&gt;
+    &lt;cpuHashInfoMap/&gt;
+&lt;/cpuHashInfoDefinition&gt;</ipxact:value>
+            </ipxact:parameter>
             <ipxact:parameter parameterId="cpuInfo" type="string">
               <ipxact:name>cpuInfo</ipxact:name>
               <ipxact:displayName>Cpu Info</ipxact:displayName>
@@ -1525,30 +1584,35 @@ https://fpgasoftware.intel.com/eula.-->
             &lt;fileSetFixedName&gt;board_subsystem_intel_vip_reset_gen_block_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;QUARTUS_SYNTH&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_intel_vip_reset_gen_block_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_intel_vip_reset_gen_block_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;SIM_VERILOG&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_intel_vip_reset_gen_block_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_intel_vip_reset_gen_block_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;SIM_VHDL&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_intel_vip_reset_gen_block_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_intel_vip_reset_gen_block_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;CDC&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_intel_vip_reset_gen_block_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_intel_vip_reset_gen_block_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;CDC_VHDL&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
     &lt;/fileSets&gt;
 &lt;/generationInfoDefinition&gt;</ipxact:value>
@@ -1582,11 +1646,17 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="transformParameters" type="string">
+              <ipxact:name>transformParameters</ipxact:name>
+              <ipxact:displayName>Transform Parameters</ipxact:displayName>
+              <ipxact:value>&lt;transformParameterDescriptorDefinitionList/&gt;</ipxact:value>
             </ipxact:parameter>
           </ipxact:parameters>
         </altera:altera_module_parameters>
+        <altera:altera_ecc_parameter_mappings altera:parentModule=""></altera:altera_ecc_parameter_mappings>
       </altera:module>
       <altera:module altera:enabled="true" altera:auto_export="false">
         <altera:entity_info>
@@ -1745,7 +1815,7 @@ https://fpgasoftware.intel.com/eula.-->
     &lt;originalModuleInfo&gt;
         &lt;className&gt;altera_reset_controller&lt;/className&gt;
         &lt;version&gt;19.2.4&lt;/version&gt;
-        &lt;displayName&gt;Merlin Reset Controller Intel FPGA IP&lt;/displayName&gt;
+        &lt;displayName&gt;Merlin Reset Controller IP&lt;/displayName&gt;
     &lt;/originalModuleInfo&gt;
     &lt;systemInfoParameterDescriptors&gt;
         &lt;descriptors/&gt;
@@ -1754,6 +1824,13 @@ https://fpgasoftware.intel.com/eula.-->
         &lt;connPtSystemInfos/&gt;
     &lt;/systemInfos&gt;
 &lt;/componentDefinition&gt;</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="cpuHashInfo" type="string">
+              <ipxact:name>cpuHashInfo</ipxact:name>
+              <ipxact:displayName>CPU Hash Info</ipxact:displayName>
+              <ipxact:value>&lt;cpuHashInfoDefinition&gt;
+    &lt;cpuHashInfoMap/&gt;
+&lt;/cpuHashInfoDefinition&gt;</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="cpuInfo" type="string">
               <ipxact:name>cpuInfo</ipxact:name>
@@ -1911,30 +1988,35 @@ https://fpgasoftware.intel.com/eula.-->
             &lt;fileSetFixedName&gt;board_subsystem_reset_controller_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;QUARTUS_SYNTH&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_reset_controller_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_reset_controller_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;SIM_VERILOG&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_reset_controller_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_reset_controller_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;SIM_VHDL&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_reset_controller_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_reset_controller_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;CDC&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
         &lt;fileSet&gt;
             &lt;fileSetName&gt;board_subsystem_reset_controller_0&lt;/fileSetName&gt;
             &lt;fileSetFixedName&gt;board_subsystem_reset_controller_0&lt;/fileSetFixedName&gt;
             &lt;fileSetKind&gt;CDC_VHDL&lt;/fileSetKind&gt;
             &lt;fileSetFiles/&gt;
+            &lt;fileSetFileChangeDefs/&gt;
         &lt;/fileSet&gt;
     &lt;/fileSets&gt;
 &lt;/generationInfoDefinition&gt;</ipxact:value>
@@ -2185,26 +2267,33 @@ https://fpgasoftware.intel.com/eula.-->
             </ipxact:parameter>
             <ipxact:parameter parameterId="svInterfaceDefinition" type="string">
               <ipxact:name>svInterfaceDefinition</ipxact:name>
-              <ipxact:displayName>System Verilog Interface definition</ipxact:displayName>
+              <ipxact:displayName>SystemVerilog Interface definition</ipxact:displayName>
               <ipxact:value></ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="transformParameters" type="string">
+              <ipxact:name>transformParameters</ipxact:name>
+              <ipxact:displayName>Transform Parameters</ipxact:displayName>
+              <ipxact:value>&lt;transformParameterDescriptorDefinitionList/&gt;</ipxact:value>
             </ipxact:parameter>
           </ipxact:parameters>
         </altera:altera_module_parameters>
+        <altera:altera_ecc_parameter_mappings altera:parentModule=""></altera:altera_ecc_parameter_mappings>
       </altera:module>
     </altera:modules>
     <altera:connections>
-      <altera:connection altera:kind="clock" altera:version="24.3" altera:start="board_clk_bridge.out_clk" altera:end="board_init_reset_bridge.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="24.3" altera:start="board_clk_bridge.out_clk" altera:end="board_pb_reset_generator.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="24.3" altera:start="board_clk_bridge.out_clk" altera:end="board_reset_controller.clk"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="24.3" altera:start="board_init_generator.ninit_done" altera:end="board_init_reset_bridge.in_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="24.3" altera:start="board_init_reset_bridge.out_reset" altera:end="board_reset_controller.reset_in1"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="24.3" altera:start="board_pb_reset_generator.reset" altera:end="board_reset_controller.reset_in0"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="board_clk_bridge.out_clk" altera:end="board_init_reset_bridge.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="board_clk_bridge.out_clk" altera:end="board_pb_reset_generator.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="board_clk_bridge.out_clk" altera:end="board_reset_controller.clk"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="board_init_generator.ninit_done" altera:end="board_init_reset_bridge.in_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="board_init_reset_bridge.out_reset" altera:end="board_reset_controller.reset_in1"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="board_pb_reset_generator.reset" altera:end="board_reset_controller.reset_in0"></altera:connection>
     </altera:connections>
     <altera:interconnect_requirements></altera:interconnect_requirements>
     <altera:wire_level_connections></altera:wire_level_connections>
     <altera:hdl_parameters></altera:hdl_parameters>
     <altera:hdl_parameter_mappings></altera:hdl_parameter_mappings>
     <altera:preserved_ports_for_debug></altera:preserved_ports_for_debug>
+    <altera:altera_group_hierarchy_contents></altera:altera_group_hierarchy_contents>
     <altera:altera_interface_boundary>
       <altera:interface_mapping altera:name="i_clk" altera:internal="board_clk_bridge.in_clk" altera:type="clock" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="i_reset_pb_n" altera:internal="board_pb_reset_generator.pb_resetn" altera:type="reset" altera:dir="end"></altera:interface_mapping>
