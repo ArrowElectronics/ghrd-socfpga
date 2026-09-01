@@ -12,8 +12,8 @@ the sole purpose of programming logic devices manufactured by
 Altera and sold by Altera or its authorized distributors.-->
 <ipxact:component xmlns:altera="http://www.altera.com/XMLSchema/IPXact2014/extensions" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
   <ipxact:vendor>Intel Corporation</ipxact:vendor>
-  <ipxact:library>emif_subsystem_clock_in</ipxact:library>
-  <ipxact:name>clock_in</ipxact:name>
+  <ipxact:library>hdmi_clock_bridge</ipxact:library>
+  <ipxact:name>hdmi_clock_bridge</ipxact:name>
   <ipxact:version>19.2.0</ipxact:version>
   <ipxact:busInterfaces>
     <ipxact:busInterface>
@@ -81,7 +81,7 @@ Altera and sold by Altera or its authorized distributors.-->
         <ipxact:parameter parameterId="clockRate" type="longint">
           <ipxact:name>clockRate</ipxact:name>
           <ipxact:displayName>Clock rate</ipxact:displayName>
-          <ipxact:value>200000000</ipxact:value>
+          <ipxact:value>148529412</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="clockRateKnown" type="bit">
           <ipxact:name>clockRateKnown</ipxact:name>
@@ -151,7 +151,7 @@ Altera and sold by Altera or its authorized distributors.-->
   <ipxact:vendorExtensions>
     <altera:entity_info>
       <ipxact:vendor>Intel Corporation</ipxact:vendor>
-      <ipxact:library>emif_subsystem_clock_in</ipxact:library>
+      <ipxact:library>hdmi_clock_bridge</ipxact:library>
       <ipxact:name>altera_clock_bridge</ipxact:name>
       <ipxact:version>19.2.0</ipxact:version>
     </altera:entity_info>
@@ -160,12 +160,12 @@ Altera and sold by Altera or its authorized distributors.-->
         <ipxact:parameter parameterId="DERIVED_CLOCK_RATE" type="longint">
           <ipxact:name>DERIVED_CLOCK_RATE</ipxact:name>
           <ipxact:displayName>Derived clock rate</ipxact:displayName>
-          <ipxact:value>200000000</ipxact:value>
+          <ipxact:value>148529412</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="EXPLICIT_CLOCK_RATE" type="longint">
           <ipxact:name>EXPLICIT_CLOCK_RATE</ipxact:name>
           <ipxact:displayName>Explicit clock rate</ipxact:displayName>
-          <ipxact:value>200000000</ipxact:value>
+          <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="NUM_CLOCK_OUTPUTS" type="int">
           <ipxact:name>NUM_CLOCK_OUTPUTS</ipxact:name>
@@ -194,7 +194,7 @@ Altera and sold by Altera or its authorized distributors.-->
         <ipxact:parameter parameterId="deviceSpeedGrade" type="string">
           <ipxact:name>deviceSpeedGrade</ipxact:name>
           <ipxact:displayName>Device Speed Grade</ipxact:displayName>
-          <ipxact:value>4</ipxact:value>
+          <ipxact:value>6</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="generationId" type="int">
           <ipxact:name>generationId</ipxact:name>
@@ -214,7 +214,7 @@ Altera and sold by Altera or its authorized distributors.-->
          type = "String";
       }
    }
-   element clock_in
+   element hdmi_clock_bridge
    {
    }
 }
@@ -290,7 +290,7 @@ Altera and sold by Altera or its authorized distributors.-->
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;clockRate&lt;/key&gt;
-                        &lt;value&gt;200000000&lt;/value&gt;
+                        &lt;value&gt;148529412&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;clockRateKnown&lt;/key&gt;
@@ -321,7 +321,7 @@ Altera and sold by Altera or its authorized distributors.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                        &lt;value&gt;200000000&lt;/value&gt;
+                        &lt;value&gt;148529412&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;
@@ -335,7 +335,7 @@ Altera and sold by Altera or its authorized distributors.-->
                 &lt;consumedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_RATE&lt;/key&gt;
-                        &lt;value&gt;200000000&lt;/value&gt;
+                        &lt;value&gt;148529412&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/consumedSystemInfos&gt;
             &lt;/value&gt;
@@ -356,10 +356,10 @@ Altera and sold by Altera or its authorized distributors.-->
       </ipxact:parameters>
     </altera:altera_system_parameters>
     <altera:altera_interface_boundary>
-      <altera:interface_mapping altera:name="in_clk" altera:internal="clock_in.in_clk" altera:type="clock" altera:dir="end">
+      <altera:interface_mapping altera:name="in_clk" altera:internal="hdmi_clock_bridge.in_clk" altera:type="clock" altera:dir="end">
         <altera:port_mapping altera:name="in_clk" altera:internal="in_clk"></altera:port_mapping>
       </altera:interface_mapping>
-      <altera:interface_mapping altera:name="out_clk" altera:internal="clock_in.out_clk" altera:type="clock" altera:dir="start">
+      <altera:interface_mapping altera:name="out_clk" altera:internal="hdmi_clock_bridge.out_clk" altera:type="clock" altera:dir="start">
         <altera:port_mapping altera:name="out_clk" altera:internal="out_clk"></altera:port_mapping>
       </altera:interface_mapping>
     </altera:altera_interface_boundary>

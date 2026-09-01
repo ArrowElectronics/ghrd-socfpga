@@ -1983,7 +1983,7 @@ Altera and sold by Altera or its authorized distributors.-->
         <ipxact:parameter parameterId="SYSINFO_DEVICE" type="string">
           <ipxact:name>SYSINFO_DEVICE</ipxact:name>
           <ipxact:displayName>SYSINFO_DEVICE</ipxact:displayName>
-          <ipxact:value>A5ED065BB32AE4SR0</ipxact:value>
+          <ipxact:value>A5ED065AB32AE1V</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="SYSINFO_DEVICE_FAMILY" type="string">
           <ipxact:name>SYSINFO_DEVICE_FAMILY</ipxact:name>
@@ -1993,12 +1993,12 @@ Altera and sold by Altera or its authorized distributors.-->
         <ipxact:parameter parameterId="SYSINFO_DEVICE_SPEEDGRADE" type="string">
           <ipxact:name>SYSINFO_DEVICE_SPEEDGRADE</ipxact:name>
           <ipxact:displayName>SYSINFO_DEVICE_SPEEDGRADE</ipxact:displayName>
-          <ipxact:value>4</ipxact:value>
+          <ipxact:value>1</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="SYSINFO_DEVICE_DIE_REVISIONS" type="string">
           <ipxact:name>SYSINFO_DEVICE_DIE_REVISIONS</ipxact:name>
           <ipxact:displayName>SYSINFO_DEVICE_DIE_REVISIONS</ipxact:displayName>
-          <ipxact:value>MAIN_SM7_REVA</ipxact:value>
+          <ipxact:value>MAIN_SM7_REVB</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="SYSINFO_DEVICE_TEMPERATURE_GRADE" type="string">
           <ipxact:name>SYSINFO_DEVICE_TEMPERATURE_GRADE</ipxact:name>
@@ -2008,27 +2008,27 @@ Altera and sold by Altera or its authorized distributors.-->
         <ipxact:parameter parameterId="SYSINFO_DEVICE_POWER_MODEL" type="string">
           <ipxact:name>SYSINFO_DEVICE_POWER_MODEL</ipxact:name>
           <ipxact:displayName>SYSINFO_DEVICE_POWER_MODEL</ipxact:displayName>
-          <ipxact:value>STANDARD_POWER_FIXED</ipxact:value>
+          <ipxact:value>STANDARD_POWER</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="SYSINFO_SUPPORTS_VID" type="string">
           <ipxact:name>SYSINFO_SUPPORTS_VID</ipxact:name>
           <ipxact:displayName>SYSINFO_SUPPORTS_VID</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
+          <ipxact:value>1</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="SYSINFO_DEVICE_IOBANK_REVISION" type="string">
           <ipxact:name>SYSINFO_DEVICE_IOBANK_REVISION</ipxact:name>
           <ipxact:displayName>SYSINFO_DEVICE_IOBANK_REVISION</ipxact:displayName>
-          <ipxact:value>IO96B</ipxact:value>
+          <ipxact:value>IO96B_REVB1</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="SYSINFO_DEVICE_GROUP" type="string">
           <ipxact:name>SYSINFO_DEVICE_GROUP</ipxact:name>
           <ipxact:displayName>SYSINFO_DEVICE_GROUP</ipxact:displayName>
-          <ipxact:value>B</ipxact:value>
+          <ipxact:value>A</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="SYSINFO_DEVICE_BASE_DIE" type="string">
           <ipxact:name>SYSINFO_DEVICE_BASE_DIE</ipxact:name>
           <ipxact:displayName>SYSINFO_DEVICE_BASE_DIE</ipxact:displayName>
-          <ipxact:value>SM7</ipxact:value>
+          <ipxact:value>SM7REVB</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="EMIF_PROTOCOL" type="string">
           <ipxact:name>EMIF_PROTOCOL</ipxact:name>
@@ -2067,7 +2067,7 @@ Altera and sold by Altera or its authorized distributors.-->
         <ipxact:parameter parameterId="device" type="string">
           <ipxact:name>device</ipxact:name>
           <ipxact:displayName>Device</ipxact:displayName>
-          <ipxact:value>A5ED065BB32AE4SR0</ipxact:value>
+          <ipxact:value>A5ED065AB32AE1V</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="deviceFamily" type="string">
           <ipxact:name>deviceFamily</ipxact:name>
@@ -2077,7 +2077,7 @@ Altera and sold by Altera or its authorized distributors.-->
         <ipxact:parameter parameterId="deviceSpeedGrade" type="string">
           <ipxact:name>deviceSpeedGrade</ipxact:name>
           <ipxact:displayName>Device Speed Grade</ipxact:displayName>
-          <ipxact:value>4</ipxact:value>
+          <ipxact:value>1</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="generationId" type="int">
           <ipxact:name>generationId</ipxact:name>
@@ -3136,12 +3136,12 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="MEM_OPERATING_FREQ_MHZ" type="string">
                 <ipxact:name>MEM_OPERATING_FREQ_MHZ</ipxact:name>
                 <ipxact:displayName>Memory Operating Frequency</ipxact:displayName>
-                <ipxact:value>1333.333</ipxact:value>
+                <ipxact:value>1866.667</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="CTRL_FIXED_R_PRIORITY" type="int">
                 <ipxact:name>CTRL_FIXED_R_PRIORITY</ipxact:name>
                 <ipxact:displayName>Fixed Read Priority</ipxact:displayName>
-                <ipxact:value>0</ipxact:value>
+                <ipxact:value>1</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="PHY_AC_PLACEMENT" type="string">
                 <ipxact:name>PHY_AC_PLACEMENT</ipxact:name>
@@ -3156,7 +3156,7 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="CTRL_FIXED_PRIORITY_EN" type="bit">
                 <ipxact:name>CTRL_FIXED_PRIORITY_EN</ipxact:name>
                 <ipxact:displayName>Enable Fixed Priority</ipxact:displayName>
-                <ipxact:value>false</ipxact:value>
+                <ipxact:value>true</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="PHY_REFCLK_FREQ_MHZ_AUTOSET_EN" type="bit">
                 <ipxact:name>PHY_REFCLK_FREQ_MHZ_AUTOSET_EN</ipxact:name>
@@ -3171,7 +3171,7 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="MEM_TCMDCKE_NS" type="real">
                 <ipxact:name>MEM_TCMDCKE_NS</ipxact:name>
                 <ipxact:displayName>tCMDCKE</ipxact:displayName>
-                <ipxact:value>2.25</ipxact:value>
+                <ipxact:value>1.75</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="EX_DESIGN_PMON_CH2_EN" type="bit">
                 <ipxact:name>EX_DESIGN_PMON_CH2_EN</ipxact:name>
@@ -3231,7 +3231,7 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="MEM_CWL_CYC" type="int">
                 <ipxact:name>MEM_CWL_CYC</ipxact:name>
                 <ipxact:displayName>Write Latency</ipxact:displayName>
-                <ipxact:value>22</ipxact:value>
+                <ipxact:value>30</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="JEDEC_OVERRIDE_TABLE_PARAM_NAME" type="string">
                 <ipxact:name>JEDEC_OVERRIDE_TABLE_PARAM_NAME</ipxact:name>
@@ -3291,7 +3291,7 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="MEM_TESCKE_NS" type="real">
                 <ipxact:name>MEM_TESCKE_NS</ipxact:name>
                 <ipxact:displayName>tESCKE</ipxact:displayName>
-                <ipxact:value>2.25</ipxact:value>
+                <ipxact:value>1.75</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_TXP_NS" type="real">
                 <ipxact:name>MEM_TXP_NS</ipxact:name>
@@ -3301,7 +3301,7 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="CTRL_DM_EN" type="bit">
                 <ipxact:name>CTRL_DM_EN</ipxact:name>
                 <ipxact:displayName>Use Data Masking</ipxact:displayName>
-                <ipxact:value>false</ipxact:value>
+                <ipxact:value>true</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="ANALOG_PARAM_DERIVATION_PARAM_NAME" type="string">
                 <ipxact:name>ANALOG_PARAM_DERIVATION_PARAM_NAME</ipxact:name>
@@ -3311,7 +3311,7 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="CTRL_SCRAMBLER_EN" type="bit">
                 <ipxact:name>CTRL_SCRAMBLER_EN</ipxact:name>
                 <ipxact:displayName>CTRL_SCRAMBLER_EN</ipxact:displayName>
-                <ipxact:value>false</ipxact:value>
+                <ipxact:value>true</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_TECH_IS_X" type="bit">
                 <ipxact:name>MEM_TECH_IS_X</ipxact:name>
@@ -3351,7 +3351,7 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="MEM_TCKCKEH_NS" type="real">
                 <ipxact:name>MEM_TCKCKEH_NS</ipxact:name>
                 <ipxact:displayName>tCKCKEH</ipxact:displayName>
-                <ipxact:value>2.25</ipxact:value>
+                <ipxact:value>1.75</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_VREF_CA_X_CA_RANGE" type="int">
                 <ipxact:name>MEM_VREF_CA_X_CA_RANGE</ipxact:name>
@@ -3381,7 +3381,7 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="MEM_TMRR_NS" type="real">
                 <ipxact:name>MEM_TMRR_NS</ipxact:name>
                 <ipxact:displayName>tMRR</ipxact:displayName>
-                <ipxact:value>6.0</ipxact:value>
+                <ipxact:value>4.28571</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="PHY_AC_TX_EQUALIZATION" type="string">
                 <ipxact:name>PHY_AC_TX_EQUALIZATION</ipxact:name>
@@ -3416,12 +3416,12 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="CTRL_PLACEMENT_EN" type="bit">
                 <ipxact:name>CTRL_PLACEMENT_EN</ipxact:name>
                 <ipxact:displayName>Enable Placement Logic</ipxact:displayName>
-                <ipxact:value>true</ipxact:value>
+                <ipxact:value>false</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_TCCD_NS" type="real">
                 <ipxact:name>MEM_TCCD_NS</ipxact:name>
                 <ipxact:displayName>tCCD</ipxact:displayName>
-                <ipxact:value>6.0</ipxact:value>
+                <ipxact:value>4.28571</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="PHY_TERM_X_DQ_SLEW_RATE" type="string">
                 <ipxact:name>PHY_TERM_X_DQ_SLEW_RATE</ipxact:name>
@@ -3431,7 +3431,7 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="CTRL_ALL_STRB_EN" type="bit">
                 <ipxact:name>CTRL_ALL_STRB_EN</ipxact:name>
                 <ipxact:displayName>Enable All Strobe</ipxact:displayName>
-                <ipxact:value>false</ipxact:value>
+                <ipxact:value>true</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="DIAG_FORCE_SLIM_EN" type="bit">
                 <ipxact:name>DIAG_FORCE_SLIM_EN</ipxact:name>
@@ -3456,7 +3456,7 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="PHY_REFCLK_ADVANCED_SELECT_EN" type="bit">
                 <ipxact:name>PHY_REFCLK_ADVANCED_SELECT_EN</ipxact:name>
                 <ipxact:displayName>Enable Advanced List of PLL Reference Clock Frequencies</ipxact:displayName>
-                <ipxact:value>true</ipxact:value>
+                <ipxact:value>false</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="TURNAROUND_R2R_DIFFCS_CYC" type="int">
                 <ipxact:name>TURNAROUND_R2R_DIFFCS_CYC</ipxact:name>
@@ -3521,7 +3521,7 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="MEM_TZQCKE_NS" type="real">
                 <ipxact:name>MEM_TZQCKE_NS</ipxact:name>
                 <ipxact:displayName>tZQCKE</ipxact:displayName>
-                <ipxact:value>2.25</ipxact:value>
+                <ipxact:value>1.75</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_TMRW_NS" type="real">
                 <ipxact:name>MEM_TMRW_NS</ipxact:name>
@@ -3536,7 +3536,7 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="MEM_OPERATING_FREQ_MHZ_AUTOSET_EN" type="bit">
                 <ipxact:name>MEM_OPERATING_FREQ_MHZ_AUTOSET_EN</ipxact:name>
                 <ipxact:displayName>Auto-set Memory Operating Frequency</ipxact:displayName>
-                <ipxact:value>true</ipxact:value>
+                <ipxact:value>false</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="DIAG_EXTRA_PARAMETERS" type="string">
                 <ipxact:name>DIAG_EXTRA_PARAMETERS</ipxact:name>
@@ -3566,7 +3566,7 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="CTRL_PERFORMANCE_PROFILE" type="string">
                 <ipxact:name>CTRL_PERFORMANCE_PROFILE</ipxact:name>
                 <ipxact:displayName>Controller Performance Profile</ipxact:displayName>
-                <ipxact:value>SEQ</ipxact:value>
+                <ipxact:value>SEQ_SIMU</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="EX_DESIGN_PMON_CH3_EN" type="bit">
                 <ipxact:name>EX_DESIGN_PMON_CH3_EN</ipxact:name>
@@ -3581,12 +3581,12 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="PHY_REFCLK_FREQ_MHZ" type="string">
                 <ipxact:name>PHY_REFCLK_FREQ_MHZ</ipxact:name>
                 <ipxact:displayName>Reference Clock Frequency</ipxact:displayName>
-                <ipxact:value>199.9999</ipxact:value>
+                <ipxact:value>200.0</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_CL_CYC" type="int">
                 <ipxact:name>MEM_CL_CYC</ipxact:name>
                 <ipxact:displayName>Read Latency</ipxact:displayName>
-                <ipxact:value>24</ipxact:value>
+                <ipxact:value>32</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="MEM_TREFW_NS" type="real">
                 <ipxact:name>MEM_TREFW_NS</ipxact:name>
@@ -3606,7 +3606,7 @@ Altera and sold by Altera or its authorized distributors.-->
               <ipxact:parameter parameterId="MEM_WR_POSTAMBLE_CYC" type="int">
                 <ipxact:name>MEM_WR_POSTAMBLE_CYC</ipxact:name>
                 <ipxact:displayName>Write Postamble Cycles</ipxact:displayName>
-                <ipxact:value>0</ipxact:value>
+                <ipxact:value>1</ipxact:value>
               </ipxact:parameter>
               <ipxact:parameter parameterId="PHY_TERM_X_CK_OUTPUT_IO_STD_TYPE" type="string">
                 <ipxact:name>PHY_TERM_X_CK_OUTPUT_IO_STD_TYPE</ipxact:name>

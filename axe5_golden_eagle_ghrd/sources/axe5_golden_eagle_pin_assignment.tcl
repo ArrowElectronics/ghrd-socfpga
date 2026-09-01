@@ -5,139 +5,117 @@
 
 set REV_04 1
 
-set wADDA 1
+set wHPS_UART0 1
+set wHPS_I2C0 1
+set wHPS_EMAC2 1
+set wHPS_USB 1
+set wHPS_USB 1
+set wHPS_PB 1
+set wHPS_DIPSW 1
+set wHPS_SD 1
+set wHPS 1
+set wHPS_LED0 1
+set wHPS_LED1 1
+
 set wFAB_EMAC 1
 set wRGB_LED0 1
 set wRGB_LED1 1
 set wRGB_LED2 1
 set wRGB_LED3 1
-set wHPS_LED0 1
-set wHPS_LED1 1
-set wFAB_QSPI 1
+set wFAB_PB 1
+set wFAB_DIPSW 1
+set wFAB_I2C1 1
 set wLPDDR4A 1
 set wLPDDR4B 1
-set wHDMI 0
-set wHPS_LED0 1
-set wHPS_LED1 1
-set wHPS_UART0 1
-set wHPS_I2C0 1
-set wFAB_I2C1 1
-set wHPS_PB 1
-set wHPS_DIPSW 1
-set wHPS_USB 1
-set wHPS_EMAC2 1
-set wHPS_SD 1
-set wHPS 1
+
 set wFMC 0
-set wFAB_PB 1
-set wFAB_UART 0
-set wFAB_DIPSW 1
 set wCRUVI_HS_1 0
 set wCRUVI_HS_2 0
-set wCRUVI_LS_1 0
-set wCRUVI_LS_2 0
+set wCRUVI_GTX 0
+set wPMOD 0
+set wCRUVI_LS_C 0
 set wSFP10G_A 0
 set wSFP10G_B 0
 set wFMC_XCVRS 0
 set wPCIe 0
 set smartVID 0	;# For Agilex-5 E-series group-A devices
+set wHDMI 1
+set wFAB_UART 0
+set wCSI0 0
+set wCSI1 0
+set wNVME 0
 
+# HPS MUX
 set_location_assignment PIN_T132   -to HPS_OSC_CLK_25MHz
 set_instance_assignment -name IO_STANDARD "1.8 V" -to HPS_OSC_CLK_25MHz
 
-# Bank HVIO_5A
-set_location_assignment PIN_CK134  -to FPGA_RST_n
+# Bank HVIO_6D
+set_location_assignment PIN_A23  -to FPGA_RST_n
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_RST_n
 
-if {$wSFP10G_A == 1 || $wSFP10G_B == 1} {
-# Bank 1C (GXBL1C)
-set_location_assignment PIN_AT120  -to SFP_REFCLK_p
-set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to SFP_REFCLK_p
-}
 
 if {$smartVID == 1} {
-set_location_assignment PIN_J2  -to PWR_SDA
+set_location_assignment PIN_CF99  -to PWR_SDA
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to PWR_SDA
-set_location_assignment PIN_G2  -to PWR_SCL
+set_location_assignment PIN_CF109  -to PWR_SCL
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to PWR_SCL
 }
 
-# Bank HVIO_6B (1.8V) SJK
-set_location_assignment PIN_BK22  -to DBG_TXD
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to DBG_TXD
-set_location_assignment PIN_CH4  -to DBG_RXD
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to DBG_RXD
-
 if {$wFAB_PB == 1} {
-# Bank HVIO_6D (3.3V)
-set_location_assignment PIN_B30  -to FPGA_PB[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_PB[0]
-set_location_assignment PIN_A30  -to FPGA_PB[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_PB[1]
+# Bank HSIO_3B (CRUVI_VADJ_T)
+set_location_assignment PIN_B56  -to FPGA_PB[2]
+set_instance_assignment -name IO_STANDARD "1.2-V" -to FPGA_PB[2]
+set_location_assignment PIN_A60  -to FPGA_PB[3]
+set_instance_assignment -name IO_STANDARD "1.2-V" -to FPGA_PB[3]
 }
 
-# Bank 2B FMC_ADJ=1.3V
+# Bank 2B (FMC_ADJ)
 if {$wFAB_DIPSW == 1} {
-set_location_assignment PIN_CL54  -to FPGA_DIPSW[0]
-set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to FPGA_DIPSW[0]
-set_location_assignment PIN_CK63  -to FPGA_DIPSW[1]
-set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to FPGA_DIPSW[1]
-}
-
-
-# Bank HVIO_6D (3.3V)
-if {$wADDA == 1} {
-set_location_assignment PIN_B20  -to ADDA_CLK
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDA_CLK
-set_location_assignment PIN_A20  -to ADDA_DIN
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDA_DIN
-set_location_assignment PIN_A23  -to ADDA_DOUT
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDA_DOUT
-set_location_assignment PIN_A14  -to ADDA_SYNC
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDA_SYNC
-set_location_assignment PIN_A17  -to ADDA_RST
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to ADDA_RST
+set_location_assignment PIN_CL54  -to FPGA_DIPSW[2]
+set_instance_assignment -name IO_STANDARD "1.2-V" -to FPGA_DIPSW[2]
+set_location_assignment PIN_CL56  -to FPGA_DIPSW[3]
+set_instance_assignment -name IO_STANDARD "1.2-V" -to FPGA_DIPSW[3]
 }
 
 # Bank HVIO_6C (1.8V)
 if {$wFAB_EMAC == 1} {
-set_location_assignment PIN_F27  -to ETH1_RST
+set_location_assignment PIN_C2  -to ETH1_RST
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RST
-set_location_assignment PIN_F24  -to ETH1_TXCK
+set_location_assignment PIN_D8  -to ETH1_TXCK
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_TXCK
-set_location_assignment PIN_H27  -to ETH1_TXD[0]
+set_location_assignment PIN_F27  -to ETH1_TXD[0]
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_TXD[0]
-set_location_assignment PIN_D24  -to ETH1_TXD[1]
+set_location_assignment PIN_F24  -to ETH1_TXD[1]
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_TXD[1]
-set_location_assignment PIN_H18  -to ETH1_TXD[2]
+set_location_assignment PIN_H27  -to ETH1_TXD[2]
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_TXD[2]
-set_location_assignment PIN_D15  -to ETH1_TXD[3]
+set_location_assignment PIN_D24  -to ETH1_TXD[3]
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_TXD[3]
-set_location_assignment PIN_F18  -to ETH1_RXCTL
+set_location_assignment PIN_H8  -to ETH1_RXCTL
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXCTL
-set_location_assignment PIN_F15  -to ETH1_TXCTL
+set_location_assignment PIN_K8  -to ETH1_TXCTL
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_TXCTL
-set_location_assignment PIN_K8   -to ETH1_RXD[0]
+set_location_assignment PIN_H18  -to ETH1_RXD[0]
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXD[0]
-set_location_assignment PIN_H8   -to ETH1_RXD[2]
+set_location_assignment PIN_D15  -to ETH1_RXD[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXD[1]
+set_location_assignment PIN_F18  -to ETH1_RXD[2]
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXD[2]
-set_location_assignment PIN_C2   -to ETH1_RXD[3]
+set_location_assignment PIN_F15  -to ETH1_RXD[3]
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXD[3]
 set_location_assignment PIN_F8   -to ETH1_RXCK
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXCK
-set_location_assignment PIN_D8   -to ETH1_RXD[1]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_RXD[1]
 set_location_assignment PIN_G1 -to ETH1_MDC -comment IOBANK_6C
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_MDC -entity axe5_eagle_top
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_MDC
 set_location_assignment PIN_J1 -to ETH1_MDIO -comment IOBANK_6C
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_MDIO -entity axe5_eagle_top
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to ETH1_MDIO
 }
 
 # Bank HVIO_5A
 if {$wRGB_LED0 == 1} {
 set_location_assignment PIN_CK125  -to LED0R
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED0R
-set_location_assignment PIN_CL125  -to LED0G
+set_location_assignment PIN_CK134  -to LED0G
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED0G
 set_location_assignment PIN_BR118  -to LED0B
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED0B
@@ -159,7 +137,7 @@ set_location_assignment PIN_CL130  -to LED2B
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED2B
 }
 if {$wRGB_LED3 == 1} {
-set_location_assignment PIN_CF128  -to LED3R
+set_location_assignment PIN_CF121  -to LED3R
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED3R
 set_location_assignment PIN_CH132  -to LED3G
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED3G
@@ -167,76 +145,72 @@ set_location_assignment PIN_CG135  -to LED3B
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED3B
 }
 
+# CRUVI_VADJ_B=ON
 set_location_assignment PIN_AC68  -to REFCLK_3B0 -comment IOBANK_3B_B
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to REFCLK_3B0
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to REFCLK_3B0
 
-# Bank HVIO_6A/6B (1.8V)
+# Bank HVIO_6A/6B (3.3V)
 if {$wHDMI == 1} {
-set_location_assignment PIN_CF9  -to HDMI_SPDIF
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_SPDIF
 set_location_assignment PIN_BH19  -to HDMI_VS
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_VS
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_VS
 set_location_assignment PIN_CF12  -to HDMI_HS
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_HS
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_HS
 set_location_assignment PIN_BK31  -to HDMI_CLK
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_CLK
 set_location_assignment PIN_BK19  -to HDMI_DE
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_DE
-set_location_assignment PIN_BF16  -to HDMI_INT
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_INT
-set_location_assignment PIN_BW19  -to HDMI_CT_HPD
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CT_HPD
-set_location_assignment PIN_BF25  -to HDMI_CEC_CLK
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CEC_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_DE
 set_location_assignment PIN_BF32  -to HDMI_D[0]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[0]
 set_location_assignment PIN_CH12  -to HDMI_D[1]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[1]
 set_location_assignment PIN_BM22  -to HDMI_D[2]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[2]
 set_location_assignment PIN_BF21  -to HDMI_D[3]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[3]
 set_location_assignment PIN_BE21  -to HDMI_D[4]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[4]
 set_location_assignment PIN_BP22  -to HDMI_D[5]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[5]
 set_location_assignment PIN_BR22  -to HDMI_D[6]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[6]
 set_location_assignment PIN_BE25  -to HDMI_D[7]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[7]
 set_location_assignment PIN_BU22  -to HDMI_D[8]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[8]
 set_location_assignment PIN_BW28  -to HDMI_D[9]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[9]
 set_location_assignment PIN_BU28  -to HDMI_D[10]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[10]
 set_location_assignment PIN_BM31  -to HDMI_D[11]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[11]
 set_location_assignment PIN_BR28  -to HDMI_D[12]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[12]
 set_location_assignment PIN_BM28  -to HDMI_D[13]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[13]
 set_location_assignment PIN_BK28  -to HDMI_D[14]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[14]
 set_location_assignment PIN_BH28  -to HDMI_D[15]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[15]
 set_location_assignment PIN_BF36  -to HDMI_D[16]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[16]
 set_location_assignment PIN_BE43  -to HDMI_D[17]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[17]
 set_location_assignment PIN_BU31   -to HDMI_D[18]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[18]
 set_location_assignment PIN_BP31  -to HDMI_D[19]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[19]
 set_location_assignment PIN_BR31  -to HDMI_D[20]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[20]
 set_location_assignment PIN_BF29  -to HDMI_D[21]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[21]
 set_location_assignment PIN_BF40  -to HDMI_D[22]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[22]
 set_location_assignment PIN_BE29  -to HDMI_D[23]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_D[23]
+# Bank HVIO_6D (3.3V)
+set_location_assignment PIN_A8  -to HDMI_CT_HPD
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HDMI_CT_HPD
 }
 
 # Bank HPS_IOA_7 (1.8V) - GPIO0_IO6
@@ -309,7 +283,7 @@ set_location_assignment PIN_BU118 -to USB_HUB_RST -comment IO_BANK_5A
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to USB_HUB_RST
 }
 
-# Bank 1C (GXBL1C)
+# Bank 1C (GTSL1C)
 set_location_assignment PIN_AP120  -to USB_REFCLK_p
 set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to USB_REFCLK_p
 set_location_assignment PIN_AP115  -to USB_REFCLK_p(n)
@@ -364,8 +338,6 @@ set_location_assignment PIN_D132  -to SD_CLK
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_CLK
 set_location_assignment PIN_AB132  -to SD_CMD
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_CMD
-set_location_assignment PIN_P124  -to SD_DETECT
-set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DETECT
 set_location_assignment PIN_E135  -to SD_DAT[0]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[0]
 set_location_assignment PIN_F132  -to SD_DAT[1]
@@ -374,6 +346,8 @@ set_location_assignment PIN_AA135  -to SD_DAT[2]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[2]
 set_location_assignment PIN_V127  -to SD_DAT[3]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_DAT[3]
+set_location_assignment PIN_P124  -to SD_VSEL_1V8
+set_instance_assignment -name IO_STANDARD "1.8 V" -to SD_VSEL_1V8
 }
 
 # LPDDR4B Bank 2A 1.1V_LPDDR4
@@ -520,7 +494,7 @@ set_location_assignment PIN_H87   -to LPDDR4A_DMB0 -comment IOBANK_3A_T
 set_location_assignment PIN_AK111   -to LPDDR4A_OCT_RZQIN -comment IOBANK_3A_B
 }
 
-# Bank 2B FMC_ADJ=1.3V 
+# Bank 2B FMC_ADJ=ON
 if {$wFMC == 1} {
 #set_location_assignment PIN_BE61  -to FMC_REFCK_C2M_p
 #set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to FMC_REFCK_C2M_p
@@ -549,7 +523,7 @@ set_location_assignment PIN_CF22  -to LA01_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to LA01_p
 set_location_assignment PIN_CC22  -to LA02_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to LA02_p
-set_location_assignment PIN_CF28  -to LA03_p
+set_location_assignment PIN_CC28  -to LA03_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to LA03_p
 set_location_assignment PIN_CA31  -to LA04_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to LA04_p
@@ -586,7 +560,7 @@ set_location_assignment PIN_BK49  -to LA18_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to LA18_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to LA18_n
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to LA18_p
-set_location_assignment PIN_CK73  -to LA19_p
+set_location_assignment PIN_CK66  -to LA19_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to LA19_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to LA19_n
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to LA19_p
@@ -648,9 +622,41 @@ set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to LA33_p
 }
 
+if {$wCSI0 == 1} {
+#Bank 2A (1.1V)
+# CSI0_SCL/SDA I2C is accessed via MUX_I2C_SCL/SDA U15 Ch2
+# I2C write 0x06 to device address 0x71
+set_location_assignment PIN_BF86  -to CSI0_C_p
+set_instance_assignment -name IO_STANDARD "DPHY" -to CSI0_C_p
+set_location_assignment PIN_BE96  -to CSI0_D0_p
+set_instance_assignment -name IO_STANDARD "DPHY" -to CSI0_D0_p
+set_location_assignment PIN_BF93  -to CSI0_D1_p
+set_instance_assignment -name IO_STANDARD "DPHY" -to CSI0_D1_p
+set_location_assignment PIN_BE83  -to CSI0_D2_p
+set_instance_assignment -name IO_STANDARD "DPHY" -to CSI0_D2_p
+set_location_assignment PIN_BE79  -to CSI0_D3_p
+set_instance_assignment -name IO_STANDARD "DPHY" -to CSI0_D3_p
+}
+
+if {$wCSI1 == 1} {
+#Bank 3A (1.1V)
+# CSI1_SCL/SDA I2C is accessed via MUX_I2C_SCL/SDA U15 Ch3
+# I2C write 0x07 to device address 0x71
+set_location_assignment PIN_AG90  -to CSI1_C_p
+set_instance_assignment -name IO_STANDARD "DPHY" -to CSI1_C_p
+set_location_assignment PIN_AG100  -to CSI1_D0_p
+set_instance_assignment -name IO_STANDARD "DPHY" -to CSI1_D0_p
+set_location_assignment PIN_AC100  -to CSI1_D1_p
+set_instance_assignment -name IO_STANDARD "DPHY" -to CSI1_D1_p
+set_location_assignment PIN_AC90  -to CSI1_D2_p
+set_instance_assignment -name IO_STANDARD "DPHY" -to CSI1_D2_p
+set_location_assignment PIN_Y98  -to CSI1_D3_p
+set_instance_assignment -name IO_STANDARD "DPHY" -to CSI1_D3_p
+}
+
 
 if {$wCRUVI_HS_1 == 1} {
-# BANK 3B (1.3V)
+# BANK 3B_T (CRUVI_VADJ_T=ON)
 set_location_assignment PIN_B45  -to CX_HSIO
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to CX_HSIO
 set_location_assignment PIN_A48  -to CX_HSO
@@ -659,30 +665,31 @@ set_location_assignment PIN_A51  -to CX_RESET
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to CX_RESET
 set_location_assignment PIN_A63  -to CX_HSI
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to CX_HSI
+
 # CX_An_p and CX_Bn_p are used as differential pins												   
-set_location_assignment PIN_P44  -to CX_B5_p
-
-set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B5_p
-
-set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CX_B5_p
-set_location_assignment PIN_V58  -to CX_B4_p
 # CX_Bn_p pins being used as differential input, need the Input Termination assignment
+# Differential Output (CX_An) MUST run at 1.3V
+set_location_assignment PIN_P44  -to CX_B5_p
+set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B5_p
+set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CX_B5_p
+
+set_location_assignment PIN_V58  -to CX_B4_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B4_p
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CX_B4_p
-set_location_assignment PIN_P55  -to CX_B3_p
 
+set_location_assignment PIN_P55  -to CX_B3_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B3_p
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CX_B3_p
-set_location_assignment PIN_K55  -to CX_B2_p
 
+set_location_assignment PIN_K55  -to CX_B2_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B2_p
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CX_B2_p
-set_location_assignment PIN_M58  -to CX_B1_p
 
+set_location_assignment PIN_M58  -to CX_B1_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B1_p
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CX_B1_p
-set_location_assignment PIN_F55  -to CX_B0_p
 
+set_location_assignment PIN_F55  -to CX_B0_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CX_B0_p
 set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CX_B0_p
 
@@ -708,29 +715,32 @@ set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to
 # HVIO BANK 5B (3.3V)
 set_location_assignment PIN_BR112  -to CX_SMB_ALERT
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CX_SMB_ALERT
-set_location_assignment PIN_BU109  -to CX_SMB_SDA
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CX_SMB_SDA
-set_location_assignment PIN_BR109  -to CX_SMB_SCL
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CX_SMB_SCL
 set_location_assignment PIN_BM109  -to CX_REFCLK
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CX_REFCLK
+# HVIO BANK 6C (3.3V)
+set_location_assignment PIN_B11  -to CX_SMB_SDA
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CX_SMB_SDA
+set_location_assignment PIN_A11  -to CX_SMB_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CX_SMB_SCL
 }
 
 if {$wCRUVI_HS_2 == 1} {
-# BANK 3B (1.2V)
+# BANK 3B_B (CRUVI_VADJ_B=ON)
 set_location_assignment PIN_A70  -to CY_HSIO
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to CY_HSIO
 set_location_assignment PIN_B70  -to CY_HSO
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to CY_HSO
-set_location_assignment PIN_A60  -to CY_RESET
+set_location_assignment PIN_B82  -to CY_RESET
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to CY_RESET
-set_location_assignment PIN_B56  -to CY_HSI
+set_location_assignment PIN_A82  -to CY_HSI
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to CY_HSI
 
 # CY_An_p and CY_Bn_p are used as differential pins												   
+# CY_Bn_p pins being used as differential input, need the Input Termination assignment
+# Differential Output (CY_An) MUST run at 1.3V
 set_location_assignment PIN_H67  -to CY_B5_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_B5_p
-#set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_B5_n
+set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to CY_B5_p
 
 set_location_assignment PIN_F77  -to CY_B4_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_B4_p
@@ -771,44 +781,43 @@ set_location_assignment PIN_F65  -to CY_A5_p
 set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to CY_A5_p
 
 
-# HVIO BANK 5V (3.3V)
+# HVIO BANK 5A (3.3V)
 set_location_assignment PIN_CG134  -to CY_SMB_ALERT
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CY_SMB_ALERT
 set_location_assignment PIN_CD135  -to CY_SMB_SDA
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CY_SMB_SDA
 set_location_assignment PIN_CD134  -to CY_SMB_SCL
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CY_SMB_SCL
-set_location_assignment PIN_CH128  -to CY_REFCLK
+set_location_assignment PIN_CL125  -to CY_REFCLK
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CY_REFCLK
 }
 
 
-if {$wCRUVI_LS_1 == 1} {
+if {$wPMOD == 1} {
 # Bank HVIO_5B (3.3V)
-set_location_assignment PIN_BE115  -to CRUVI_LS_B[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CRUVI_LS_B[0]
-set_location_assignment PIN_BF111  -to CRUVI_LS_B[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CRUVI_LS_B[1]
-set_location_assignment PIN_BF107  -to CRUVI_LS_B[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CRUVI_LS_B[2]
-set_location_assignment PIN_BE107  -to CRUVI_LS_B[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CRUVI_LS_B[3]
-set_location_assignment PIN_BF120  -to CRUVI_LS_B[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CRUVI_LS_B[4]
-set_location_assignment PIN_BE111  -to CRUVI_LS_B[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CRUVI_LS_B[5]
-set_location_assignment PIN_BF115  -to CRUVI_LS_B[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CRUVI_LS_B[6]
-set_location_assignment PIN_BH118  -to CRUVI_LS_B[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CRUVI_LS_B[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CRUVI_LS_B[7]
+set_location_assignment PIN_BE115  -to P0_IO[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to P0_IO[0]
+set_location_assignment PIN_BF111  -to P0_IO[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to P0_IO[1]
+set_location_assignment PIN_BF107  -to P0_IO[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to P0_IO[2]
+set_location_assignment PIN_BE107  -to P0_IO[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to P0_IO[3]
+set_location_assignment PIN_BF120  -to P0_IO[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to P0_IO[4]
+set_location_assignment PIN_BE111  -to P0_IO[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to P0_IO[5]
+set_location_assignment PIN_BF115  -to P0_IO[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to P0_IO[6]
+set_location_assignment PIN_BH118  -to P0_IO[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to P0_IO[7]
 }
 
-if {$wCRUVI_LS_2 == 1} {
+if {$wCRUVI_LS_C == 1} {
 # Bank HVIO_5B (3.3V)
 set_location_assignment PIN_BK109  -to CRUVI_LS_C[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CRUVI_LS_C[0]
-set_location_assignment PIN_BF104  -to CRUVI_LS_C[1]
+set_location_assignment PIN_BR109  -to CRUVI_LS_C[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CRUVI_LS_C[1]
 set_location_assignment PIN_BM118  -to CRUVI_LS_C[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CRUVI_LS_C[2]
@@ -824,92 +833,86 @@ set_location_assignment PIN_BK112  -to CRUVI_LS_C[7]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CRUVI_LS_C[7]
 }
 
-if {$wFAB_QSPI == 1} {
-# Bank HVIO_6B (1.8V)
-set_location_assignment PIN_BM19  -to FPGA_QSPI_CS
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to FPGA_QSPI_CS
-set_location_assignment PIN_BU19  -to FPGA_QSPI_CLK
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to FPGA_QSPI_CLK
-set_location_assignment PIN_CH4  -to FPGA_QSPI_RST
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to FPGA_QSPI_RST
-set_location_assignment PIN_BR19  -to FPGA_QSPI_D[0]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to FPGA_QSPI_D[0]
-set_location_assignment PIN_CK4  -to FPGA_QSPI_D[1]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to FPGA_QSPI_D[1]
-set_location_assignment PIN_CJ2  -to FPGA_QSPI_D[2]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to FPGA_QSPI_D[2]
-set_location_assignment PIN_CK2  -to FPGA_QSPI_D[3]
-set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to FPGA_QSPI_D[3]
-}
-
-# Bank 6B (1.8V)
+# Bank HVIO_6C (1.8V)
 if {$wFAB_UART == 1} {
-set_location_assignment PIN_BK22  -to DBG_TXD
+set_location_assignment PIN_G2  -to DBG_TXD
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to DBG_TXD
-set_location_assignment PIN_CH4  -to DBG_RDX
+set_location_assignment PIN_J2  -to DBG_RDX
 set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to DBG_RDX
 }
 
-# Bank 1C (GXBL1C)
+# Bank 1A (GTSL1A)
 if {$wSFP10G_A == 1} {
 
 # Need to also set wFAB_I2C1 to 1
-# SJK signals commented out
 
-set_location_assignment PIN_AU129  -to SFPA_TD_p
-set_location_assignment PIN_AT135  -to SFPA_RD_p
+set_location_assignment PIN_BB120  -to SFPA_REFCLK_p
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to SFPA_REFCLK_p
 
-# Bank 3B (CRUVI_VADJ=1.3V)
-set_location_assignment PIN_A80  -to SFPA_M_DEF0
-set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPA_M_DEF0
-set_location_assignment PIN_AC64  -to SFPA_RS0
-set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPA_RS0
-set_location_assignment PIN_Y58  -to SFPA_RS1
-set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPA_RS1
-set_location_assignment PIN_AG64  -to SFPA_LOS
-set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPA_LOS
-set_location_assignment PIN_Y77  -to SFPA_TX_DIS
-set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPA_TX_DIS
-#set_location_assignment PIN_Y74  -to SFPA_TX_FAULT
-#set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPA_TX_FAULT
+set_location_assignment PIN_BG129  -to SFPA_TD_p
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to SFPA_TD_p
+set_location_assignment PIN_BF135  -to SFPA_RD_p
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to SFPA_RD_p
 
 set_instance_assignment -name HSSI_PARAMETER "tx_eq_main_tap=35" -to SFPA_TD_p
 set_instance_assignment -name HSSI_PARAMETER "rx_external_couple_type=RX_EXTERNAL_COUPLE_TYPE_AC" -to SFPA_RD_p
 set_instance_assignment -name HSSI_PARAMETER "rx_onchip_termination_setting=RX_ONCHIP_TERMINATION_SETTING_R_2" -to SFPA_RD_p
 set_instance_assignment -name HSSI_PARAMETER "rx_termination_mode=RX_TERMINATION_MODE_GROUNDED" -to SFPA_RD_p
+
+# Bank 3B_B (CRUVI_VADJ_B=ON)
+set_location_assignment PIN_A80  -to SFPA_M_DEF0
+set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPA_M_DEF0
+set_location_assignment PIN_B73  -to SFPA_RS0
+set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPA_RS0
+set_location_assignment PIN_AG83  -to SFPA_RS1
+set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPA_RS1
+set_location_assignment PIN_A76  -to SFPA_LOS
+set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPA_LOS
+set_location_assignment PIN_Y77  -to SFPA_TX_DIS
+set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPA_TX_DIS
+set_location_assignment PIN_Y74  -to SFPA_TX_FAULT
+set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPA_TX_FAULT
+
 }
 
-# Bank 1C (GXBL1C)
+# Bank 1C (GTSL1C)
 if {$wSFP10G_B == 1} {
 
 # Need to also set wFAB_I2C1 to 1
-# SJK signals commented out
 
-sset_location_assignment PIN_AL129  -to SFPB_TD_p
+# Bank 1C (GTSL1C)
+set_location_assignment PIN_AT120  -to SFPB_REFCLK_p
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to SFPB_REFCLK_p
+
+set_location_assignment PIN_AL129  -to SFPB_TD_p
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to SFPB_TD_p
 set_location_assignment PIN_AK135  -to SFPB_RD_p
-
-# Bank 3B (CRUVI_VADJ=1.3V)
-set_location_assignment PIN_AG83  -to SFPB_M_DEF0
-set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPB_M_DEF0
-set_location_assignment PIN_AG57  -to SFPB_RS0
-set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPB_RS0
-set_location_assignment PIN_AC53  -to SFPB_RS1
-set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPB_RS1
-set_location_assignment PIN_AC61  -to SFPB_LOS
-set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPB_LOS
-set_location_assignment PIN_AC50  -to SFPB_TX_DIS
-set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPB_TX_DIS
-#set_location_assignment PIN_Y55  -to SFPB_TX_FAULT
-#set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPB_TX_FAULT
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to SFPB_RD_p
 
 set_instance_assignment -name HSSI_PARAMETER "tx_eq_main_tap=35" -to SFPB_TD_p
 set_instance_assignment -name HSSI_PARAMETER "rx_external_couple_type=RX_EXTERNAL_COUPLE_TYPE_AC" -to SFPB_RD_p
 set_instance_assignment -name HSSI_PARAMETER "rx_onchip_termination_setting=RX_ONCHIP_TERMINATION_SETTING_R_2" -to SFPB_RD_p
 set_instance_assignment -name HSSI_PARAMETER "rx_termination_mode=RX_TERMINATION_MODE_GROUNDED" -to SFPB_RD_p
+
+# Bank 3B_T (CRUVI_VADJ_T=ON)
+set_location_assignment PIN_Y58  -to SFPB_M_DEF0
+set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPB_M_DEF0
+set_location_assignment PIN_AC53  -to SFPB_RS1
+set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPB_RS1
+set_location_assignment PIN_AC50  -to SFPB_TX_DIS
+set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPB_TX_DIS
+set_location_assignment PIN_AG61  -to SFPB_TX_FAULT
+set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPB_TX_FAULT
+
+# Bank 3B_B (CRUVI_VADJ_B=ON)
+set_location_assignment PIN_A66  -to SFPB_RS0
+set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPB_RS0
+set_location_assignment PIN_A85  -to SFPB_LOS
+set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to SFPB_LOS
 }
 
 if {$wPCIe == 1} {
-# Bank 1B (GXBL1B)
+# Bank 1B (GTSL1B)
 set_location_assignment PIN_AV120  -to PCIE_CLK_p
 set_location_assignment PIN_AY120  -to PCIE_100M_CK_p
 set_location_assignment PIN_BD135  -to PET_p[0]
@@ -920,10 +923,65 @@ set_location_assignment PIN_BE129  -to PER_p[0]
 set_location_assignment PIN_BC129  -to PER_p[1]
 set_location_assignment PIN_BA129  -to PER_p[2]
 set_location_assignment PIN_AW129  -to PER_p[3]
+# Bank 5A (3.3V)
+set_location_assignment PIN_CF132  -to PCIE_RSTb
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to PCIE_RSTb
+# Bank 6D (3.3V)
+set_location_assignment PIN_D34    -to PCIE_WAKE
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to PCIE_WAKE
 }
 
+if {$wNVME == 1} {
+# Bank 1C (GTSL1C)
+set_location_assignment PIN_AT120  -to SFPB_REFCLK_p
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to SFPB_REFCLK_p
+set_location_assignment PIN_AV120  -to GTSL1C_TX0_p
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to GTSL1C_TX0_p
+set_location_assignment PIN_AY120  -to GTSL1C_RX0_p
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to GTSL1C_RX0_p
+# Bank 5A (3.3V)
+set_location_assignment PIN_CF128  -to SSD1_PERST
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to SSD1_PERST
+# Bank 6D (3.3V)
+set_location_assignment PIN_A14    -to SSD1_CLKRQ
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to SSD1_CLKRQ
+set_location_assignment PIN_B14    -to SSD1_WAKE
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to SSD1_WAKE
+
+}
+
+if {$wCRUVI_GTX == 1} {
+# Bank 1B (GTSL1B)
+set_location_assignment PIN_AV120  -to GBTCLK0_p
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to GBTCLK0_p
+set_location_assignment PIN_AV120  -to GTSR4A_TX_p
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to GTSR4A_TX_p
+set_location_assignment PIN_AV120  -to GTSR4A_RX_p
+set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to GTSR4A_RX_p
+
+# Bank 6B (3.3V)
+set_location_assignment PIN_BK22  -to LS_IO[1]
+set_location_assignment PIN_BU19  -to LS_IO[2]
+set_location_assignment PIN_BM19  -to LS_IO[3]
+set_location_assignment PIN_BR19  -to LS_IO[4]
+set_location_assignment PIN_CK2   -to LS_IO[5]
+set_location_assignment PIN_CJ2   -to LS_IO[6]
+set_location_assignment PIN_CK4   -to LS_IO[7]
+set_location_assignment PIN_CH4   -to LS_IO[8]
+
+
+# Bank 3B_T (CRUVI_VADJ_T=ON)
+set_location_assignment PIN_Y44  -to HS_D5_p
+set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to HS_D5_p
+#set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to HS_D5_p
+set_location_assignment PIN_AG57  -to HS_D11_p
+set_instance_assignment -name IO_STANDARD "1.3V True Differential Signaling" -to HS_D11_p
+#set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to HS_D11_p
+}
+
+
 if {$wFMC_XCVRS == 1} {
-# Bank 4B (GXBR4B)
+# Bank 4B (GTSR4B)
 #set_location_assignment PIN_AV16  -to FMC_GBTCLK_p[0]
 #set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to FMC_GBTCLK_p[0]
 
@@ -972,7 +1030,7 @@ set_instance_assignment -name HSSI_PARAMETER "rx_termination_mode=RX_TERMINATION
 set_instance_assignment -name HSSI_PARAMETER "rx_termination_mode=RX_TERMINATION_MODE_GROUNDED" -to DP_M2C_p[2]
 set_instance_assignment -name HSSI_PARAMETER "rx_termination_mode=RX_TERMINATION_MODE_GROUNDED" -to DP_M2C_p[3]
 
-# Bank 4C (GXBR4C)
+# Bank 4C (GTSR4C)
 #set_location_assignment PIN_AP16  -to FMC_GBTCLK_p[1]
 #set_instance_assignment -name IO_STANDARD "Current Mode Logic (CML)" -to FMC_GBTCLK_p[1]
 

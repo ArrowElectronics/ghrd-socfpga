@@ -12,74 +12,10 @@ the sole purpose of programming logic devices manufactured by
 Altera and sold by Altera or its authorized distributors.-->
 <ipxact:component xmlns:altera="http://www.altera.com/XMLSchema/IPXact2014/extensions" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
   <ipxact:vendor>Intel Corporation</ipxact:vendor>
-  <ipxact:library>board_subsystem_reset_controller_0</ipxact:library>
-  <ipxact:name>reset_controller_0</ipxact:name>
-  <ipxact:version>19.2.4</ipxact:version>
+  <ipxact:library>hdmi_reset_bridge</ipxact:library>
+  <ipxact:name>hdmi_reset_bridge</ipxact:name>
+  <ipxact:version>19.2.0</ipxact:version>
   <ipxact:busInterfaces>
-    <ipxact:busInterface>
-      <ipxact:name>reset_in0</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="reset" version="26.1"></ipxact:busType>
-      <ipxact:abstractionTypes>
-        <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="26.1"></ipxact:abstractionRef>
-          <ipxact:portMaps>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>reset</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>reset_in0</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-          </ipxact:portMaps>
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-      <ipxact:slave></ipxact:slave>
-      <ipxact:parameters>
-        <ipxact:parameter parameterId="associatedClock" type="string">
-          <ipxact:name>associatedClock</ipxact:name>
-          <ipxact:displayName>Associated clock</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="synchronousEdges" type="string">
-          <ipxact:name>synchronousEdges</ipxact:name>
-          <ipxact:displayName>Synchronous edges</ipxact:displayName>
-          <ipxact:value>NONE</ipxact:value>
-        </ipxact:parameter>
-      </ipxact:parameters>
-    </ipxact:busInterface>
-    <ipxact:busInterface>
-      <ipxact:name>reset_in1</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="reset" version="26.1"></ipxact:busType>
-      <ipxact:abstractionTypes>
-        <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="26.1"></ipxact:abstractionRef>
-          <ipxact:portMaps>
-            <ipxact:portMap>
-              <ipxact:logicalPort>
-                <ipxact:name>reset</ipxact:name>
-              </ipxact:logicalPort>
-              <ipxact:physicalPort>
-                <ipxact:name>reset_in1</ipxact:name>
-              </ipxact:physicalPort>
-            </ipxact:portMap>
-          </ipxact:portMaps>
-        </ipxact:abstractionType>
-      </ipxact:abstractionTypes>
-      <ipxact:slave></ipxact:slave>
-      <ipxact:parameters>
-        <ipxact:parameter parameterId="associatedClock" type="string">
-          <ipxact:name>associatedClock</ipxact:name>
-          <ipxact:displayName>Associated clock</ipxact:displayName>
-          <ipxact:value></ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="synchronousEdges" type="string">
-          <ipxact:name>synchronousEdges</ipxact:name>
-          <ipxact:displayName>Synchronous edges</ipxact:displayName>
-          <ipxact:value>NONE</ipxact:value>
-        </ipxact:parameter>
-      </ipxact:parameters>
-    </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>clk</ipxact:name>
       <ipxact:busType vendor="intel" library="intel" name="clock" version="26.1"></ipxact:busType>
@@ -118,7 +54,7 @@ Altera and sold by Altera or its authorized distributors.-->
       </ipxact:parameters>
     </ipxact:busInterface>
     <ipxact:busInterface>
-      <ipxact:name>reset_out</ipxact:name>
+      <ipxact:name>in_reset</ipxact:name>
       <ipxact:busType vendor="intel" library="intel" name="reset" version="26.1"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
@@ -129,7 +65,39 @@ Altera and sold by Altera or its authorized distributors.-->
                 <ipxact:name>reset</ipxact:name>
               </ipxact:logicalPort>
               <ipxact:physicalPort>
-                <ipxact:name>reset_out</ipxact:name>
+                <ipxact:name>in_reset</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:slave></ipxact:slave>
+      <ipxact:parameters>
+        <ipxact:parameter parameterId="associatedClock" type="string">
+          <ipxact:name>associatedClock</ipxact:name>
+          <ipxact:displayName>Associated clock</ipxact:displayName>
+          <ipxact:value>clk</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="synchronousEdges" type="string">
+          <ipxact:name>synchronousEdges</ipxact:name>
+          <ipxact:displayName>Synchronous edges</ipxact:displayName>
+          <ipxact:value>DEASSERT</ipxact:value>
+        </ipxact:parameter>
+      </ipxact:parameters>
+    </ipxact:busInterface>
+    <ipxact:busInterface>
+      <ipxact:name>out_reset</ipxact:name>
+      <ipxact:busType vendor="intel" library="intel" name="reset" version="26.1"></ipxact:busType>
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="26.1"></ipxact:abstractionRef>
+          <ipxact:portMaps>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>reset</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>out_reset</ipxact:name>
               </ipxact:physicalPort>
             </ipxact:portMap>
           </ipxact:portMaps>
@@ -145,12 +113,12 @@ Altera and sold by Altera or its authorized distributors.-->
         <ipxact:parameter parameterId="associatedDirectReset" type="string">
           <ipxact:name>associatedDirectReset</ipxact:name>
           <ipxact:displayName>Associated direct reset</ipxact:displayName>
-          <ipxact:value></ipxact:value>
+          <ipxact:value>in_reset</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="associatedResetSinks" type="string">
           <ipxact:name>associatedResetSinks</ipxact:name>
           <ipxact:displayName>Associated reset sinks</ipxact:displayName>
-          <ipxact:value>reset_in0,reset_in1</ipxact:value>
+          <ipxact:value>in_reset</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="synchronousEdges" type="string">
           <ipxact:name>synchronousEdges</ipxact:name>
@@ -171,7 +139,7 @@ Altera and sold by Altera or its authorized distributors.-->
     <ipxact:instantiations>
       <ipxact:componentInstantiation>
         <ipxact:name>QUARTUS_SYNTH</ipxact:name>
-        <ipxact:moduleName>altera_reset_controller</ipxact:moduleName>
+        <ipxact:moduleName>altera_reset_bridge</ipxact:moduleName>
         <ipxact:fileSetRef>
           <ipxact:localName>QUARTUS_SYNTH</ipxact:localName>
         </ipxact:fileSetRef>
@@ -179,32 +147,6 @@ Altera and sold by Altera or its authorized distributors.-->
       </ipxact:componentInstantiation>
     </ipxact:instantiations>
     <ipxact:ports>
-      <ipxact:port>
-        <ipxact:name>reset_in0</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
-      <ipxact:port>
-        <ipxact:name>reset_in1</ipxact:name>
-        <ipxact:wire>
-          <ipxact:direction>in</ipxact:direction>
-          <ipxact:vectors></ipxact:vectors>
-          <ipxact:wireTypeDefs>
-            <ipxact:wireTypeDef>
-              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
-              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
-            </ipxact:wireTypeDef>
-          </ipxact:wireTypeDefs>
-        </ipxact:wire>
-      </ipxact:port>
       <ipxact:port>
         <ipxact:name>clk</ipxact:name>
         <ipxact:wire>
@@ -219,7 +161,20 @@ Altera and sold by Altera or its authorized distributors.-->
         </ipxact:wire>
       </ipxact:port>
       <ipxact:port>
-        <ipxact:name>reset_out</ipxact:name>
+        <ipxact:name>in_reset</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>out_reset</ipxact:name>
         <ipxact:wire>
           <ipxact:direction>out</ipxact:direction>
           <ipxact:vectors></ipxact:vectors>
@@ -236,131 +191,41 @@ Altera and sold by Altera or its authorized distributors.-->
   <ipxact:vendorExtensions>
     <altera:entity_info>
       <ipxact:vendor>Intel Corporation</ipxact:vendor>
-      <ipxact:library>board_subsystem_reset_controller_0</ipxact:library>
-      <ipxact:name>altera_reset_controller</ipxact:name>
-      <ipxact:version>19.2.4</ipxact:version>
+      <ipxact:library>hdmi_reset_bridge</ipxact:library>
+      <ipxact:name>altera_reset_bridge</ipxact:name>
+      <ipxact:version>19.2.0</ipxact:version>
     </altera:entity_info>
     <altera:altera_module_parameters>
       <ipxact:parameters>
-        <ipxact:parameter parameterId="NUM_RESET_INPUTS" type="int">
-          <ipxact:name>NUM_RESET_INPUTS</ipxact:name>
-          <ipxact:displayName>Number of inputs</ipxact:displayName>
-          <ipxact:value>2</ipxact:value>
+        <ipxact:parameter parameterId="ACTIVE_LOW_RESET" type="int">
+          <ipxact:name>ACTIVE_LOW_RESET</ipxact:name>
+          <ipxact:displayName>Active low reset</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
-        <ipxact:parameter parameterId="OUTPUT_RESET_SYNC_EDGES" type="string">
-          <ipxact:name>OUTPUT_RESET_SYNC_EDGES</ipxact:name>
-          <ipxact:displayName>Output Reset Synchronous Edges</ipxact:displayName>
+        <ipxact:parameter parameterId="SYNCHRONOUS_EDGES" type="string">
+          <ipxact:name>SYNCHRONOUS_EDGES</ipxact:name>
+          <ipxact:displayName>Input Synchronous edges</ipxact:displayName>
           <ipxact:value>deassert</ipxact:value>
         </ipxact:parameter>
-        <ipxact:parameter parameterId="SYNC_DEPTH" type="int">
-          <ipxact:name>SYNC_DEPTH</ipxact:name>
-          <ipxact:displayName>Synchronizer depth</ipxact:displayName>
-          <ipxact:value>2</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="RESET_REQUEST_PRESENT" type="int">
-          <ipxact:name>RESET_REQUEST_PRESENT</ipxact:name>
-          <ipxact:displayName>Reset request logic enable</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="RESET_REQ_WAIT_TIME" type="int">
-          <ipxact:name>RESET_REQ_WAIT_TIME</ipxact:name>
-          <ipxact:displayName>Reset request wait time</ipxact:displayName>
+        <ipxact:parameter parameterId="NUM_RESET_OUTPUTS" type="int">
+          <ipxact:name>NUM_RESET_OUTPUTS</ipxact:name>
+          <ipxact:displayName>Number of reset outputs</ipxact:displayName>
           <ipxact:value>1</ipxact:value>
         </ipxact:parameter>
-        <ipxact:parameter parameterId="MIN_RST_ASSERTION_TIME" type="int">
-          <ipxact:name>MIN_RST_ASSERTION_TIME</ipxact:name>
-          <ipxact:displayName>Minimum reset assertion time</ipxact:displayName>
-          <ipxact:value>3</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="RESET_REQ_EARLY_DSRT_TIME" type="int">
-          <ipxact:name>RESET_REQ_EARLY_DSRT_TIME</ipxact:name>
-          <ipxact:displayName>Reset request deassert timing</ipxact:displayName>
-          <ipxact:value>1</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN0" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN0</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in0</ipxact:displayName>
+        <ipxact:parameter parameterId="USE_RESET_REQUEST" type="int">
+          <ipxact:name>USE_RESET_REQUEST</ipxact:name>
+          <ipxact:displayName>Use reset request signal</ipxact:displayName>
           <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN1" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN1</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in1</ipxact:displayName>
+        <ipxact:parameter parameterId="SYNC_RESET" type="int">
+          <ipxact:name>SYNC_RESET</ipxact:name>
+          <ipxact:displayName>Use synchronous resets</ipxact:displayName>
           <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN2" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN2</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in2</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN3" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN3</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in3</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN4" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN4</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in4</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN5" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN5</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in5</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN6" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN6</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in6</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN7" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN7</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in7</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN8" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN8</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in8</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN9" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN9</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in9</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN10" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN10</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in10</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN11" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN11</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in11</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN12" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN12</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in12</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN13" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN13</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in13</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN14" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN14</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in14</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_IN15" type="int">
-          <ipxact:name>USE_RESET_REQUEST_IN15</ipxact:name>
-          <ipxact:displayName>Enable reset_req for port reset_in15</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="USE_RESET_REQUEST_INPUT" type="int">
-          <ipxact:name>USE_RESET_REQUEST_INPUT</ipxact:name>
-          <ipxact:displayName>Enable reset_req for reset_inputs</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
+        <ipxact:parameter parameterId="AUTO_CLK_CLOCK_RATE" type="longint">
+          <ipxact:name>AUTO_CLK_CLOCK_RATE</ipxact:name>
+          <ipxact:displayName>Auto CLOCK_RATE</ipxact:displayName>
+          <ipxact:value>148529412</ipxact:value>
         </ipxact:parameter>
       </ipxact:parameters>
     </altera:altera_module_parameters>
@@ -384,7 +249,7 @@ Altera and sold by Altera or its authorized distributors.-->
         <ipxact:parameter parameterId="deviceSpeedGrade" type="string">
           <ipxact:name>deviceSpeedGrade</ipxact:name>
           <ipxact:displayName>Device Speed Grade</ipxact:displayName>
-          <ipxact:value>4</ipxact:value>
+          <ipxact:value>6</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="generationId" type="int">
           <ipxact:name>generationId</ipxact:name>
@@ -404,7 +269,7 @@ Altera and sold by Altera or its authorized distributors.-->
          type = "String";
       }
    }
-   element reset_controller_0
+   element hdmi_reset_bridge
    {
    }
 }
@@ -420,66 +285,6 @@ Altera and sold by Altera or its authorized distributors.-->
           <ipxact:displayName>lockedInterfaceDefinition</ipxact:displayName>
           <ipxact:value>&lt;boundaryDefinition&gt;
     &lt;interfaces&gt;
-        &lt;interface&gt;
-            &lt;name&gt;reset_in0&lt;/name&gt;
-            &lt;type&gt;reset&lt;/type&gt;
-            &lt;isStart&gt;false&lt;/isStart&gt;
-            &lt;ports&gt;
-                &lt;port&gt;
-                    &lt;name&gt;reset_in0&lt;/name&gt;
-                    &lt;role&gt;reset&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-            &lt;/ports&gt;
-            &lt;assignments&gt;
-                &lt;assignmentValueMap/&gt;
-            &lt;/assignments&gt;
-            &lt;parameters&gt;
-                &lt;parameterValueMap&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedClock&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;synchronousEdges&lt;/key&gt;
-                        &lt;value&gt;NONE&lt;/value&gt;
-                    &lt;/entry&gt;
-                &lt;/parameterValueMap&gt;
-            &lt;/parameters&gt;
-        &lt;/interface&gt;
-        &lt;interface&gt;
-            &lt;name&gt;reset_in1&lt;/name&gt;
-            &lt;type&gt;reset&lt;/type&gt;
-            &lt;isStart&gt;false&lt;/isStart&gt;
-            &lt;ports&gt;
-                &lt;port&gt;
-                    &lt;name&gt;reset_in1&lt;/name&gt;
-                    &lt;role&gt;reset&lt;/role&gt;
-                    &lt;direction&gt;Input&lt;/direction&gt;
-                    &lt;width&gt;1&lt;/width&gt;
-                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
-                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                &lt;/port&gt;
-            &lt;/ports&gt;
-            &lt;assignments&gt;
-                &lt;assignmentValueMap/&gt;
-            &lt;/assignments&gt;
-            &lt;parameters&gt;
-                &lt;parameterValueMap&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;associatedClock&lt;/key&gt;
-                    &lt;/entry&gt;
-                    &lt;entry&gt;
-                        &lt;key&gt;synchronousEdges&lt;/key&gt;
-                        &lt;value&gt;NONE&lt;/value&gt;
-                    &lt;/entry&gt;
-                &lt;/parameterValueMap&gt;
-            &lt;/parameters&gt;
-        &lt;/interface&gt;
         &lt;interface&gt;
             &lt;name&gt;clk&lt;/name&gt;
             &lt;type&gt;clock&lt;/type&gt;
@@ -515,12 +320,43 @@ Altera and sold by Altera or its authorized distributors.-->
             &lt;/parameters&gt;
         &lt;/interface&gt;
         &lt;interface&gt;
-            &lt;name&gt;reset_out&lt;/name&gt;
+            &lt;name&gt;in_reset&lt;/name&gt;
+            &lt;type&gt;reset&lt;/type&gt;
+            &lt;isStart&gt;false&lt;/isStart&gt;
+            &lt;ports&gt;
+                &lt;port&gt;
+                    &lt;name&gt;in_reset&lt;/name&gt;
+                    &lt;role&gt;reset&lt;/role&gt;
+                    &lt;direction&gt;Input&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+            &lt;/ports&gt;
+            &lt;assignments&gt;
+                &lt;assignmentValueMap/&gt;
+            &lt;/assignments&gt;
+            &lt;parameters&gt;
+                &lt;parameterValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedClock&lt;/key&gt;
+                        &lt;value&gt;clk&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;synchronousEdges&lt;/key&gt;
+                        &lt;value&gt;DEASSERT&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/parameterValueMap&gt;
+            &lt;/parameters&gt;
+        &lt;/interface&gt;
+        &lt;interface&gt;
+            &lt;name&gt;out_reset&lt;/name&gt;
             &lt;type&gt;reset&lt;/type&gt;
             &lt;isStart&gt;true&lt;/isStart&gt;
             &lt;ports&gt;
                 &lt;port&gt;
-                    &lt;name&gt;reset_out&lt;/name&gt;
+                    &lt;name&gt;out_reset&lt;/name&gt;
                     &lt;role&gt;reset&lt;/role&gt;
                     &lt;direction&gt;Output&lt;/direction&gt;
                     &lt;width&gt;1&lt;/width&gt;
@@ -540,10 +376,11 @@ Altera and sold by Altera or its authorized distributors.-->
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;associatedDirectReset&lt;/key&gt;
+                        &lt;value&gt;in_reset&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;associatedResetSinks&lt;/key&gt;
-                        &lt;value&gt;reset_in0,reset_in1&lt;/value&gt;
+                        &lt;value&gt;in_reset&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;synchronousEdges&lt;/key&gt;
@@ -559,7 +396,21 @@ Altera and sold by Altera or its authorized distributors.-->
           <ipxact:name>systemInfos</ipxact:name>
           <ipxact:displayName>systemInfos</ipxact:displayName>
           <ipxact:value>&lt;systemInfosDefinition&gt;
-    &lt;connPtSystemInfos/&gt;
+    &lt;connPtSystemInfos&gt;
+        &lt;entry&gt;
+            &lt;key&gt;clk&lt;/key&gt;
+            &lt;value&gt;
+                &lt;connectionPointName&gt;clk&lt;/connectionPointName&gt;
+                &lt;suppliedSystemInfos&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;CLOCK_RATE&lt;/key&gt;
+                        &lt;value&gt;148529412&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/suppliedSystemInfos&gt;
+                &lt;consumedSystemInfos/&gt;
+            &lt;/value&gt;
+        &lt;/entry&gt;
+    &lt;/connPtSystemInfos&gt;
 &lt;/systemInfosDefinition&gt;</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="dflBitArray" type="string">
@@ -575,17 +426,14 @@ Altera and sold by Altera or its authorized distributors.-->
       </ipxact:parameters>
     </altera:altera_system_parameters>
     <altera:altera_interface_boundary>
-      <altera:interface_mapping altera:name="clk" altera:internal="reset_controller_0.clk" altera:type="clock" altera:dir="end">
+      <altera:interface_mapping altera:name="clk" altera:internal="hdmi_reset_bridge.clk" altera:type="clock" altera:dir="end">
         <altera:port_mapping altera:name="clk" altera:internal="clk"></altera:port_mapping>
       </altera:interface_mapping>
-      <altera:interface_mapping altera:name="reset_in0" altera:internal="reset_controller_0.reset_in0" altera:type="reset" altera:dir="end">
-        <altera:port_mapping altera:name="reset_in0" altera:internal="reset_in0"></altera:port_mapping>
+      <altera:interface_mapping altera:name="in_reset" altera:internal="hdmi_reset_bridge.in_reset" altera:type="reset" altera:dir="end">
+        <altera:port_mapping altera:name="in_reset" altera:internal="in_reset"></altera:port_mapping>
       </altera:interface_mapping>
-      <altera:interface_mapping altera:name="reset_in1" altera:internal="reset_controller_0.reset_in1" altera:type="reset" altera:dir="end">
-        <altera:port_mapping altera:name="reset_in1" altera:internal="reset_in1"></altera:port_mapping>
-      </altera:interface_mapping>
-      <altera:interface_mapping altera:name="reset_out" altera:internal="reset_controller_0.reset_out" altera:type="reset" altera:dir="start">
-        <altera:port_mapping altera:name="reset_out" altera:internal="reset_out"></altera:port_mapping>
+      <altera:interface_mapping altera:name="out_reset" altera:internal="hdmi_reset_bridge.out_reset" altera:type="reset" altera:dir="start">
+        <altera:port_mapping altera:name="out_reset" altera:internal="out_reset"></altera:port_mapping>
       </altera:interface_mapping>
     </altera:altera_interface_boundary>
     <altera:altera_has_warnings>false</altera:altera_has_warnings>

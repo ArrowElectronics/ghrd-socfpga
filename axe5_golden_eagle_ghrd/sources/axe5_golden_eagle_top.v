@@ -24,23 +24,26 @@
 `define wFAB_PB
 `define wFAB_DIPSW
 `define wFAB_I2C1
-`define wFAB_QSPI
-`define wADDA
 `define wLPDDR4A //EMIF HPS
 `define wLPDDR4B //EMIF FPGA
+
 
 //`define wFMC
 //`define wCRUVI_HS_1
 //`define wCRUVI_HS_2
-//`define wCRUVI_LS_1
-//`define wCRUVI_LS_2
-//`define wSFP10G_1
-//`define wSFP10G_2
+//`define wPMOD
+//`define wCRUVI_LS_C
+//`define wSFP10G_A
+//`define wSFP10G_B
 //`define wFMC_XCVRS
 //`define wPCIe
 //`define smartVID
-//`define wHDMI
-
+`define wHDMI
+//`define wCRUVI_GTX
+//`define wNVME
+//`define wFAB_UART
+//`define wCSI0
+//`define wCSI0
 
 module axe5_golden_eagle_top (
    `ifdef wHPS_LED0
@@ -83,10 +86,6 @@ module axe5_golden_eagle_top (
    inout         	MUX_I2C_SDA,
    inout         	MUX_I2C_SCL, MUX_I2C_INT,
    `endif
-   `ifdef wADDA
-   output        	ADDA_CLK, ADDA_DIN, ADDA_SYNC, ADDA_RST,
-   input         	ADDA_DOUT,
-   `endif
    `ifdef wFAB_EMAC
    output        	ETH1_RST, ETH1_TXCK, ETH1_TXCTL,
    output [3:0]  	ETH1_TXD,
@@ -118,14 +117,17 @@ module axe5_golden_eagle_top (
    output        	LED3R, LED3G, LED3B,
    `endif
    `ifdef wFAB_PB
-   input [1:0]   	FPGA_PB,
+   input [3:2]   	FPGA_PB,
    `endif
    `ifdef wFAB_DIPSW
-   input [1:0]   	FPGA_DIPSW,
+   input [3:2]   	FPGA_DIPSW,
+   `endif
+   `ifdef wFAB_UART
+   input            DBG_RXD,
+   output           DBG_TXD,
    `endif
    `ifdef wHDMI
-   output        	HDMI_VS, HDMI_HS, HDMI_CLK, HDMI_DE, HDMI_CT_HPD, HDMI_SPDIF, HDMI_CEC_CLK,
-   input         	HDMI_INT,
+   output        	HDMI_VS, HDMI_HS, HDMI_CLK, HDMI_DE, HDMI_CT_HPD,
    output [23:0] 	HDMI_D,
    `endif
    `ifdef wLPDDR4A
@@ -177,6 +179,8 @@ module axe5_golden_eagle_top (
    input         	PCIE_100M_CK_p, PCIE_100M_CK_n,
    input  [3:0]  	PET_p, PET_n,
    output [3:0]  	PER_p, PER_n,
+   input            PCIE_RSTb,
+   output           PCIE_WAKE,
    `endif
    `ifdef wCRUVI_HS_1
    inout         	CX_SMB_ALERT,
@@ -204,29 +208,54 @@ module axe5_golden_eagle_top (
    inout         	CY_A0_p, CY_A1_p, CY_A2_p, CY_A3_p, CY_A4_p, CY_A5_p,
    inout         	CY_A0_n, CY_A1_n, CY_A2_n, CY_A3_n, CY_A4_n, CY_A5_n,
    `endif
-   `ifdef wCRUVI_LS_1
-   inout  [7:0]  	CRUVI_LS_B,
+   `ifdef wCRUVI_GTX
+   input  [3:0]     GTSR4A_RX_p, GTSR4A_RX_n
+   output [3:0]     GTSR4A_TX_p, GTSR4A_TX_n,
+   input            GBTCLK0_p, GBTCLK0_n,
+   inout  [8:1]     LS_IO,
+   inout            HS_D5_p, HS_D5_n,
+   inout            HS_D11_p, HS_D11_n,
    `endif
-   `ifdef wCRUVI_LS_2
+   `ifdef wNVME
+   output           GTSL1C_TX0_p, GTSL1C_TX0_n,
+   input            GTSL1C_RX0_p, GTSL1C_RX0_n,
+   output           SSD1_PERST, SSD1_WAKE,
+   output           SSD1_CLKRQ,
+   `endif
+   `ifdef wCSI0
+   input            CSI0_CK_p, CSI0_D0_p, CSI0_D1_p, CSI0_D2_p, CSI0_D3_p, 
+   input            CSI0_CK_n, CSI0_D0_n, CSI0_D1_n, CSI0_D2_n, CSI0_D3_n, 
+   `endif
+   `ifdef wCSI1
+   input            CSI1_C_p, CSI1_D0_p, CSI1_D1_p, CSI1_D2_p, CSI1_D3_p, 
+   input            CSI1_C_n, CSI1_D0_n, CSI1_D1_n, CSI1_D2_n, CSI1_D3_n, 
+   `endif
+   `ifdef wPMOD
+   inout  [8:1]  	P0_IO,
+   `endif
+   `ifdef wCRUVI_LS_C
    inout  [7:0]  	CRUVI_LS_C,
    `endif
-   `ifdef wFAB_QSPI
-   output        	FPGA_QSPI_CS, FPGA_QSPI_CLK, FPGA_QSPI_RST,
-   inout [3:0]   	FPGA_QSPI_D,
-   `endif
-   `ifdef wSFP10G_1
+   `ifdef wSFP10G_A
+   // Need to define wFAB_I2C to get I2C signals
+   input         	SFPA_REFCLK_p, SFPA_REFCLK_n,
    output        	SFPA_TD_p, SFPA_TD_n,
    output        	SFPA_RD_p, SFPA_RD_n,
+   input            SFPA_TX_FAULT, SFPA_LOS, SFPA_M_DEF0,
+   output           SFPA_TX_DIS, SFPA_RS0, SFPA_RS1,
    `endif
-   `ifdef wSFP10G_2
+   `ifdef wSFP10G_B
+   // Need to define wFAB_I2C to get I2C signals
+   input         	SFPB_REFCLK_p, SFPB_REFCLK_n,
    output        	SFPB_TD_p, SFPB_TD_n,
    output        	SFPB_RD_p, SFPB_RD_n,
+   input            SFPB_TX_FAULT, SFPB_LOS, SFPB_M_DEF0,
    `endif
 
-   `ifdef wSFP10G_1
-   input         	SFP_REFCLK_p, SFP_REFCLK_n,
-   `elsif wSFP10G_1
-   input         	SFP_REFCLK_p, SFP_REFCLK_n,
+   `ifdef wNVME
+   input         	SFPB_REFCLK_p, SFPB_REFCLK_n,
+   `elsif wSFP10G_B
+   input         	SFPB_REFCLK_p, SFPB_REFCLK_n,
    `endif
 
    `ifdef smartVID
@@ -273,15 +302,10 @@ module axe5_golden_eagle_top (
    `endif
    
    `ifdef wHDMI
-   wire [15:0]	hdmi_data_pd;  
-   
-   assign HDMI_CT_HPD = 1'b1;
-   assign HDMI_CEC_CLK = 1'b0; 
-   
-   // yuv422, separate sync, x1 clk, style 1, table 18, 1080p, hdmi_clk 148.5M
-  
-   assign HDMI_D [23:0] = {hdmi_data_pd, {8{1'b0}}};  
-   `endif   
+
+   assign HDMI_CT_HPD   = 1'b1;
+     
+   `endif 
 
    `ifdef wFAB_EMAC
    wire	emac0_mdio_mdc, emac0_mdio_di, emac0_mdio_mdo, emac0_mdio_oe;
@@ -315,20 +339,14 @@ module axe5_golden_eagle_top (
         .sys_clk_clk              					(REFCLK_3B0),
         .reset_pb_n_reset                       	(FPGA_RST_n),		
       `ifdef wHDMI
-        .hdmi_clk_clk             					(HDMI_CLK),
-        .hdmi_h16_hsync           					(HDMI_HS),
-        .hdmi_h16_vsync           					(HDMI_VS),
-        .hdmi_h16_data_e          					(HDMI_DE),
-        .hdmi_h16_data            					(hdmi_data_pd),
-        .hdmi_h16_es_data         					(),
-        .hdmi_h24_hsync           					(),
-        .hdmi_h24_vsync           					(),
-        .hdmi_h24_data_e          					(),
-        .hdmi_h24_data            					(),
-        .hdmi_h36_hsync           					(),
-        .hdmi_h36_vsync           					(),
-        .hdmi_h36_data_e          					(),
-        .hdmi_h36_data            					(),
+        .hdmi_vid_out_data                    		(HDMI_D), 
+        .hdmi_vid_out_active                  		(HDMI_DE), 
+        .hdmi_vid_out_f                       		(),  
+        .hdmi_vid_out_v_sync                  		(HDMI_VS),
+        .hdmi_vid_out_h_sync                  		(HDMI_HS), 
+        .hdmi_ddio_h_fragment                 		(1'b1), 
+        .hdmi_ddio_l_fragment                 		(1'b0), 
+        .hdmi_clock_out_export                		(HDMI_CLK), 
       `endif
       `ifdef wFAB_DIPSW
         .dipsw_export             					(FPGA_DIPSW),
@@ -361,17 +379,6 @@ module axe5_golden_eagle_top (
         .emac0_rgmii_txd          					(ETH1_TXD),
         .eth1_rst_export							(ETH1_RST),
       `endif
-      `ifdef wADDA
-        .spim0_miso_i             					(ADDA_DOUT),
-        .spim0_mosi_o             					(ADDA_DIN),
-        .spim0_mosi_oe            					(),
-        .spim0_ss_in_n            					(1'b1),
-        .spim0_ss0_n_o            					(ADDA_SYNC),
-        .spim0_ss1_n_o            					(),
-        .spim0_sclk_out_clk       					(ADDA_CLK),
-        .spim0_ss2_n_o            					(),
-        .spim0_ss3_n_o            					(),
-       `endif
       `ifdef wFAB_I2C1
         .i2c1_scl_i_clk           					(i2c1_scl_i_clk),
         .i2c1_scl_oe_clk          					(i2c1_scl_oe_clk),
